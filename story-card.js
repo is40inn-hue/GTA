@@ -5,9 +5,10 @@
 (function () {
   const WIDTH = 1080, HEIGHT = 1920;
   const COLORS = {
-    blue: '#1736b6', blueDark: '#17123c', yellow: '#ffd18a', red: '#df145b',
-    peach: '#ffe2bb', paper: '#fff0d8', white: '#fff9ef', ink: '#17123c',
-    brown: '#66516a', line: '#d4b99a'
+    blue: '#4e4a78', blueDark: '#37324f', yellow: '#efc4a5', red: '#91475e',
+    peach: '#f1d9ca', paper: '#fbefe4', white: '#fff9f2', ink: '#362e46',
+    brown: '#66546a', line: '#d4bcb8',
+    sunsetLilac: '#a895c6', sunsetRose: '#d499ac', sunsetPeach: '#eeb59b'
   };
   const HERO = { x: 72, y: 610, width: 936, height: 800 };
 
@@ -60,7 +61,8 @@
     const passScore = Math.max(0, Math.min(100, Math.round(finite(data.passScore, 60))));
     const sections = sectionData(data);
     if (data.mode === 'practice') return 'Пробный заезд. До встречи на экзамене.';
-    if (score >= 90) return 'Комиссия просит автограф.';
+    if (score < passScore) return 'До допуска не хватило баллов. Пересдача открыта.';
+    if (score >= 90) return 'Комиссия просит автограф. Допуск оформлен.';
     // A stale or partial breakdown must not make a claim about the player's
     // theory or practical performance. Use the same earned points as the card.
     if (sections && sections.reduce((sum, s) => sum + s.max, 0) === 100 &&
@@ -70,7 +72,7 @@
       if (theory < 0.6 && practical >= 0.7) return 'Теорию завалил. Практику вывез.';
       if (theory >= 0.8 && practical < 0.5) return 'Лор знаю. За руль не пускайте.';
     }
-    return score >= passScore ? 'Экзамен сдан. Ностальгия подтверждена.' : 'Есть что вспомнить. Есть что пересдать.';
+    return 'Экзамен сдан. Допущен к GTA VI.';
   }
   function contentBounds(source) {
     const full = { x: 0, y: 0, width: source.width, height: source.height };
@@ -100,10 +102,11 @@
     const passScore = Math.max(0, Math.min(100, Math.round(finite(data.passScore, 60))));
     const practice = data.mode === 'practice', passed = score >= passScore;
     const statusColor = practice || passed ? COLORS.blue : COLORS.red;
-    const verdict = practice ? 'ТРЕНИРОВКА' : passed ? 'ЗАЧЁТ' : 'ПЕРЕСДАЧА';
+    const verdict = practice ? 'ТРЕНИРОВКА' : passed ? 'ДОПУЩЕН К GTA VI' : 'НЕ ДОПУЩЕН';
     const shot = readableImage(data.highlightImage);
     const portrait = readableImage(data.avatarImage);
     const brand = readableImage(data.brandImage);
+    const stamp = !practice && passed ? readableImage(data.stampImage) : null;
     const sections = sectionData(data);
 
     function text(value, x, y, font, color, align) {
@@ -160,7 +163,7 @@
       const h = HERO;
       c.save(); c.beginPath(); c.rect(h.x, h.y, h.width, h.height); c.clip();
       const gradient = c.createLinearGradient(h.x, h.y, h.x + h.width, h.y + h.height);
-      gradient.addColorStop(0, COLORS.blueDark); gradient.addColorStop(1, '#70238a');
+      gradient.addColorStop(0, COLORS.blueDark); gradient.addColorStop(1, '#695074');
       box(h.x, h.y, h.width, h.height, gradient);
       if (shot) {
         // One photograph, one frame. The centered crop preserves the native
@@ -186,22 +189,24 @@
       const finalSalvo = shot && data.highlight?.scene === 3 && data.highlight?.kind === 'explosion';
       text(shot ? finalSalvo ? 'ПОСЛЕДНИЙ ЗАЛП' : 'КАДР ИЗ ПРАКТИКИ' : 'ЕДИНЫЙ ГАНГСТЕРСКИЙ ЭКЗАМЕН', h.x + 22, h.y + h.height + 34,
         'bold 24px Arial, sans-serif', COLORS.brown);
+      if (typeof data.ticketCode === 'string' && /^[A-Z0-9]{1,6}$/.test(data.ticketCode)) {
+        text('БИЛЕТ № ' + data.ticketCode, h.x + h.width - 22, h.y + h.height + 34,
+          'bold 24px Arial, sans-serif', COLORS.brown, 'right');
+      }
     }
 
     // Meaningful content stays between y=140 and y=1740 for story controls.
     box(0, 0, WIDTH, HEIGHT, COLORS.paper);
-    box(0, 0, WIDTH, 26, COLORS.white);
-    const blueAccent = c.createLinearGradient(0, 0, WIDTH, 0);
-    blueAccent.addColorStop(0, COLORS.blue); blueAccent.addColorStop(1, '#6b28bc');
-    box(0, 26, WIDTH, 26, blueAccent);
-    const redAccent = c.createLinearGradient(0, 0, WIDTH, 0);
-    redAccent.addColorStop(0, COLORS.red); redAccent.addColorStop(1, '#ff8554');
-    box(0, 52, WIDTH, 26, redAccent);
+    const sunset = c.createLinearGradient(0, 0, WIDTH, 0);
+    sunset.addColorStop(0, COLORS.sunsetLilac);
+    sunset.addColorStop(.52, COLORS.sunsetRose);
+    sunset.addColorStop(1, COLORS.sunsetPeach);
+    box(0, 0, WIDTH, 24, sunset);
     const cover = c.createLinearGradient(0, 120, WIDTH, 1760);
-    cover.addColorStop(0, COLORS.blue); cover.addColorStop(.48, '#492399'); cover.addColorStop(1, COLORS.red);
+    cover.addColorStop(0, '#675a8b'); cover.addColorStop(.54, '#775f84'); cover.addColorStop(1, '#a27487');
     box(48, 128, 984, 1634, COLORS.ink);
     box(42, 120, 984, 1634, cover);
-    c.save(); c.globalAlpha = .04;
+    c.save(); c.globalAlpha = .025;
     for (let y = 124; y < 1754; y += 6) line(42, y, 1026, y, COLORS.white, 1);
     c.restore();
 
@@ -210,7 +215,7 @@
     titleBand.addColorStop(0, COLORS.paper); titleBand.addColorStop(1, COLORS.yellow);
     box(79, 148, 936, 64, COLORS.ink);
     box(72, 140, 936, 64, titleBand);
-    fit('ИСТОРИЯ GTA', 540, 185, 860, 43, 36, '"Arial Black", Arial, sans-serif', COLORS.ink, '900', 'center');
+    fit('ДОПУСК К GTA VI', 540, 185, 860, 43, 36, '"Arial Black", Arial, sans-serif', COLORS.ink, '900', 'center');
     const branded = brand && window.GTAFinalBrand && window.GTAFinalBrand.draw(c, brand.image, 72, 218, 552, 320);
     if (!branded) {
       if (window.GTAClassicBrand) window.GTAClassicBrand.draw(c, 82, 257, 532, 222);
@@ -221,10 +226,24 @@
     }
     box(665, 226, 351, 320, COLORS.ink);
     box(657, 218, 351, 320, COLORS.paper);
-    box(657, 218, 351, 64, statusColor);
-    fit(verdict, 832, 261, 307, 35, 28, 'Arial, sans-serif', COLORS.white, '900', 'center');
-    fit(score, 832, 464, 307, 170, 130, '"Arial Black", Arial, sans-serif', statusColor, '900', 'center');
-    text('/ 100', 832, 519, 'bold 47px Arial, sans-serif', COLORS.ink, 'center');
+    if (stamp) {
+      // Use the exact supplied red print. Multiply makes its white paper
+      // disappear into this paper panel without redrawing the lettering.
+      const crop = { x: 80 / 1536, y: 93 / 1024, w: 1375 / 1536, h: 892 / 1024 };
+      c.save();
+      c.globalCompositeOperation = 'multiply';
+      c.drawImage(stamp.image, crop.x * stamp.width, crop.y * stamp.height,
+        crop.w * stamp.width, crop.h * stamp.height, 677, 230, 310, 201);
+      c.restore();
+      line(682, 439, 982, 439, COLORS.line);
+      fit(score, 821, 512, 131, 76, 53, '"Arial Black", Arial, sans-serif', statusColor, '900', 'right');
+      text('/ 100', 835, 510, 'bold 37px Arial, sans-serif', COLORS.ink, 'left');
+    } else {
+      box(657, 218, 351, 64, statusColor);
+      fit(verdict, 832, 261, 307, 32, 23, 'Arial, sans-serif', COLORS.white, '900', 'center');
+      fit(score, 832, 464, 307, 170, 130, '"Arial Black", Arial, sans-serif', statusColor, '900', 'center');
+      text('/ 100', 832, 519, 'bold 47px Arial, sans-serif', COLORS.ink, 'center');
+    }
     // A single short note gives the truthful result its own voice.
     box(72, 552, 936, 44, COLORS.paper);
     fit(resultLine(data), 540, 583, 884, 31, 27,
@@ -244,9 +263,7 @@
         for (let star = 0; star < 5; star++) ratingStar(148 + i * 312 + star * 40, 1691, star < rating);
       }
     }
-    box(0, 1776, WIDTH, 48, COLORS.white);
-    box(0, 1824, WIDTH, 48, blueAccent);
-    box(0, 1872, WIDTH, 48, redAccent);
+    box(0, HEIGHT - 24, WIDTH, 24, sunset);
     return canvas;
   }
 

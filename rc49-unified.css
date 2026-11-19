@@ -48,3 +48,81 @@
 @media (prefers-reduced-motion: reduce) {
   .result-loading-seal.result-save-seal { animation: none; }
 }
+
+/* Vice City at dusk: one diagonal accent, not stacked horizontal stripes.
+   Keep the text and controls on solid, accessible ink/paper colours. */
+:root {
+  --vice-horizon: linear-gradient(112deg, #a99cc4 0%, #d0a2b5 53%, #ecc0a5 100%);
+  --vice-horizon-wash: linear-gradient(112deg, #ece7f3 0%, #f2e4ea 54%, #f7ece1 100%);
+  --vice-shadow: #3b344d36;
+  --final-paper: #f8eee4;
+  --final-paper-light: #fffaf5;
+  --final-ink: #302b43;
+  --final-blue: #51496c;
+  --final-blue-deep: #443b58;
+  --final-raspberry: #ad7789;
+  --final-raspberry-text: #834a64;
+  --final-gold: #edc3a5;
+  --final-rule: #c8b6b7;
+  --final-sunset: var(--vice-horizon);
+  --bg: #f3ebe6;
+  --print-paper: var(--final-paper-light);
+  --print-sheet: var(--final-paper);
+  --print-blush: #f1e2e7;
+  --print-ink: var(--final-ink);
+  --print-blue: var(--final-blue);
+  --print-blue-dark: var(--final-blue-deep);
+  --print-raspberry: var(--final-raspberry-text);
+  --print-gold: var(--final-gold);
+  --print-rule: var(--final-rule);
+  --print-shadow: 2px 3px 0 var(--vice-shadow);
+}
+body:not(.rpg-page-active) {
+  background-image: radial-gradient(ellipse at 0 0, #a99cc42b, transparent 48%),
+    radial-gradient(ellipse at 100% 85%, #ecc0a52e, transparent 52%);
+}
+.shell:not(.rpg-exam-shell) > .topbar,
+.shell.final-home-shell > .topbar {
+  border-color: var(--print-rule);
+  background: var(--vice-horizon-wash);
+  box-shadow: var(--print-shadow);
+}
+.shell:not(.rpg-exam-shell) > .topbar::after { display: none; }
+.topbar .brand-mark {
+  color: var(--print-ink);
+  border-color: var(--print-rule);
+  background: var(--vice-horizon);
+  text-shadow: none;
+  box-shadow: var(--print-shadow);
+}
+.topbar .music-button[aria-pressed="true"],
+.stage-route > .current,
+.checkpoint-route > .current {
+  box-shadow: var(--print-shadow);
+}
+.final-cover { border-color: var(--print-rule); background: var(--vice-horizon-wash); box-shadow: var(--print-shadow); }
+.final-cover-image, .brand-cover-full { filter: saturate(.88) contrast(.975); }
+.final-home .final-pass {
+  border: 1px solid var(--print-rule);
+  background: var(--vice-horizon) top / 100% 4px no-repeat, var(--print-paper);
+  box-shadow: var(--print-shadow);
+}
+.final-home .final-pass :is(.pass-title, .candidate-name, .text-input) { color: var(--print-ink); }
+.final-home .final-pass .text-input { border-color: var(--print-rule); }
+.final-pass .candidate-avatar { border-color: var(--print-blue); box-shadow: var(--print-shadow); }
+.final-home .final-pass > .primary:not(:disabled) { border-color: var(--print-blue-dark); }
+.exam-shell .question-card { border-top-color: var(--print-rule); }
+.exam-shell .question-card::before {
+  height: 4px;
+  border: 0;
+  background: var(--vice-horizon);
+  opacity: .72;
+}
+.exam-shell .question-media { border-color: var(--print-rule); background: var(--print-ink); }
+.audio-console { background: var(--print-ink); }
+.checkpoint-card.checkpoint-clean { border-color: var(--print-rule); background: var(--vice-horizon) top / 100% 4px no-repeat, var(--print-paper); }
+.checkpoint-receipt { color: var(--print-ink); background: var(--vice-horizon); border-color: var(--print-rule); text-shadow: none; box-shadow: var(--print-shadow); }
+.commission-card { border-color: var(--print-rule); }
+.rpg-exam-strip { border-bottom-color: var(--print-rule); }
+.result-picture { border-color: var(--print-rule); }
+.result-share-actions .primary:hover:not(:disabled) { background: #f2cfb6; }

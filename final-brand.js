@@ -1,9 +1,9 @@
 'use strict';
 
-/* The supplied cover stays byte-for-byte intact. This view only draws its logo
+/* The approved cover is shared with the home screen. This view only draws its logo
    into UI canvases; loading is optional and can never block a result forever. */
 (function (root) {
-  const ASSET = 'assets/brand-cover-rc45.png';
+  const ASSET = 'assets/brand-cover-rc45.png?release=ege-054';
   const SOURCE = { width: 1086, height: 1448 };
   const LOGO = { x: 80, y: 210, width: 930, height: 535 };
   const TIMEOUT = 1800;

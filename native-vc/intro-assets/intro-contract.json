@@ -1,0 +1,22 @@
+{
+  "nativeEngine": "shipped Vice City WASM",
+  "type": "standalone scene only; isolated from RC4.9 practice",
+  "roomDffId": 5035,
+  "teacherPedId": 67,
+  "studentsPedId": 7,
+  "spawn": [
+    290,
+    -1065,
+    11.5
+  ],
+  "cameraShots": 3,
+  "durationMilliseconds": 12000,
+  "instructions": 40,
+  "sha256": "dd0872f7729935f1bb73d2e19481f9976d6c930ea378ff713ce8a1c61a3bc6cf",
+  "size": 34978,
+  "gpuVerified": false,
+  "scmValidated": true,
+  "labels": {
+    "hold": 34964
+  }
+}

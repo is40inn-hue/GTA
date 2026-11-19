@@ -1,64 +1,84 @@
-'use strict';
-
-/* GTA EGE 0.5.1: an opt-out, silent-by-default 2.5D exam-room cinematic.
-   Pure presentation: no ticket, scoring, practice or storage writes. */
+/* EGE 0.5.2 — REAL Vice City WASM classroom cutscene, not SVG/video/CSS scene.
+   The iframe loads an isolated native SCM + author-built RenderWare room and
+   shipped WFYBU teacher. Browser HTML is subtitles and Skip only. */
 (function (global) {
   'use strict';
   let current = null;
   function cancel() {
-    if (!current) return;
-    current.cancelled = true;
-    if (current.frame) global.cancelAnimationFrame?.(current.frame);
-    current = null;
+    const session=current;if(!session)return;
+    session.cancelled=true;
+    if(session.frame)global.cancelAnimationFrame?.(session.frame);
+    if(session.timer)clearTimeout(session.timer);
+    if(session.timeout)clearTimeout(session.timeout);
+    global.removeEventListener('message',session.onMessage);
+    if(session.iframe){session.iframe.src='about:blank';session.iframe.remove();}
+    current=null;
   }
-  function markup() {
-    return `<main class="exam-cinema" data-exam-cinema data-shot="1" aria-label="Начало экзамена: катсцена">
-      <div class="cinema-viewport" aria-hidden="true">
-        <img class="cinema-room" src="assets/cinema/exam-room.svg" width="900" height="680" alt="" decoding="async" fetchpriority="high">
-        <div class="cinema-tint"></div>
-        <div class="cinema-ticket"><div class="cinema-ticket-hdr"><span>ЕГЭ · 2026</span><span>ФОРМА № 006</span></div><div class="cinema-ticket-seal">ДОПУЩЕН</div><p>Единый гангстерский экзамен</p><strong><span>ЭКЗАМЕНАЦИОННЫЙ</span><span>БИЛЕТ</span></strong><div class="cinema-ticket-line"></div><span class="cinema-ticket-part">ЧАСТЬ А</span><h2>Города и герои</h2><span class="cinema-ticket-foot">Ответы и оценки — после комиссии</span></div>
-      </div>
-      <div class="cinema-grain" aria-hidden="true"></div>
+  function markup(ticketCode = '') {
+    // Only a short hexadecimal/alphanumeric ticket reference enters subtitles.
+    const ticketNumber = /^[A-Z0-9]{1,6}$/.test(ticketCode) ? ' № ' + ticketCode : '';
+    return `<main class="exam-cinema" data-exam-cinema data-shot="0" data-engine="loading" aria-label="Допуск к GTA VI: сцена на игровом движке Vice City">
+      <div class="cinema-viewport"><iframe class="cinema-native-frame" title="Экзаменационный класс · игровой движок Vice City" src="native-vc/exam-intro.html?release=ege-052-20261119" allow="autoplay" tabindex="-1" aria-hidden="true" loading="eager"></iframe><div class="cinema-tint" aria-hidden="true"></div></div>
       <div class="cinema-wipe" aria-hidden="true"></div>
       <div class="cinema-ui">
-        <div class="cinema-top"><span class="cinema-location"><span class="cinema-live-dot"></span> ЭКЗАМЕНАЦИОННЫЙ ПУНКТ №006</span><button class="cinema-skip" type="button" data-action="cinema-skip" aria-label="Пропустить катсцену и начать часть A">Пропустить <span aria-hidden="true">↗</span></button></div>
+        <div class="cinema-top"><span class="cinema-location"><span class="cinema-live-dot"></span> ПУНКТ АТТЕСТАЦИИ №006</span><button class="cinema-skip" type="button" data-action="cinema-skip" aria-label="Пропустить катсцену и перейти к первому вопросу">Пропустить <span aria-hidden="true">↗</span></button></div>
+        <div class="cinema-load-note" data-intro-progress role="status" aria-live="polite"><strong>ДОПУСК К GTA VI</strong><span>Загружаем настоящий игровой класс. Это можно пропустить.</span><div class="cinema-load-meter"><i></i></div></div>
         <div class="cinema-dialogue" aria-live="off">
-          <section class="cinema-beat cinema-beat-1"><span class="cinema-cue">VICE COUNTY · 2026</span><h1>Сегодня ты сдаёшь<br>не совсем обычный ЕГЭ.</h1><p>Комиссия проверит твою готовность к GTA VI.</p></section>
-          <section class="cinema-beat cinema-beat-2"><span class="cinema-cue">ЭКЗАМЕНАТОР</span><h1>Телефоны и чит-коды<br>запрещены.</h1><p>Оружие получите на практической части.</p></section>
-          <section class="cinema-beat cinema-beat-3"><span class="cinema-cue">БИЛЕТ №006</span><h1>Часть A.<br>Города и герои.</h1><p>Проверка базовой гангстерской грамотности.</p></section>
+          <section class="cinema-beat cinema-beat-1"><span class="cinema-cue">ЭКЗАМЕНАЦИОННЫЙ ПУНКТ №006 · VICE CITY</span><h1>Сначала билет.<br>Потом — город.</h1><p>Комиссия проверяет готовность к GTA VI.</p></section>
+          <section class="cinema-beat cinema-beat-2"><span class="cinema-cue">ЭКЗАМЕНАТОР · ИНСТРУКТАЖ</span><h1>Телефоны и чит-коды<br>запрещены.</h1><p>Оружие получите на практической части.</p></section>
+          <section class="cinema-beat cinema-beat-3"><span class="cinema-cue">ЭКЗАМЕНАЦИОННЫЙ БИЛЕТ${ticketNumber}</span><h1>Часть A.<br>Города и герои.</h1><p>Откройте билет. Этот бланк вернётся к комиссии.</p></section>
         </div>
-        <div class="cinema-bottom"><span>ЕГЭ · ДОПУСК В GTA VI</span><span class="cinema-progress"><i></i></span><span>01 / 03</span></div>
+        <div class="cinema-bottom"><span>ЕГЭ · ДОПУСК К GTA VI</span><span class="cinema-progress"><i></i></span><span data-cinema-counter>01 / 03</span></div>
       </div>
     </main>`;
   }
-  function mount(host, onComplete) {
+  function mount(host,onComplete){
     cancel();
-    const view = host && host.querySelector('[data-exam-cinema]');
-    if (!view || typeof view.style?.setProperty !== 'function' || typeof onComplete !== 'function' || typeof global.requestAnimationFrame !== 'function') return false;
-    const reduced = !!global.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
-    const beats = reduced ? [350, 780, 1400, 1600] : [2700, 7350, 11000, 12000];
-    const session = { cancelled: false, elapsed: 0, last: 0, frame: 0, done: false };
-    current = session;
-    function finish() {
-      if (session.done || session.cancelled || current !== session) return;
-      session.done = true;
-      cancel();
-      onComplete();
+    const view=host?.querySelector('[data-exam-cinema]');
+    const iframe=view?.querySelector('.cinema-native-frame');
+    if(!view||!iframe||typeof onComplete!=='function'||!global.requestAnimationFrame)return false;
+    const reduce=!!global.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    const limit=reduce?3200:12000, beats=reduce?[700,2000,2750]:[3200,7450,11100];
+    const session={cancelled:false,done:false,frame:0,iframe,timer:0,timeout:0,elapsed:0,last:0,onMessage:null,ready:false};
+    current=session;
+    function finish(){if(session.done||session.cancelled||current!==session)return;session.done=true;cancel();onComplete();}
+    function step(now){
+      if(session.cancelled||current!==session||!session.ready)return;
+      if(!global.document.hidden&&session.last)session.elapsed+=Math.min(150,Math.max(0,now-session.last));
+      session.last=now;
+      const shot=session.elapsed<beats[0]?1:session.elapsed<beats[1]?2:session.elapsed<beats[2]?3:4;
+      if(view.dataset.shot!==String(shot))view.dataset.shot=String(shot);
+      view.style.setProperty('--cinema-progress',(Math.min(100,100*session.elapsed/limit)).toFixed(1)+'%');
+      const counter=view.querySelector('[data-cinema-counter]');if(counter)counter.textContent=String(Math.min(3,shot)).padStart(2,'0')+' / 03';
+      if(session.elapsed>=limit)return finish();
+      session.frame=global.requestAnimationFrame(step);
     }
-    function step(now) {
-      if (session.cancelled || current !== session) return;
-      if (!global.document.hidden && session.last) session.elapsed += Math.min(100, Math.max(0, now - session.last));
-      session.last = now;
-      const shot = session.elapsed < beats[0] ? 1 : session.elapsed < beats[1] ? 2 : session.elapsed < beats[2] ? 3 : 4;
-      if (view.dataset.shot !== String(shot)) view.dataset.shot = String(shot);
-      view.style.setProperty('--cinema-progress', Math.min(100, session.elapsed / beats[3] * 100).toFixed(1) + '%');
-      if (session.elapsed >= beats[3]) return finish();
-      session.frame = global.requestAnimationFrame(step);
-    }
-    session.frame = global.requestAnimationFrame(step);
+    session.onMessage=function(event){
+      if(session.cancelled||current!==session||event.origin!==global.location.origin||event.source!==iframe.contentWindow)return;
+      const msg=event.data;if(!msg||typeof msg.type!=='string')return;
+      const notice=view.querySelector('[data-intro-progress]');
+      if(msg.type==='ege:intro:progress'){
+        if(notice){const span=notice.querySelector('span');if(span)span.textContent=String(msg.text||'Подготавливаем сцену').slice(0,80);
+          const bar=notice.querySelector('i');if(bar&&Number.isFinite(msg.percent))bar.style.width=Math.max(0,Math.min(100,msg.percent))+'%';}
+      } else if(msg.type==='ege:intro:ready'){
+        if(session.ready)return;
+        session.ready=true;view.dataset.engine='ready';view.dataset.shot='1';session.frame=global.requestAnimationFrame(step);
+      } else if(msg.type==='ege:intro:error'){
+        view.dataset.engine='error';if(notice)notice.querySelector('span').textContent='Не удалось открыть 3D-класс. Переходим к вопросам.';
+        session.timer=setTimeout(finish,3000);
+      }
+    };
+    global.addEventListener('message',session.onMessage);
+    // A slow or unsupported device never traps the candidate before the exam.
+    session.timeout=setTimeout(()=>{
+      if(!session.ready&&!session.cancelled){view.dataset.engine='error';
+        const note=view.querySelector('[data-intro-progress] span');if(note)note.textContent='Класс загружается слишком долго. Продолжаем экзамен.';
+        session.timer=setTimeout(finish,2500);
+      }
+    },95000);
     return true;
   }
-  global.GTAExamCinema = Object.freeze({ markup, mount, cancel });
+  global.GTAExamCinema=Object.freeze({markup,mount,cancel});
 })(window);
 
 (function () {
@@ -175,7 +195,7 @@
 
   function header() {
     const compact = screen !== 'home';
-    return '<header class="topbar' + (compact ? ' is-compact' : '') + '"><button class="brand" data-action="home" aria-label="На главную"><span class="brand-mark">ЕГЭ</span><span class="brand-copy"><strong>ИСТОРИЯ GTA</strong></span></button><div class="top-actions">' + A.buttonHTML() + (hasVersion('8.0') ? '<button class="fullscreen-button" data-action="fullscreen" aria-label="На весь экран" ' + (tg.isFullscreen ? 'hidden' : '') + '>↗</button>' : '') + '<button class="icon-button" data-action="rules" aria-label="Правила экзамена">?</button></div></header>';
+    return '<header class="topbar' + (compact ? ' is-compact' : '') + '"><button class="brand" data-action="home" aria-label="На главную"><span class="brand-mark">ЕГЭ</span><span class="brand-copy"><strong>ДОПУСК К GTA VI</strong></span></button><div class="top-actions">' + A.buttonHTML() + (hasVersion('8.0') ? '<button class="fullscreen-button" data-action="fullscreen" aria-label="На весь экран" ' + (tg.isFullscreen ? 'hidden' : '') + '>↗</button>' : '') + '<button class="icon-button" data-action="rules" aria-label="Правила экзамена">?</button></div></header>';
   }
   function footer() {
     return screen === 'home' ? '<footer class="footer"><span>Фанатский экзамен · © Rockstar Games</span><button class="ghost" data-action="about">О проекте</button></footer>' : '';
@@ -297,7 +317,9 @@
     nativeAdvance?.sync();
     syncPreload();
   }
+  let examMicroCleanup;
   function page(html, extra) {
+    examMicroCleanup?.(); examMicroCleanup = undefined;
     clearTimeout(imageLoadTimer); imageLoadTimer = null; imageLoadRun++;
     window.GTAExamCinema?.cancel();
     nativeAdvance?.cancel();
@@ -323,6 +345,8 @@
     ['variant', 'edition', 'tgWebAppStartParam'].forEach(key => url.searchParams.delete(key));
     history.replaceState({}, '', url); ignoreLaunchVariant = true;
   }
+  function ticketCode() { return attempt.variant.slice(0, 6).toUpperCase(); }
+  function storyExam() { return attempt.mode === 'exam' && attemptEdition() >= 16; }
   function questionCount() { return attempt?.questionIds?.length || COUNT; }
   function sectionInfo(key) {
     // This is presentation only. Accepted ticket data and section maxima stay
@@ -349,10 +373,10 @@
     const launch = launchReference();
     const challenge = launch?.error ? '<div class="daily-banner launch-error" role="alert"><span>' + launchError(launch) + '</span><button class="secondary" data-action="new-current-ticket">Новый вариант</button></div>' : '';
     page(`<main class="home-page home-clean final-home">${resume}${challenge}<div class="home-grid">
-      <figure class="final-cover" aria-labelledby="exam-brand-title"><h1 id="exam-brand-title" class="visually-hidden">Единый гангстерский экзамен — История GTA</h1><img class="final-cover-image" src="assets/brand-cover-rc45.png" width="1086" height="1448" fetchpriority="high" decoding="async" alt="Обложка ЕГЭ по истории GTA: пальмы внутри букв, подготовка к GTA VI и Сиджей с учебником. 12 заданий, 100 баллов."></figure>
-      <aside class="exam-pass final-pass" aria-label="Бланк регистрации участника"><div class="form-heading"><span class="form-title-line">Экзаменационный билет · 2026</span>${barcode()}</div><h2 class="pass-title">Бланк участника</h2>
+      <figure class="final-cover" aria-labelledby="exam-brand-title"><h1 id="exam-brand-title" class="visually-hidden">Единый гангстерский экзамен — допуск к GTA VI</h1><img class="final-cover-image" src="assets/brand-cover-rc45.png?release=ege-054" width="1086" height="1448" fetchpriority="high" decoding="async" alt="Обложка ЕГЭ по истории GTA: пальмы внутри букв, подготовка к GTA VI и Сиджей с учебником. 12 заданий, 100 баллов."></figure>
+      <aside class="exam-pass final-pass" aria-label="Бланк регистрации участника"><div class="form-heading"><span class="form-title-line">Допуск к GTA VI · экзамен 2026</span>${barcode()}</div><h2 class="pass-title">Кандидат на допуск</h2>
         ${telegramUser.name ? '<div class="candidate-card">' + avatarHTML(telegramUser.name) + '<strong class="candidate-name">' + escape(telegramUser.name) + '</strong></div>' : '<label class="field-label" for="nickname">Имя для результата</label><input class="text-input" id="nickname" maxlength="28" autocomplete="nickname" placeholder="Имя или ник" value="' + escape(profile.nickname || '') + '">'}
-        <button class="primary" data-action="start">${homeMode === 'exam' ? 'Начать экзамен' : 'Начать тренировку'}<span aria-hidden="true">→</span></button><p class="home-duration">6–8 минут <span aria-hidden="true">·</span> Зачёт от ${PASS}</p>
+        <button class="primary" data-action="start">${homeMode === 'exam' ? 'Сдать на допуск' : 'Начать тренировку'}<span aria-hidden="true">→</span></button><p class="home-duration">6–8 минут <span aria-hidden="true">·</span> Допуск от ${PASS} баллов</p>
         <div class="final-home-links"><a class="ghost practice-entry-link" href="rpg/">Практика C отдельно</a><details class="home-options"><summary>${homeMode === 'exam' ? 'Режим: экзамен' : 'Режим: тренировка'}</summary><div class="mode-tabs" role="group" aria-label="Режим прохождения"><button data-action="mode" data-mode="exam" class="${homeMode === 'exam' ? 'active' : ''}" aria-pressed="${homeMode === 'exam'}">Экзамен</button><button data-action="mode" data-mode="practice" class="${homeMode === 'practice' ? 'active' : ''}" aria-pressed="${homeMode === 'practice'}">Тренировка</button></div></details></div>
       </aside></div></main>`, 'clean-shell final-home-shell');
     window.scrollTo({ top: 0 });
@@ -390,7 +414,7 @@
     screen = 'intro'; readyQuestionId = null; lastTick = performance.now();
     attempt.phase = 'intro'; attempt.introFilmPlayed = true; save();
     const owner = attempt;
-    page(window.GTAExamCinema.markup(), 'exam-cinema-shell');
+    page(window.GTAExamCinema.markup(storyExam() ? ticketCode() : ''), 'exam-cinema-shell');
     if (!window.GTAExamCinema.mount(root, () => { if (attempt === owner) finishOpeningCinema(); })) return renderStageIntro();
     window.scrollTo({ top: 0 });
   }
@@ -405,14 +429,21 @@
       }
       return renderPracticeOpening();
     }
-    page(`<main class="stage-intro stage-clean"><section class="stage-intro-card"><div class="stage-kicker">Часть ${part.letter} · ${tasksLabel(part.count)}</div><div class="stage-letter" aria-hidden="true">${part.letter}</div><h1 class="stage-title">${part.title}</h1><p class="stage-desc">${key === 'theory' ? 'Вспомни знакомые города. Начнём с героев и мест.' : key === 'field' ? 'Радио, голоса и те самые коды. Подними записи из памяти.' : part.description}</p><p class="stage-disclosure">${disclosureText(key)}</p><button class="primary stage-cta" data-action="stage-enter">${key === 'theory' ? 'Приступить к части A' : key === 'field' ? 'Приступить к части B' : 'Начать'}<span aria-hidden="true">→</span></button></section></main>`, 'clean-shell');
+    page(`<main class="stage-intro stage-clean"><section class="stage-intro-card"><div class="stage-kicker">Часть ${part.letter} · ${tasksLabel(part.count)}</div><div class="stage-letter" aria-hidden="true">${part.letter}</div><h1 class="stage-title">${part.title}</h1><p class="stage-desc">${key === 'theory' ? 'Первый допуск: вспомни героев, места и события GTA.' : key === 'field' ? 'Комиссия открыла архив: радио, история, релизы и коды.' : part.description}</p><p class="stage-disclosure">${disclosureText(key)}</p><button class="primary stage-cta" data-action="stage-enter">${key === 'theory' ? 'Приступить к части A' : key === 'field' ? 'Приступить к части B' : 'Начать'}<span aria-hidden="true">→</span></button></section></main>`, 'clean-shell');
     window.scrollTo({ top: 0 });
   }
   function sourcesHTML(q) { return '<div class="source-links">' + (q.sources || []).filter(source => /^https:\/\//.test(source.url)).map(source => '<a href="' + escape(source.url) + '" target="_blank" rel="noopener noreferrer">' + escape(source.title) + ' →</a>').join('') + '</div>'; }
+  function isGameFrameEvidence(q) {
+    return q.id === 'v14-a-demolition' && attemptEdition() === 16;
+  }
   function mediaHTML(q) {
     if (!q.image) return '';
     const kind = q.mediaKind === 'archive' ? ' is-archive' : q.mediaKind === 'art' || q.mediaKind === 'artwork' ? ' is-art' : '';
-    return '<div class="question-media"><div class="screenshot-wrap' + kind + '"><img id="exam-image" src="' + escape(q.image) + '" alt="' + escape(q.alt || 'Изображение к заданию') + '" decoding="async"><button class="image-zoom" data-action="zoom" aria-label="Увеличить изображение">↗</button></div><p class="image-load-state" hidden></p>' + (q.imageCaption ? '<p class="image-caption">' + escape(q.imageCaption) + '</p>' : '') + '</div>';
+    const gameFrame = isGameFrameEvidence(q);
+    const patrol = q.id === 'v14-b-tommy-voice' && attemptEdition() === 16 && window.GTAExamPatrol;
+    const overlay = patrol ? '<div class="exam-patrol" data-exam-patrol aria-label="Учебная запись патруля"><div data-patrol-radar><canvas aria-hidden="true"></canvas></div><div data-patrol-stars data-level="0" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><button type="button">▶ Патруль на радаре</button><span class="visually-hidden" data-patrol-status role="status"></span></div>' : '';
+    if (gameFrame) return '<figure class="question-media game-frame-evidence"><div class="screenshot-wrap"><img id="exam-image" src="' + escape(q.image) + '" alt="' + escape(q.alt) + '" width="640" height="458" decoding="async"></div><p class="image-load-state" hidden></p><figcaption><span>Приложение к билету · Vice City</span><button type="button" data-action="zoom">Рассмотреть кадр <span aria-hidden="true">↗</span></button></figcaption></figure>';
+    return '<div class="question-media' + (patrol ? ' has-patrol' : '') + '"><div class="screenshot-wrap' + kind + '"><img id="exam-image" src="' + escape(q.image) + '" alt="' + escape(q.alt || 'Изображение к заданию') + '" decoding="async"><button class="image-zoom" data-action="zoom" aria-label="Увеличить изображение">↗</button>' + overlay + '</div><p class="image-load-state" hidden></p>' + (q.imageCaption ? '<p class="image-caption">' + escape(q.imageCaption) + '</p>' : '') + '</div>';
   }
   function disclosureText() {
     return 'Все ответы и оценки — после финала.';
@@ -503,6 +534,8 @@
     if (q.type === 'rpg') return renderRpgQuestion(q, answer);
     if (q.type === 'vice') return renderNativeQuestion(q, answer);
     const number = String(attempt.index + 1).padStart(2, '0');
+    const ticketCover = storyExam() && attempt.index === 0
+      ? '<p class="eyebrow">Билет № ' + escape(ticketCode()) + '</p>' : '';
     // Shorten presentation only; historical ticket data and grading stay intact.
     const heading = q.id === 'v15-b-release-order' ? 'Расставь эти GTA по порядку выхода.' : q.type === 'case' ? q.title : q.prompt;
     const content = q.type === 'mcq' || q.type === 'image' || q.type === 'audio' ? optionsHTML(q, !!answer, reveal) : q.type === 'order' ? orderHTML(q, !!answer) : q.type === 'match' ? matchHTML(q, !!answer) : q.type === 'classify' ? classifyHTML(q, !!answer) : caseHTML(q, !!answer, reveal);
@@ -517,8 +550,15 @@
       <section class="question-main"><div class="exam-meta"><span class="pill">Часть ${part.letter} · ${part.title}</span><span class="question-count">${number} <span class="muted">/ ${questionCount()}</span></span></div><div class="progress-track" role="progressbar" aria-label="Принято ответов" aria-valuemin="0" aria-valuemax="${questionCount()}" aria-valuenow="${progress()}"><div class="progress-fill" style="width:${progress() / questionCount() * 100}%"></div></div>
       ${q.section === 'field' ? '<div class="time-strip"><span class="timer-value" data-question-timer aria-label="Время ответа">' + formatTime(answer ? answer.seconds : attempt.questionTimes[q.id]) + '</span><span>' + 'На баллы не влияет' + '</span></div>' : ''}
       ${q.section === 'final' ? '<div class="challenge-level"><span>' + escape(q.stageTitle) + '</span></div>' : ''}
-      <article class="question-card"><h1 class="question-title" tabindex="-1">${escape(heading)}</h1>${q.type === 'case' ? '<p class="question-hint">' + escape(q.prompt) + '</p>' : ''}
+      <article class="question-card">${ticketCover}<h1 class="question-title" tabindex="-1">${escape(heading)}</h1>${q.type === 'case' ? '<p class="question-hint">' + escape(q.prompt) + '</p>' : ''}
       ${q.type === 'audio' ? audioHTML(q, !!answer) : ''}${mediaHTML(q)}${questionHint(q) ? '<p class="question-hint">' + questionHint(q) + '</p>' : ''}${content}${feedback}<div class="question-actions">${action}</div></article></section></main>`, 'exam-shell');
+    const micro = root.querySelector('[data-exam-patrol]');
+    if (micro) {
+      try {
+        const cleanup = window.GTAExamPatrol.mount(micro);
+        if (typeof cleanup === 'function') examMicroCleanup = cleanup;
+      } catch (_) { /* The original question image and options always remain usable. */ }
+    }
     armQuestion(q); save();
     if (!keepScroll) { window.scrollTo({ top: 0 }); document.querySelector('.question-title').focus({ preventScroll: true }); }
   }
@@ -531,6 +571,8 @@
     const owner = attempt, id = q.id;
     const continuous = attemptEdition() >= 8 && !!P;
     const title = continuous && attemptEdition() === 8 && q.nativeScene === 2 ? 'Перекрытие' : q.title;
+    const practiceLabel = storyExam() ? 'Практика · Задание C' + q.nativeScene : 'Часть C · Сцена ' + q.nativeScene + ' из 3';
+    const practiceReceipt = storyExam() ? 'Протокол C' + q.nativeScene + ' приложен к билету.' : 'Этап C' + q.nativeScene + ' завершён. Оценка — после комиссии.';
     let transitionArmed = false, nativePlayed = false;
     const usedWarmRuntime = !!nativeScene?.isWarmup?.();
     if (nativeOwner && nativeOwner !== owner) releaseNative();
@@ -539,7 +581,7 @@
       if (nativeScene?.isWarmup?.()) positionNative();
       else nativeHost.hidden = true;
     }
-    page('<main class="rpg-exam-main"><div class="rpg-exam-strip"><div><span>Часть C · Сцена ' + q.nativeScene + ' из 3</span><h1 class="question-title" tabindex="-1">' + escape(title) + '</h1></div><strong>' + (attempt.index + 1) + ' / ' + questionCount() + '</strong></div><div class="native-route" aria-label="Сцены практики">' + (attemptEdition() >= 16 ? ['Встреча', 'Заезд', 'Последний залп'] : attemptEdition() >= 10 ? ['Взрыв', 'Погоня', 'Финал'] : attemptEdition() >= 9 ? ['Угон', 'Взрыв', 'РПГ'] : continuous ? ['Пристрелка', 'Перекрытие', 'Вертолёт'] : ['Пистолет', 'Uzi', 'РПГ']).map((label, i) => '<span class="' + (i + 1 < q.nativeScene ? 'done' : i + 1 === q.nativeScene ? 'current' : '') + '">C' + (i + 1) + ' · ' + label + '</span>').join('') + '</div><div id="native-exam-anchor" class="rpg-scene-host"></div><div class="rpg-exam-finish" id="native-exam-finish" hidden><p>Этап C' + q.nativeScene + ' завершён. Оценка — после комиссии.</p><p class="native-auto-note" id="native-auto-status" role="status"></p><button class="primary" data-action="native-finish">' + (q.nativeScene === 3 ? 'Передать работу комиссии' : 'Следующая сцена') + '<span aria-hidden="true">→</span></button></div><div class="rpg-exam-error" id="native-exam-error" hidden><p>Не удалось открыть практику. Ответы A и B сохранены.</p><button class="secondary" data-action="native-reload">Повторить запуск</button><button class="ghost" data-action="native-skip">Пропустить сцену</button></div></main>', 'rpg-exam-shell native-exam-shell' + (continuous ? ' native-continuous-shell' : ''));
+    page('<main class="rpg-exam-main"><div class="rpg-exam-strip"><div><span>' + practiceLabel + '</span><h1 class="question-title" tabindex="-1">' + escape(title) + '</h1></div><strong>' + (attempt.index + 1) + ' / ' + questionCount() + '</strong></div><div class="native-route" aria-label="Сцены практики">' + (attemptEdition() >= 16 ? ['Встреча', 'Заезд', 'Последний залп'] : attemptEdition() >= 10 ? ['Взрыв', 'Погоня', 'Финал'] : attemptEdition() >= 9 ? ['Угон', 'Взрыв', 'РПГ'] : continuous ? ['Пристрелка', 'Перекрытие', 'Вертолёт'] : ['Пистолет', 'Uzi', 'РПГ']).map((label, i) => '<span class="' + (i + 1 < q.nativeScene ? 'done' : i + 1 === q.nativeScene ? 'current' : '') + '">C' + (i + 1) + ' · ' + label + '</span>').join('') + '</div><div id="native-exam-anchor" class="rpg-scene-host"></div><div class="rpg-exam-finish" id="native-exam-finish" hidden><p>' + practiceReceipt + '</p><p class="native-auto-note" id="native-auto-status" role="status"></p><button class="primary" data-action="native-finish">' + (q.nativeScene === 3 ? 'Передать работу комиссии' : (storyExam() ? 'Следующее задание' : 'Следующая сцена')) + '<span aria-hidden="true">→</span></button></div><div class="rpg-exam-error" id="native-exam-error" hidden><p>Не удалось открыть практику. Ответы A и B сохранены.</p><button class="secondary" data-action="native-reload">Повторить запуск</button><button class="ghost" data-action="native-skip">Пропустить сцену</button></div></main>', 'rpg-exam-shell native-exam-shell' + (continuous ? ' native-continuous-shell' : ''));
     function current() { return attempt === owner && screen === 'question' && activeQuestion().id === id; }
     function completed(value) {
       if (!current() || !E.ready(q, value)) return;
@@ -560,7 +602,7 @@
           isActive: () => !document.hidden && !dialog.open && appActive && (!isTelegram() || tg.isActive !== false),
           onTick: status => {
             const label = document.getElementById('native-auto-status');
-            if (label) label.textContent = status.paused ? 'Переход приостановлен' : q.nativeScene === 3 ? 'Передаём работу комиссии…' : 'Следующая сцена через ' + status.seconds;
+            if (label) label.textContent = status.paused ? 'Переход приостановлен' : q.nativeScene === 3 ? (storyExam() ? 'Передаём билет комиссии…' : 'Оформляем протокол допуска…') : 'Следующая сцена через ' + status.seconds;
           },
           onComplete: () => { if (current() && owner.answers[id]) next(); }
         });
@@ -721,7 +763,7 @@
       const missing = attempt.questionIds.findIndex(id => !attempt.answers[id]);
       if (missing >= 0) { attempt.index = missing; draft = null; caseStep = 0; save(); return renderQuestion(); }
       tick(); attempt.finishedAt = new Date().toISOString(); attempt.phase = 'grading';
-      if (attempt.mode === 'exam') { profile.best = Math.max(profile.best || 0, totalScore()); profile.passes = (profile.passes || 0) + 1; write(PROFILE_KEY, profile); }
+      if (attempt.mode === 'exam') { profile.best = Math.max(profile.best || 0, totalScore()); if (totalScore() >= PASS) profile.passes = (profile.passes || 0) + 1; write(PROFILE_KEY, profile); }
       save(); return renderCommission();
     }
     const section = activeQuestion().section;
@@ -741,7 +783,13 @@
     if (missing >= 0) { attempt.index = missing; delete attempt.checkpointSection; draft = null; caseStep = 0; save(); return renderQuestion(); }
     screen = 'checkpoint'; readyQuestionId = null; attempt.phase = 'checkpoint'; save();
     const continuousPractice = key === 'field' && attempt.questionIds.some(id => byId[id].type === 'vice') && attemptEdition() >= 8;
-    page(`<main class="checkpoint-screen"><section class="checkpoint-card checkpoint-clean" aria-label="Часть ${part.letter} принята"><span class="checkpoint-receipt" aria-hidden="true">${part.letter}<img class="receipt-game-icon" src="assets/game-ui/${key === 'theory' ? 'radio' : 'phone'}.png" width="32" height="32" alt=""></span><h1>Часть ${part.letter} принята</h1><p class="checkpoint-next-copy">${key === 'theory' ? 'Лица и адреса — в бланке. Теперь вспомни радио и коды.' : 'Бланк заполнен. Осталась проверка на улицах.'}</p><div class="checkpoint-actions"><button class="primary" data-action="checkpoint-next">${continuousPractice ? 'Открыть часть C' : key === 'theory' ? 'К части B' : 'К части C'}<span aria-hidden="true">→</span></button></div></section></main>`, 'clean-shell');
+    const story = storyExam();
+    const receipt = story ? '<div class="eyebrow">Комиссия · билет № ' + escape(ticketCode()) + '</div>' : '';
+    const note = story
+      ? key === 'theory' ? 'Ответы в бланке. Комиссия открывает архив: радио, релизы и дела.' : 'Тот же билет, теперь на улицах Vice City. Экипажи комиссии уже на маршруте.'
+      : key === 'theory' ? 'Комиссия приняла теорию. Дальше — сложные архивные материалы и ситуационные задачи.' : 'Теоретическая часть завершена. Проследуйте на практику. За дверью уже слышна сирена.';
+    const continueLabel = story ? key === 'theory' ? 'Открыть архив' : 'Выехать на практику' : continuousPractice ? (attemptEdition() >= 16 ? 'Проследовать на практику' : 'Открыть часть C') : key === 'theory' ? 'Открыть часть B' : 'К практическому экзамену';
+    page(`<main class="checkpoint-screen"><section class="checkpoint-card checkpoint-clean" aria-label="Часть ${part.letter} принята"><span class="checkpoint-receipt" aria-hidden="true">${part.letter}<img class="receipt-game-icon" src="assets/game-ui/${key === 'theory' ? 'radio' : 'phone'}.png" width="32" height="32" alt=""></span>${receipt}<h1>Часть ${part.letter} принята</h1><p class="checkpoint-next-copy">${note}</p><div class="checkpoint-actions"><button class="primary" data-action="checkpoint-next">${continueLabel}<span aria-hidden="true">→</span></button></div></section></main>`, 'clean-shell');
     window.scrollTo({ top: 0 });
   }
   function continueCheckpoint() {
@@ -761,7 +809,7 @@
   function fieldSeconds() { return attempt.questionIds.filter(id => byId[id].section === 'field').reduce((sum, id) => sum + (attempt.answers[id] ? attempt.answers[id].seconds || 0 : 0), 0); }
   function renderCommission() {
     screen = 'grading'; readyQuestionId = null; const run = ++commissionRun;
-    page(`<main class="commission-screen"><section class="commission-card"><div class="commission-mark">ЭКЗАМЕНАЦИОННАЯ КОМИССИЯ</div><h1>Комиссия проверяет</h1><div class="commission-sheet" aria-hidden="true"><span class="commission-code"></span><span class="commission-sheet-label">Бланк ${escape(attempt.variant.slice(0, 6).toUpperCase())}</span><div class="scan-line"></div></div><div class="commission-status" role="status">Проверяем часть A…</div><div class="commission-progress" role="progressbar" aria-label="Проверка комиссией" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i style="width:0%"></i></div></section></main>`);
+    page(`<main class="commission-screen"><section class="commission-card"><div class="commission-mark">ИТОГОВОЕ ЗАСЕДАНИЕ КОМИССИИ</div><h1>Решение о допуске</h1><div class="commission-sheet" aria-hidden="true"><span class="commission-code"></span><span class="commission-sheet-label">${storyExam() ? 'Билет № ' : 'Бланк '}${escape(ticketCode())}</span><div class="scan-line"></div></div><div class="commission-status" role="status">${storyExam() ? 'Сканируем билет…' : 'Проверяем часть A…'}</div><div class="commission-progress" role="progressbar" aria-label="Проверка комиссией" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i style="width:0%"></i></div></section></main>`);
     window.scrollTo({ top: 0 });
     prepareStory().catch(() => {});
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -771,11 +819,11 @@
       if (index === 2) { haptic('medium'); return renderResult(true); }
       const fill = root.querySelector('.commission-progress > i'); if (fill) fill.style.width = (index === 0 ? 42 : 86) + '%';
       root.querySelector('.commission-progress').setAttribute('aria-valuenow', index === 0 ? '42' : '86');
-      root.querySelector('.commission-status').textContent = index === 0 ? 'Проверяем часть B…' : 'Проверяем часть C…';
+      root.querySelector('.commission-status').textContent = storyExam() ? index === 0 ? 'Сверяем ответы A и B…' : 'Приобщаем протоколы C…' : index === 0 ? 'Проверяем часть B…' : 'Проверяем часть C…';
 
     }, delay));
   }
-  function verdict() { return attempt.mode === 'practice' ? { cls: 'training', title: 'Тренировка завершена', detail: 'Учебный результат. В основном экзамене проходной балл — ' + PASS + '.' } : totalScore() >= PASS ? { cls: 'pass', title: 'Экзамен сдан', detail: 'Проходной балл — ' + PASS + '. Комиссия выдаёт допуск.' } : { cls: 'retry', title: 'Нужна пересдача', detail: 'Проходной балл — ' + PASS + '. До порога: +' + (PASS - totalScore()) + '.' }; }
+  function verdict() { return attempt.mode === 'practice' ? { cls: 'training', title: 'Тренировка завершена', detail: 'Учебный результат. В основном экзамене проходной балл — ' + PASS + '.' } : totalScore() >= PASS ? { cls: 'pass', title: 'Допущен к GTA VI', detail: 'Комиссия утвердила допуск. Проходной балл — ' + PASS + '.' } : { cls: 'retry', title: 'Не допущен · пересдача', detail: 'Нужно ' + PASS + ' баллов. До допуска: +' + (PASS - totalScore()) + '.' }; }
 
   function renderResult(animate) {
     screen = 'result'; commissionRun++; attempt.phase = 'result'; save();
@@ -829,12 +877,12 @@
     });
   }
   function modal(html) { tick(); A.pauseClip(); if (rpgScene) rpgScene.setPaused(true); if (nativeScene) nativeScene.setPaused(true); dialog.innerHTML = '<div class="modal-content"><div class="modal-top"><span class="eyebrow">ЕГЭ / GTA</span><button class="icon-button" data-action="close-modal" aria-label="Закрыть окно">×</button></div>' + html + '</div>'; if (!dialog.open) dialog.showModal(); nativeAdvance?.sync(); syncPreload(); }
-  function rules() { modal('<h2>Порядок проведения</h2><p><strong>' + questionCount() + ' заданий. Максимум 100. Проходной балл — ' + PASS + '.</strong></p><div class="sections">' + Object.keys(sections).map(key => sectionInfo(key)).map(part => '<div class="section-row"><span class="section-letter">' + part.letter + '</span><span class="section-copy"><strong>' + part.title + '</strong><small>' + tasksLabel(part.count) + '</small></span><strong>' + part.max + '</strong></div>').join('') + '</div><p>A — знакомые города и герои. B — радио, голоса, коды и игры по порядку. C откроется после теста.</p><p>Ответы принимаются по ходу экзамена. Правильность, баллы и звёзды за все части откроются после финала.</p><p>В интерактивных заданиях возможны частичные баллы. Записанный ответ изменить нельзя.</p><p>Время ответа в B не влияет на баллы. Ответы сохраняются. Музыку можно выключить кнопкой вверху. Правила части C откроются перед её началом.</p><p class="muted">Вопросы затрагивают сюжеты выпущенных игр. В заданиях на порядок указано, сравниваем события или выход игр.</p><button class="primary" data-action="close-modal">Порядок понятен →</button>'); }
+  function rules() { modal('<h2>Правила допуска в GTA VI</h2><p><strong>' + questionCount() + ' заданий. Максимум 100. Проходной балл — ' + PASS + '.</strong></p><div class="sections">' + Object.keys(sections).map(key => sectionInfo(key)).map(part => '<div class="section-row"><span class="section-letter">' + part.letter + '</span><span class="section-copy"><strong>' + part.title + '</strong><small>' + tasksLabel(part.count) + '</small></span><strong>' + part.max + '</strong></div>').join('') + '</div><p>Комиссия оценивает три этапа: A — базовая гангстерская грамотность; B — архив и ситуационные задачи; C — выездная практическая аттестация.</p><p>Ответы принимаются по ходу экзамена. Правильность, баллы и звёзды за все части откроются после финала.</p><p>В интерактивных заданиях возможны частичные баллы. Записанный ответ изменить нельзя.</p><p>Время ответа в B не влияет на баллы. Ответы сохраняются. Музыку можно выключить кнопкой вверху. Правила части C откроются перед её началом.</p><p class="muted">Вопросы затрагивают сюжеты выпущенных игр. В заданиях на порядок указано, сравниваем события или выход игр.</p><button class="primary" data-action="close-modal">Порядок понятен →</button>'); }
   function about() { modal('<h2>ЕГЭ × GTA</h2><p>Фанатский экзамен о героях, местах и историях Grand Theft Auto. Вспоминаем любимые игры, знакомую музыку и истории создания серии.</p><p>Вопросы используют официальные материалы Rockstar и справочники серии. В разборе каждого задания есть источники. Источники кадров и фотографий указаны в разборе.</p><p>Из Telegram для оформления берём только имя и доступное фото профиля. Если фото скрыто, показываем инициал. Баллы, имя и черновик сохраняются в этом браузере.</p><p>Карточка 9:16 подходит для сториз. Её публикацию вы выбираете сами. Общего рейтинга в этой версии нет.</p><p class="muted">Проект не связан с Rockstar Games или государственным экзаменом. Игровые изображения принадлежат правообладателям.</p>'); }
   async function copy(text, message) { try { await navigator.clipboard.writeText(text); toast(message || 'Скопировано'); } catch (_) { modal('<h2>Ваш результат</h2><textarea class="copy-fallback" readonly>' + escape(text) + '</textarea><p>Выделите и скопируйте текст.</p>'); } }
   function resultText() {
     const line = window.GTAStory.resultLine?.({ score: totalScore(), passScore: PASS, sections: breakdown(), mode: attempt.mode });
-    return attempt.nickname + ' — ' + totalScore() + '/100 на ЕГЭ по GTA. ' + (line || (attempt.mode === 'practice' ? 'Тренировка завершена.' : totalScore() >= PASS ? 'Экзамен сдан!' : 'Иду на пересдачу.')) + ' А ты сдашь лучше?';
+    return attempt.nickname + ' — ' + totalScore() + '/100 на ЕГЭ по GTA. ' + (line || (attempt.mode === 'practice' ? 'Тренировка завершена.' : totalScore() >= PASS ? 'Допущен к GTA VI!' : 'Допуск не получен. Иду на пересдачу.')) + ' А ты сдашь лучше?';
   }
   function challengeURL() {
     const edition = attemptEdition();
@@ -853,8 +901,8 @@
     if (storyCache) URL.revokeObjectURL(storyCache.url);
     storyCache = null; storyPromise = null; storyKey = ''; storyGeneration++; resultImageRequest++;
   }
-  function decodeHighlight(value) {
-    if (!validHighlight(value)) return Promise.resolve(null);
+  function loadStoryImage(src) {
+    if (!src) return Promise.resolve(null);
     return new Promise(resolve => {
       const image = new Image();
       let done = false;
@@ -862,8 +910,11 @@
       const timeout = setTimeout(() => finish(null), 1800);
       image.onload = () => finish(image.naturalWidth > 0 ? image : null);
       image.onerror = () => finish(null);
-      image.src = value.dataUrl;
+      try { image.src = src; } catch (_) { finish(null); }
     });
+  }
+  function decodeHighlight(value) {
+    return loadStoryImage(validHighlight(value) ? value.dataUrl : null);
   }
   function prepareStory() {
     if (!attempt || !attempt.finishedAt) return Promise.reject(new Error('No result'));
@@ -875,12 +926,14 @@
     storyKey = key;
     const generation = ++storyGeneration;
     const data = { name: owner.nickname, avatarImage: owner.nickname === telegramUser.name ? avatarImage : null, score: totalScore(), mode: owner.mode,
-      sections: parts, passScore: PASS, botUsername: CONFIG.botUsername || '', highlight: highlight };
+      sections: parts, passScore: PASS, botUsername: CONFIG.botUsername || '', highlight, ticketCode: storyExam() ? ticketCode() : '' };
     const brand = window.GTAFinalBrand?.load?.() || Promise.resolve(null);
-    const request = Promise.all([decodeHighlight(highlight), brand]).then(([highlightImage, brandImage]) => new Promise((resolve, reject) => {
+    const stamp = owner.mode === 'exam' && data.score >= PASS
+      ? loadStoryImage('assets/admission-stamp.jpg').catch(() => null) : Promise.resolve(null);
+    const request = Promise.all([decodeHighlight(highlight), brand, stamp]).then(([highlightImage, brandImage, stampImage]) => new Promise((resolve, reject) => {
       if (attempt !== owner || storyKey !== key || generation !== storyGeneration) return reject(new Error('Result changed'));
       try {
-        const canvas = window.GTAStory.draw({ ...data, highlightImage, brandImage });
+        const canvas = window.GTAStory.draw({ ...data, highlightImage, brandImage, stampImage });
         canvas.toBlob(blob => {
           if (!blob) return reject(new Error('No story image'));
           if (attempt !== owner || storyKey !== key || generation !== storyGeneration) return reject(new Error('Result changed'));
@@ -1044,9 +1097,11 @@
     else if (action === 'audio-memory') A.answerFromMemory();
     else if (action === 'rules') rules();
     else if (action === 'about') about();
-    else if (action === 'view-cover') modal('<h2>Единый гангстерский экзамен</h2><img class="brand-cover-full" src="assets/brand-cover-rc45.png" width="1086" height="1448" alt="ЕГЭ по истории GTA — Сиджей с учебником"><div class="brand-downloads"><a class="secondary" href="assets/brand-cover-rc45.png" download="gta-ege-cover-final.png">Скачать обложку PNG</a></div>');
+    else if (action === 'view-cover') modal('<h2>Единый гангстерский экзамен</h2><img class="brand-cover-full" src="assets/brand-cover-rc45.png?release=ege-054" width="1086" height="1448" alt="ЕГЭ по истории GTA — Сиджей с учебником"><div class="brand-downloads"><a class="secondary" href="assets/brand-cover-rc45.png?release=ege-054" download="gta-ege-cover-final.png">Скачать обложку PNG</a></div>');
     else if (action === 'close-modal') dialog.close();
-    else if (action === 'zoom') { const q = activeQuestion(); modal('<img class="image-full" src="' + escape(q.image) + '" alt="' + escape(q.alt) + '"><p class="fine-print">' + escape(q.imageCaption || 'Реальный игровой скриншот · © Rockstar Games') + '</p>'); }
+    else if (action === 'zoom') { const q = activeQuestion();
+      if (isGameFrameEvidence(q)) modal('<h2>Приложение к билету</h2><img class="image-full game-frame-full" src="' + escape(q.image) + '" alt="' + escape(q.alt) + '" width="640" height="458"><p class="fine-print">Игровой кадр · Vice City</p>');
+      else modal('<img class="image-full" src="' + escape(q.image) + '" alt="' + escape(q.alt) + '"><p class="fine-print">' + escape(q.imageCaption || 'Реальный игровой скриншот · © Rockstar Games') + '</p>'); }
     else if (action === 'retry-image') renderQuestion(true);
     else if (action === 'download') downloadStory();
     else if (action === 'share') share();

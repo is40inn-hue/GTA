@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="light">
     <meta name="description" content="Единый гангстерский экзамен по миру GTA. Вспомни любимые GTA, узнай музыку и получи свой аттестат. 12 заданий, 100 баллов. Проходной — 60.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/brand-cover-rc45.png">
+    <meta property="og:image" content="assets/brand-cover-rc45.png?release=ege-054">
     <meta property="og:image:width" content="1086">
     <meta property="og:image:height" content="1448">
     <meta property="og:title" content="ЕГЭ по GTA — Единый гангстерский экзамен">
@@ -30,7 +30,7 @@
   const doc = root.document;
   const START_TIMEOUT = 20000, QUESTIONS_TIMEOUT = 12000;
   let phase = 'loading', failure = null, retrying = false;
-  const fallback = '<main id="boot-panel" class="boot-panel" aria-live="polite" aria-busy="true"><p class="boot-kicker">ЕГЭ · ИСТОРИЯ GTA</p><h1 id="boot-title">Открываем экзамен</h1><p id="boot-message">Подготавливаем твой вариант.</p><p id="boot-detail" class="boot-detail" hidden></p><button id="boot-retry" class="boot-retry" type="button" onclick="window.GTAExamBoot ? window.GTAExamBoot.retry() : location.reload()">Повторить</button></main>';
+  const fallback = '<main id="boot-panel" class="boot-panel" aria-live="polite" aria-busy="true"><p class="boot-kicker">ЕГЭ · ДОПУСК К GTA VI</p><h1 id="boot-title">Открываем экзамен</h1><p id="boot-message">Подготавливаем твой вариант.</p><p id="boot-detail" class="boot-detail" hidden></p><button id="boot-retry" class="boot-retry" type="button" onclick="window.GTAExamBoot ? window.GTAExamBoot.retry() : location.reload()">Повторить</button></main>';
 
   function error(code, message, detail) {
     const value = new Error(message);
@@ -129,53 +129,56 @@
   return { requireModules, loadQuestions, fail, ready, retry, error, getState: () => ({ phase, failure, retrying }) };
 });
     </script>
-    <link rel="stylesheet" href="styles.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="v3.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="v4.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="brand-ui.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="evidence-scope.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="workbook-ui.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="rpg-scene.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="rpg-app.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="practice-ui.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="vice-accent.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="clean-ui.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="rc42-exam-style.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="rc43-classic.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="rc45-exam.css?release=rc4.9-20261118">
-    <link rel="stylesheet" href="rc45-cover.css?release=rc4.9-20261118">
+    <link rel="stylesheet" href="styles.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="v3.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="v4.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="brand-ui.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="evidence-scope.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="workbook-ui.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="rpg-scene.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="rpg-app.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="practice-ui.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="vice-accent.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="clean-ui.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="rc42-exam-style.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="rc43-classic.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="rc45-exam.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="rc45-cover.css?release=ege-052-20261119">
     <script async src="https://telegram.org/js/telegram-web-app.js?65"></script>
-    <script defer data-boot-required src="config.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="exam-content.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="v6-radio-content.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="v8-practice-content.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="rc2-content.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="rc3-content.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="exam-engine.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="netlify-legacy-content.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="classic-brand.js?release=rc4.9-20261118"></script>
-    <script defer src="final-brand.js?release=rc4.9-20261118"></script>
-    <script defer src="image-content-bounds.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="story-card.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="audio-controller.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="evidence-scope.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="rpg-scene.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="native-assets.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="native-preload.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="vice-port.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="practice-flow.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="native-warmup.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="game-gestures.js?release=rc4.9-20261118"></script>
-    <script defer data-boot-required src="telegram-layout.js?release=rc4.9-20261118"></script>
-    <link rel="stylesheet" href="exam-cinema.css?release=ege-051">
-    <script defer data-boot-required src="app.js?release=rc4.9-20261118"></script>
-  <link rel="stylesheet" href="rc47-polish.css?release=rc4.9-20261118">
-<link rel="stylesheet" href="rc48-unified.css?release=rc4.9-20261118">
-<link rel="stylesheet" href="rc49-unified.css?release=rc4.9-20261118">
+    <script defer data-boot-required src="config.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="exam-content.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="v6-radio-content.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="v8-practice-content.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="rc2-content.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="rc3-content.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="exam-engine.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="netlify-legacy-content.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="classic-brand.js?release=ege-052-20261119"></script>
+    <script defer src="final-brand.js?release=ege-054-20261119"></script>
+    <script defer src="image-content-bounds.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="story-card.js?release=ege-054-20261119"></script>
+    <script defer data-boot-required src="audio-controller.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="evidence-scope.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="rpg-scene.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="native-assets.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="native-preload.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="vice-port.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="practice-flow.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="native-warmup.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="game-gestures.js?release=ege-052-20261119"></script>
+    <script defer data-boot-required src="telegram-layout.js?release=ege-052-20261119"></script>
+    <link rel="stylesheet" href="exam-cinema.css?release=ege-052-20261119">
+    <link rel="stylesheet" href="exam-micro.css?release=ege-056">
+    <script defer src="native-vc/hud-radar.js?release=ege-055"></script>
+    <script defer src="exam-b-patrol.js?release=ege-055"></script>
+    <script defer data-boot-required src="app.js?release=ege-056-20261119"></script>
+  <link rel="stylesheet" href="rc47-polish.css?release=ege-052-20261119">
+<link rel="stylesheet" href="rc48-unified.css?release=ege-052-20261119">
+<link rel="stylesheet" href="rc49-unified.css?release=ege-sunset-20261119">
 </head>
   <body>
     <div id="app"><main id="boot-panel" class="boot-panel" aria-live="polite" aria-busy="true">
-      <p class="boot-kicker">ЕГЭ · ИСТОРИЯ GTA</p>
+      <p class="boot-kicker">ЕГЭ · ДОПУСК К GTA VI</p>
       <h1 id="boot-title">Открываем экзамен</h1>
       <p id="boot-message">Подготавливаем твой вариант.</p>
       <p id="boot-detail" class="boot-detail" hidden></p>
