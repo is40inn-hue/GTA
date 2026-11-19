@@ -1,0 +1,152 @@
+/* RC4.3 — an old GTA box inside the familiar Russian exam booklet.
+   Artwork remains the user's originals; CSS only frames the illustrations. */
+:root { --classic-ink: #252638; --classic-paper: #fffaf0; }
+
+.topbar .brand-mark {
+  color: var(--classic-paper);
+  background: var(--classic-ink);
+  border: 1px solid var(--classic-ink);
+  border-bottom: 3px solid var(--red);
+  text-shadow: 1px 1px 0 #11121b, -1px -1px 0 #11121b;
+  box-shadow: 2px 2px 0 #b52c5240;
+  letter-spacing: -.07em;
+}
+.topbar .brand-copy strong { letter-spacing: .015em; }
+.topbar .music-button[aria-pressed="true"] { box-shadow: inset 0 -3px #b52c52; }
+.shell:not(.rpg-exam-shell) > .topbar { border-top-color: var(--classic-ink); }
+
+.hero.textbook.classic-cover { border-color: var(--classic-ink); box-shadow: 5px 6px 0 var(--classic-ink); }
+.hero.textbook.classic-cover .textbook-paper { padding: 16px 20px 30px; }
+.classic-cover .textbook-series { font-size: 8px; letter-spacing: .035em; }
+.classic-cover .textbook-heading { margin-top: 10px; gap: 9px; }
+.classic-cover .textbook-year { color: var(--red); font-size: 25px; }
+.hero.textbook.classic-cover .textbook-heading h1 {
+  display: block;
+  flex: 1;
+  margin: 0;
+  line-height: 0;
+  font-size: 0;
+}
+.classic-wordmark { display: block; width: 100%; height: auto; max-height: 163px; object-fit: contain; }
+.hero.textbook.classic-cover .textbook-paper::after { bottom: 9px; height: 13px; }
+.hero.textbook.classic-cover .textbook-paper::before { bottom: 9px; height: 13px; }
+.classic-cover-art {
+  display: grid;
+  grid-template-columns: .96fr 1.04fr;
+  gap: 4px;
+  padding: 4px 0;
+  height: clamp(136px, 20vw, 194px);
+  background: var(--classic-ink);
+  border-block: 2px solid var(--classic-ink);
+  overflow: hidden;
+}
+.classic-panel { position: relative; overflow: hidden; min-width: 0; margin: 0; background: #344887; }
+.classic-panel img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.classic-panel-san img { object-position: 44% 48%; }
+.classic-panel-vice img { object-position: 73% 45%; }
+.classic-cover .textbook-band {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: var(--classic-ink);
+}
+.classic-cover .textbook-band::before { display: none; }
+.classic-cover .textbook-subject {
+  padding: 12px 14px 13px;
+  border: 0;
+  box-shadow: inset 0 3px 0 #f5efdf, inset 0 7px 0 #344887;
+  color: var(--classic-paper);
+  background: #b52c52;
+  font-family: Impact, "Arial Narrow", Arial, sans-serif;
+  font-size: clamp(25px, 3.2vw, 35px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+}
+.home-clean .classic-cover .textbook-bottom { padding: 15px 20px; }
+.classic-cover .textbook-facts { justify-content: center; gap: 22px; }
+.classic-cover .textbook-seal { width: 64px; height: 64px; border-width: 5px; box-shadow: 0 0 0 2px #d8b676; }
+.classic-cover .textbook-seal strong { font-size: 28px; }
+.classic-cover .textbook-seal span { font-size: 8px; }
+.classic-cover .textbook-facts p { gap: 4px; }
+.classic-cover .textbook-facts p strong { font-size: 16px; }
+.classic-cover .textbook-facts p span { font-size: 12px; }
+
+/* Small repeated print details, never a second decorative layer over answers. */
+.home-clean .exam-pass { border-top: 3px solid var(--classic-ink); box-shadow: 3px 4px 0 #cbb8b140; }
+.home-clean .primary,
+.exam-shell .question-actions > .primary,
+.checkpoint-actions .primary,
+.result-share-actions .primary { border-color: #252638; box-shadow: 2px 3px 0 #252638; }
+.home-clean .primary:active,
+.exam-shell .question-actions > .primary:active,
+.checkpoint-actions .primary:active,
+.result-share-actions .primary:active { box-shadow: 1px 1px 0 #252638; transform: translate(1px, 1px); }
+.question-card .sheet-heading { border-top: 2px solid var(--classic-ink); }
+.question-card .sheet-heading::after {
+  content: "";
+  flex: 0 0 19px;
+  width: 19px;
+  height: 23px;
+  background: url("assets/vice-palm.svg") center / contain no-repeat;
+  opacity: .6;
+}
+.exam-shell .question-media { border-color: var(--classic-ink); }
+.checkpoint-card.checkpoint-clean { border-top: 4px solid var(--classic-ink); }
+.checkpoint-receipt {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 70px;
+  margin: 0 auto 22px;
+  border: 2px solid var(--classic-ink);
+  background: #344887;
+  color: #fffaf0;
+  box-shadow: 3px 4px 0 #b52c52;
+  font: 900 45px/1 "Arial Black", Arial, sans-serif;
+}
+.checkpoint-next-copy { max-width: 29em; margin: 15px auto 24px; color: #6a5d56; text-align: center; font-size: 14px; line-height: 1.55; }
+.result-picture { border-color: var(--classic-ink); box-shadow: 4px 5px 0 var(--classic-ink); }
+.result-loading-seal { background: #f1d5cc; border-color: var(--classic-ink); color: var(--red); }
+
+@media (max-width: 760px) {
+  .home-clean .home-grid { gap: 16px; }
+  .hero.textbook.classic-cover .textbook-paper { padding: 10px 16px 25px; }
+  .home-clean .classic-cover .textbook-series { min-height: 16px; font-size: 6px; }
+  .classic-cover .textbook-heading { margin-top: 7px; gap: 6px; }
+  .classic-cover .textbook-year { font-size: 21px; }
+  .classic-wordmark { max-height: 102px; }
+  .classic-cover-art { height: clamp(106px, 28.5vw, 130px); gap: 3px; padding-block: 3px; }
+  .home-clean .classic-cover .textbook-band { padding: 0; }
+  .home-clean .classic-cover .textbook-subject { padding: 11px 8px 9px; font-size: clamp(23px, 6.6vw, 30px); }
+  .home-clean .classic-cover .textbook-bottom { padding: 10px 16px; }
+  .home-clean .classic-cover .textbook-seal { width: 46px; height: 46px; }
+  .classic-cover .textbook-seal strong { font-size: 22px; }
+  .classic-cover .textbook-seal span { margin-top: 3px; font-size: 7px; }
+  .classic-cover .textbook-facts { gap: 20px; }
+  .classic-cover .textbook-facts p strong { font-size: 14px; }
+  .classic-cover .textbook-facts p span { font-size: 11px; }
+  .home-clean .exam-pass { padding: 17px; }
+  .home-clean .pass-title { font-size: 24px; margin-bottom: 12px; }
+  .home-clean .home-parts { margin: 12px 0 10px; }
+  .home-clean .stage-cards > div { padding: 8px 7px; }
+  .home-clean .exam-pass .primary { margin-top: 8px; }
+  .checkpoint-receipt { width: 58px; height: 62px; margin-bottom: 19px; font-size: 39px; }
+  .checkpoint-next-copy { font-size: 13px; }
+  .question-card .sheet-heading::after { width: 15px; height: 18px; flex-basis: 15px; }
+}
+@media (max-width: 360px) {
+  .hero.textbook.classic-cover .textbook-paper { padding-inline: 12px; }
+  .classic-cover-art { height: 104px; }
+  .classic-cover .textbook-year { font-size: 18px; }
+  .classic-cover .textbook-facts p strong { font-size: 13px; }
+}
+@media print { .classic-cover-art { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+.exam-shell .image-zoom { font-size: 0; }
+.exam-shell .image-zoom::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23344985' stroke-width='2' stroke-linecap='square'%3E%3Cpath d='M14 3h7v7M21 3l-8 8M3 14v7h7M3 21l8-8'/%3E%3C/svg%3E");
+}

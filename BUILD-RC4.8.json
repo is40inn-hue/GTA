@@ -1,0 +1,520 @@
+{
+  "release": "gta-ege-rc4.8-20261118",
+  "date": "2026-11-18",
+  "timezone": "Asia/Bangkok",
+  "basedOn": "gta-ege-rc4.7-20261117-dist.zip",
+  "entrypoint": "index.html",
+  "contentEdition": 16,
+  "storageVersion": 4,
+  "questions": 12,
+  "maxScore": 100,
+  "passScore": 60,
+  "sectionScores": {
+    "A": 24,
+    "B": 40,
+    "C": 36
+  },
+  "results": {
+    "disclosure": "after final commission only",
+    "sameVisibleAndExportedPNG": true,
+    "size": [
+      1080,
+      1920
+    ],
+    "singleGameplayImage": true,
+    "conservativeBlackPaddingTrim": true,
+    "personalizedLine": true,
+    "nativeBrowserDownloadLink": true,
+    "directTelegramStoriesRequiresConfiguredHTTPSMediaEndpoint": true
+  },
+  "priorityS": {
+    "preloadStartsAfterCoverPaint": true,
+    "sameMutedRuntimeThroughABtoC": true,
+    "warmCityStartsNoGameTimer": true,
+    "artificialBriefingDelayMs": 0,
+    "resourceConstraintsRespected": true,
+    "universalZeroLatencyClaim": false,
+    "persistentCacheRequired": false,
+    "boundedSessionFallbackMiB": {
+      "normal": 80,
+      "knownLowMemory": 16
+    },
+    "ordinaryInputAbortsInflightChunk": false,
+    "preparedProgressSeed": true,
+    "releaseFallback": "first successful foreground briefing or playing frame",
+    "actualPackageColdProof": {
+      "scope": "Actual packaged manifest and bytes via local-file transport; scheduler delays compressed; no browser, real-network speed or GPU execution.",
+      "persistentStorage": "denied",
+      "preparedBytes": 69804226,
+      "totalBytes": 69804226,
+      "logicalResources": 355,
+      "requests": 466,
+      "duplicateRequests": 0,
+      "peakTransportRequests": 1,
+      "retainedSessionFiles": 464,
+      "retainedSessionBytes": 69804226,
+      "allLogicalResourcesAssembledAndSHAVerified": true,
+      "assembledBytes": 69804226,
+      "additionalRuntimeDownloadsAtHandoff": 0,
+      "sessionBytesAfterRelease": 0,
+      "progressMonotonic": true,
+      "nativeGPUExecuted": false
+    },
+    "coldProofInheritedFrom": "RC4.7; preload code and all runtime package files verified byte-identical"
+  },
+  "native": {
+    "engine": "vice-city-wasm",
+    "runtimeBinaryChanged": false,
+    "missionSize": 53205,
+    "missionSHA256": "fa84cbbc5a94d43f0a32c3e4dd02b349abecd5ee171721f157e95e95c68555ab",
+    "arrival": {
+      "scene": 1,
+      "model": 217,
+      "crewModels": [
+        108,
+        107,
+        8,
+        109
+      ],
+      "pudgeActor": 2,
+      "steveActor": 1,
+      "cjLikeActor": 0,
+      "dancerActor": 3,
+      "passengerSeats": [
+        0,
+        1,
+        2
+      ],
+      "airPosition": [
+        288.8,
+        -1088,
+        17.2
+      ],
+      "landingPosition": [
+        288.8,
+        -1083,
+        10.85
+      ],
+      "foreground": [
+        [
+          287.8,
+          -1075.5
+        ],
+        [
+          291.5,
+          -1076.0
+        ],
+        [
+          289.7,
+          -1074.5
+        ],
+        [
+          293.0,
+          -1075.0
+        ]
+      ],
+      "landingTimeoutMilliseconds": 8000,
+      "exitTimeoutMilliseconds": 6000,
+      "walkMilliseconds": 4800,
+      "runMilliseconds": 4800,
+      "runRefreshMilliseconds": 700,
+      "runTarget": "current-player-position",
+      "minimumRunMilliseconds": 1200,
+      "runNearRadiusMetres": 4,
+      "brawlMilliseconds": 3200,
+      "fleeMilliseconds": 4500,
+      "startTrigger": "native-start-command-only",
+      "nativeExitRequired": true,
+      "pickupRelease": "brawl-start-or-bounded-fallback",
+      "scored": false,
+      "observation": {
+        "actors": [
+          2,
+          1
+        ],
+        "models": [
+          8,
+          107
+        ],
+        "seenFields": [
+          "arrivalPudgeSeen",
+          "arrivalSteveSeen"
+        ],
+        "storedFields": [
+          "record1_arrivalPudgeSeen",
+          "record1_arrivalSteveSeen"
+        ],
+        "requiresBothSeen": true,
+        "exposureMilliseconds": 600,
+        "radiusMetres": 18,
+        "requiresExitedHelicopter": true,
+        "requiresNativeVisibility": true
+      },
+      "stages": [
+        "prepared",
+        "landing",
+        "exiting",
+        "foreground",
+        "brawl",
+        "flee",
+        "finished",
+        "fallback"
+      ]
+    },
+    "drive": {
+      "routeStages": [
+        "outbound",
+        "past-ramp",
+        "seafront",
+        "southern-bend",
+        "rpg"
+      ],
+      "passengerRequired": false,
+      "stopRequired": false,
+      "oneDirection": true,
+      "scoredSeparately": false
+    },
+    "street": {
+      "scene": 2,
+      "traffic": [
+        {
+          "model": 130,
+          "position": [
+            270,
+            -1160,
+            11.2
+          ],
+          "destination": [
+            290,
+            -1060,
+            11.2
+          ],
+          "speed": 6.5,
+          "colour": [
+            37,
+            37
+          ],
+          "routeStage": 0
+        },
+        {
+          "model": 150,
+          "position": [
+            256,
+            -1240,
+            11.2
+          ],
+          "destination": [
+            277,
+            -1130,
+            11.2
+          ],
+          "speed": 7.5,
+          "colour": [
+            6,
+            6
+          ],
+          "routeStage": 1
+        }
+      ],
+      "walkers": [
+        {
+          "model": 7,
+          "position": [
+            294,
+            -1125,
+            11.2
+          ],
+          "destination": [
+            290,
+            -1140
+          ]
+        },
+        {
+          "model": 7,
+          "position": [
+            290,
+            -1136,
+            11.2
+          ],
+          "destination": [
+            295,
+            -1119
+          ]
+        },
+        {
+          "model": 1,
+          "position": [
+            282,
+            -1190,
+            11.2
+          ],
+          "destination": [
+            279,
+            -1207
+          ]
+        }
+      ],
+      "trafficRelease": "native-driver-confirmed-and-route-stage",
+      "trafficMaxCount": 2,
+      "trafficDrivingStyle": 0,
+      "trafficRetireAfterMilliseconds": 45000,
+      "trafficRetireOnlyOffScreen": true,
+      "cameoQuestion": false,
+      "allAmbientScored": false,
+      "allSceneActorsCleanedOnFinish": true
+    },
+    "C2TimeLimitSeconds": 150,
+    "C2Route": [
+      [
+        272,
+        -1190,
+        11.5
+      ],
+      [
+        263,
+        -1285,
+        11.5
+      ],
+      [
+        244,
+        -1340,
+        11.5
+      ],
+      [
+        218,
+        -1430,
+        11.5
+      ],
+      [
+        193,
+        -1500,
+        11.5
+      ]
+    ],
+    "C3Spawn": [
+      193,
+      -1500,
+      11.5
+    ],
+    "scoreRecordABIChanged": false,
+    "originalSlotsPreserved": [
+      0,
+      192
+    ],
+    "appendedCameoSlots": {
+      "cameoSeen": 190,
+      "cameoVisibleSince": 191,
+      "record2_cameoSeen": 192
+    },
+    "arrivalExposureSlots": {
+      "pudgeSeen": 197,
+      "steveSeen": 199,
+      "record1PudgeSeen": 202,
+      "record1SteveSeen": 203
+    },
+    "pudgeModelId": 8,
+    "blockPedModelId": 107,
+    "whiteTopExtraModelId": 108,
+    "dancerModelId": 109,
+    "arrivalAddedDownloadBytes": 92160,
+    "originalCJModel": false,
+    "dancerOriginalBundledModel": true,
+    "pickupPlacement": "3m current-player-forward at mission release",
+    "drivingInput": "separate steering/gas/ordinary brake; bounded keyboard pulses; hold-to-exit",
+    "blockPedAdditionalBytes": 32768,
+    "pudgeShoulderFit": {
+      "outsetPerSide": 0.125,
+      "drop": 0.06,
+      "nativeFramesAndInverseBindsUpdatedTogether": true
+    },
+    "pudgeCPUPoseCount": 20,
+    "modelProvenance": [
+      "native-vc/runtime/pudge-model-provenance.json",
+      "native-vc/runtime/block-ped-provenance.json",
+      "native-vc/runtime/arrival-cast-provenance.json"
+    ]
+  },
+  "observation": {
+    "id": "arrival-guests-v2",
+    "afterScene": 1,
+    "unscored": true,
+    "legacyObservationPreserved": true,
+    "requiresBothArrivalGuestsSeen": true,
+    "nativeGamePaused": true,
+    "selectTwoAndConfirmOrSkip": true,
+    "disclosure": "final exam review or standalone C3 completion"
+  },
+  "visual": {
+    "cover": "assets/brand-cover-rc45.png",
+    "coverSHA256": "d8d7f1c240b3c9e3cdaa2735d99a164ff4dde5e10cab62d9978d3556e4209b0f",
+    "originalCoverPreserved": true,
+    "sameLogoInResult": true,
+    "newStyleSheets": [
+      "rc48-unified.css",
+      "native-vc/rc48-native.css"
+    ],
+    "touchPrimaryPx": 56,
+    "touchAnswerPx": [
+      58,
+      60
+    ],
+    "touchSecondaryPx": 50,
+    "notifications": "6px below mission plaque, one notice at a time",
+    "checkedPhoneWidths": [
+      320,
+      390,
+      430
+    ],
+    "nativeLayoutMockOnly": true
+  },
+  "standaloneRoute": "rpg/",
+  "validation": {
+    "automatedTestsPassed": 376,
+    "automatedTestsFailed": 0,
+    "baseline": {
+      "baseline": "gta-ege-rc4.7-20261117-dist.zip",
+      "unchanged": {
+        "native-assets.js": "705e570734b85dec0ec01c951fc83cc128e61acd7dd825ac76d124daf0691cc0",
+        "native-preload.js": "d7179269d4fa59257a37f0a1015e3ca359fd18e30ce74748b2a8b792bafe5e87",
+        "native-warmup.js": "8ab0fcede7ea1d4fa5b2a199ad205d0958e858ecaec193a49f094e2ea4914965",
+        "practice-flow.js": "a8e0741b018c2548a3288690c4174d851dd29b5729d7c7d6028dc80cdb717f57",
+        "vice-port.js": "b6525e084f14549c5e357c1eba7bb0df89b89f2d548a3377d5686b8a0c151d34",
+        "native-vc/native.js": "b43fcb3c27ba126cd9f8dc12cc5085b34aedf178a3e2c2e4c5defc0669d82ca3",
+        "native-vc/drive-input.js": "c0650712547412357d5c83ad08665887509ff3b4b7a33a201358f63693b76413",
+        "native-vc/range.scm": "fa84cbbc5a94d43f0a32c3e4dd02b349abecd5ee171721f157e95e95c68555ab",
+        "native-vc/range-config.json": "9ab14ab9b6cbed1ede0661dbe8fd0d303f12248a3adfc1d98ae1b5050eb86b5b",
+        "exam-engine.js": "402578b0ee5a5af06f40e99c8051607030556ebb2abb2d1426731496376c19a2",
+        "assets/brand-cover-rc45.png": "d8d7f1c240b3c9e3cdaa2735d99a164ff4dde5e10cab62d9978d3556e4209b0f"
+      },
+      "nativeRuntimeFilesUnchanged": 1062
+    },
+    "browser": {
+      "scope": "Cloud Chrome, actual application in a same-origin CSS-width fixture and then its normal top-level page. Not a phone or Telegram emulator.",
+      "edition": 16,
+      "flow": "A4 and B5 completed, including both audio pages, HESOYAM, five-game tap chronology and resume after reload.",
+      "phoneWidths": [
+        320,
+        390,
+        430
+      ],
+      "horizontalOverflowObserved": false,
+      "touchDimensionsPx": {
+        "answer": [
+          58,
+          60
+        ],
+        "primary": 56,
+        "nativeExit": 48,
+        "nativePause": 48,
+        "nativeGasAt390": 68,
+        "nativeBrakeAt390": 60
+      },
+      "disclosure": "No answer correctness, scores or stars at A/B transitions. Final commission and review only.",
+      "nativeLaunch": {
+        "attempted": true,
+        "code": "C-GPU",
+        "reason": "WebGL 2 unavailable; GL_VENDOR Disabled; GL_RENDERER Disabled",
+        "nativeGPUExecuted": false
+      },
+      "technicalSkip": {
+        "scenes": 3,
+        "finalScore": 64,
+        "sectionPoints": [
+          24,
+          40,
+          0
+        ],
+        "sectionStars": [
+          5,
+          5,
+          1
+        ]
+      },
+      "finalPNG": {
+        "visible": true,
+        "dimensions": [
+          1080,
+          1920
+        ],
+        "topLevelDownloadEventConfirmed": true,
+        "outerIframeDownloadEventConfirmed": false,
+        "fileVerified": true,
+        "fileBytes": 1635252
+      },
+      "nativeLayoutFixture": {
+        "label": "Макет интерфейса · движок не запущен",
+        "screens": [
+          "arrival",
+          "driving",
+          "loading"
+        ],
+        "sizes": [
+          [
+            320,
+            600
+          ],
+          [
+            390,
+            780
+          ]
+        ],
+        "scriptsOmitted": true
+      },
+      "nativeGPUExecuted": false,
+      "nativeMobileTelegramVerified": false,
+      "publicDeploymentChanged": false,
+      "previewStopped": true,
+      "screenshotsExcludedFromPackage": true
+    },
+    "download": {
+      "format": "PNG",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "bytes": 1635252,
+      "sha256": "04bcc46897829b6c29f6636763e5a964339638b232e4f8cad316c6c39395802e",
+      "downloadEventConfirmed": true,
+      "scope": "Cloud Chrome main application page; native browser download link clicked. Not an iPhone Telegram verification."
+    },
+    "nativeGPUVerified": false,
+    "nativeMobileTelegramVerified": false,
+    "macFinderTested": false,
+    "windowsLauncherTested": false,
+    "liveDeploymentUpdated": false
+  },
+  "changedFiles": [
+    "START-HERE.txt",
+    "app.js",
+    "index.html",
+    "native-vc/highlight-capture.js",
+    "native-vc/index.html",
+    "rpg/index.html",
+    "rpg.html",
+    "server.cjs",
+    "server.py",
+    "story-card.js"
+  ],
+  "newFiles": [
+    "README-RC4.8.md",
+    "image-content-bounds.js",
+    "native-vc/rc48-native.css",
+    "rc48-unified.css"
+  ],
+  "fileSHA256": {
+    "START-HERE.txt": "0a164f2fde3042fb07239a5b096eb00c87e8ae9d6a59121737df2d082713d71a",
+    "app.js": "4ac381ddf51b17863ab3fb414ecfc6c0791ce3782d979d9cb8747fbd39864c4a",
+    "index.html": "4c68ca8f50a10377e756afc359e157dc00e276c6483677b2d5aca5e8bf5f7ee2",
+    "native-vc/highlight-capture.js": "5ba32c319f44db19ac811112d4d2035f2dc690ee577c2e08637e29f1f7be50d1",
+    "native-vc/index.html": "0ae5d989ef52d6592bb893b0310b0e7a79b22f6543af1d6a9c0d5da8f8e858b4",
+    "rpg/index.html": "1c10ebb85104752bd0f6dc5a4d3bbf122207a233f6c18dc3529f49a72958afb9",
+    "rpg.html": "df158edd4a418ddb4bebf1e5f22e186b583bc06de7aeae3dd6a49ae89be7fbc3",
+    "server.cjs": "071df65e786dd64b98d9bc28304939eeac204a45cd21fa04b530e070f766a332",
+    "server.py": "a896de5b4dbff2a8c8aeb5228a97bf59b485d8f335581728b8b7dcb6cfd19fb8",
+    "story-card.js": "7e0897d15cf2c1387f4b5e9d92e12c3bd19537bd5bdc0848505d7b6908ca9de9",
+    "README-RC4.8.md": "c5142b680557bfeae51578b49e2ceea0fa8ef69e4798843a5bb4d101b733307e",
+    "image-content-bounds.js": "7772f597c198a7d4d5d35c610e373f04adb7a6fe78d0004de7390f06be1dfd65",
+    "native-vc/rc48-native.css": "2ee8845dccad6e32c90f98121020d1796ca29316668f108dd26b52b7ad8ad50d",
+    "rc48-unified.css": "d0ba5ca410ff65d8836f436f790b5142c06f92da072ba80ab4306ee34d3362b2"
+  }
+}

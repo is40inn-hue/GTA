@@ -1,0 +1,365 @@
+{
+  "source": "Already supplied project runtime; no asset downloads",
+  "dataSHA256": "5e029ee66b82d9113f47b87226e226985bf45b5b0e0f88fa74d6d10df8728bb1",
+  "hudSHA256": "51a73732cb6e57ead9beceaaa39db06676c69394505d0aa7c00ade7a2910518d",
+  "tiles": [
+    {
+      "name": "radar00.txd",
+      "sha256": "a845a8de34f1839d3140f063927ba526b3e43de657c17dc70daa1e15c9475aba"
+    },
+    {
+      "name": "radar01.txd",
+      "sha256": "328b375347d12bc40c87db34916f4e3bd779fc978d01993cafd305cc0431b794"
+    },
+    {
+      "name": "radar02.txd",
+      "sha256": "d29a5781883dcbc4fee0cfbcc6b1028e8e5b3d075b85bfe9b2aa43525d39542a"
+    },
+    {
+      "name": "radar03.txd",
+      "sha256": "e56297f3c9831fe65d66d560c2855a5794987a8c4027ded0adba5e537c881803"
+    },
+    {
+      "name": "radar04.txd",
+      "sha256": "4ccb1d801abc87d4a0ab04089f76fbd6837e21dbdfcc984ebb4ebddf4be4108f"
+    },
+    {
+      "name": "radar05.txd",
+      "sha256": "023e8224274aaccd8a41c483871af899f5e6722fe640155e5818b483e4c30e87"
+    },
+    {
+      "name": "radar06.txd",
+      "sha256": "049fd9de805bf7598a47170a2cacb65fce4bf99e79990ffcebf89daf438a6298"
+    },
+    {
+      "name": "radar07.txd",
+      "sha256": "97b02af90300f334789eef8289a6a634f99d2ac623189f2e09b5f12a167d62c0"
+    },
+    {
+      "name": "radar08.txd",
+      "sha256": "1e7a91f0a07588caa5bd3f131f0193d703b84ee5de605647723ae9b0ccdd38ae"
+    },
+    {
+      "name": "radar09.txd",
+      "sha256": "9fefcef77d88828b20ef14933a5fb7e9982cd3aa0f3d70845e941300eca8dbc1"
+    },
+    {
+      "name": "radar10.txd",
+      "sha256": "52aa63c394f884b9fd6c8b0a886c051fa716e2b0e9c89928bf53f0f22a535a16"
+    },
+    {
+      "name": "radar11.txd",
+      "sha256": "bad0e59282ea932c2d7c28e3ba9ad6dd4d3cb74a6b3b76db9f0ac7454a40226c"
+    },
+    {
+      "name": "radar12.txd",
+      "sha256": "1634b684c429104836d41a339a07fabdedcd9d2039da10642fe72b285694748d"
+    },
+    {
+      "name": "radar13.txd",
+      "sha256": "d35ab50c7bef7ae7a1568ea813cf6eff872ca288817ba277ddf2b18cb23bfc0e"
+    },
+    {
+      "name": "radar14.txd",
+      "sha256": "466d2a7c7069beb62fd615dc01c885350a91b412ffc3780a22f6f7c74caf26af"
+    },
+    {
+      "name": "radar15.txd",
+      "sha256": "86b3234597e39e5fefcda68afebc31f5e68c40fee61a92db6dee2834d8509acb"
+    },
+    {
+      "name": "radar16.txd",
+      "sha256": "cc5d5c37c5db142b42ecfb94581cafb8fc02be5a75366ea3a8991c12dc624b64"
+    },
+    {
+      "name": "radar17.txd",
+      "sha256": "1d4cf67333217001420b3a7a45655e336b33328127b30e7aebfe70fd57b897ba"
+    },
+    {
+      "name": "radar18.txd",
+      "sha256": "d2feb3c802f58d4cb83236f6eac18cbd7011fe7641b2aedd6edbb7d06be86a1f"
+    },
+    {
+      "name": "radar19.txd",
+      "sha256": "02aef8b2a72a39b68e6ecdbf474d53a9d6d2153ea882a6cf78974b363c0893ab"
+    },
+    {
+      "name": "radar20.txd",
+      "sha256": "b61259caccc9526c2f67a6b81d095e0d6c8f5da970f77c8cfb5745dd1ed971af"
+    },
+    {
+      "name": "radar21.txd",
+      "sha256": "83db0733b3f8cc880afdc5319c6658c92408e0f8efb3d306ad1588ad620a5180"
+    },
+    {
+      "name": "radar22.txd",
+      "sha256": "7f8ec85754b668a181d1ca5211b23979796798b8c5a25539b18f2087bf7631e1"
+    },
+    {
+      "name": "radar23.txd",
+      "sha256": "42a4b2fca8dbe31af837f42103a259bc1668f027dc46bb071080299a7d8425b4"
+    },
+    {
+      "name": "radar24.txd",
+      "sha256": "1be45c501ac3dea5b7e8d75ca43468aecf5a01399b99aff7ccb0c5a8474b992f"
+    },
+    {
+      "name": "radar25.txd",
+      "sha256": "804d0ce2d04b875461fa7c47eec7e0723a6599565361c9938860725b15ddf5f9"
+    },
+    {
+      "name": "radar26.txd",
+      "sha256": "e74d5fb781294cf8d3d54a918554eac18c5ea6e524340bfc52a714b7393bbbd9"
+    },
+    {
+      "name": "radar27.txd",
+      "sha256": "0fc44bd468e25ffe58b0b2409ee3d2e5fd9b7f3d3bdd1b9f1b601c5fc6658710"
+    },
+    {
+      "name": "radar28.txd",
+      "sha256": "7cb0c2ced905d5ec7c88eddaa7cb711335f5b1854497884a36fb8bd6c2e781ea"
+    },
+    {
+      "name": "radar29.txd",
+      "sha256": "e2884f33fd4b73cb1b2b47399f2ff8af709b56b599a60052a35f0baca6e95879"
+    },
+    {
+      "name": "radar30.txd",
+      "sha256": "fd7cc2c6d7b295ea7d4c446ec76b60d981758e6d5dee6f23cddaa380709c6100"
+    },
+    {
+      "name": "radar31.txd",
+      "sha256": "2dab8ebe7b5d96986539cf480af52a409c1917173c9205f2b2ca98ec020977d6"
+    },
+    {
+      "name": "radar32.txd",
+      "sha256": "9c157545209faef02924d331fe23b6c3f8f024c709bcbc079965f435c0c73ab4"
+    },
+    {
+      "name": "radar33.txd",
+      "sha256": "043a089b1697d0063e48724f4314523aae74b60a48be4f623efc5d9ecc44e537"
+    },
+    {
+      "name": "radar34.txd",
+      "sha256": "647200c63aa013439095c396942ad2c78977ad3cc0374cdd6a8aeadc135b08dd"
+    },
+    {
+      "name": "radar35.txd",
+      "sha256": "0e8721b52193298d8b10b9424daa3a359b7782772f570caff227ac032c3f8caf"
+    },
+    {
+      "name": "radar36.txd",
+      "sha256": "38a55361773d73f3c3e5dff677470d1ec5f62600d0ee99354dbbe84402b55a74"
+    },
+    {
+      "name": "radar37.txd",
+      "sha256": "e1cff7bc7339fe2233b9b84917181bedcfe331a078e0a47e64ca94d4a05a1240"
+    },
+    {
+      "name": "radar38.txd",
+      "sha256": "25ff36a3c00a8671c01ad5eb5f9ef78bdfbcf14d4a8212cf0c282cee28712581"
+    },
+    {
+      "name": "radar39.txd",
+      "sha256": "13198c74ed01e962072a8f80ed7987b0d36f579735395ea3f414835c32f2a5d8"
+    },
+    {
+      "name": "radar40.txd",
+      "sha256": "d115f1df3f449f2efb38e2d44290208c766cf3349baa4aa46aab7a1d295f0e4c"
+    },
+    {
+      "name": "radar41.txd",
+      "sha256": "d1e4eda0b26becbac65e9bd67014db3b81f52c6afd1027bc595429cbf9892e1d"
+    },
+    {
+      "name": "radar42.txd",
+      "sha256": "0f9a6f70f15106f7a30c778f5a48ce201b71b6c8dc5ae74bcc10739e713a4dd5"
+    },
+    {
+      "name": "radar43.txd",
+      "sha256": "c1156a7d8e4d532ce32bb24b76c80c961eb8cf398becdf04bd5d9bd8f07dc285"
+    },
+    {
+      "name": "radar44.txd",
+      "sha256": "2171d2248baf09b1c276d77031e64995c149e1797662339c519c899b72ab9777"
+    },
+    {
+      "name": "radar45.txd",
+      "sha256": "60fa7a90cfc06e77fa1c871f4345feea3a9b173145e169230c9c2fa158c63e30"
+    },
+    {
+      "name": "radar46.txd",
+      "sha256": "89ce6957f730cf10e54fcd745e2bf8db6004b1d1668f2c735933411134c74251"
+    },
+    {
+      "name": "radar47.txd",
+      "sha256": "ae20eac5518a43c2605b90b3cf8959e0acdd93e53c4971246c50dedb7cd45889"
+    },
+    {
+      "name": "radar48.txd",
+      "sha256": "f87147243312e6dc429588c040aa8c3d974d49aabc446534c0323c2e9b669f86"
+    },
+    {
+      "name": "radar49.txd",
+      "sha256": "b3bda6aabb6cbdcb6450e2668af27fbf55e4058ea6f2d56b913d75c3a6f331ff"
+    },
+    {
+      "name": "radar50.txd",
+      "sha256": "9d33c8fc151001bea62e59a82bf6fff78e37bc7d095a48e8c1665645db520adb"
+    },
+    {
+      "name": "radar51.txd",
+      "sha256": "491ca11473ba053bc620bb08d967497bc3e6d18a35922d9fdb63f90a394a410a"
+    },
+    {
+      "name": "radar52.txd",
+      "sha256": "02a872293cd2f716efede78e861409e70a3873b6e449a2d972cdadd016a561d9"
+    },
+    {
+      "name": "radar53.txd",
+      "sha256": "6c39f0614f728f96fd29a814d0e12aa358993543075bf1adfb56f3c4c2614466"
+    },
+    {
+      "name": "radar54.txd",
+      "sha256": "1881d9153ab051df276cc552c07ddf9cb185cc196692269a3a7f4face602776b"
+    },
+    {
+      "name": "radar55.txd",
+      "sha256": "4d5953641fbefbe2ea0c9964118c0a51e48489c257d16781831d6c1a936e3963"
+    },
+    {
+      "name": "radar56.txd",
+      "sha256": "15cc081f57a67c58a89603ce5e68fbfdaf90b3612ed9559c190bb16922a8511c"
+    },
+    {
+      "name": "radar57.txd",
+      "sha256": "d11ded4a7d24cb7c0cabca738943c0a0f878113ba04b1395c6f238a3b83c8236"
+    },
+    {
+      "name": "radar58.txd",
+      "sha256": "611e47f97667ac3bfe3825f560a14eee5439e65ed07e5cbcb9fbd6c321e3519f"
+    },
+    {
+      "name": "radar59.txd",
+      "sha256": "a586db66dc0130c5c103c2186d092438dbaddded2565fcffd5cd2fe6d7405f2c"
+    },
+    {
+      "name": "radar60.txd",
+      "sha256": "d2d79fd19f90ee3be1d35d9cf024b3c5a4efa4995b65ebf5032e00e91ec81b02"
+    },
+    {
+      "name": "radar61.txd",
+      "sha256": "1145f3c01e66a6977a9b182ccaaa43a71a22634477e281717742d931a64b8c99"
+    },
+    {
+      "name": "radar62.txd",
+      "sha256": "fb1f11d0e01c4dc9240ac42e77435a4e31dfa442060484a441bb21b3b8dfc270"
+    },
+    {
+      "name": "radar63.txd",
+      "sha256": "8e30fe138870177d903b3d713fff479bcc45831c2f5c5eb424a9ebca76415fba"
+    }
+  ],
+  "generated": [
+    {
+      "path": "assets/game-ui/radio.png",
+      "sourceTexture": "RWave",
+      "dimensions": [
+        16,
+        16
+      ],
+      "size": 326,
+      "sha256": "74f73c09f6a796027a7f49ae8f219014ce662b7ee952d1c23b849185c187ec30"
+    },
+    {
+      "path": "assets/game-ui/phone.png",
+      "sourceTexture": "phone",
+      "dimensions": [
+        16,
+        16
+      ],
+      "size": 307,
+      "sha256": "163db3cddca23025ad69d802aede7bce64129d19c8556c06724215a1977ebc68"
+    },
+    {
+      "path": "assets/game-ui/taxi.png",
+      "sourceTexture": "kcabs",
+      "dimensions": [
+        16,
+        16
+      ],
+      "size": 160,
+      "sha256": "7fddc94b7374009d2c0d238211629675239a3c0d7837dc950606181434ec77f6"
+    },
+    {
+      "path": "assets/game-ui/save.png",
+      "sourceTexture": "radar_save",
+      "dimensions": [
+        16,
+        16
+      ],
+      "size": 313,
+      "sha256": "aaeea7d94043b23b7ae53864303a99fe8e563ace53142270f15dff8e236725a6"
+    },
+    {
+      "path": "assets/game-ui/gun.png",
+      "sourceTexture": "gun",
+      "dimensions": [
+        16,
+        16
+      ],
+      "size": 346,
+      "sha256": "a2010f0d21a2b1c95ab85c435fe63e2d20c4f8cbdde573d967d8709417ed116b"
+    },
+    {
+      "path": "assets/game-ui/bike.png",
+      "sourceTexture": "bikers",
+      "dimensions": [
+        16,
+        16
+      ],
+      "size": 237,
+      "sha256": "dd1edd72ec637137caddf5f14050524696202b0891fa1372eed5bfe2dbc13503"
+    },
+    {
+      "path": "assets/game-ui/north.png",
+      "sourceTexture": "radar_north",
+      "dimensions": [
+        16,
+        16
+      ],
+      "size": 220,
+      "sha256": "4d4f96303d548c2e9bb29796dc148486f0446b42ff9b063c00b542f1c33fcc46"
+    },
+    {
+      "path": "assets/game-ui/player.png",
+      "sourceTexture": "radar_centre",
+      "dimensions": [
+        16,
+        16
+      ],
+      "size": 274,
+      "sha256": "69d79559ce4b87cfcf7efb87dcbc88e3b401575c0e56fdf390d58db2afd91d4f"
+    },
+    {
+      "path": "assets/game-ui/radar-disc.png",
+      "sourceTexture": "radardisc",
+      "dimensions": [
+        128,
+        128
+      ],
+      "size": 6359,
+      "sha256": "a2fd565e697182ca7506ec217f87320ec55f71b8c7771cd1d2f7b7343451b86d"
+    },
+    {
+      "path": "assets/game-ui/vice-radar.webp",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "size": 367314,
+      "sha256": "566abbf907455a1c10d8f473d57eb68449d2247d9875c076bb3c534f1f0122c7"
+    }
+  ],
+  "totalWebBytes": 375856
+}

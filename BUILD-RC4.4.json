@@ -1,0 +1,465 @@
+{
+  "release": "gta-ege-rc4.4-prefinal-20261117",
+  "date": "2026-11-17",
+  "timezone": "Asia/Bangkok",
+  "basedOn": "gta-ege-rc4.3-prefinal-20261117-dist.zip",
+  "entrypoint": "index.html",
+  "contentEdition": 16,
+  "storageVersion": 4,
+  "questions": 12,
+  "maxScore": 100,
+  "passScore": 60,
+  "sectionScores": {
+    "A": 24,
+    "B": 40,
+    "C": 36
+  },
+  "results": {
+    "disclosure": "after the final commission only",
+    "sameVisibleAndExportedPNG": true,
+    "size": [
+      1080,
+      1920
+    ]
+  },
+  "priorityS": {
+    "preloadStartsAfterCoverPaint": true,
+    "sameMutedRuntimeThroughABtoC": true,
+    "warmCityStartsNoGameTimer": true,
+    "artificialBriefingDelayMs": 0,
+    "resourceConstraintsRespected": true,
+    "universalZeroLatencyClaim": false
+  },
+  "native": {
+    "engine": "vice-city-wasm",
+    "runtimeBinaryChanged": false,
+    "missionSize": 48065,
+    "missionSHA256": "0399988ed5f9420ce88770cea8c02e0ed3c8a78632bad17fe81a02c6755daa39",
+    "streetTaxiAndPedestrians": true,
+    "arrival": {
+      "scene": 1,
+      "model": 217,
+      "crewModels": [
+        7,
+        7,
+        8
+      ],
+      "pudgeActor": 2,
+      "airPosition": [
+        288.8,
+        -1088,
+        17.2
+      ],
+      "landingPosition": [
+        288.8,
+        -1083,
+        10.85
+      ],
+      "foreground": [
+        [
+          287.8,
+          -1075.5
+        ],
+        [
+          291.5,
+          -1076.0
+        ],
+        [
+          289.7,
+          -1074.5
+        ]
+      ],
+      "landingTimeoutMilliseconds": 8000,
+      "exitTimeoutMilliseconds": 6000,
+      "walkMilliseconds": 1800,
+      "brawlMilliseconds": 3200,
+      "fleeMilliseconds": 4500,
+      "startTrigger": "native-start-command-only",
+      "nativeExitRequired": true,
+      "pickupRelease": "brawl-start-or-bounded-fallback",
+      "scored": false,
+      "stages": [
+        "prepared",
+        "landing",
+        "exiting",
+        "foreground",
+        "brawl",
+        "flee",
+        "finished",
+        "fallback"
+      ]
+    },
+    "drive": {
+      "routeStages": [
+        "outbound",
+        "past-ramp",
+        "seafront",
+        "southern-bend",
+        "rpg"
+      ],
+      "passengerRequired": false,
+      "stopRequired": false,
+      "oneDirection": true,
+      "scoredSeparately": false
+    },
+    "C2TimeLimitSeconds": 150,
+    "C2RequiresNativePassenger": false,
+    "C2Route": [
+      [
+        272,
+        -1190,
+        11.5
+      ],
+      [
+        263,
+        -1285,
+        11.5
+      ],
+      [
+        244,
+        -1340,
+        11.5
+      ],
+      [
+        218,
+        -1430,
+        11.5
+      ],
+      [
+        193,
+        -1500,
+        11.5
+      ]
+    ],
+    "C3Spawn": [
+      193,
+      -1500,
+      11.5
+    ],
+    "scoreRecordABIChanged": false,
+    "originalSlotsPreserved": [
+      0,
+      172
+    ],
+    "pudgeModelId": 8,
+    "nativeModelProvenance": "native-vc/runtime/pudge-model-provenance.json",
+    "extraModelBytes": 839680
+  },
+  "standaloneRoute": "rpg/",
+  "validation": {
+    "automatedTestsPassed": 303,
+    "automatedTestsFailed": 0,
+    "physicalRuntimeFilesVerified": 1047,
+    "assembledResourcesVerified": 5,
+    "browser": {
+      "fixtureType": "CSS viewport and Telegram API test double; not iOS or Telegram native execution",
+      "mainAppLoaded": true,
+      "standaloneIntroLoaded": true,
+      "checkedWidths": [
+        320,
+        390,
+        430
+      ],
+      "headerGeometry": [
+        {
+          "width": "320",
+          "geometry": [
+            {
+              "bottom": 844,
+              "className": "rpg-page-active",
+              "clientWidth": 320,
+              "id": "",
+              "left": 0,
+              "right": 320,
+              "scrollWidth": 320,
+              "tag": "BODY",
+              "top": 0
+            },
+            {
+              "bottom": 162,
+              "className": "brand rpg-back",
+              "clientWidth": 240,
+              "id": "",
+              "left": 12,
+              "right": 252,
+              "scrollWidth": 240,
+              "tag": "A",
+              "top": 114
+            },
+            {
+              "bottom": 162,
+              "className": "top-actions",
+              "clientWidth": 48,
+              "id": "rpg-playtest-audio",
+              "left": 260,
+              "right": 308,
+              "scrollWidth": 48,
+              "tag": "DIV",
+              "top": 114
+            },
+            {
+              "bottom": 227,
+              "className": "rpg-exam-strip",
+              "clientWidth": 320,
+              "id": "",
+              "left": 0,
+              "right": 320,
+              "scrollWidth": 320,
+              "tag": "DIV",
+              "top": 170
+            },
+            {
+              "bottom": 844,
+              "className": "rpg-scene-host",
+              "clientWidth": 320,
+              "id": "rpg-playtest-scene",
+              "left": 0,
+              "right": 320,
+              "scrollWidth": 320,
+              "tag": "DIV",
+              "top": 227
+            },
+            {
+              "bottom": 107,
+              "className": "tg-fixture-chrome",
+              "clientWidth": 320,
+              "id": "",
+              "left": 0,
+              "right": 320,
+              "scrollWidth": 320,
+              "tag": "DIV",
+              "top": 0
+            }
+          ]
+        },
+        {
+          "width": "390",
+          "geometry": [
+            {
+              "bottom": 844,
+              "className": "rpg-page-active",
+              "clientWidth": 390,
+              "id": "",
+              "left": 0,
+              "right": 390,
+              "scrollWidth": 390,
+              "tag": "BODY",
+              "top": 0
+            },
+            {
+              "bottom": 162,
+              "className": "brand rpg-back",
+              "clientWidth": 310,
+              "id": "",
+              "left": 12,
+              "right": 322,
+              "scrollWidth": 310,
+              "tag": "A",
+              "top": 114
+            },
+            {
+              "bottom": 162,
+              "className": "top-actions",
+              "clientWidth": 48,
+              "id": "rpg-playtest-audio",
+              "left": 330,
+              "right": 378,
+              "scrollWidth": 48,
+              "tag": "DIV",
+              "top": 114
+            },
+            {
+              "bottom": 227,
+              "className": "rpg-exam-strip",
+              "clientWidth": 390,
+              "id": "",
+              "left": 0,
+              "right": 390,
+              "scrollWidth": 390,
+              "tag": "DIV",
+              "top": 170
+            },
+            {
+              "bottom": 844,
+              "className": "rpg-scene-host",
+              "clientWidth": 390,
+              "id": "rpg-playtest-scene",
+              "left": 0,
+              "right": 390,
+              "scrollWidth": 390,
+              "tag": "DIV",
+              "top": 227
+            },
+            {
+              "bottom": 107,
+              "className": "tg-fixture-chrome",
+              "clientWidth": 390,
+              "id": "",
+              "left": 0,
+              "right": 390,
+              "scrollWidth": 390,
+              "tag": "DIV",
+              "top": 0
+            }
+          ]
+        },
+        {
+          "width": "430",
+          "geometry": [
+            {
+              "bottom": 844,
+              "className": "rpg-page-active",
+              "clientWidth": 430,
+              "id": "",
+              "left": 0,
+              "right": 430,
+              "scrollWidth": 430,
+              "tag": "BODY",
+              "top": 0
+            },
+            {
+              "bottom": 162,
+              "className": "brand rpg-back",
+              "clientWidth": 350,
+              "id": "",
+              "left": 12,
+              "right": 362,
+              "scrollWidth": 350,
+              "tag": "A",
+              "top": 114
+            },
+            {
+              "bottom": 162,
+              "className": "top-actions",
+              "clientWidth": 48,
+              "id": "rpg-playtest-audio",
+              "left": 370,
+              "right": 418,
+              "scrollWidth": 48,
+              "tag": "DIV",
+              "top": 114
+            },
+            {
+              "bottom": 227,
+              "className": "rpg-exam-strip",
+              "clientWidth": 430,
+              "id": "",
+              "left": 0,
+              "right": 430,
+              "scrollWidth": 430,
+              "tag": "DIV",
+              "top": 170
+            },
+            {
+              "bottom": 844,
+              "className": "rpg-scene-host",
+              "clientWidth": 430,
+              "id": "rpg-playtest-scene",
+              "left": 0,
+              "right": 430,
+              "scrollWidth": 430,
+              "tag": "DIV",
+              "top": 227
+            },
+            {
+              "bottom": 107,
+              "className": "tg-fixture-chrome",
+              "clientWidth": 430,
+              "id": "",
+              "left": 0,
+              "right": 430,
+              "scrollWidth": 430,
+              "tag": "DIV",
+              "top": 0
+            }
+          ]
+        }
+      ],
+      "nativeIframeRetainedOnResize": true,
+      "actualComputedUserSelect": {
+        "drive-brake": "none",
+        "drive-enter": "none",
+        "native-aim-label": "none",
+        "fire-label": "none",
+        "error-diagnostic": "text"
+      },
+      "gameLaunch": {
+        "attempted": true,
+        "build": 17,
+        "result": "C-GPU",
+        "graphics": "WebGL 2 unavailable",
+        "renderer": "Disabled",
+        "engineInitialized": false
+      },
+      "nativeGPUVerified": false,
+      "nativeMobileTelegramVerified": false,
+      "screenshotProvidedInChat": true,
+      "browserScreenshotIncludedInArchive": false
+    },
+    "nativeGPUVerified": false,
+    "nativeMobileTelegramVerified": false,
+    "macFinderTested": false,
+    "windowsLauncherTested": false,
+    "liveDeploymentUpdated": false
+  },
+  "changedFiles": [
+    "START-HERE.txt",
+    "app.js",
+    "game-gestures.js",
+    "index.html",
+    "native-vc/index.html",
+    "native-vc/native-gestures.js",
+    "native-vc/native.css",
+    "native-vc/native.js",
+    "native-vc/range-config.json",
+    "native-vc/range.scm",
+    "native-vc/runtime/manifest.json",
+    "rpg/index.html",
+    "rpg-playtest.js",
+    "rpg.html",
+    "server.cjs",
+    "server.py",
+    "styles.css",
+    "v3.css",
+    "vice-playtest.js"
+  ],
+  "newFiles": [
+    "README-RC4.4.md",
+    "native-vc/pudge-model.js",
+    "native-vc/runtime/pudge-model-provenance.json",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.dff",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.txd",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.txd.001.bin",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.txd.002.bin",
+    "telegram-layout.js"
+  ],
+  "fileSHA256": {
+    "START-HERE.txt": "017437faa341305ab1d6cb30944ac2eb39e90d42bc8424c3d993bbe3e7a3a8a6",
+    "app.js": "dd4c9dd040a6b620dbd10d3b8769b9ef5aaee6b5429bd11d7e50f03dd876cf73",
+    "game-gestures.js": "7e37c9e654b380b23a83a67cd66a1ff282721c3a8179cd8fa9bba421f5b97a54",
+    "index.html": "5434d377e859fc0b0f1fcc624e3eb183b11efd0087e3e7bab0784fd117d024b0",
+    "native-vc/index.html": "01e6e0bfbcdc579b15ef939faf4592da25e2eaccfe83f8476c82952619e5a566",
+    "native-vc/native-gestures.js": "94ba879ba6e18faa065d29a037127f72cf7e2be5673e9f245218fe7311398eed",
+    "native-vc/native.css": "fd1f58482b7954220963c64d9203d7a11952b14ea14ab1ff7800fbfe38ea2e6f",
+    "native-vc/native.js": "d76b99868a960d1b3dcacc5a8a815e71bbd21142d22eae2b2c5bdd4005e9790b",
+    "native-vc/range-config.json": "6f219a9b0a7dec24c251c1599a2e13b4fa6adcff2832b145d6074b811d532f59",
+    "native-vc/range.scm": "0399988ed5f9420ce88770cea8c02e0ed3c8a78632bad17fe81a02c6755daa39",
+    "native-vc/runtime/manifest.json": "5c0af2a53fddabee8f0d4a2131a0e82481719dc91a6cec1494368791be55e8a1",
+    "rpg/index.html": "b57cafdb57346ddf9cab88701e9962ef892eb048c220871cb0d97f0154baff2e",
+    "rpg-playtest.js": "56eb24f5c39804efc1fa0079dbefca221847be8aaf5c3b0aad4b5d96ddb9d902",
+    "rpg.html": "b0bbe00d3161e165255844f2c70bd332dd7fe6b793b31e2f4cbbec656d003cff",
+    "server.cjs": "c471b3f5410589f88221f81b4b4d1c38a963a425c01298ec8bbe337975fc9312",
+    "server.py": "5bd919843e34eefbc184311435fbdc20b9d287e7601dc96a7348f0c582b7072d",
+    "styles.css": "c4b1f7b46b30e701a8300ad522bc44d345eb34a163d887cb23da0b8874e92c1f",
+    "v3.css": "2bc2dcb2c51afebeb4017be55347ce8e4fc204b7532703327ad6d8b78d05ce8f",
+    "vice-playtest.js": "51c381c9dde086186365c457de075c8c555b5c5f87f38de969ef2f9f56168fa1",
+    "README-RC4.4.md": "b41cdd3f418d184cc1a68855476abfcf753a4135915087dfcf4669765b228682",
+    "native-vc/pudge-model.js": "23e19318873a5305d336da9229a0b06efcfcecf256ab25b19920c65d175be08d",
+    "native-vc/runtime/pudge-model-provenance.json": "a600a1d903dfe76f84e3fdb56b8c105ce993e56a853e6790f30742ee798b46c1",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.dff": "4e84d90e01a17cbb49056e102d13e018a37763b15c1d5849e6da2ef07972fefc",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.txd": "1abbc0128e654041bd6e4686f59a934cb0b006482c9570f1c5926041527cfe8e",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.txd.001.bin": "b2900ff519bb68bc59c2aa8fdf31f7916e6db66b0be358065717b8c4787ea86f",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.txd.002.bin": "e81cdfaedfb2c837f3af7a507aae87764d90c3e5c073095480c95b3046739056",
+    "telegram-layout.js": "aac45114344c4ca50485dc0a39ef8c4c162deb3a11f5d8c60ae96c3e7769c4b7"
+  }
+}

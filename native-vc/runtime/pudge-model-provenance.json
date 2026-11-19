@@ -1,0 +1,615 @@
+{
+  "purpose": "Dedicated native Pudge cameo for EGE RC4.9; shoulder sockets and clavicle skin fitted; model slot 8 only",
+  "sourceArchive": "gta2026-model-inspection.zip",
+  "sourceEntry": "prepared/pudge_candidate.glb",
+  "sourceSHA256": "c2b31eb3cb4fa4ad86311aa7d63af9fd905977f8d33b49dd928b8f0099d77dca",
+  "modelID": 8,
+  "modelName": "egepudge",
+  "sourceJointCount": 58,
+  "nativeBoneCount": 24,
+  "vertices": 3895,
+  "triangles": 5266,
+  "characterMeshesRetained": 9,
+  "characterMeshesRemoved": 0,
+  "files": [
+    {
+      "path": "remote/models/gta3.img/egepudge.dff",
+      "size": 313344,
+      "sha256": "d8828bf13a07dcf2c37e7a5d4105d31e44425ab6313e9cc8ca6946cd33bb1a56"
+    },
+    {
+      "path": "remote/models/gta3.img/egepudge.txd",
+      "size": 526336,
+      "sha256": "1abbc0128e654041bd6e4686f59a934cb0b006482c9570f1c5926041527cfe8e"
+    }
+  ],
+  "attribution": {
+    "author": "muddyriversoff (https://sketchfab.com/muddyriversoff)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/pudge-8dbdff217f074b8ba13e1473c113bdfd",
+    "title": "Pudge"
+  },
+  "changes": [
+    "Original GLB rest skin baked before retargeting.",
+    "58 source joints consolidated to 24 original VC HAnim channels.",
+    "RC4.9: upper-arm sockets sit 15 cm outward and 10 cm down from male01 per side; native frame translations and inverse binds are rebuilt together.",
+    "RC4.9: source clavicle skin keeps unit scale and is anchored at the outer shoulder socket; the former 1.75x collar stretch is removed.",
+    "Original bone names, IDs, parent hierarchy and rest orientations are retained; arm segment lengths and the original male01 file are unchanged.",
+    "Native limb lengths matched along bone axes; thick Pudge cross sections retained.",
+    "All nine character meshes retained, including the original cosmetic hook and cleaver; no gameplay weapon is granted.",
+    "One diffuse atlas with padded tiles; no extra game engine or delayed asset fetch."
+  ],
+  "validation": {
+    "modelID": 8,
+    "nativeBones": 24,
+    "vertices": 3895,
+    "triangles": 5266,
+    "inverseBindMaxError": 4.2405887801244546e-08,
+    "reconstructedBindVertexMaxError": 8.029930437315457e-08,
+    "shoulderAnchorMaxErrors": {
+      "22": 1.1102230246251565e-16,
+      "23": 1.1102230246251565e-16,
+      "24": 6.938893903907228e-17,
+      "32": 5.551115123125783e-17,
+      "33": 1.6653345369377348e-16,
+      "34": 5.551115123125783e-17
+    },
+    "clavicleOuterAnchorMaxErrors": {
+      "21": 5.551115123125783e-17,
+      "31": 5.551115123125783e-17
+    },
+    "clavicleSkinUnitScale": true,
+    "weightsNormalized": true,
+    "indicesInRange": true,
+    "leftRightNotSwapped": true,
+    "nativeGPUExecuted": false,
+    "scope": "CPU structure and bind-pose acceptance only; no claim about actual Vice City animation, seating, clipping or performance."
+  },
+  "nativeGPUExecuted": false,
+  "shoulderFit": {
+    "outsetPerSide": 0.15,
+    "drop": 0.1,
+    "clavicleSkinScale": 1.0,
+    "clavicleAnchor": "outer shoulder socket",
+    "nativeFramesAndInverseBindsUpdatedTogether": true
+  },
+  "animationValidation": {
+    "scope": "CPU samples of shipped native animation rotation channels; root travel normalized; not engine playback, blending, IK, collisions or GPU verification.",
+    "nativeGPUExecuted": false,
+    "animationCount": 234,
+    "upperArmRotationOnlyTrackCounts": {
+      "22": 231,
+      "32": 228
+    },
+    "originalShoulderSocketWidth": 0.4113282226090002,
+    "correctedShoulderSocketWidth": 0.7113281959903637,
+    "armSegmentLengthsPreserved": true,
+    "coincidentVertexPairs": 1007,
+    "maximumAnimatedSeamGap": 4.384760378090777e-06,
+    "samples": [
+      {
+        "clip": "IDLE_stance",
+        "phase": 0,
+        "boundsSpan": [
+          1.286792432658223,
+          1.955738033691595,
+          1.5469497112921018
+        ],
+        "maxCoincidentVertexGap": 4.162487650391986e-06
+      },
+      {
+        "clip": "IDLE_stance",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.286183341653791,
+          1.9546803350928204,
+          1.5529899205108277
+        ],
+        "maxCoincidentVertexGap": 4.129339679960538e-06
+      },
+      {
+        "clip": "IDLE_stance",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.2829107562161848,
+          1.9542888364904245,
+          1.5578915563162814
+        ],
+        "maxCoincidentVertexGap": 4.160635646477713e-06
+      },
+      {
+        "clip": "IDLE_stance",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.2848306521786497,
+          1.955995333793045,
+          1.5436541710733884
+        ],
+        "maxCoincidentVertexGap": 4.144515416586991e-06
+      },
+      {
+        "clip": "IDLE_stance",
+        "phase": 1,
+        "boundsSpan": [
+          1.2867925208676931,
+          1.9557380800142279,
+          1.5469497417912719
+        ],
+        "maxCoincidentVertexGap": 4.162487692260286e-06
+      },
+      {
+        "clip": "WALK_civi",
+        "phase": 0,
+        "boundsSpan": [
+          1.1912895056437542,
+          1.963045257986749,
+          1.6525196489150558
+        ],
+        "maxCoincidentVertexGap": 3.326584911998776e-06
+      },
+      {
+        "clip": "WALK_civi",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.4073895806558825,
+          1.968969626777842,
+          1.4372093124699512
+        ],
+        "maxCoincidentVertexGap": 3.2637274483967725e-06
+      },
+      {
+        "clip": "WALK_civi",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.3318965050669034,
+          1.9637491925260555,
+          1.420473233873254
+        ],
+        "maxCoincidentVertexGap": 3.1743759233940665e-06
+      },
+      {
+        "clip": "WALK_civi",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.2460073746227391,
+          1.9621413492852557,
+          1.6511797163689712
+        ],
+        "maxCoincidentVertexGap": 3.3544459663361146e-06
+      },
+      {
+        "clip": "WALK_civi",
+        "phase": 1,
+        "boundsSpan": [
+          1.1912895315619472,
+          1.9630452582109457,
+          1.6525197605078086
+        ],
+        "maxCoincidentVertexGap": 3.3265851848846222e-06
+      },
+      {
+        "clip": "run_civi",
+        "phase": 0,
+        "boundsSpan": [
+          1.6949049386087651,
+          2.01930287538681,
+          1.573499184038552
+        ],
+        "maxCoincidentVertexGap": 3.949436221963071e-06
+      },
+      {
+        "clip": "run_civi",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.8668083722233657,
+          2.3283773462381214,
+          1.072006765652075
+        ],
+        "maxCoincidentVertexGap": 4.384760378090777e-06
+      },
+      {
+        "clip": "run_civi",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.8517380404827546,
+          2.038413139046401,
+          1.6012781591717746
+        ],
+        "maxCoincidentVertexGap": 4.052750241685169e-06
+      },
+      {
+        "clip": "run_civi",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.827402093309787,
+          2.0378611475965958,
+          1.0587131176498714
+        ],
+        "maxCoincidentVertexGap": 3.7929480214868434e-06
+      },
+      {
+        "clip": "run_civi",
+        "phase": 1,
+        "boundsSpan": [
+          1.695604771269755,
+          1.9933716118668066,
+          1.5819031773994017
+        ],
+        "maxCoincidentVertexGap": 3.9494365877920585e-06
+      },
+      {
+        "clip": "FIGHTIDLE",
+        "phase": 0,
+        "boundsSpan": [
+          1.5639454503769072,
+          2.2644267451495077,
+          1.274938833408378
+        ],
+        "maxCoincidentVertexGap": 3.9030201499254325e-06
+      },
+      {
+        "clip": "FIGHTIDLE",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.726492037346432,
+          2.0550776800314923,
+          1.3507600742948438
+        ],
+        "maxCoincidentVertexGap": 3.801804721780403e-06
+      },
+      {
+        "clip": "FIGHTIDLE",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.6986863620822805,
+          2.057599124439197,
+          1.1338597523086658
+        ],
+        "maxCoincidentVertexGap": 3.5905493839875145e-06
+      },
+      {
+        "clip": "FIGHTIDLE",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.5479279991842536,
+          2.221992041109815,
+          1.273872680358576
+        ],
+        "maxCoincidentVertexGap": 3.974125622270006e-06
+      },
+      {
+        "clip": "FIGHTIDLE",
+        "phase": 1,
+        "boundsSpan": [
+          1.5639454503769072,
+          2.2644267665724884,
+          1.274938833408378
+        ],
+        "maxCoincidentVertexGap": 3.9030201499254325e-06
+      }
+    ]
+  },
+  "motorcycleValidation": {
+    "scope": "CPU samples of shipped bikes.ifp rotation channels with normalized root; not native engine, vehicle seating, IK, collisions, gameplay or GPU verification.",
+    "nativeGPUExecuted": false,
+    "clavicleSkin": [
+      {
+        "bone": 21,
+        "skinLengthScale": 1.0,
+        "outerAnchorError": 7.850462293418876e-17
+      },
+      {
+        "bone": 31,
+        "skinLengthScale": 1.0000000000000002,
+        "outerAnchorError": 5.551115123125783e-17
+      }
+    ],
+    "sportsBikeAnimationCount": 18,
+    "sportsBikeAnimationSHA256": "f546894e681b540307cadbe663d523344340d2fea1ebdedaae9f719e4fd3402e",
+    "shoulderTranslationsPreserved": true,
+    "coincidentVertexPairs": 1007,
+    "maximumAnimatedSeamGap": 7.407962395340688e-06,
+    "samples": [
+      {
+        "clip": "BIKEs_jumponL",
+        "phase": 0,
+        "boundsSpan": [
+          1.4390245580944825,
+          1.9353388041669743,
+          1.6781818494375655
+        ],
+        "maxCoincidentVertexGap": 4.0455331870946626e-06
+      },
+      {
+        "clip": "BIKEs_jumponL",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.5409224014749212,
+          1.938595585133482,
+          1.482464657177042
+        ],
+        "maxCoincidentVertexGap": 5.320603377180315e-06
+      },
+      {
+        "clip": "BIKEs_jumponL",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.617649393174686,
+          1.7236531009380718,
+          1.3726049961941555
+        ],
+        "maxCoincidentVertexGap": 4.497546641770333e-06
+      },
+      {
+        "clip": "BIKEs_jumponL",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.3274959804151993,
+          1.8702789650973541,
+          1.18085478465911
+        ],
+        "maxCoincidentVertexGap": 4.6274481237687215e-06
+      },
+      {
+        "clip": "BIKEs_jumponL",
+        "phase": 1,
+        "boundsSpan": [
+          1.3310895555735989,
+          1.9116065028909683,
+          1.2357995440759963
+        ],
+        "maxCoincidentVertexGap": 4.757584334504523e-06
+      },
+      {
+        "clip": "BIKEs_jumponR",
+        "phase": 0,
+        "boundsSpan": [
+          1.9394136307108794,
+          1.93164632594676,
+          1.5081933518751032
+        ],
+        "maxCoincidentVertexGap": 3.828612974296403e-06
+      },
+      {
+        "clip": "BIKEs_jumponR",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.5595162658352115,
+          2.0414117005725987,
+          1.3808850133027812
+        ],
+        "maxCoincidentVertexGap": 3.2089282156663916e-06
+      },
+      {
+        "clip": "BIKEs_jumponR",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.614859991604892,
+          1.6461069277500748,
+          1.4039227583681246
+        ],
+        "maxCoincidentVertexGap": 7.407962395340688e-06
+      },
+      {
+        "clip": "BIKEs_jumponR",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.3407380877072763,
+          1.7257813810288862,
+          1.1831150489763402
+        ],
+        "maxCoincidentVertexGap": 4.218751870142759e-06
+      },
+      {
+        "clip": "BIKEs_jumponR",
+        "phase": 1,
+        "boundsSpan": [
+          1.352448723198512,
+          1.7612897707468123,
+          1.2301024026876268
+        ],
+        "maxCoincidentVertexGap": 4.239777210792436e-06
+      },
+      {
+        "clip": "BIKEs_Ride",
+        "phase": 0,
+        "boundsSpan": [
+          1.340643982401575,
+          1.8718212841257755,
+          1.223677142573547
+        ],
+        "maxCoincidentVertexGap": 4.757584660999252e-06
+      },
+      {
+        "clip": "BIKEs_Ride",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.3406439829212056,
+          1.8718213136636286,
+          1.2236771400779634
+        ],
+        "maxCoincidentVertexGap": 4.7575846813547414e-06
+      },
+      {
+        "clip": "BIKEs_Ride",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.340643983440835,
+          1.8718213432014776,
+          1.2236771375823783
+        ],
+        "maxCoincidentVertexGap": 4.757584701710571e-06
+      },
+      {
+        "clip": "BIKEs_Ride",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.3406439839604654,
+          1.8718213727393223,
+          1.2236771350867939
+        ],
+        "maxCoincidentVertexGap": 4.757584722074099e-06
+      },
+      {
+        "clip": "BIKEs_Ride",
+        "phase": 1,
+        "boundsSpan": [
+          1.340643984480095,
+          1.8718214022771615,
+          1.2236771325912084
+        ],
+        "maxCoincidentVertexGap": 4.7575847424217215e-06
+      },
+      {
+        "clip": "BIKEs_Still",
+        "phase": 0,
+        "boundsSpan": [
+          1.3960447664782374,
+          1.9978581622250853,
+          1.2701457029388215
+        ],
+        "maxCoincidentVertexGap": 4.75758458946517e-06
+      },
+      {
+        "clip": "BIKEs_Still",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.3960447629079769,
+          1.997858161978501,
+          1.2701457058540062
+        ],
+        "maxCoincidentVertexGap": 4.75758458946517e-06
+      },
+      {
+        "clip": "BIKEs_Still",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.396044759337716,
+          1.9978581617319164,
+          1.2701457087691914
+        ],
+        "maxCoincidentVertexGap": 4.75758458946517e-06
+      },
+      {
+        "clip": "BIKEs_Still",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.3960447557674551,
+          1.9978581614853321,
+          1.270145711684376
+        ],
+        "maxCoincidentVertexGap": 4.75758458946517e-06
+      },
+      {
+        "clip": "BIKEs_Still",
+        "phase": 1,
+        "boundsSpan": [
+          1.3960447521971937,
+          1.9978581612387476,
+          1.2701457145995607
+        ],
+        "maxCoincidentVertexGap": 4.75758458946517e-06
+      },
+      {
+        "clip": "BIKEs_Left",
+        "phase": 0,
+        "boundsSpan": [
+          1.34064397078695,
+          1.8718212697540166,
+          1.2236771427445055
+        ],
+        "maxCoincidentVertexGap": 4.7575848853461105e-06
+      },
+      {
+        "clip": "BIKEs_Left",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.3904221392615823,
+          1.8927264156526058,
+          1.219350238209178
+        ],
+        "maxCoincidentVertexGap": 4.6175861511797166e-06
+      },
+      {
+        "clip": "BIKEs_Left",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.4589044833480722,
+          1.9119689813204508,
+          1.196335614628252
+        ],
+        "maxCoincidentVertexGap": 4.817368930482482e-06
+      },
+      {
+        "clip": "BIKEs_Left",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.4921944097834252,
+          1.9231254260554538,
+          1.1739281838314377
+        ],
+        "maxCoincidentVertexGap": 5.16523052505681e-06
+      },
+      {
+        "clip": "BIKEs_Left",
+        "phase": 1,
+        "boundsSpan": [
+          1.508295589004538,
+          1.9281952820840973,
+          1.168381304492383
+        ],
+        "maxCoincidentVertexGap": 5.469743701071823e-06
+      },
+      {
+        "clip": "BIKEs_Right",
+        "phase": 0,
+        "boundsSpan": [
+          1.340644040279268,
+          1.8718213242260069,
+          1.2236771586847512
+        ],
+        "maxCoincidentVertexGap": 4.757584660999252e-06
+      },
+      {
+        "clip": "BIKEs_Right",
+        "phase": 0.25,
+        "boundsSpan": [
+          1.3618333062770447,
+          1.8211270447092986,
+          1.2316284808972622
+        ],
+        "maxCoincidentVertexGap": 4.430707937705004e-06
+      },
+      {
+        "clip": "BIKEs_Right",
+        "phase": 0.5,
+        "boundsSpan": [
+          1.3519283847826764,
+          1.8029837094381282,
+          1.2303589833332311
+        ],
+        "maxCoincidentVertexGap": 3.945795966716257e-06
+      },
+      {
+        "clip": "BIKEs_Right",
+        "phase": 0.75,
+        "boundsSpan": [
+          1.3683528574301516,
+          1.791489622220775,
+          1.2217760085925693
+        ],
+        "maxCoincidentVertexGap": 3.386666024404778e-06
+      },
+      {
+        "clip": "BIKEs_Right",
+        "phase": 1,
+        "boundsSpan": [
+          1.4059239043266079,
+          1.7831899549224535,
+          1.2081158770818916
+        ],
+        "maxCoincidentVertexGap": 2.851595824332693e-06
+      }
+    ]
+  }
+}

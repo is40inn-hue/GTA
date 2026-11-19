@@ -1,0 +1,116 @@
+/* RC2 / 80% examination workbook, 20% Vice City.
+   Colour and small print details carry the reference; the paper stays quiet. */
+:root {
+  --bg: #f0ece3;
+  --surface: #fffaf0;
+  --surface-2: #f5efdf;
+  --paper: #fffaf0;
+  --ink: #252638;
+  --muted: #6d665e;
+  --line: #c6b99f;
+  --accent: #344887;
+  --blue: #344887;
+  --red: #b52c52;
+  --yellow: #edcf8d;
+  --form: #f1dfd2;
+  --form-line: #bda18f;
+  --brand-ink: #252638;
+  --brand-gold: #d8b676;
+  --vice-cream: #f5efdf;
+  --vice-indigo: #344887;
+  --vice-raspberry: #b52c52;
+  --vice-sunset: linear-gradient(90deg, #344887, #b52c52 64%, #e0ae7b);
+}
+.topbar { border-bottom-color: #bdb3a3; }
+.topbar .brand-mark { background: var(--paper); color: var(--red); border-bottom-color: var(--blue); }
+.icon-button, .music-button, .fullscreen-button { border-color: #a8aac1; border-radius: 0; background-color: var(--paper); }
+.icon-button:hover, .music-button:hover, .fullscreen-button:hover { background-color: #eceaf2; border-color: var(--blue); }
+.music-button[aria-pressed="true"] { background-color: var(--blue); color: var(--paper); border-color: var(--blue); }
+.primary, .secondary, .mini-button, .choice, .text-input, .match-row select { border-radius: 0; }
+.primary, .secondary, .mini-button { min-height: 44px; }
+.hero.textbook { border: 2px solid var(--brand-ink); background: var(--paper); box-shadow: 4px 5px 0 #252638; }
+.textbook-paper { background: var(--vice-cream); }
+.textbook-series { align-items: center; gap: 10px; color: #75644a; }
+.textbook-series > span:first-child { flex: 1; max-width: none; }
+.textbook-series::after { content: ""; flex: 0 0 32px; width: 32px; height: 32px; background: url("assets/vice-palm.svg") center / contain no-repeat; opacity: .9; transform: rotate(-5deg); }
+.hero.textbook .textbook-heading h1, .textbook-year { color: var(--red); }
+.textbook-band { position: relative; background: var(--blue); border-color: #28345f; }
+.textbook-band::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: var(--vice-sunset); }
+.textbook-subject { border-color: #922140; background: var(--red); color: #fffaf0; box-shadow: 2px 3px 0 #28345f; }
+.textbook-gold-label { background: #edcf8d; border-color: #9d7c46; color: #493b27; }
+.textbook-bottom { background: var(--vice-cream); color: var(--ink); border-top: 1px solid #c6b99f; }
+.textbook-facts p { color: var(--ink); }
+.textbook-facts p span { color: #6d665e; }
+.textbook-seal { background: #fff1cf; border-color: #bc9858; box-shadow: 0 0 0 2px #e4c78f; color: var(--red); }
+.textbook-bottom .primary { background: var(--blue); border-color: #28345f; box-shadow: 2px 3px 0 #b6ad9c; color: #fffaf0; }
+.textbook-bottom .primary:hover:not(:disabled) { background: #28345f; }
+.textbook-bottom .primary:focus-visible { outline-color: var(--red); }
+.textbook-cover-link, .textbook-playtest { color: var(--blue); border-color: #34488755; }
+.textbook-cover-link:hover { color: #922140; }
+.textbook-cover-link:focus-visible { outline-color: var(--blue); }
+.home-page .edition-strip { background: #f5efdf; border-color: #c6b99f; border-left-color: var(--red); }
+.home-page .exam-pass { border-color: var(--form-line); box-shadow: 3px 4px 0 #d4c4b6; }
+.candidate-card { background: #fff4e4; }
+.candidate-avatar { border-color: var(--blue); color: var(--blue); background: #ecebf1; }
+.mode-tabs { background: #f6eade; }
+.mode-tabs button.active { background: var(--blue); border-color: #28345f; }
+.stage-letter { background: var(--blue); color: var(--paper); border-color: var(--brand-ink); box-shadow: 4px 4px 0 var(--red); text-shadow: none; }
+.stage-kicker, .brand-subject-label { background: var(--red); color: #fffaf0; border-color: #922140; }
+.practice-stamp, .checkpoint-kicker { color: #a02a4a; border-color: var(--red); background: #fff7e9; }
+.practice-dossier, .practice-dossier-top, .rpg-exam-shell, .rpg-exam-shell .topbar, .rpg-exam-strip { background-color: var(--vice-cream); }
+.practice-dossier { border-color: var(--line); box-shadow: 4px 5px 0 #d7cfc0; }
+.practice-scene-max, .practice-controls-guide b { color: var(--red); }
+.practice-opening-bottom { background: #ece4d4; border-color: var(--line); }
+.rpg-exam-strip { border-bottom-color: var(--red); }
+.rpg-exam-shell .music-button, .rpg-exam-shell .icon-button, .rpg-exam-shell .fullscreen-button { min-width: 44px; min-height: 44px; }
+.native-auto-note strong { color: var(--blue); }
+.question-card .sheet-heading { background: #fff6e8; }
+.question-card .sheet-meta { background: #f8eddf; }
+.question-card .choice.selected { border-color: var(--blue); background: #ecebf5; }
+.question-card .choice.selected .choice-letter { background: var(--blue); border-color: var(--blue); color: #fffaf0; }
+.question-card .choice:active:not(:disabled) { background: #e5e4f1; }
+.audio-console { background: var(--blue); border-color: #28345f; }
+.audio-toggle { background: #edcf8d; border-color: #c9a460; border-bottom-color: #a8864b; color: #28345f; }
+.audio-toggle:hover { background: #f6dcaa; }
+.audio-restart:hover { background: #48588f; }
+.audio-waveform > span { background: #f4eee2; }
+.audio-status, .audio-exhibit.is-playing .audio-status { color: #5c536e; }
+.case-evidence button.active { background: var(--blue); border-color: #28345f; color: #fffaf0; }
+.scorecard { border: 2px solid var(--brand-ink); box-shadow: 4px 5px 0 #252638; }
+.score-stamp.pass { background: #fbefd2; border-color: #a98544; color: #6c522d; }
+.result-actions .story-button, .story-button { background: #edcf8d; border-color: #bd9a58; box-shadow: 0 2px 0 #ad8d51; color: #28345f; }
+.result-actions .story-button:hover, .story-button:hover { background: #f6dcaa; color: #28345f; }
+.story-sheet { border-top: 3px solid var(--red); }
+.story-preview { background: var(--vice-cream); border-color: #bda18f; }
+.brand-cover-full { border-color: var(--brand-ink); }
+
+/* Five logo cards: images remain evidence, never cropped or stretched. */
+.order-list.order-visual { display: grid; gap: 8px; padding: 0; list-style: none; }
+.order-visual .order-row { display: grid; grid-template-columns: 24px 56px minmax(0, 1fr) 92px; align-items: center; gap: 8px; min-height: 68px; padding: 9px 8px; background: #fff8ec; border: 1px solid #bda18f; }
+.order-visual .order-index { width: 24px; height: 28px; min-width: 0; display: grid; place-items: center; font-size: 12px; background: #f0e1d2; border-color: #bda18f; color: #6c5444; }
+.order-visual .order-thumb { display: block; width: 56px; height: 40px; max-width: 100%; object-fit: contain; object-position: center; border: 1px solid #c8baab; background: #fffdf7; padding: 3px; }
+.order-visual .order-text { min-width: 0; font: 700 13px/1.3 var(--body-font); color: var(--ink); overflow-wrap: anywhere; }
+.order-visual .order-actions { display: flex; gap: 4px; justify-content: end; }
+.order-visual .mini-button { display: grid; place-items: center; width: 44px; min-width: 44px; height: 44px; min-height: 44px; padding: 0; font-size: 18px; background: #efedf3; border: 1px solid #a8a9bd; color: var(--blue); touch-action: manipulation; }
+.order-visual .mini-button:hover:not(:disabled) { background: #dedfee; border-color: var(--blue); }
+.order-visual .mini-button:disabled { opacity: .42; }
+.order-visual .mini-button:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+
+@media (max-width: 360px) {
+  .textbook-series::after { width: 27px; height: 27px; flex-basis: 27px; }
+  .textbook-series { gap: 7px; }
+  .order-visual .order-row { grid-template-columns: 20px 44px minmax(0, 1fr) 92px; padding: 8px 6px; gap: 5px; min-height: 66px; }
+  .order-visual .order-index { width: 20px; height: 26px; font-size: 11px; }
+  .order-visual .order-thumb { width: 44px; height: 38px; padding: 2px; }
+  .order-visual .order-text { font-size: 12px; line-height: 1.3; }
+}
+@media (orientation: landscape) and (max-height: 520px) {
+  .rpg-exam-shell { max-width: none; }
+  .rpg-exam-shell .topbar { min-height: 50px; padding-bottom: 3px; }
+  .rpg-exam-shell .icon-button, .rpg-exam-shell .music-button, .rpg-exam-shell .fullscreen-button { width: 44px; height: 44px; padding: 0; }
+  .rpg-exam-strip { padding-top: 5px; padding-bottom: 5px; }
+}
+@media print {
+  .textbook-series::after { display: none; }
+  .scorecard { border: 1px solid var(--form-line); box-shadow: none; }
+}

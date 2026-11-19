@@ -1,0 +1,18 @@
+{
+  "scope": "Actual packaged manifest and bytes via local-file transport; scheduler delays compressed; no browser, real-network speed or GPU execution.",
+  "persistentStorage": "denied",
+  "preparedBytes": 69804226,
+  "totalBytes": 69804226,
+  "logicalResources": 355,
+  "requests": 466,
+  "duplicateRequests": 0,
+  "peakTransportRequests": 1,
+  "retainedSessionFiles": 464,
+  "retainedSessionBytes": 69804226,
+  "allLogicalResourcesAssembledAndSHAVerified": true,
+  "assembledBytes": 69804226,
+  "additionalRuntimeDownloadsAtHandoff": 0,
+  "sessionBytesAfterRelease": 0,
+  "progressMonotonic": true,
+  "nativeGPUExecuted": false
+}

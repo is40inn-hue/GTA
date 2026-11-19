@@ -1,0 +1,245 @@
+{
+  "fixtureType": "CSS viewport and Telegram API test double; not iOS or Telegram native execution",
+  "mainAppLoaded": true,
+  "standaloneIntroLoaded": true,
+  "checkedWidths": [
+    320,
+    390,
+    430
+  ],
+  "headerGeometry": [
+    {
+      "width": "320",
+      "geometry": [
+        {
+          "bottom": 844,
+          "className": "rpg-page-active",
+          "clientWidth": 320,
+          "id": "",
+          "left": 0,
+          "right": 320,
+          "scrollWidth": 320,
+          "tag": "BODY",
+          "top": 0
+        },
+        {
+          "bottom": 162,
+          "className": "brand rpg-back",
+          "clientWidth": 240,
+          "id": "",
+          "left": 12,
+          "right": 252,
+          "scrollWidth": 240,
+          "tag": "A",
+          "top": 114
+        },
+        {
+          "bottom": 162,
+          "className": "top-actions",
+          "clientWidth": 48,
+          "id": "rpg-playtest-audio",
+          "left": 260,
+          "right": 308,
+          "scrollWidth": 48,
+          "tag": "DIV",
+          "top": 114
+        },
+        {
+          "bottom": 227,
+          "className": "rpg-exam-strip",
+          "clientWidth": 320,
+          "id": "",
+          "left": 0,
+          "right": 320,
+          "scrollWidth": 320,
+          "tag": "DIV",
+          "top": 170
+        },
+        {
+          "bottom": 844,
+          "className": "rpg-scene-host",
+          "clientWidth": 320,
+          "id": "rpg-playtest-scene",
+          "left": 0,
+          "right": 320,
+          "scrollWidth": 320,
+          "tag": "DIV",
+          "top": 227
+        },
+        {
+          "bottom": 107,
+          "className": "tg-fixture-chrome",
+          "clientWidth": 320,
+          "id": "",
+          "left": 0,
+          "right": 320,
+          "scrollWidth": 320,
+          "tag": "DIV",
+          "top": 0
+        }
+      ]
+    },
+    {
+      "width": "390",
+      "geometry": [
+        {
+          "bottom": 844,
+          "className": "rpg-page-active",
+          "clientWidth": 390,
+          "id": "",
+          "left": 0,
+          "right": 390,
+          "scrollWidth": 390,
+          "tag": "BODY",
+          "top": 0
+        },
+        {
+          "bottom": 162,
+          "className": "brand rpg-back",
+          "clientWidth": 310,
+          "id": "",
+          "left": 12,
+          "right": 322,
+          "scrollWidth": 310,
+          "tag": "A",
+          "top": 114
+        },
+        {
+          "bottom": 162,
+          "className": "top-actions",
+          "clientWidth": 48,
+          "id": "rpg-playtest-audio",
+          "left": 330,
+          "right": 378,
+          "scrollWidth": 48,
+          "tag": "DIV",
+          "top": 114
+        },
+        {
+          "bottom": 227,
+          "className": "rpg-exam-strip",
+          "clientWidth": 390,
+          "id": "",
+          "left": 0,
+          "right": 390,
+          "scrollWidth": 390,
+          "tag": "DIV",
+          "top": 170
+        },
+        {
+          "bottom": 844,
+          "className": "rpg-scene-host",
+          "clientWidth": 390,
+          "id": "rpg-playtest-scene",
+          "left": 0,
+          "right": 390,
+          "scrollWidth": 390,
+          "tag": "DIV",
+          "top": 227
+        },
+        {
+          "bottom": 107,
+          "className": "tg-fixture-chrome",
+          "clientWidth": 390,
+          "id": "",
+          "left": 0,
+          "right": 390,
+          "scrollWidth": 390,
+          "tag": "DIV",
+          "top": 0
+        }
+      ]
+    },
+    {
+      "width": "430",
+      "geometry": [
+        {
+          "bottom": 844,
+          "className": "rpg-page-active",
+          "clientWidth": 430,
+          "id": "",
+          "left": 0,
+          "right": 430,
+          "scrollWidth": 430,
+          "tag": "BODY",
+          "top": 0
+        },
+        {
+          "bottom": 162,
+          "className": "brand rpg-back",
+          "clientWidth": 350,
+          "id": "",
+          "left": 12,
+          "right": 362,
+          "scrollWidth": 350,
+          "tag": "A",
+          "top": 114
+        },
+        {
+          "bottom": 162,
+          "className": "top-actions",
+          "clientWidth": 48,
+          "id": "rpg-playtest-audio",
+          "left": 370,
+          "right": 418,
+          "scrollWidth": 48,
+          "tag": "DIV",
+          "top": 114
+        },
+        {
+          "bottom": 227,
+          "className": "rpg-exam-strip",
+          "clientWidth": 430,
+          "id": "",
+          "left": 0,
+          "right": 430,
+          "scrollWidth": 430,
+          "tag": "DIV",
+          "top": 170
+        },
+        {
+          "bottom": 844,
+          "className": "rpg-scene-host",
+          "clientWidth": 430,
+          "id": "rpg-playtest-scene",
+          "left": 0,
+          "right": 430,
+          "scrollWidth": 430,
+          "tag": "DIV",
+          "top": 227
+        },
+        {
+          "bottom": 107,
+          "className": "tg-fixture-chrome",
+          "clientWidth": 430,
+          "id": "",
+          "left": 0,
+          "right": 430,
+          "scrollWidth": 430,
+          "tag": "DIV",
+          "top": 0
+        }
+      ]
+    }
+  ],
+  "nativeIframeRetainedOnResize": true,
+  "actualComputedUserSelect": {
+    "drive-brake": "none",
+    "drive-enter": "none",
+    "native-aim-label": "none",
+    "fire-label": "none",
+    "error-diagnostic": "text"
+  },
+  "gameLaunch": {
+    "attempted": true,
+    "build": 17,
+    "result": "C-GPU",
+    "graphics": "WebGL 2 unavailable",
+    "renderer": "Disabled",
+    "engineInitialized": false
+  },
+  "nativeGPUVerified": false,
+  "nativeMobileTelegramVerified": false,
+  "screenshotProvidedInChat": true,
+  "browserScreenshotIncludedInArchive": false
+}

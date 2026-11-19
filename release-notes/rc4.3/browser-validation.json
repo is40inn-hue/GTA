@@ -1,0 +1,47 @@
+{
+  "environment": "managed cloud browser; desktop engine; mobile-width iframe fixture",
+  "release": "RC4.3",
+  "homeAndDefaultEdition": 16,
+  "layoutContainerWidths": [
+    320,
+    390,
+    430
+  ],
+  "horizontalOverflowAtCheckedWidths": false,
+  "coverHeightAt390ContainerPx": 406.02,
+  "primaryTapHeightPx": 54,
+  "AtoBObservedWithoutCorrectnessPointsOrStars": true,
+  "HesoyamQuestionObserved": true,
+  "musicSecondClipReadyState": 4,
+  "musicSecondClipPlaybackObservedFromMediaElement": true,
+  "chronologyTapInteractionObserved": true,
+  "BtoCObservedWithoutDuplicateIntro": true,
+  "nativeLaunchBuild": 16,
+  "nativeGPUExecuted": false,
+  "nativeBlocker": "C-GPU: WebGL 2 unavailable; GL_RENDERER disabled in cloud browser",
+  "technicalSkipsPreserveAB": true,
+  "commissionObserved": true,
+  "finalScoreInFallbackRun": 64,
+  "finalSectionPoints": {
+    "A": 24,
+    "B": 40,
+    "C": 0
+  },
+  "finalImageNaturalSize": [
+    1080,
+    1920
+  ],
+  "finalDownloadButtonObserved": true,
+  "downloadVerification": "top-level application; native browser download event returned a file",
+  "iframeBlobExportLimit": "browser tooling does not support Blob downloads from nested frames",
+  "realCFrameCapturedInThisEnvironment": false,
+  "staleTabRegressionObservedAndFixed": true,
+  "staleTabLiveRetest": [
+    "old finished64 view could not replace new explicit0/12 attempt on reload",
+    "old0/12 view could not overwrite another tab accepted1/12 answer on reload"
+  ],
+  "browserScreenshot": "gta-ege-rc43-preview.jpg (QA only; excluded from deployment archive)",
+  "phoneHardwareTested": false,
+  "telegramNativeStoriesPublicationTested": false,
+  "liveDeploymentUpdated": false
+}

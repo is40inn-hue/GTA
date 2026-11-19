@@ -1,0 +1,683 @@
+{
+  "version": 3,
+  "magic": [
+    1380271941,
+    842023766
+  ],
+  "slots": {
+    "magic0": 0,
+    "magic1": 1,
+    "version": 2,
+    "phase": 3,
+    "player": 4,
+    "ped": 5,
+    "scene": 6,
+    "ammo": 7,
+    "ammoInitial": 8,
+    "weapon": 9,
+    "heartbeat": 10,
+    "playerHealth": 11,
+    "targetCount": 12,
+    "outcome": 13,
+    "completed": 14,
+    "currentWeapon": 15,
+    "command": 16,
+    "requestedScene": 17,
+    "commandSeq": 18,
+    "ackSeq": 19,
+    "nativeTimer": 20,
+    "emptyDeadline": 21,
+    "creditedCount": 22,
+    "target0_handle": 23,
+    "target0_health": 24,
+    "target0_credited": 25,
+    "target0_destroyed": 26,
+    "target0_baseline": 27,
+    "target1_handle": 28,
+    "target1_health": 29,
+    "target1_credited": 30,
+    "target1_destroyed": 31,
+    "target1_baseline": 32,
+    "target2_handle": 33,
+    "target2_health": 34,
+    "target2_credited": 35,
+    "target2_destroyed": 36,
+    "target2_baseline": 37,
+    "playerX": 38,
+    "playerY": 39,
+    "playerZ": 40,
+    "playerFrozen": 41,
+    "heliX": 42,
+    "heliY": 43,
+    "heliZ": 44,
+    "heliRoute": 45,
+    "rpgHit": 46,
+    "sceneDeadline": 47,
+    "driver": 48,
+    "hijacked": 49,
+    "driveCompleted": 50,
+    "inCar": 51,
+    "wanted": 52,
+    "cop": 53,
+    "copCar": 54,
+    "shotHit": 55,
+    "policeAlert": 56,
+    "policeAlertUntil": 57,
+    "record1_completed": 64,
+    "record1_scene": 65,
+    "record1_outcome": 66,
+    "record1_ammoInitial": 67,
+    "record1_ammo": 68,
+    "record1_weapon": 69,
+    "record1_targetCount": 70,
+    "record1_target0_health": 71,
+    "record1_target0_credited": 72,
+    "record1_target0_destroyed": 73,
+    "record1_target1_health": 74,
+    "record1_target1_credited": 75,
+    "record1_target1_destroyed": 76,
+    "record1_target2_health": 77,
+    "record1_target2_credited": 78,
+    "record1_target2_destroyed": 79,
+    "record1_hijacked": 80,
+    "record1_driveCompleted": 81,
+    "record2_completed": 96,
+    "record2_scene": 97,
+    "record2_outcome": 98,
+    "record2_ammoInitial": 99,
+    "record2_ammo": 100,
+    "record2_weapon": 101,
+    "record2_targetCount": 102,
+    "record2_target0_health": 103,
+    "record2_target0_credited": 104,
+    "record2_target0_destroyed": 105,
+    "record2_target1_health": 106,
+    "record2_target1_credited": 107,
+    "record2_target1_destroyed": 108,
+    "record2_target2_health": 109,
+    "record2_target2_credited": 110,
+    "record2_target2_destroyed": 111,
+    "record2_hijacked": 112,
+    "record2_driveCompleted": 113,
+    "record3_completed": 128,
+    "record3_scene": 129,
+    "record3_outcome": 130,
+    "record3_ammoInitial": 131,
+    "record3_ammo": 132,
+    "record3_weapon": 133,
+    "record3_targetCount": 134,
+    "record3_target0_health": 135,
+    "record3_target0_credited": 136,
+    "record3_target0_destroyed": 137,
+    "record3_target1_health": 138,
+    "record3_target1_credited": 139,
+    "record3_target1_destroyed": 140,
+    "record3_target2_health": 141,
+    "record3_target2_credited": 142,
+    "record3_target2_destroyed": 143,
+    "record3_hijacked": 144,
+    "record3_driveCompleted": 145,
+    "pickup": 146,
+    "pickupBlip": 147,
+    "pickupCollected": 148,
+    "routeBlip": 149,
+    "chaseStage": 150,
+    "target0_rpgHit": 151,
+    "target1_rpgHit": 152,
+    "target2_rpgHit": 153,
+    "missionHeat": 154,
+    "chaseHeli": 155,
+    "chaseHeliUpdate": 156,
+    "chaseActivated": 157,
+    "ambient0": 158,
+    "ambient1": 159,
+    "ambient2": 160,
+    "ambientState": 161,
+    "ambientAttackUntil": 162,
+    "ambientRemoveAt": 163,
+    "streetTaxi": 164,
+    "routeStage": 165,
+    "courier": 166,
+    "courierStopUntil": 167,
+    "courierRetryAt": 168,
+    "courierBoarding": 169,
+    "carDriver": 170,
+    "courierAttempts": 171,
+    "courierInCar": 172,
+    "arrivalStage": 173,
+    "arrivalDeadline": 174,
+    "arrivalExited": 175,
+    "arrivalLanded": 176,
+    "arrivalRunUpdate": 177,
+    "traffic0": 178,
+    "traffic1": 179,
+    "trafficDriver0": 180,
+    "trafficDriver1": 181,
+    "trafficState0": 182,
+    "trafficState1": 183,
+    "trafficExpire0": 184,
+    "trafficExpire1": 185,
+    "street0": 186,
+    "street1": 187,
+    "street2": 188,
+    "streetActive": 189,
+    "cameoSeen": 190,
+    "cameoVisibleSince": 191,
+    "record2_cameoSeen": 192,
+    "ambient3": 193,
+    "firstPickupX": 194,
+    "firstPickupY": 195,
+    "firstPickupZ": 196,
+    "arrivalPudgeSeen": 197,
+    "arrivalPudgeVisibleSince": 198,
+    "arrivalSteveSeen": 199,
+    "arrivalSteveVisibleSince": 200,
+    "arrivalRunNotBefore": 201,
+    "record1_arrivalPudgeSeen": 202,
+    "record1_arrivalSteveSeen": 203,
+    "escapeBike": 204,
+    "escapeState": 205,
+    "escapeDeadline": 206,
+    "escapeRetryAt": 207,
+    "escapeAttempts": 208,
+    "escapeDriver": 209,
+    "escapeNotBefore": 210,
+    "escapeEntered": 211,
+    "escapeDeparted": 212,
+    "escapeStartX": 213,
+    "escapeStartY": 214,
+    "escapeBikeX": 215,
+    "escapeBikeY": 216,
+    "playerHeading": 217,
+    "mapTargetX": 218,
+    "mapTargetY": 219,
+    "mapTargetZ": 220,
+    "mapTargetKind": 221,
+    "mapValid": 222,
+    "record1_escapeEntered": 223,
+    "record1_escapeDeparted": 224,
+    "escapeBikeZ": 225
+  },
+  "size": 56463,
+  "sha256": "67c4c72db55bc3831eaf676c64e161ab5b63bdf649aec9e37b0ee5ca9320bfda",
+  "phases": {
+    "error": -1,
+    "loading": 0,
+    "briefing": 1,
+    "playing": 2,
+    "complete": 3,
+    "idle": 4
+  },
+  "commands": {
+    "prepare": 1,
+    "start": 2
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "title": "Первый шум",
+      "weapon": 23,
+      "weaponName": "Uzi",
+      "model": 282,
+      "ammo": 40,
+      "burst": 3,
+      "targetModel": 217,
+      "targetModels": [
+        217
+      ],
+      "positions": [
+        [
+          288.8,
+          -1088,
+          17.2
+        ]
+      ],
+      "pickup": [
+        290,
+        -1068,
+        11.5
+      ],
+      "pickupPlacement": "native-player-forward-offset-at-release",
+      "pickupForwardMetres": 3,
+      "targetHeading": 90,
+      "targetHealth": 320,
+      "landingTarget": true,
+      "targetName": "Вертолёт у метки",
+      "spawn": [
+        290,
+        -1065,
+        11.5
+      ],
+      "pointsPerTarget": 12,
+      "action": "destroy",
+      "instruction": "Вертолёт садится. Затем возьми Узи и освободи выезд.",
+      "criterion": "Попадание и настоящий взрыв вертолёта — 12 баллов.",
+      "targetCount": 1
+    },
+    {
+      "scene": 2,
+      "title": "Уходи от погони",
+      "weapon": 0,
+      "weaponName": "За руль",
+      "model": 0,
+      "ammo": 0,
+      "burst": 0,
+      "targetModel": 130,
+      "targetModels": [
+        130
+      ],
+      "positions": [
+        [
+          287,
+          -1100,
+          11.2
+        ]
+      ],
+      "spawn": [
+        289,
+        -1099,
+        11.5
+      ],
+      "pointsPerTarget": 5,
+      "action": "hijack",
+      "instruction": "Забери машину. По набережной — прямо к РПГ.",
+      "criterion": "Угон — 5. Полный проезд к РПГ — ещё 5.",
+      "timeLimitSeconds": 150,
+      "route": [
+        [
+          272,
+          -1190,
+          11.5
+        ],
+        [
+          263,
+          -1285,
+          11.5
+        ],
+        [
+          244,
+          -1340,
+          11.5
+        ],
+        [
+          218,
+          -1430,
+          11.5
+        ],
+        [
+          193,
+          -1500,
+          11.5
+        ]
+      ],
+      "targetCount": 1
+    },
+    {
+      "scene": 3,
+      "title": "Последний аргумент",
+      "weapon": 30,
+      "weaponName": "РПГ",
+      "model": 287,
+      "ammo": 6,
+      "burst": 1,
+      "targetModel": 156,
+      "targetModels": [
+        156,
+        156,
+        227
+      ],
+      "positions": [
+        [
+          185,
+          -1530,
+          11.2
+        ],
+        [
+          193,
+          -1550,
+          11.2
+        ],
+        [
+          196,
+          -1570,
+          25
+        ]
+      ],
+      "spawn": [
+        193,
+        -1500,
+        11.5
+      ],
+      "pickup": [
+        193,
+        -1502,
+        11.5
+      ],
+      "pointsPerTarget": 0,
+      "targetPoints": [
+        4,
+        4,
+        6
+      ],
+      "guidanceOrder": [
+        0,
+        1,
+        2
+      ],
+      "guidanceSemantics": "one visible marker; other targets remain valid",
+      "action": "finale",
+      "instruction": "РПГ в двух шагах. Стреляй по цели с красной меткой. Вертолёт — последним.",
+      "criterion": "Машины — по 4. Вертолёт — 6. Шесть ракет.",
+      "targetCount": 3
+    }
+  ],
+  "location": "Ocean Drive",
+  "contentEdition": 10,
+  "pursuitEnabled": true,
+  "globalWantedEnabled": false,
+  "heatSemantics": "scripted mission pressure, not global native wanted level",
+  "ambient": {
+    "scene": 1,
+    "models": [
+      108,
+      107,
+      8,
+      109
+    ],
+    "count": 4,
+    "attackActor": 2,
+    "attackMilliseconds": 3200,
+    "fleeMilliseconds": 4500,
+    "scored": false,
+    "reactionActors": [
+      0,
+      1
+    ],
+    "reactionTrigger": "first-native-weapon-hit-and-health-loss",
+    "reactionOnce": true,
+    "reactionSemantics": "optional early interruption of the foreground brawl; otherwise timer-driven dispersion",
+    "taxiModel": 150,
+    "taxiPosition": [
+      298,
+      -1069,
+      11.2
+    ],
+    "taxiSettlesBeforeFreeze": true,
+    "attackTrigger": "confirmed-native-exit-then-player-directed-run"
+  },
+  "arrival": {
+    "scene": 1,
+    "model": 217,
+    "crewModels": [
+      108,
+      107,
+      8,
+      109
+    ],
+    "pudgeActor": 2,
+    "steveActor": 1,
+    "cjLikeActor": 0,
+    "dancerActor": 3,
+    "passengerSeats": [
+      0,
+      1,
+      2
+    ],
+    "airPosition": [
+      288.8,
+      -1088,
+      17.2
+    ],
+    "landingPosition": [
+      288.8,
+      -1083,
+      10.85
+    ],
+    "foreground": [
+      [
+        287.8,
+        -1075.5
+      ],
+      [
+        291.5,
+        -1076.0
+      ],
+      [
+        289.7,
+        -1074.5
+      ],
+      [
+        293.0,
+        -1075.0
+      ]
+    ],
+    "landingTimeoutMilliseconds": 8000,
+    "exitTimeoutMilliseconds": 6000,
+    "walkMilliseconds": 4800,
+    "runMilliseconds": 4800,
+    "runRefreshMilliseconds": 700,
+    "runTarget": "current-player-position",
+    "minimumRunMilliseconds": 1200,
+    "runNearRadiusMetres": 4,
+    "brawlMilliseconds": 3200,
+    "fleeMilliseconds": 4500,
+    "startTrigger": "native-start-command-only",
+    "nativeExitRequired": true,
+    "pickupRelease": "confirmed-bike-departure-or-bounded-fallback",
+    "scored": false,
+    "observation": {
+      "actors": [
+        2,
+        1
+      ],
+      "models": [
+        8,
+        107
+      ],
+      "seenFields": [
+        "arrivalPudgeSeen",
+        "arrivalSteveSeen"
+      ],
+      "storedFields": [
+        "record1_arrivalPudgeSeen",
+        "record1_arrivalSteveSeen"
+      ],
+      "requiresBothSeen": true,
+      "exposureMilliseconds": 600,
+      "radiusMetres": 18,
+      "requiresExitedHelicopter": true,
+      "requiresNativeVisibility": true
+    },
+    "stages": [
+      "prepared",
+      "landing",
+      "exiting",
+      "foreground",
+      "brawl",
+      "flee",
+      "finished",
+      "fallback"
+    ]
+  },
+  "escape": {
+    "scene": 1,
+    "actor": 2,
+    "model": 191,
+    "position": [
+      294.2,
+      -1072.0,
+      11.2
+    ],
+    "destination": [
+      272,
+      -1190,
+      11.2
+    ],
+    "heading": 180,
+    "boardingMilliseconds": 6500,
+    "boardingRetryMilliseconds": 3300,
+    "maximumBoardingAttempts": 2,
+    "departureMilliseconds": 3500,
+    "minimumRidingMilliseconds": 900,
+    "departureBoxHalfExtentMetres": 6,
+    "cruiseSpeed": 9,
+    "drivingStyle": 0,
+    "nativeBoardingRequired": true,
+    "nativeDriverRequired": true,
+    "nativeDepartureRequired": true,
+    "warpAllowed": false,
+    "scored": false,
+    "states": [
+      "prepared",
+      "boarding",
+      "riding",
+      "departed",
+      "fallback"
+    ],
+    "pickupRelease": "departure confirmed or bounded failure; never early score/auto hit",
+    "cleanup": "off-screen after 18s or unconditional finish/prepare"
+  },
+  "radar": {
+    "readOnly": true,
+    "nativeTelemetry": true,
+    "worldBounds": [
+      -2000,
+      -2000,
+      2000,
+      2000
+    ],
+    "grid": [
+      8,
+      8
+    ],
+    "tileMetres": 500,
+    "tileIndex": "x + 8 * y; north at top",
+    "targetKinds": {
+      "none": 0,
+      "pickup": 1,
+      "vehicle": 2,
+      "route": 3,
+      "helicopter": 4
+    },
+    "validOnlyWhilePlaying": true
+  },
+  "helicopters": {
+    "arrival": {
+      "model": 217,
+      "label": "красный гражданский вертолёт"
+    },
+    "pursuitAndFinale": {
+      "model": 227,
+      "label": "патрульный вертолёт",
+      "variant": "supplied Maverick with authored roof pods, searchlight and patrol beacon"
+    }
+  },
+  "drive": {
+    "routeStages": [
+      "outbound",
+      "past-ramp",
+      "seafront",
+      "southern-bend",
+      "rpg"
+    ],
+    "passengerRequired": false,
+    "stopRequired": false,
+    "oneDirection": true,
+    "scoredSeparately": false
+  },
+  "street": {
+    "scene": 2,
+    "traffic": [
+      {
+        "model": 130,
+        "position": [
+          270,
+          -1160,
+          11.2
+        ],
+        "destination": [
+          290,
+          -1060,
+          11.2
+        ],
+        "speed": 6.5,
+        "colour": [
+          37,
+          37
+        ],
+        "routeStage": 0
+      },
+      {
+        "model": 150,
+        "position": [
+          256,
+          -1240,
+          11.2
+        ],
+        "destination": [
+          277,
+          -1130,
+          11.2
+        ],
+        "speed": 7.5,
+        "colour": [
+          6,
+          6
+        ],
+        "routeStage": 1
+      }
+    ],
+    "walkers": [
+      {
+        "model": 7,
+        "position": [
+          294,
+          -1125,
+          11.2
+        ],
+        "destination": [
+          290,
+          -1140
+        ]
+      },
+      {
+        "model": 7,
+        "position": [
+          290,
+          -1136,
+          11.2
+        ],
+        "destination": [
+          295,
+          -1119
+        ]
+      },
+      {
+        "model": 1,
+        "position": [
+          282,
+          -1190,
+          11.2
+        ],
+        "destination": [
+          279,
+          -1207
+        ]
+      }
+    ],
+    "trafficRelease": "native-driver-confirmed-and-route-stage",
+    "trafficMaxCount": 2,
+    "trafficDrivingStyle": 0,
+    "trafficRetireAfterMilliseconds": 45000,
+    "trafficRetireOnlyOffScreen": true,
+    "cameoQuestion": false,
+    "allAmbientScored": false,
+    "allSceneActorsCleanedOnFinish": true
+  },
+  "result": {
+    "engine": "vice-city-wasm",
+    "version": 3,
+    "immutable": true,
+    "nativeOnly": true
+  }
+}

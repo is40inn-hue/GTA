@@ -1,0 +1,635 @@
+{
+  "version": 1,
+  "purpose": "Local GTA EGE startup repair; missing runtime resources copied byte-for-byte from the existing user project.",
+  "sourceProject": "gta2026-hud-safe-20261111",
+  "sourceDirectory": "public/remote/models",
+  "destinationDirectory": "native-vc/runtime/remote/models",
+  "count": 86,
+  "size": 2423075,
+  "modifiedAssets": false,
+  "licenseStatus": "Existing user-supplied project assets. This provenance record does not grant new rights or authorize public distribution.",
+  "files": [
+    {
+      "path": "remote/models/gta3.img/airtrain.dff",
+      "originalPath": "/remote/models/gta3.img/airtrain.dff",
+      "size": 94208,
+      "sha256": "e07b50e06c8e8157fafa7f5522b1e653fbf87b0dfc76b8772517ea92d94998f5",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/airtrain.txd",
+      "originalPath": "/remote/models/gta3.img/airtrain.txd",
+      "size": 26624,
+      "sha256": "4451c4e5c33d5decde83a501b342738086097ed1ae9ec865185a2bb1b5be75ef",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/baseball.ifp",
+      "originalPath": "/remote/models/gta3.img/baseball.ifp",
+      "size": 59392,
+      "sha256": "2ddd8afd295996171555dfab4eb51c9294802a24627d4b87eb1c51dc1a7ba580",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/biked.ifp",
+      "originalPath": "/remote/models/gta3.img/biked.ifp",
+      "size": 141312,
+      "sha256": "d06dcab7a2d4e6e32225b5abe6fcb923488adf6274fe7a7a84548362c70f766a",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/bikeh.ifp",
+      "originalPath": "/remote/models/gta3.img/bikeh.ifp",
+      "size": 110592,
+      "sha256": "3e2661e827ef323c3f7b33ef116d4d34932f2551e8cec4431444153b8dad7096",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/bikes.ifp",
+      "originalPath": "/remote/models/gta3.img/bikes.ifp",
+      "size": 133120,
+      "sha256": "f546894e681b540307cadbe663d523344340d2fea1ebdedaae9f719e4fd3402e",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/bikev.ifp",
+      "originalPath": "/remote/models/gta3.img/bikev.ifp",
+      "size": 88064,
+      "sha256": "a3a3c8a9541842a3654574c2cc7181dffad52d316353d6f8e2a7a0f292e81e33",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/coach.ifp",
+      "originalPath": "/remote/models/gta3.img/coach.ifp",
+      "size": 86016,
+      "sha256": "08040df1544c8d172e67362ad37450d181c94b8e49cd9557a4f1159d97c7cdf9",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/colt45.ifp",
+      "originalPath": "/remote/models/gta3.img/colt45.ifp",
+      "size": 59392,
+      "sha256": "1e0caa3312eef94b52bcb76c90445d412da1ab71d192e42a83d15c4a2d2f8b56",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/islandlodmainland.dff",
+      "originalPath": "/remote/models/gta3.img/islandlodmainland.dff",
+      "size": 346112,
+      "sha256": "b7129a70de4761ec64b211281563a5ceb01aba110c38b2ecd429d9bc67ddf76d",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/islandlolodm.txd",
+      "originalPath": "/remote/models/gta3.img/islandlolodm.txd",
+      "size": 100352,
+      "sha256": "7d21f3235c7b394ebff0740fb0542d4bd2eb5f677af44112cb6b0c537d108c68",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/missile.dff",
+      "originalPath": "/remote/models/gta3.img/missile.dff",
+      "size": 6144,
+      "sha256": "7b5dc48c55c08c59188fbe59783a584b76bb1b96b9f667c6fc4ae07828612210",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/missile.txd",
+      "originalPath": "/remote/models/gta3.img/missile.txd",
+      "size": 4096,
+      "sha256": "b6229aaf99677e2bc9b20edc4f668a0eedd2ff500e98817899d37207bc30d7b5",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/nitestick.dff",
+      "originalPath": "/remote/models/gta3.img/nitestick.dff",
+      "size": 4096,
+      "sha256": "860c9ce178230d6b71e1c41eaba6a53f63ebc771e6e46529b1055a18732caa3e",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/nitestick.txd",
+      "originalPath": "/remote/models/gta3.img/nitestick.txd",
+      "size": 6144,
+      "sha256": "d0353c45c5c2b13d7339ccc00e0fb89465ae61913eeeb9005a881177d15ebc8e",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/playidles.ifp",
+      "originalPath": "/remote/models/gta3.img/playidles.ifp",
+      "size": 86016,
+      "sha256": "71a1e9945d4797e1d9be8f661bfbab09d3378a1903fd79e3faae7b33933f5db5",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar00.txd",
+      "originalPath": "/remote/models/gta3.img/radar00.txd",
+      "size": 8360,
+      "sha256": "a845a8de34f1839d3140f063927ba526b3e43de657c17dc70daa1e15c9475aba",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar01.txd",
+      "originalPath": "/remote/models/gta3.img/radar01.txd",
+      "size": 10240,
+      "sha256": "328b375347d12bc40c87db34916f4e3bd779fc978d01993cafd305cc0431b794",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar02.txd",
+      "originalPath": "/remote/models/gta3.img/radar02.txd",
+      "size": 10240,
+      "sha256": "d29a5781883dcbc4fee0cfbcc6b1028e8e5b3d075b85bfe9b2aa43525d39542a",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar03.txd",
+      "originalPath": "/remote/models/gta3.img/radar03.txd",
+      "size": 10240,
+      "sha256": "e56297f3c9831fe65d66d560c2855a5794987a8c4027ded0adba5e537c881803",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar04.txd",
+      "originalPath": "/remote/models/gta3.img/radar04.txd",
+      "size": 10240,
+      "sha256": "4ccb1d801abc87d4a0ab04089f76fbd6837e21dbdfcc984ebb4ebddf4be4108f",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar05.txd",
+      "originalPath": "/remote/models/gta3.img/radar05.txd",
+      "size": 10240,
+      "sha256": "023e8224274aaccd8a41c483871af899f5e6722fe640155e5818b483e4c30e87",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar06.txd",
+      "originalPath": "/remote/models/gta3.img/radar06.txd",
+      "size": 10240,
+      "sha256": "049fd9de805bf7598a47170a2cacb65fce4bf99e79990ffcebf89daf438a6298",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar07.txd",
+      "originalPath": "/remote/models/gta3.img/radar07.txd",
+      "size": 8360,
+      "sha256": "97b02af90300f334789eef8289a6a634f99d2ac623189f2e09b5f12a167d62c0",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar08.txd",
+      "originalPath": "/remote/models/gta3.img/radar08.txd",
+      "size": 8360,
+      "sha256": "1e7a91f0a07588caa5bd3f131f0193d703b84ee5de605647723ae9b0ccdd38ae",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar09.txd",
+      "originalPath": "/remote/models/gta3.img/radar09.txd",
+      "size": 10240,
+      "sha256": "9fefcef77d88828b20ef14933a5fb7e9982cd3aa0f3d70845e941300eca8dbc1",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar10.txd",
+      "originalPath": "/remote/models/gta3.img/radar10.txd",
+      "size": 10240,
+      "sha256": "52aa63c394f884b9fd6c8b0a886c051fa716e2b0e9c89928bf53f0f22a535a16",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar11.txd",
+      "originalPath": "/remote/models/gta3.img/radar11.txd",
+      "size": 10240,
+      "sha256": "bad0e59282ea932c2d7c28e3ba9ad6dd4d3cb74a6b3b76db9f0ac7454a40226c",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar12.txd",
+      "originalPath": "/remote/models/gta3.img/radar12.txd",
+      "size": 10240,
+      "sha256": "1634b684c429104836d41a339a07fabdedcd9d2039da10642fe72b285694748d",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar13.txd",
+      "originalPath": "/remote/models/gta3.img/radar13.txd",
+      "size": 10240,
+      "sha256": "d35ab50c7bef7ae7a1568ea813cf6eff872ca288817ba277ddf2b18cb23bfc0e",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar14.txd",
+      "originalPath": "/remote/models/gta3.img/radar14.txd",
+      "size": 8360,
+      "sha256": "466d2a7c7069beb62fd615dc01c885350a91b412ffc3780a22f6f7c74caf26af",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar15.txd",
+      "originalPath": "/remote/models/gta3.img/radar15.txd",
+      "size": 8360,
+      "sha256": "86b3234597e39e5fefcda68afebc31f5e68c40fee61a92db6dee2834d8509acb",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar16.txd",
+      "originalPath": "/remote/models/gta3.img/radar16.txd",
+      "size": 8360,
+      "sha256": "cc5d5c37c5db142b42ecfb94581cafb8fc02be5a75366ea3a8991c12dc624b64",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar17.txd",
+      "originalPath": "/remote/models/gta3.img/radar17.txd",
+      "size": 8360,
+      "sha256": "1d4cf67333217001420b3a7a45655e336b33328127b30e7aebfe70fd57b897ba",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar18.txd",
+      "originalPath": "/remote/models/gta3.img/radar18.txd",
+      "size": 8360,
+      "sha256": "d2feb3c802f58d4cb83236f6eac18cbd7011fe7641b2aedd6edbb7d06be86a1f",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar19.txd",
+      "originalPath": "/remote/models/gta3.img/radar19.txd",
+      "size": 10240,
+      "sha256": "02aef8b2a72a39b68e6ecdbf474d53a9d6d2153ea882a6cf78974b363c0893ab",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar20.txd",
+      "originalPath": "/remote/models/gta3.img/radar20.txd",
+      "size": 10240,
+      "sha256": "b61259caccc9526c2f67a6b81d095e0d6c8f5da970f77c8cfb5745dd1ed971af",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar21.txd",
+      "originalPath": "/remote/models/gta3.img/radar21.txd",
+      "size": 10240,
+      "sha256": "83db0733b3f8cc880afdc5319c6658c92408e0f8efb3d306ad1588ad620a5180",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar22.txd",
+      "originalPath": "/remote/models/gta3.img/radar22.txd",
+      "size": 8360,
+      "sha256": "7f8ec85754b668a181d1ca5211b23979796798b8c5a25539b18f2087bf7631e1",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar23.txd",
+      "originalPath": "/remote/models/gta3.img/radar23.txd",
+      "size": 8360,
+      "sha256": "42a4b2fca8dbe31af837f42103a259bc1668f027dc46bb071080299a7d8425b4",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar24.txd",
+      "originalPath": "/remote/models/gta3.img/radar24.txd",
+      "size": 8360,
+      "sha256": "1be45c501ac3dea5b7e8d75ca43468aecf5a01399b99aff7ccb0c5a8474b992f",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar25.txd",
+      "originalPath": "/remote/models/gta3.img/radar25.txd",
+      "size": 8360,
+      "sha256": "804d0ce2d04b875461fa7c47eec7e0723a6599565361c9938860725b15ddf5f9",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar26.txd",
+      "originalPath": "/remote/models/gta3.img/radar26.txd",
+      "size": 8360,
+      "sha256": "e74d5fb781294cf8d3d54a918554eac18c5ea6e524340bfc52a714b7393bbbd9",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar27.txd",
+      "originalPath": "/remote/models/gta3.img/radar27.txd",
+      "size": 10240,
+      "sha256": "0fc44bd468e25ffe58b0b2409ee3d2e5fd9b7f3d3bdd1b9f1b601c5fc6658710",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar28.txd",
+      "originalPath": "/remote/models/gta3.img/radar28.txd",
+      "size": 10240,
+      "sha256": "7cb0c2ced905d5ec7c88eddaa7cb711335f5b1854497884a36fb8bd6c2e781ea",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar29.txd",
+      "originalPath": "/remote/models/gta3.img/radar29.txd",
+      "size": 10240,
+      "sha256": "e2884f33fd4b73cb1b2b47399f2ff8af709b56b599a60052a35f0baca6e95879",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar30.txd",
+      "originalPath": "/remote/models/gta3.img/radar30.txd",
+      "size": 8360,
+      "sha256": "fd7cc2c6d7b295ea7d4c446ec76b60d981758e6d5dee6f23cddaa380709c6100",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar31.txd",
+      "originalPath": "/remote/models/gta3.img/radar31.txd",
+      "size": 8360,
+      "sha256": "2dab8ebe7b5d96986539cf480af52a409c1917173c9205f2b2ca98ec020977d6",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar32.txd",
+      "originalPath": "/remote/models/gta3.img/radar32.txd",
+      "size": 10240,
+      "sha256": "9c157545209faef02924d331fe23b6c3f8f024c709bcbc079965f435c0c73ab4",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar33.txd",
+      "originalPath": "/remote/models/gta3.img/radar33.txd",
+      "size": 10240,
+      "sha256": "043a089b1697d0063e48724f4314523aae74b60a48be4f623efc5d9ecc44e537",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar34.txd",
+      "originalPath": "/remote/models/gta3.img/radar34.txd",
+      "size": 8360,
+      "sha256": "647200c63aa013439095c396942ad2c78977ad3cc0374cdd6a8aeadc135b08dd",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar35.txd",
+      "originalPath": "/remote/models/gta3.img/radar35.txd",
+      "size": 10240,
+      "sha256": "0e8721b52193298d8b10b9424daa3a359b7782772f570caff227ac032c3f8caf",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar36.txd",
+      "originalPath": "/remote/models/gta3.img/radar36.txd",
+      "size": 10240,
+      "sha256": "38a55361773d73f3c3e5dff677470d1ec5f62600d0ee99354dbbe84402b55a74",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar37.txd",
+      "originalPath": "/remote/models/gta3.img/radar37.txd",
+      "size": 10240,
+      "sha256": "e1cff7bc7339fe2233b9b84917181bedcfe331a078e0a47e64ca94d4a05a1240",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar38.txd",
+      "originalPath": "/remote/models/gta3.img/radar38.txd",
+      "size": 10240,
+      "sha256": "25ff36a3c00a8671c01ad5eb5f9ef78bdfbcf14d4a8212cf0c282cee28712581",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar39.txd",
+      "originalPath": "/remote/models/gta3.img/radar39.txd",
+      "size": 10240,
+      "sha256": "13198c74ed01e962072a8f80ed7987b0d36f579735395ea3f414835c32f2a5d8",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar40.txd",
+      "originalPath": "/remote/models/gta3.img/radar40.txd",
+      "size": 10240,
+      "sha256": "d115f1df3f449f2efb38e2d44290208c766cf3349baa4aa46aab7a1d295f0e4c",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar41.txd",
+      "originalPath": "/remote/models/gta3.img/radar41.txd",
+      "size": 10240,
+      "sha256": "d1e4eda0b26becbac65e9bd67014db3b81f52c6afd1027bc595429cbf9892e1d",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar42.txd",
+      "originalPath": "/remote/models/gta3.img/radar42.txd",
+      "size": 8360,
+      "sha256": "0f9a6f70f15106f7a30c778f5a48ce201b71b6c8dc5ae74bcc10739e713a4dd5",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar43.txd",
+      "originalPath": "/remote/models/gta3.img/radar43.txd",
+      "size": 10240,
+      "sha256": "c1156a7d8e4d532ce32bb24b76c80c961eb8cf398becdf04bd5d9bd8f07dc285",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar44.txd",
+      "originalPath": "/remote/models/gta3.img/radar44.txd",
+      "size": 10240,
+      "sha256": "2171d2248baf09b1c276d77031e64995c149e1797662339c519c899b72ab9777",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar45.txd",
+      "originalPath": "/remote/models/gta3.img/radar45.txd",
+      "size": 10240,
+      "sha256": "60fa7a90cfc06e77fa1c871f4345feea3a9b173145e169230c9c2fa158c63e30",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar46.txd",
+      "originalPath": "/remote/models/gta3.img/radar46.txd",
+      "size": 10240,
+      "sha256": "89ce6957f730cf10e54fcd745e2bf8db6004b1d1668f2c735933411134c74251",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar47.txd",
+      "originalPath": "/remote/models/gta3.img/radar47.txd",
+      "size": 10240,
+      "sha256": "ae20eac5518a43c2605b90b3cf8959e0acdd93e53c4971246c50dedb7cd45889",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar48.txd",
+      "originalPath": "/remote/models/gta3.img/radar48.txd",
+      "size": 10240,
+      "sha256": "f87147243312e6dc429588c040aa8c3d974d49aabc446534c0323c2e9b669f86",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar49.txd",
+      "originalPath": "/remote/models/gta3.img/radar49.txd",
+      "size": 10240,
+      "sha256": "b3bda6aabb6cbdcb6450e2668af27fbf55e4058ea6f2d56b913d75c3a6f331ff",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar50.txd",
+      "originalPath": "/remote/models/gta3.img/radar50.txd",
+      "size": 10240,
+      "sha256": "9d33c8fc151001bea62e59a82bf6fff78e37bc7d095a48e8c1665645db520adb",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar51.txd",
+      "originalPath": "/remote/models/gta3.img/radar51.txd",
+      "size": 10240,
+      "sha256": "491ca11473ba053bc620bb08d967497bc3e6d18a35922d9fdb63f90a394a410a",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar52.txd",
+      "originalPath": "/remote/models/gta3.img/radar52.txd",
+      "size": 10240,
+      "sha256": "02a872293cd2f716efede78e861409e70a3873b6e449a2d972cdadd016a561d9",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar53.txd",
+      "originalPath": "/remote/models/gta3.img/radar53.txd",
+      "size": 10240,
+      "sha256": "6c39f0614f728f96fd29a814d0e12aa358993543075bf1adfb56f3c4c2614466",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar54.txd",
+      "originalPath": "/remote/models/gta3.img/radar54.txd",
+      "size": 10240,
+      "sha256": "1881d9153ab051df276cc552c07ddf9cb185cc196692269a3a7f4face602776b",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar55.txd",
+      "originalPath": "/remote/models/gta3.img/radar55.txd",
+      "size": 10240,
+      "sha256": "4d5953641fbefbe2ea0c9964118c0a51e48489c257d16781831d6c1a936e3963",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar56.txd",
+      "originalPath": "/remote/models/gta3.img/radar56.txd",
+      "size": 10240,
+      "sha256": "15cc081f57a67c58a89603ce5e68fbfdaf90b3612ed9559c190bb16922a8511c",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar57.txd",
+      "originalPath": "/remote/models/gta3.img/radar57.txd",
+      "size": 10240,
+      "sha256": "d11ded4a7d24cb7c0cabca738943c0a0f878113ba04b1395c6f238a3b83c8236",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar58.txd",
+      "originalPath": "/remote/models/gta3.img/radar58.txd",
+      "size": 10240,
+      "sha256": "611e47f97667ac3bfe3825f560a14eee5439e65ed07e5cbcb9fbd6c321e3519f",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar59.txd",
+      "originalPath": "/remote/models/gta3.img/radar59.txd",
+      "size": 10240,
+      "sha256": "a586db66dc0130c5c103c2186d092438dbaddded2565fcffd5cd2fe6d7405f2c",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar60.txd",
+      "originalPath": "/remote/models/gta3.img/radar60.txd",
+      "size": 10240,
+      "sha256": "d2d79fd19f90ee3be1d35d9cf024b3c5a4efa4995b65ebf5032e00e91ec81b02",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar61.txd",
+      "originalPath": "/remote/models/gta3.img/radar61.txd",
+      "size": 10240,
+      "sha256": "1145f3c01e66a6977a9b182ccaaa43a71a22634477e281717742d931a64b8c99",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar62.txd",
+      "originalPath": "/remote/models/gta3.img/radar62.txd",
+      "size": 10240,
+      "sha256": "fb1f11d0e01c4dc9240ac42e77435a4e31dfa442060484a441bb21b3b8dfc270",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/radar63.txd",
+      "originalPath": "/remote/models/gta3.img/radar63.txd",
+      "size": 10240,
+      "sha256": "8e30fe138870177d903b3d713fff479bcc45831c2f5c5eb424a9ebca76415fba",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/shotgun.ifp",
+      "originalPath": "/remote/models/gta3.img/shotgun.ifp",
+      "size": 51200,
+      "sha256": "24e58c624c5c51316e3fad0e7239e8cbd616a0dc78e1a6a0b466e53c73a88311",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/sunbathe.ifp",
+      "originalPath": "/remote/models/gta3.img/sunbathe.ifp",
+      "size": 59392,
+      "sha256": "a0da11ca8f11e6c67ac84887299d8c514f693789dafec6d0baaaa8cd75f668cf",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/uzi.ifp",
+      "originalPath": "/remote/models/gta3.img/uzi.ifp",
+      "size": 57344,
+      "sha256": "c5dbc23d656cc98c9661652c5a7d49e03e527c3bc87540b15d142fba51388d58",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/van.ifp",
+      "originalPath": "/remote/models/gta3.img/van.ifp",
+      "size": 79872,
+      "sha256": "18a3c9e10577c36e77afc75766c23680025a24bb66fba0a51bd57492bbaa8753",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/maverick.dff",
+      "originalPath": "/remote/models/gta3.img/maverick.dff",
+      "size": 179283,
+      "sha256": "10ffcaac061f51bec29b3668bd772f64bcdecca3c311fcdf869414787b523722",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/maverick.txd",
+      "originalPath": "/remote/models/gta3.img/maverick.txd",
+      "size": 20904,
+      "sha256": "20378aa76f36927ffb8f4893267423462182eecb5a9ab1980902f268ed5004f7",
+      "mimeType": "application/octet-stream"
+    }
+  ],
+  "additions": {
+    "sourceProject": "gta2026-helicopter-action-20261109",
+    "sourceDirectory": "city/patch/models/gta3.img",
+    "files": [
+      {
+        "path": "remote/models/gta3.img/maverick.dff",
+        "originalPath": "/remote/models/gta3.img/maverick.dff",
+        "size": 179283,
+        "sha256": "10ffcaac061f51bec29b3668bd772f64bcdecca3c311fcdf869414787b523722",
+        "mimeType": "application/octet-stream"
+      },
+      {
+        "path": "remote/models/gta3.img/maverick.txd",
+        "originalPath": "/remote/models/gta3.img/maverick.txd",
+        "size": 20904,
+        "sha256": "20378aa76f36927ffb8f4893267423462182eecb5a9ab1980902f268ed5004f7",
+        "mimeType": "application/octet-stream"
+      }
+    ]
+  }
+}

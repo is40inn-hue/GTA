@@ -1,0 +1,159 @@
+{
+  "purpose": "Standalone native Vice City engine proof; target is Infernus, not helicopter; no exam score",
+  "version": 1,
+  "globalByteOffset": 30000,
+  "magicWords": [
+    1380271941,
+    825246550
+  ],
+  "magicASCII": [
+    "EGER",
+    "VC01"
+  ],
+  "littleEndian": true,
+  "fields": {
+    "magic0": {
+      "offset": 0,
+      "type": "int32"
+    },
+    "magic1": {
+      "offset": 4,
+      "type": "int32"
+    },
+    "version": {
+      "offset": 8,
+      "type": "int32"
+    },
+    "phase": {
+      "offset": 12,
+      "type": "int32"
+    },
+    "player": {
+      "offset": 16,
+      "type": "int32"
+    },
+    "ped": {
+      "offset": 20,
+      "type": "int32"
+    },
+    "target": {
+      "offset": 24,
+      "type": "int32"
+    },
+    "ammo": {
+      "offset": 28,
+      "type": "int32"
+    },
+    "targetHealth": {
+      "offset": 32,
+      "type": "int32"
+    },
+    "targetDead": {
+      "offset": 36,
+      "type": "int32"
+    },
+    "playerHealth": {
+      "offset": 40,
+      "type": "int32"
+    },
+    "heartbeat": {
+      "offset": 44,
+      "type": "int32"
+    },
+    "weapon": {
+      "offset": 48,
+      "type": "int32"
+    },
+    "reserved": {
+      "offset": 52,
+      "type": "int32"
+    },
+    "playerX": {
+      "offset": 56,
+      "type": "float32"
+    },
+    "playerY": {
+      "offset": 60,
+      "type": "float32"
+    },
+    "playerZ": {
+      "offset": 64,
+      "type": "float32"
+    },
+    "targetX": {
+      "offset": 68,
+      "type": "float32"
+    },
+    "targetY": {
+      "offset": 72,
+      "type": "float32"
+    },
+    "targetZ": {
+      "offset": 76,
+      "type": "float32"
+    },
+    "playerFrozen": {
+      "offset": 80,
+      "type": "int32"
+    },
+    "nativeTimer": {
+      "offset": 84,
+      "type": "int32"
+    },
+    "emptyDeadline": {
+      "offset": 88,
+      "type": "int32"
+    }
+  },
+  "phases": {
+    "-1": "Requested native model missing",
+    "0": "Native scene loading/settling",
+    "1": "Playing",
+    "2": "Native IS_CAR_DEAD true",
+    "3": "Native RPG ammo0 for6s, target not yet wrecked"
+  },
+  "phaseNote": "Native destruction takes precedence: a burning target can later change3 to2. These are native observations, not exam scoring.",
+  "player": {
+    "spawn": [
+      500,
+      -1020,
+      14
+    ],
+    "heading": 0,
+    "freezeAfterSettle": true
+  },
+  "target": {
+    "model": 141,
+    "name": "Infernus",
+    "spawn": [
+      500,
+      -995,
+      13
+    ],
+    "heading": 90,
+    "initialHealth": 1000
+  },
+  "weapon": {
+    "type": 30,
+    "model": 287,
+    "projectileModel": 273,
+    "initialAmmo": 3
+  },
+  "reserved": "offset52 stays0; not a fabricated hit count",
+  "input": "Native right-mouse aim and left-mouse fire; drag sends native mouse movement. No movement keys.",
+  "validation": {
+    "runtimeExecuted": false,
+    "opcodeDataset": "https://raw.githubusercontent.com/sannybuilder/library/master/vc/vc.json",
+    "instructionCount": 94,
+    "mainSize": 35275,
+    "codeStart": 34392,
+    "sha256": "07f2e4842f654665b26f335086e76e620268a9db73f27e8ec2b1ba82d9a10b8d",
+    "labels": {
+      "native_loop": 35003,
+      "target_alive": 35136,
+      "check_empty_deadline": 35202,
+      "model_failure": 35241,
+      "failure_loop": 35251
+    }
+  }
+}

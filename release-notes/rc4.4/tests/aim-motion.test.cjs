@@ -1,0 +1,8 @@
+const test=require('node:test');const assert=require('node:assert/strict');
+const {create}=require('./load-browser-module.cjs')(require('path').join(__dirname,'../dist/native-vc/aim-motion.js'));
+test('fractional touch motion survives ten small events',()=>{const q=create();for(let i=0;i<10;i++)q.push(.6,.7);assert.deepEqual(q.flush(),{x:6,y:7});assert.deepEqual(q.flush(),{x:0,y:0});});
+test('negative fractions and remainder survive frame boundaries',()=>{const q=create();q.push(-.6,-.35);assert.deepEqual(q.flush(),{x:0,y:0});q.push(-.6,-.35);assert.deepEqual(q.flush(),{x:-1,y:0});q.push(-.8,-.35);assert.deepEqual(q.flush(),{x:-1,y:-1});});
+test('frame cap preserves remaining motion within bounded backlog',()=>{const q=create();q.push(100,-80);assert.deepEqual(q.flush(),{x:70,y:-50});assert.deepEqual(q.flush(),{x:30,y:-30});q.push(1000,1000);assert.deepEqual(q.flush(),{x:70,y:50});assert.deepEqual(q.flush(),{x:70,y:50});assert.deepEqual(q.flush(),{x:0,y:0});});
+test('release and disabled aiming clear pending motion',()=>{const q=create();q.push(12,9);q.clear();assert.deepEqual(q.flush(),{x:0,y:0});q.push(20,30);assert.deepEqual(q.flush(false),{x:0,y:0});q.push(2,3,false);assert.deepEqual(q.flush(),{x:0,y:0});});
+test('splitting a gesture changes no total delta under cap',()=>{const one=create(),many=create();one.push(42,21);for(let i=0;i<30;i++)many.push(1.4,.7);assert.deepEqual(one.flush(),many.flush());});
+test('opposing motion cancels and non-finite values never enter native input',()=>{const q=create();q.push(4.2,-3.6);q.push(-4.2,3.6);q.push(NaN,Infinity);assert.deepEqual(q.flush(),{x:0,y:0});});

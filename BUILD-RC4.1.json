@@ -1,0 +1,42 @@
+{
+  "release": "gta-ege-rc4.1-20261117",
+  "date": "2026-11-17",
+  "basedOn": "gta-ege-rc4-20261116-dist.zip",
+  "contentEdition": 15,
+  "storageVersion": 4,
+  "maxScore": 100,
+  "passScore": 60,
+  "package": "single flat ZIP: local launch and static deployment",
+  "entrypoint": "index.html",
+  "nativeRuntimeChanged": false,
+  "nativeWarmupChanged": false,
+  "validation": {
+    "targetedTestsPassed": 37,
+    "targetedTestsFailed": 0,
+    "syntaxChecks": "PASS",
+    "localLauncherPureChecks": "PASS; no extra HTTP listener",
+    "previewHomeAndSavedAttemptRestored": true,
+    "existingDeploymentRootHTTP": 404,
+    "existingDeploymentNestedEntryHTTP": 200,
+    "existingDeploymentA1Accepted": true,
+    "existingDeploymentVerifiedRelease": "gta-ege-rc4-20261116",
+    "nativeRuntimeFilesVerified": 1044,
+    "nativeGPUVerified": false,
+    "nativeGPUBlocker": "C-GPU: WebGL 2 unavailable in cloud test browser",
+    "macFinderTested": false,
+    "windowsLauncherTested": false,
+    "liveDeploymentUpdated": false
+  },
+  "fileSHA256": {
+    "index.html": "39b41524f60b5555a5ee5e4bdf2a1449acc11f2501940b2786631ad16d9ac0ec",
+    "app.js": "9a62c08c1162c160eac0716c35c2af14fab0df968d2aa80186bb4764758a1ead",
+    "boot-guard.js": "65810916af0069a2c865672861405f8a0ea336f76f6b8b8247bcb74976ec7963",
+    "server.cjs": "2f864d7be499d739b9f3eeca7edd2873797ef3a7b9a25505893fad61c6833176",
+    "server.py": "b0c53a2e4fa6cf39ab030609196efbb5b8ee6bdf3a481e4fd3f2cafa8d2b4ced",
+    "START-MAC.command": "0cf6c0bf785e1b2d8e1096ecdf647eea6759e1f39fd828f647a914badb1ea734",
+    "START-WINDOWS.cmd": "b5e9ae4917a547a0b38dc3477ef8670831c42f548a42089a465c7082f94bd5dc",
+    "START-LINUX.sh": "af50b641dbe299114f955bf3072b29d7399db501f7b879fa5b1250db16201931",
+    "START-HERE.txt": "234eec751b6087df372760025466ec7382f8b24e91a1d985c0060174ad02b302",
+    "_redirects": "c29ec64437444a210bf3b22a3159dae6fab720f2ac2a44c05c3cb33513760a38"
+  }
+}

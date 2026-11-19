@@ -1,0 +1,42 @@
+{
+  "release": "gta-ege-rc2-1-20261115",
+  "basedOn": "gta-ege-rc2-20261113-dist.zip",
+  "scope": "UI copy cleanup; next question set is a proposal only",
+  "changedRuntimeFiles": [
+    "app.js",
+    "native-vc/index.html",
+    "native-vc/native.js",
+    "rpg/index.html",
+    "rpg.html"
+  ],
+  "contentEdition": 13,
+  "storageVersion": 4,
+  "questions": 12,
+  "maxScore": 100,
+  "passScore": 60,
+  "questionBankChanged": false,
+  "nativeGameplayChanged": false,
+  "nativeSCMSHA256": "2e70d7a2293e55a321dd0cec5cdfcc4bc35cf0bfe85e7bc4445bce08186e3f91",
+  "validation": {
+    "syntaxCheck": [
+      "app.js",
+      "native-vc/native.js"
+    ],
+    "existingVMTestsPassed": 38,
+    "existingVMTestsFailed": 0,
+    "testFiles": [
+      "tests/app-practice-flow.test.cjs",
+      "tests/vice-port.test.cjs"
+    ],
+    "copyExpectationsUpdated": 2,
+    "browserLayoutRechecked": false,
+    "nativeGameplayRechecked": false
+  },
+  "changedFileSHA256": {
+    "app.js": "8e0b3e17f396027c8d5522d788ba213d74bbc733949429e6fd3cf8f80d80fb47",
+    "native-vc/index.html": "a321ba1a8085de3e6659c1bee9addf7d47fe56804816b2856eff8f7c69740231",
+    "native-vc/native.js": "6aa724e32756f85e3449aa7c62409cfdc063a21408c451af02eee195d53fc5b5",
+    "rpg/index.html": "95c3634ef48faa46e8e29431e064769c8eb7f9d28b8c0a2eefccfcfff6368ea4",
+    "rpg.html": "302d84cb35caf0be6b9fadae8db6890a40a92abed5df8bb375f487f874d9f0c2"
+  }
+}

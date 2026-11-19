@@ -1,0 +1,1352 @@
+[
+  {
+    "id": "q01",
+    "type": "mcq",
+    "game": "Grand Theft Auto (1997)",
+    "era": "2d",
+    "difficulty": "hard",
+    "prompt": "Какая тройка городов была в самой первой GTA?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Либерти-Сити, Сан-Андреас, Вайс-Сити"
+      },
+      {
+        "id": "b",
+        "text": "Лос-Сантос, Сан-Фиерро, Лас-Вентурас"
+      },
+      {
+        "id": "c",
+        "text": "Либерти-Сити, Карсер-Сити, Ладендорф"
+      },
+      {
+        "id": "d",
+        "text": "Вайс-Сити, Лос-Сантос, Лондон"
+      }
+    ],
+    "answer": "a",
+    "explanation": "В GTA 1997 года были Liberty City, San Andreas и Vice City. San Andreas здесь — название города в 2D-вселенной, а не карта штата из игры 2004 года.",
+    "sources": [
+      {
+        "title": "GTA Wiki — Grand Theft Auto (1997): locations",
+        "url": "https://gta.wiki/w/Grand_Theft_Auto_%281997_game%29"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q02",
+    "type": "mcq",
+    "game": "GTA: London 1969 / London 1961",
+    "era": "2d",
+    "difficulty": "medium",
+    "prompt": "В каком реальном городе происходят два дополнения к первой GTA, действие которых разворачивается в 1961 и 1969 годах?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Нью-Йорк"
+      },
+      {
+        "id": "b",
+        "text": "Майами"
+      },
+      {
+        "id": "c",
+        "text": "Лондон"
+      },
+      {
+        "id": "d",
+        "text": "Лос-Анджелес"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Оба дополнения переносят основную историю в Лондон. Это отдельная ветка 2D-эпохи серии.",
+    "sources": [
+      {
+        "title": "GTA Base — London 1969 / 1961",
+        "url": "https://www.gtabase.com/games/grand-theft-auto-london-1969-1961"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q03",
+    "type": "mcq",
+    "game": "Grand Theft Auto 2",
+    "era": "2d",
+    "difficulty": "medium",
+    "prompt": "Что в GTA 2 определяет, какие задания банда готова тебе доверить?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Цвет машины"
+      },
+      {
+        "id": "b",
+        "text": "Уважение этой банды"
+      },
+      {
+        "id": "c",
+        "text": "Количество недвижимости"
+      },
+      {
+        "id": "d",
+        "text": "Общий пробег"
+      }
+    ],
+    "answer": "b",
+    "explanation": "В GTA 2 отношение каждой банды отражается в показателе Respect. Более высокий уровень уважения открывает более серьёзные задания.",
+    "sources": [
+      {
+        "title": "Grand Theft Wiki — Respect",
+        "url": "https://www.grandtheftwiki.com/Respect"
+      },
+      {
+        "title": "GTA Base — Grand Theft Auto 2",
+        "url": "https://www.gtabase.com/games/grand-theft-auto-2"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q04",
+    "type": "mcq",
+    "game": "Grand Theft Auto 2",
+    "era": "2d",
+    "difficulty": "hard",
+    "prompt": "Как называется город GTA 2?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Карсер-Сити"
+      },
+      {
+        "id": "b",
+        "text": "Лос-Сантос"
+      },
+      {
+        "id": "c",
+        "text": "Вайс-Сити"
+      },
+      {
+        "id": "d",
+        "text": "Энивэр-Сити / Anywhere City"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Действие GTA 2 происходит в Anywhere City — городе 2D-вселенной серии.",
+    "sources": [
+      {
+        "title": "GTA Base — Grand Theft Auto 2",
+        "url": "https://www.gtabase.com/games/grand-theft-auto-2"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q05",
+    "type": "mcq",
+    "game": "Grand Theft Auto III",
+    "era": "3d",
+    "difficulty": "medium",
+    "prompt": "Кто предаёт Клода во вступлении GTA III?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Мария"
+      },
+      {
+        "id": "b",
+        "text": "Каталина"
+      },
+      {
+        "id": "c",
+        "text": "Мисти"
+      },
+      {
+        "id": "d",
+        "text": "Асука"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Во вступлении Каталина стреляет в Клода после ограбления. С этого предательства начинается его история в GTA III.",
+    "sources": [
+      {
+        "title": "GTA Wiki — Missions in GTA III",
+        "url": "https://gta.wiki/w/Missions_in_GTA_III"
+      }
+    ],
+    "spoiler": true,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q06",
+    "type": "mcq",
+    "game": "Grand Theft Auto III",
+    "era": "3d",
+    "difficulty": "medium",
+    "prompt": "С кем Клод выбирается на свободу после нападения на тюремный конвой в начале GTA III?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Тони Сиприани"
+      },
+      {
+        "id": "b",
+        "text": "Сальваторе Леоне"
+      },
+      {
+        "id": "c",
+        "text": "8-Ball"
+      },
+      {
+        "id": "d",
+        "text": "Дональд Лав"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Клод бежит вместе с 8-Ball. В первой миссии Give Me Liberty они добираются до убежища и клуба Луиджи.",
+    "sources": [
+      {
+        "title": "GTA Base — Give Me Liberty",
+        "url": "https://www.gtabase.com/gta-3/missions/give-me-liberty"
+      },
+      {
+        "title": "GTA Wiki — Missions in GTA III",
+        "url": "https://gta.wiki/w/Missions_in_GTA_III"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q07",
+    "type": "mcq",
+    "game": "Grand Theft Auto: Vice City",
+    "era": "3d",
+    "difficulty": "easy",
+    "prompt": "Как зовут главного героя GTA: Vice City?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Томми Версетти"
+      },
+      {
+        "id": "b",
+        "text": "Виктор Вэнс"
+      },
+      {
+        "id": "c",
+        "text": "Тони Сиприани"
+      },
+      {
+        "id": "d",
+        "text": "Лэнс Вэнс"
+      }
+    ],
+    "answer": "a",
+    "explanation": "В Vice City мы играем за Томми Версетти. Виктор Вэнс — герой отдельного приквела Vice City Stories.",
+    "sources": [
+      {
+        "title": "Rockstar — The Trilogy: stories and characters",
+        "url": "https://www.rockstargames.com/newswire/article/25ak3481oa1384/grand-theft-auto-the-trilogy-the-definitive-edition-now-available"
+      },
+      {
+        "title": "Rockstar — Vice City Stories",
+        "url": "https://www.rockstargames.com/games/vicecitystories"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q08",
+    "type": "mcq",
+    "game": "Grand Theft Auto: Vice City",
+    "era": "3d",
+    "difficulty": "medium",
+    "prompt": "Чем Томми управляет в миссии Demolition Man — той самой со стройкой?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Радиоуправляемой машинкой"
+      },
+      {
+        "id": "b",
+        "text": "Самолётом-игрушкой"
+      },
+      {
+        "id": "c",
+        "text": "Экскаватором"
+      },
+      {
+        "id": "d",
+        "text": "Радиоуправляемым вертолётом"
+      }
+    ],
+    "answer": "d",
+    "explanation": "В Demolition Man используется RC Goblin: маленький радиоуправляемый вертолёт. Именно им нужно выполнить задание на стройке.",
+    "sources": [
+      {
+        "title": "GTA Base — Demolition Man",
+        "url": "https://www.gtabase.com/gta-vice-city/missions/demolition-man"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q09",
+    "type": "mcq",
+    "game": "Grand Theft Auto: San Andreas",
+    "era": "3d",
+    "difficulty": "easy",
+    "prompt": "Что заставляет Карла Джонсона вернуться домой в начале San Andreas?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Приглашение на съёмки"
+      },
+      {
+        "id": "b",
+        "text": "Известие о смерти матери"
+      },
+      {
+        "id": "c",
+        "text": "Победа в лотерее"
+      },
+      {
+        "id": "d",
+        "text": "Предложение купить казино"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Карл возвращается в Лос-Сантос после убийства матери. Так начинается история восстановления его связей с семьёй и районом.",
+    "sources": [
+      {
+        "title": "Rockstar Store — Grand Theft Auto: The Trilogy",
+        "url": "https://store.rockstargames.com/game/buy-grand-theft-auto-the-trilogy"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q10",
+    "type": "mcq",
+    "game": "Grand Theft Auto: San Andreas",
+    "era": "3d",
+    "difficulty": "hard",
+    "prompt": "Чей магазин радиоуправляемых моделей находится в Сан-Фиерро?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Вузи"
+      },
+      {
+        "id": "b",
+        "text": "Сизара"
+      },
+      {
+        "id": "c",
+        "text": "Зеро"
+      },
+      {
+        "id": "d",
+        "text": "Оу Джи Лока"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Zero RC принадлежит Зеро и находится в районе Гарсия, Сан-Фиерро. С этим магазином связана отдельная линия RC-заданий.",
+    "sources": [
+      {
+        "title": "GTA Wiki — Zero RC",
+        "url": "https://gta.fandom.com/wiki/Zero_RC"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q11",
+    "type": "mcq",
+    "game": "Grand Theft Auto Advance",
+    "era": "3d",
+    "difficulty": "hard",
+    "prompt": "Как зовут главного героя GTA Advance?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Майк"
+      },
+      {
+        "id": "b",
+        "text": "Клод"
+      },
+      {
+        "id": "c",
+        "text": "Хуан Ли"
+      },
+      {
+        "id": "d",
+        "text": "Луис Лопес"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Главный герой GTA Advance — Майк. Несмотря на вид сверху, эта история относится к 3D-вселенной и её версии Либерти-Сити.",
+    "sources": [
+      {
+        "title": "Grand Theft Wiki — Mike",
+        "url": "https://www.grandtheftwiki.com/Mike"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q12",
+    "type": "mcq",
+    "game": "Grand Theft Auto: Liberty City Stories",
+    "era": "3d",
+    "difficulty": "medium",
+    "prompt": "В какой мафиозной семье Тони Сиприани пытается вернуть своё положение в Liberty City Stories?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Форелли"
+      },
+      {
+        "id": "b",
+        "text": "Синдакко"
+      },
+      {
+        "id": "c",
+        "text": "Гамбетти"
+      },
+      {
+        "id": "d",
+        "text": "Леоне"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Тони возвращается в Либерти-Сити после вынужденного отсутствия и снова работает на семью Леоне.",
+    "sources": [
+      {
+        "title": "Rockstar — Liberty City Stories",
+        "url": "https://www.rockstargames.com/games/libertycitystories"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q13",
+    "type": "mcq",
+    "game": "Grand Theft Auto: Vice City Stories",
+    "era": "3d",
+    "difficulty": "medium",
+    "prompt": "Кем служит Виктор Вэнс в начале Vice City Stories?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Полицейским"
+      },
+      {
+        "id": "b",
+        "text": "Военнослужащим"
+      },
+      {
+        "id": "c",
+        "text": "Пожарным"
+      },
+      {
+        "id": "d",
+        "text": "Пилотом пассажирских рейсов"
+      }
+    ],
+    "answer": "b",
+    "explanation": "История Вика начинается с армейской службы в Вайс-Сити 1984 года.",
+    "sources": [
+      {
+        "title": "Rockstar — Vice City Stories",
+        "url": "https://www.rockstargames.com/games/vicecitystories"
+      },
+      {
+        "title": "Rockstar — Vice City Stories: setting",
+        "url": "https://www.rockstargames.com/games/vicecitystories"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q14",
+    "type": "mcq",
+    "game": "Grand Theft Auto IV",
+    "era": "hd",
+    "difficulty": "easy",
+    "prompt": "Кем Роман Беллик приходится Нико?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Родным братом"
+      },
+      {
+        "id": "b",
+        "text": "Дядей"
+      },
+      {
+        "id": "c",
+        "text": "Двоюродным братом"
+      },
+      {
+        "id": "d",
+        "text": "Школьным другом"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Роман — двоюродный брат Нико. Его рассказы о жизни в Америке помогают заманить Нико в Либерти-Сити.",
+    "sources": [
+      {
+        "title": "Rockstar — Grand Theft Auto IV",
+        "url": "https://www.rockstargames.com/games/IV"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q15",
+    "type": "mcq",
+    "game": "GTA IV / The Lost and Damned / The Ballad of Gay Tony",
+    "era": "hd",
+    "difficulty": "hard",
+    "prompt": "Какой предмет связывает сюжетные линии Нико, Джонни и Луиса в истории со сделкой в музее?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Бриллианты"
+      },
+      {
+        "id": "b",
+        "text": "Старинный меч"
+      },
+      {
+        "id": "c",
+        "text": "Плёнка с компроматом"
+      },
+      {
+        "id": "d",
+        "text": "Золотые слитки"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Сделку с бриллиантами показывают с разных сторон в Museum Piece, Collector’s Item и Not So Fast. Это пересечение трёх историй одной HD-вселенной.",
+    "sources": [
+      {
+        "title": "GTA Base — Museum Piece and the episode crossovers",
+        "url": "https://www.gtabase.com/grand-theft-auto-iv/missions/museum-piece"
+      }
+    ],
+    "spoiler": true,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q16",
+    "type": "mcq",
+    "game": "GTA IV: The Lost and Damned",
+    "era": "hd",
+    "difficulty": "easy",
+    "prompt": "К какому байкерскому клубу принадлежит Джонни Клебиц?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Angels of Death"
+      },
+      {
+        "id": "b",
+        "text": "Uptown Riders"
+      },
+      {
+        "id": "c",
+        "text": "The Professionals"
+      },
+      {
+        "id": "d",
+        "text": "The Lost MC"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Джонни — ветеран The Lost. Конфликт внутри клуба и вокруг него составляет основу The Lost and Damned.",
+    "sources": [
+      {
+        "title": "Rockstar Store — GTA IV: Complete Edition",
+        "url": "https://store.rockstargames.com/game/buy-grand-theft-auto-iv"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q17",
+    "type": "mcq",
+    "game": "GTA: The Ballad of Gay Tony",
+    "era": "hd",
+    "difficulty": "medium",
+    "prompt": "На кого работает Луис Лопес в The Ballad of Gay Tony?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Рэя Боччино"
+      },
+      {
+        "id": "b",
+        "text": "Тони Принса"
+      },
+      {
+        "id": "c",
+        "text": "Дмитрия Раскалова"
+      },
+      {
+        "id": "d",
+        "text": "Мартина Мадрасо"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Луис — помощник и телохранитель Тони Принса, владельца ночных клубов, известного как Gay Tony.",
+    "sources": [
+      {
+        "title": "Rockstar Store — GTA IV: Complete Edition",
+        "url": "https://store.rockstargames.com/game/buy-grand-theft-auto-iv"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q18",
+    "type": "mcq",
+    "game": "Grand Theft Auto: Chinatown Wars",
+    "era": "hd",
+    "difficulty": "medium",
+    "prompt": "Какую семейную реликвию Хуан Ли должен доставить дяде Кенни в начале Chinatown Wars?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Нефритовую печать"
+      },
+      {
+        "id": "b",
+        "text": "Золотую маску"
+      },
+      {
+        "id": "c",
+        "text": "Меч Юй Цзянь"
+      },
+      {
+        "id": "d",
+        "text": "Карманные часы"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Хуан прибывает в Либерти-Сити с мечом Yu Jian. Доставка семейной реликвии запускает историю Chinatown Wars.",
+    "sources": [
+      {
+        "title": "Nintendo — GTA: Chinatown Wars",
+        "url": "https://www.nintendo.com/en-gb/Games/Nintendo-DS/Grand-Theft-Auto-Chinatown-Wars-270913.html"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q19",
+    "type": "mcq",
+    "game": "Grand Theft Auto V",
+    "era": "hd",
+    "difficulty": "easy",
+    "prompt": "Чья особая способность в сюжетном режиме GTA V замедляет время за рулём?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Франклина"
+      },
+      {
+        "id": "b",
+        "text": "Майкла"
+      },
+      {
+        "id": "c",
+        "text": "Тревора"
+      },
+      {
+        "id": "d",
+        "text": "Ламара"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Способность Франклина помогает управлять наземным транспортом на высокой скорости. Майкл замедляет время в перестрелках, а у Тревора другой боевой эффект.",
+    "sources": [
+      {
+        "title": "Rockstar — GTA V Special Abilities",
+        "url": "https://www.rockstargames.com/newswire/article/ak14o88385k4a8/more-details-and-screens-from-the-grand-theft-auto-v-special-and.html"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q20",
+    "type": "mcq",
+    "game": "GTA Online: The Contract",
+    "era": "hd",
+    "difficulty": "medium",
+    "prompt": "Чей пропавший телефон с невыпущенной музыкой ищут в сюжетной линии The Contract?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Тони Принса"
+      },
+      {
+        "id": "b",
+        "text": "Майкла Де Санты"
+      },
+      {
+        "id": "c",
+        "text": "Лазло"
+      },
+      {
+        "id": "d",
+        "text": "Dr. Dre"
+      }
+    ],
+    "answer": "d",
+    "explanation": "В The Contract игрок помогает Франклину и его агентству вернуть пропавшую музыку Dr. Dre с украденного телефона.",
+    "sources": [
+      {
+        "title": "Rockstar — GTA Online: The Contract",
+        "url": "https://www.rockstargames.com/gta-online/businesses/the-contract"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q21",
+    "type": "mcq",
+    "game": "GTA Online: The Cayo Perico Heist",
+    "era": "hd",
+    "difficulty": "medium",
+    "prompt": "Чьё поместье становится целью ограбления на Кайо-Перико?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Мартина Мадрасо"
+      },
+      {
+        "id": "b",
+        "text": "Эль Рубио"
+      },
+      {
+        "id": "c",
+        "text": "Дона Персиваля"
+      },
+      {
+        "id": "d",
+        "text": "Тони Принса"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Островное поместье принадлежит Эль Рубио. Оно является главной целью The Cayo Perico Heist.",
+    "sources": [
+      {
+        "title": "Rockstar — The Cayo Perico Heist",
+        "url": "https://www.rockstargames.com/gta-online/heists/cayo-perico-heist"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4
+  },
+  {
+    "id": "q22",
+    "type": "mcq",
+    "game": "Grand Theft Auto VI",
+    "era": "hd",
+    "difficulty": "easy",
+    "prompt": "Как называется штат, в котором Rockstar официально разместила события GTA VI?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Сан-Андреас"
+      },
+      {
+        "id": "b",
+        "text": "Алдерни"
+      },
+      {
+        "id": "c",
+        "text": "Леонида"
+      },
+      {
+        "id": "d",
+        "text": "Нью-Гернси"
+      }
+    ],
+    "answer": "c",
+    "explanation": "На официальном сайте GTA VI указан штат Леонида. Вайс-Сити — один из его городов.",
+    "sources": [
+      {
+        "title": "Rockstar — Grand Theft Auto VI",
+        "url": "https://www.rockstargames.com/VI"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4,
+    "officialPublicOnly": true
+  },
+  {
+    "id": "q23",
+    "type": "mcq",
+    "game": "Grand Theft Auto VI",
+    "era": "hd",
+    "difficulty": "easy",
+    "prompt": "Какая пара героев официально представлена в GTA VI?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Джейсон и Люсия"
+      },
+      {
+        "id": "b",
+        "text": "Нико и Мэллори"
+      },
+      {
+        "id": "c",
+        "text": "Томми и Мерседес"
+      },
+      {
+        "id": "d",
+        "text": "Франклин и Таниша"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Джейсон Дюваль и Люсия Каминос — главные персонажи, представленные Rockstar в официальных материалах GTA VI.",
+    "sources": [
+      {
+        "title": "Rockstar — Grand Theft Auto VI",
+        "url": "https://www.rockstargames.com/VI"
+      },
+      {
+        "title": "Rockstar — GTA VI: Only in Leonida",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4,
+    "officialPublicOnly": true
+  },
+  {
+    "id": "q24",
+    "type": "mcq",
+    "game": "Grand Theft Auto VI",
+    "era": "hd",
+    "difficulty": "hard",
+    "prompt": "Кого Rockstar представляет как друга Джейсона, который любит слушать переговоры береговой охраны?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Рауля Баутисту"
+      },
+      {
+        "id": "b",
+        "text": "Буби Айка"
+      },
+      {
+        "id": "c",
+        "text": "Дре’Куана Приста"
+      },
+      {
+        "id": "d",
+        "text": "Кэла Хэмптона"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Кэл Хэмптон — друг Джейсона. В его описании на сайте GTA VI упоминается интерес к переговорам береговой охраны.",
+    "sources": [
+      {
+        "title": "Rockstar — GTA VI: Only in Leonida",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ],
+    "spoiler": false,
+    "section": "theory",
+    "points": 4,
+    "officialPublicOnly": true
+  },
+  {
+    "id": "i01",
+    "type": "order",
+    "section": "practice",
+    "points": 7,
+    "game": "Vice City Stories / Vice City / San Andreas / Liberty City Stories",
+    "era": "3d",
+    "difficulty": "hard",
+    "prompt": "Расположи истории 3D-вселенной по времени событий — от самых ранних к поздним. Здесь важен сюжетный год, а не дата выхода.",
+    "items": [
+      {
+        "id": "sa",
+        "text": "San Andreas"
+      },
+      {
+        "id": "lcs",
+        "text": "Liberty City Stories"
+      },
+      {
+        "id": "vcs",
+        "text": "Vice City Stories"
+      },
+      {
+        "id": "vc",
+        "text": "Vice City"
+      }
+    ],
+    "answerIds": [
+      "vcs",
+      "vc",
+      "sa",
+      "lcs"
+    ],
+    "explanation": "Vice City Stories — 1984; Vice City — 1986; San Andreas — 1992; Liberty City Stories — 1998.",
+    "sources": [
+      {
+        "title": "Rockstar — Vice City Stories: setting",
+        "url": "https://www.rockstargames.com/games/vicecitystories"
+      },
+      {
+        "title": "GTA Base — Vice City: setting",
+        "url": "https://www.gtabase.com/gta-vice-city/"
+      },
+      {
+        "title": "Rockstar — San Andreas: The Introduction",
+        "url": "https://media.rockstargames.com/broadcast/20121214/en_US_web.html"
+      },
+      {
+        "title": "GTA Base — Liberty City Stories: setting",
+        "url": "https://www.gtabase.com/gta-liberty-city-stories/"
+      }
+    ],
+    "spoiler": false
+  },
+  {
+    "id": "i02",
+    "type": "order",
+    "section": "practice",
+    "points": 7,
+    "game": "GTA III / Vice City / San Andreas / GTA IV / GTA V",
+    "era": "mixed",
+    "eras": [
+      "3d",
+      "hd"
+    ],
+    "difficulty": "medium",
+    "prompt": "Расположи игры по первому выходу — от самой ранней к поздней. Даты событий внутри игр здесь не учитываются.",
+    "items": [
+      {
+        "id": "iv",
+        "text": "GTA IV"
+      },
+      {
+        "id": "vc",
+        "text": "Vice City"
+      },
+      {
+        "id": "v",
+        "text": "GTA V"
+      },
+      {
+        "id": "iii",
+        "text": "GTA III"
+      },
+      {
+        "id": "sa",
+        "text": "San Andreas"
+      }
+    ],
+    "answerIds": [
+      "iii",
+      "vc",
+      "sa",
+      "iv",
+      "v"
+    ],
+    "explanation": "Порядок первых релизов: GTA III (2001), Vice City (2002), San Andreas (2004), GTA IV (2008), GTA V (2013). Это история выпусков, а не единая сюжетная хронология.",
+    "sources": [
+      {
+        "title": "GTA Wiki — Series game list and original releases",
+        "url": "https://gta.wiki/w/Grand_Theft_Auto"
+      },
+      {
+        "title": "Rockstar — The Trilogy: stories and characters",
+        "url": "https://www.rockstargames.com/newswire/article/25ak3481oa1384/grand-theft-auto-the-trilogy-the-definitive-edition-now-available"
+      }
+    ],
+    "spoiler": false
+  },
+  {
+    "id": "i03",
+    "type": "match",
+    "section": "practice",
+    "points": 7,
+    "game": "GTA IV / Episodes from Liberty City / Chinatown Wars",
+    "era": "hd",
+    "difficulty": "medium",
+    "prompt": "Сопоставь героя с игрой, в которой он является главным персонажем.",
+    "pairs": [
+      {
+        "id": "niko",
+        "left": "Нико Беллик",
+        "right": "GTA IV"
+      },
+      {
+        "id": "johnny",
+        "left": "Джонни Клебиц",
+        "right": "The Lost and Damned"
+      },
+      {
+        "id": "luis",
+        "left": "Луис Лопес",
+        "right": "The Ballad of Gay Tony"
+      },
+      {
+        "id": "huang",
+        "left": "Хуан Ли",
+        "right": "Chinatown Wars"
+      }
+    ],
+    "explanation": "Нико — герой GTA IV, Джонни — The Lost and Damned, Луис — The Ballad of Gay Tony, Хуан Ли — Chinatown Wars.",
+    "sources": [
+      {
+        "title": "Rockstar Store — GTA IV: Complete Edition",
+        "url": "https://store.rockstargames.com/game/buy-grand-theft-auto-iv"
+      },
+      {
+        "title": "Nintendo — GTA: Chinatown Wars",
+        "url": "https://www.nintendo.com/en-gb/Games/Nintendo-DS/Grand-Theft-Auto-Chinatown-Wars-270913.html"
+      }
+    ],
+    "spoiler": false
+  },
+  {
+    "id": "i04",
+    "type": "match",
+    "section": "practice",
+    "points": 7,
+    "game": "Grand Theft Auto V",
+    "era": "hd",
+    "difficulty": "medium",
+    "prompt": "Сопоставь героя GTA V с цветом его сюжетных заданий на карте.",
+    "pairs": [
+      {
+        "id": "franklin",
+        "left": "Франклин",
+        "right": "Зелёный",
+        "color": "#4ade80"
+      },
+      {
+        "id": "michael",
+        "left": "Майкл",
+        "right": "Синий",
+        "color": "#60a5fa"
+      },
+      {
+        "id": "trevor",
+        "left": "Тревор",
+        "right": "Оранжевый",
+        "color": "#fb923c"
+      }
+    ],
+    "explanation": "Зелёные маркеры принадлежат Франклину, синие — Майклу, оранжевые — Тревору.",
+    "sources": [
+      {
+        "title": "Rockstar Support — Character icon colors in GTA V",
+        "url": "https://support.rockstargames.com/articles/1bDc5lkHAry9GrKjCpJRMp/information-about-character-icons-in-grand-theft-auto-v"
+      }
+    ],
+    "spoiler": false
+  },
+  {
+    "id": "visual-iii",
+    "game": "GTA III",
+    "era": "3d",
+    "difficulty": "medium",
+    "prompt": "Из какой игры этот ночной кадр?",
+    "options": [
+      {
+        "id": "a",
+        "text": "GTA III"
+      },
+      {
+        "id": "b",
+        "text": "GTA 2"
+      },
+      {
+        "id": "c",
+        "text": "GTA IV"
+      },
+      {
+        "id": "d",
+        "text": "GTA: Vice City Stories"
+      }
+    ],
+    "answer": "a",
+    "explanation": "Это оригинальная GTA III: рекламные фасады и неоновые улицы её Liberty City.",
+    "type": "image",
+    "attribution": "© Rockstar Games. Официальный скриншот издателя из Steam.",
+    "alt": "Кадр 01 из экзамена",
+    "spoiler": false,
+    "sources": [
+      {
+        "title": "Официальная галерея издателя в Steam",
+        "url": "https://store.steampowered.com/app/12100/"
+      }
+    ],
+    "image": "assets/scene-01.jpg",
+    "section": "screens",
+    "points": 6
+  },
+  {
+    "id": "visual-vicecity",
+    "game": "GTA: Vice City",
+    "era": "3d",
+    "difficulty": "easy",
+    "prompt": "Кто стоит рядом с мотоциклом?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Тони Сиприани"
+      },
+      {
+        "id": "b",
+        "text": "Томми Версетти"
+      },
+      {
+        "id": "c",
+        "text": "Клод"
+      },
+      {
+        "id": "d",
+        "text": "Виктор Вэнс"
+      }
+    ],
+    "answer": "b",
+    "explanation": "На кадре Томми Версетти — главный герой GTA: Vice City. Здесь он в спортивном костюме.",
+    "type": "image",
+    "attribution": "© Rockstar Games. Официальный скриншот издателя из Steam.",
+    "alt": "Кадр 02 из экзамена",
+    "spoiler": false,
+    "sources": [
+      {
+        "title": "Официальная галерея издателя в Steam",
+        "url": "https://store.steampowered.com/app/12110/"
+      }
+    ],
+    "image": "assets/scene-02.jpg",
+    "section": "screens",
+    "points": 6
+  },
+  {
+    "id": "visual-sanandreas",
+    "game": "GTA: San Andreas",
+    "era": "3d",
+    "difficulty": "easy",
+    "prompt": "Узнай часть GTA по этому кадру.",
+    "options": [
+      {
+        "id": "a",
+        "text": "GTA: Liberty City Stories"
+      },
+      {
+        "id": "b",
+        "text": "GTA: Vice City"
+      },
+      {
+        "id": "c",
+        "text": "GTA: San Andreas"
+      },
+      {
+        "id": "d",
+        "text": "GTA IV"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Это GTA: San Andreas. На кадре Си-Джей выполняет прыжок на BMX.",
+    "type": "image",
+    "attribution": "© Rockstar Games. Официальный скриншот издателя из Steam.",
+    "alt": "Кадр 03 из экзамена",
+    "spoiler": false,
+    "sources": [
+      {
+        "title": "Официальная галерея издателя в Steam",
+        "url": "https://store.steampowered.com/app/12120/"
+      }
+    ],
+    "image": "assets/scene-03.jpg",
+    "section": "screens",
+    "points": 6
+  },
+  {
+    "id": "visual-iv",
+    "game": "GTA IV",
+    "era": "hd",
+    "difficulty": "medium",
+    "prompt": "Как зовут героя слева на кадре?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Джонни Клебиц"
+      },
+      {
+        "id": "b",
+        "text": "Луис Лопес"
+      },
+      {
+        "id": "c",
+        "text": "Роман Беллик"
+      },
+      {
+        "id": "d",
+        "text": "Нико Беллик"
+      }
+    ],
+    "answer": "d",
+    "explanation": "Это Нико Беллик, главный герой GTA IV. Кадр взят из официальной галереи издателя в Steam.",
+    "type": "image",
+    "attribution": "© Rockstar Games. Официальный скриншот издателя из Steam.",
+    "alt": "Кадр 04 из экзамена",
+    "spoiler": false,
+    "sources": [
+      {
+        "title": "Официальная галерея издателя в Steam",
+        "url": "https://store.steampowered.com/app/12210/"
+      }
+    ],
+    "image": "assets/scene-04.jpg",
+    "section": "screens",
+    "points": 6
+  },
+  {
+    "id": "visual-v",
+    "game": "GTA V",
+    "era": "hd",
+    "difficulty": "easy",
+    "prompt": "Кто изображён на этом кадре?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ламар Дэвис"
+      },
+      {
+        "id": "b",
+        "text": "Франклин Клинтон"
+      },
+      {
+        "id": "c",
+        "text": "Карл Джонсон"
+      },
+      {
+        "id": "d",
+        "text": "Луис Лопес"
+      }
+    ],
+    "answer": "b",
+    "explanation": "Это Франклин Клинтон — один из трёх главных героев GTA V.",
+    "type": "image",
+    "attribution": "© Rockstar Games. Официальный скриншот издателя из Steam.",
+    "alt": "Кадр 05 из экзамена",
+    "spoiler": false,
+    "sources": [
+      {
+        "title": "Официальная галерея издателя в Steam",
+        "url": "https://store.steampowered.com/app/271590/"
+      },
+      {
+        "title": "Rockstar Games — The Contract",
+        "url": "https://www.rockstargames.com/gta-online/businesses/the-contract"
+      }
+    ],
+    "image": "assets/scene-05.jpg",
+    "section": "screens",
+    "points": 6
+  },
+  {
+    "id": "visual-online",
+    "game": "GTA Online",
+    "era": "hd",
+    "difficulty": "hard",
+    "prompt": "Как называется эта бронемашина в GTA Online?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rhino"
+      },
+      {
+        "id": "b",
+        "text": "Insurgent"
+      },
+      {
+        "id": "c",
+        "text": "APC"
+      },
+      {
+        "id": "d",
+        "text": "Khanjali"
+      }
+    ],
+    "answer": "c",
+    "explanation": "Это APC из обновления Gunrunning. На этом официальном скриншоте установлена ракетная модификация.",
+    "type": "image",
+    "attribution": "© Rockstar Games. Официальный скриншот издателя из Steam.",
+    "alt": "Кадр 06 из экзамена",
+    "spoiler": false,
+    "sources": [
+      {
+        "title": "Официальная галерея издателя в Steam",
+        "url": "https://store.steampowered.com/app/271590/"
+      },
+      {
+        "title": "Rockstar Games — Gunrunning Now Available",
+        "url": "https://www.rockstargames.com/newswire/article/25o241181331a4/GTA-Online-Gunrunning-Now-Available"
+      }
+    ],
+    "image": "assets/scene-06.jpg",
+    "section": "screens",
+    "points": 6
+  }
+]

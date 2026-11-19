@@ -1,0 +1,69 @@
+/* Same paper / blue / raspberry palette, with separate steering and pedals. */
+.drive-steer-label { display: none; }
+body[data-driving="true"] .drive-steer-label {
+  display: block;
+  position: absolute;
+  inset: auto 8px 12px;
+  text-align: center;
+  color: #fff0d8;
+  font: 700 11px/1 Arial, sans-serif;
+  pointer-events: none;
+}
+body[data-driving="true"] #drive-stick {
+  border-radius: 36%;
+  background: linear-gradient(90deg, #17123cb8, #243794b8, #17123cb8);
+}
+.drive-actions button,
+.range-controls button { border-radius: 5px; }
+body[data-walk-controls="true"] .range-controls #native-fire small {
+  display: block;
+  margin-top: 4px;
+  font-size: 9px;
+  line-height: 1.2;
+}
+body[data-driving="true"] .drive-actions { gap: 7px; }
+body[data-driving="true"] #drive-enter {
+  min-height: 44px;
+  padding: 7px;
+  font-size: 11px;
+  color: #fff0d8;
+  background: #17123ccc;
+  box-shadow: none;
+}
+body[data-driving="true"] #drive-enter[data-holding="true"] {
+  border-color: #ffd18a;
+  background: #624783;
+}
+body[data-driving="true"] #drive-gas { min-height: 68px; background: #1736b6ed; font-size: 19px; }
+body[data-driving="true"] #drive-brake { min-height: 60px; font-size: 14px; }
+body[data-driving="true"] .drive-actions button[aria-pressed="true"] {
+  border-color: #ffd18a;
+  box-shadow: inset 0 -4px #ffd18a;
+}
+.street-question-paper { border-radius: 3px; }
+.street-question-paper .street-question-context { line-height: 1.45; }
+.street-question-paper .street-answers { gap: 7px; }
+.street-question-paper .street-answers button { min-height: 52px; border-radius: 4px; box-shadow: none; }
+.street-answers button[aria-pressed="true"] { border-color: var(--blue); background: #efedff; box-shadow: inset 3px 0 var(--blue); }
+.street-answers button[aria-pressed="true"] .street-choice-number { background: var(--blue); color: #fffaf0; }
+.arrival-check { width: 18px; height: 18px; border: 1px solid #b49cad; border-radius: 3px; }
+.street-answers button[aria-pressed="true"] .arrival-check { background: var(--blue); border-color: var(--blue); }
+.street-answers button[aria-pressed="true"] .arrival-check::after { content: '✓'; display: block; color: #fffaf0; text-align: center; font-size: 13px; }
+#arrival-confirm { margin-top: 14px; border-radius: 4px; }
+#arrival-confirm:disabled { opacity: .42; box-shadow: none; cursor: default; }
+.loading-paper { border-radius: 3px; overflow: hidden; }
+.loading-form-palm { opacity: .7; }
+.loading-stages li { border-radius: 3px; }
+.native-paper.loading-paper .load-footnote { line-height: 1.5; }
+@media (max-height: 620px) {
+  body[data-driving="true"] #drive-gas { min-height: 54px; }
+  body[data-driving="true"] #drive-brake { min-height: 50px; }
+  body[data-driving="true"] #drive-enter { min-height: 44px; }
+  .street-question-paper { padding: 16px; }
+  .street-question-paper .eyebrow { margin-bottom: 8px; }
+  .street-question-paper h2 { font-size: 27px; margin-bottom: 8px; }
+  .street-question-paper h2 br { display: none; }
+  .street-question-paper .street-question-context { margin-bottom: 10px; }
+  .street-question-paper .street-answers button { min-height: 46px; padding-block: 6px; }
+  #arrival-confirm { margin-top: 10px; min-height: 48px; }
+}

@@ -1,0 +1,280 @@
+{
+  "release": "rc4.5-20261117",
+  "viewportChecks": [
+    {
+      "width": 390,
+      "nodes": [
+        {
+          "bottom": 891.828125,
+          "class": "",
+          "clientWidth": 375,
+          "left": 0,
+          "right": 375,
+          "scrollWidth": 375,
+          "tag": "BODY",
+          "top": 0,
+          "width": 375
+        },
+        {
+          "bottom": 166,
+          "class": "topbar",
+          "clientWidth": 345,
+          "left": 14,
+          "right": 361,
+          "scrollWidth": 345,
+          "tag": "HEADER",
+          "top": 107,
+          "width": 347
+        },
+        {
+          "bottom": 571.328125,
+          "class": "final-cover",
+          "clientWidth": 293,
+          "left": 40.125,
+          "right": 334.875,
+          "scrollWidth": 293,
+          "tag": "FIGURE",
+          "top": 179,
+          "width": 294.75
+        },
+        {
+          "bottom": 790.828125,
+          "class": "exam-pass final-pass",
+          "clientWidth": 345,
+          "left": 14,
+          "right": 361,
+          "scrollWidth": 345,
+          "tag": "ASIDE",
+          "top": 587.328125,
+          "width": 347
+        },
+        {
+          "bottom": 711.328125,
+          "class": "primary",
+          "clientWidth": 309,
+          "left": 31,
+          "right": 344,
+          "scrollWidth": 309,
+          "tag": "BUTTON",
+          "top": 659.328125,
+          "width": 313
+        },
+        {
+          "bottom": 780.828125,
+          "class": "final-home-links",
+          "clientWidth": 313,
+          "left": 31,
+          "right": 344,
+          "scrollWidth": 313,
+          "tag": "DIV",
+          "top": 736.828125,
+          "width": 313
+        },
+        {
+          "bottom": 891.828125,
+          "class": "footer",
+          "clientWidth": 347,
+          "left": 14,
+          "right": 361,
+          "scrollWidth": 347,
+          "tag": "FOOTER",
+          "top": 805.828125,
+          "width": 347
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "nodes": [
+        {
+          "bottom": 868.15625,
+          "class": "",
+          "clientWidth": 305,
+          "left": 0,
+          "right": 305,
+          "scrollWidth": 305,
+          "top": 0,
+          "width": 305
+        },
+        {
+          "bottom": 166,
+          "class": "topbar",
+          "clientWidth": 275,
+          "left": 14,
+          "right": 291,
+          "scrollWidth": 275,
+          "top": 107,
+          "width": 277
+        },
+        {
+          "bottom": 547.65625,
+          "class": "final-cover",
+          "clientWidth": 275,
+          "left": 14,
+          "right": 291,
+          "scrollWidth": 275,
+          "top": 179,
+          "width": 277
+        },
+        {
+          "bottom": 767.15625,
+          "class": "exam-pass final-pass",
+          "clientWidth": 275,
+          "left": 14,
+          "right": 291,
+          "scrollWidth": 275,
+          "top": 563.65625,
+          "width": 277
+        },
+        {
+          "bottom": 687.65625,
+          "class": "primary",
+          "clientWidth": 247,
+          "left": 27,
+          "right": 278,
+          "scrollWidth": 247,
+          "top": 635.65625,
+          "width": 251
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "nodes": [
+        {
+          "bottom": 891.828125,
+          "class": "",
+          "clientWidth": 415,
+          "left": 0,
+          "right": 415,
+          "scrollWidth": 415,
+          "top": 0,
+          "width": 415
+        },
+        {
+          "bottom": 166,
+          "class": "topbar",
+          "clientWidth": 385,
+          "left": 14,
+          "right": 401,
+          "scrollWidth": 385,
+          "top": 107,
+          "width": 387
+        },
+        {
+          "bottom": 571.328125,
+          "class": "final-cover",
+          "clientWidth": 293,
+          "left": 60.125,
+          "right": 354.875,
+          "scrollWidth": 293,
+          "top": 179,
+          "width": 294.75
+        },
+        {
+          "bottom": 790.828125,
+          "class": "exam-pass final-pass",
+          "clientWidth": 385,
+          "left": 14,
+          "right": 401,
+          "scrollWidth": 385,
+          "top": 587.328125,
+          "width": 387
+        },
+        {
+          "bottom": 711.328125,
+          "class": "primary",
+          "clientWidth": 349,
+          "left": 31,
+          "right": 384,
+          "scrollWidth": 349,
+          "top": 659.328125,
+          "width": 353
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "mode": "guest",
+      "nodes": [
+        {
+          "bottom": 919.71875,
+          "class": "",
+          "clientWidth": 375,
+          "left": 0,
+          "right": 375,
+          "scrollWidth": 375,
+          "top": 0,
+          "width": 375
+        },
+        {
+          "bottom": 166,
+          "class": "topbar",
+          "clientWidth": 345,
+          "left": 14,
+          "right": 361,
+          "scrollWidth": 345,
+          "top": 107,
+          "width": 347
+        },
+        {
+          "bottom": 571.328125,
+          "class": "final-cover",
+          "clientWidth": 293,
+          "left": 40.125,
+          "right": 334.875,
+          "scrollWidth": 293,
+          "top": 179,
+          "width": 294.75
+        },
+        {
+          "bottom": 818.71875,
+          "class": "exam-pass final-pass",
+          "clientWidth": 345,
+          "left": 14,
+          "right": 361,
+          "scrollWidth": 345,
+          "top": 587.328125,
+          "width": 347
+        },
+        {
+          "bottom": 739.21875,
+          "class": "primary",
+          "clientWidth": 309,
+          "left": 31,
+          "right": 344,
+          "scrollWidth": 309,
+          "top": 687.21875,
+          "width": 313
+        }
+      ]
+    }
+  ],
+  "observed": {
+    "mobileStartVisible": true,
+    "posterFullyVisible": true,
+    "noHorizontalOverflow": true,
+    "headerBelowSimulatedTelegramChrome": true,
+    "guestNameEntry": true,
+    "aFourQuestionsAndCheckpoint": true,
+    "noCorrectnessBeforeFinal": true,
+    "bMusicQuestionVisible": true,
+    "standalonePracticeIntroVisible": true,
+    "storyImage": {
+      "width": 1080,
+      "height": 1920,
+      "complete": true
+    }
+  },
+  "limitations": [
+    "Telegram layout simulated in browser; not a physical iPhone run.",
+    "Story preview uses the user-supplied gameplay screenshot and an illustrative score of 80.",
+    "Native C GPU gameplay was not executed in this browser."
+  ],
+  "viewportHeight": 844,
+  "simulatedTelegramInsets": {
+    "safeAreaTop": 59,
+    "contentSafeAreaTop": 48,
+    "bottom": 34
+  }
+}

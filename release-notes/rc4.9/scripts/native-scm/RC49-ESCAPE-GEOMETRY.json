@@ -1,0 +1,29 @@
+{
+  "nativeRuntimeExecuted": false,
+  "staticOnly": true,
+  "valid": true,
+  "vehicleCorridor": {
+    "checkedCarVolumes": 242,
+    "sampleStepMetres": 0.5,
+    "bodyWidthMetres": 2.4,
+    "bodyLengthMetres": 5,
+    "heightAboveRoadMetres": [
+      0.2,
+      2.4
+    ],
+    "missingFloor": [],
+    "overlaps": []
+  },
+  "humanApproach": {
+    "checkedPedVolumes": 18,
+    "bodyWidthMetres": 0.7,
+    "bodyHeightMetres": 1.8,
+    "sampleStepMetres": 0.5,
+    "missingFloor": [],
+    "overlaps": []
+  },
+  "limits": [
+    "Native vehicle AI can deviate from the straight connector.",
+    "Dynamic collisions and the oversized rider silhouette require runtime playback."
+  ]
+}

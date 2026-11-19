@@ -1,0 +1,30 @@
+{
+  "modelID": 8,
+  "vertices": 3895,
+  "triangles": 5266,
+  "nativeBones": 24,
+  "bounds": [
+    [
+      -1.1844523546258434,
+      -0.9985734860257013,
+      -0.4637269000139374
+    ],
+    [
+      1.0515802937772931,
+      1.3854152969663573,
+      0.834280267364796
+    ]
+  ],
+  "files": [
+    {
+      "path": "remote/models/gta3.img/egepudge.dff",
+      "size": 313344,
+      "sha256": "d8828bf13a07dcf2c37e7a5d4105d31e44425ab6313e9cc8ca6946cd33bb1a56"
+    },
+    {
+      "path": "remote/models/gta3.img/egepudge.txd",
+      "size": 526336,
+      "sha256": "1abbc0128e654041bd6e4686f59a934cb0b006482c9570f1c5926041527cfe8e"
+    }
+  ]
+}

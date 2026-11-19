@@ -1,0 +1,153 @@
+/* The approved cover is reproduced whole and unchanged. The form is live UI. */
+.final-home-shell { max-width: 1060px; }
+.shell.final-home-shell > .topbar {
+  min-height: 64px;
+  padding: 5px 12px;
+  margin-bottom: 24px;
+  border-top-width: 2px;
+  border-bottom: 3px solid var(--blue);
+  box-shadow: 0 3px 0 var(--red);
+}
+.shell.final-home-shell > .topbar::before,
+.shell.final-home-shell > .topbar::after { display: none; }
+.final-home .home-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(300px, .94fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 62px);
+}
+.final-cover {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  border: 2px solid #17123c;
+  background: #1736b6;
+  box-shadow: 3px 0 0 #fff0d8, 6px 0 0 #c5b4a3, 10px 10px 0 #17123c;
+  isolation: isolate;
+}
+.final-cover-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: contain; }
+.final-home .final-pass {
+  min-width: 0;
+  padding: 30px;
+  border: 1px solid #bdb1a5;
+  border-top: 5px solid #df145b;
+  border-bottom: 5px solid #1736b6;
+  background: #fff8e9;
+  box-shadow: 4px 5px 0 #17123c;
+}
+.final-pass .form-heading {
+  align-items: center;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #bda994;
+}
+.final-pass .form-title-line { font-size: 9px; line-height: 1.5; color: #655571; }
+.final-pass .barcode { width: 96px; height: 30px; opacity: .8; }
+.final-home .final-pass .pass-title {
+  margin: 0 0 26px;
+  color: #17123c;
+  font: italic 700 clamp(28px, 3.1vw, 38px) / 1.12 Georgia, 'Times New Roman', serif;
+  letter-spacing: -.035em;
+}
+.final-pass .field-label { display: block; margin: 0 0 8px; color: #4d3c55; font-size: 12px; }
+.final-home .final-pass .text-input {
+  width: 100%;
+  min-height: 52px;
+  margin: 0;
+  border: 1px solid #ac8d91;
+  border-bottom: 3px solid #1736b6;
+  background: #fffdf6;
+  color: #17123c;
+  font-size: 17px;
+}
+.final-home .final-pass .candidate-card { margin: 0; padding: 0; min-height: 52px; gap: 12px; border: 0; background: transparent; box-shadow: none; }
+.final-pass .candidate-name { min-width: 0; overflow-wrap: anywhere; color: #17123c; }
+.final-pass .candidate-avatar { border: 2px solid #1736b6; box-shadow: 2px 2px 0 #df145b; }
+.final-home .final-pass > .primary {
+  width: 100%;
+  min-height: 56px;
+  margin-top: 22px;
+  padding: 14px 18px;
+  justify-content: space-between;
+  color: #fff8e9;
+  background: #1736b6;
+  border: 2px solid #17123c;
+  border-bottom: 4px solid #df145b;
+  box-shadow: 3px 3px 0 #17123c;
+  font-size: 17px;
+  line-height: 1.2;
+}
+.final-home .final-pass > .primary:hover { background: #2428a3; }
+.final-home .final-pass > .primary:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #17123c; }
+.final-home .home-duration { margin: 13px 0 7px; color: #5b4960; font-size: 12px; line-height: 1.5; }
+.final-home .home-duration span { margin-inline: 6px; color: #bf225b; }
+.final-home-links { display: flex; flex-wrap: wrap; align-items: start; justify-content: space-between; gap: 0 12px; }
+.final-home .practice-entry-link {
+  display: inline-flex;
+  width: auto;
+  min-height: 44px;
+  margin: 0;
+  padding: 8px 0;
+  align-items: center;
+  color: #37336c;
+  text-decoration: underline;
+  text-decoration-color: #a59fbf;
+  text-underline-offset: 4px;
+  font-size: 11px;
+}
+.final-home .home-options { position: relative; margin: 0; padding: 0; border: 0; }
+.final-home .home-options > summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  color: #5b4960;
+  font-size: 11px;
+}
+.final-home .home-options[open] { flex: 1 0 100%; }
+.final-home .home-options[open] > summary { justify-content: space-between; }
+.final-home .home-options .mode-tabs { margin-top: 0; }
+.final-home-shell > .footer { margin-top: 24px; padding: 10px 0 0; border-color: #cbb9a7; }
+.final-home-shell > .footer .ghost { min-height: 44px; }
+.final-home :is(a, button, input, summary):focus-visible { outline: 3px solid #df145b; outline-offset: 4px; }
+
+@media (max-width: 760px) {
+  .shell.final-home-shell { width: min(430px, calc(100% - 28px)); }
+  .shell.final-home-shell > .topbar {
+    min-height: 58px;
+    padding: 3px 7px;
+    margin-bottom: 13px;
+    gap: 8px;
+  }
+  .final-home-shell > .topbar .brand-copy strong { font-size: 10px; }
+  .final-home .home-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .final-cover {
+    width: min(100%, max(228px, calc((100svh - var(--safe-top, 0px) - var(--safe-bottom, 0px) - 310px) * .75)));
+    max-width: 322px;
+    border-width: 1px;
+    box-shadow: 2px 0 0 #fff0d8, 4px 0 0 #c5b4a3, 6px 6px 0 #17123c;
+  }
+  .final-home .final-pass { padding: 13px 16px 7px; border-top-width: 3px; border-bottom-width: 3px; box-shadow: 2px 3px 0 #17123c; }
+  .final-home .final-pass .form-heading,
+  .final-home .final-pass .pass-title { display: none; }
+  .final-pass .field-label { margin-bottom: 5px; font-size: 11px; }
+  .final-home .final-pass .text-input { min-height: 48px; font-size: 16px; }
+  .final-home .final-pass .candidate-card { min-height: 44px; }
+  .final-home .final-pass .candidate-avatar { width: 40px; height: 40px; flex-basis: 40px; }
+  .final-home .final-pass > .primary { min-height: 52px; margin-top: 12px; padding: 11px 15px; font-size: 16px; }
+  .final-home .home-duration { margin: 9px 0 0; font-size: 11px; }
+  .final-home-links { gap: 0 9px; }
+  .final-home .practice-entry-link,
+  .final-home .home-options > summary { font-size: 10px; }
+  .final-home-shell > .footer { margin-top: 15px; padding-top: 7px; font-size: 9px; padding-bottom: var(--safe-bottom, 0px); }
+}
+@media (max-width: 360px) {
+  .final-home .final-pass { padding-inline: 12px; }
+  .final-home-shell > .topbar .brand-copy { display: none; }
+}
+@media (orientation: landscape) and (max-height: 600px) and (min-width: 620px) {
+  .final-home .home-grid { grid-template-columns: minmax(180px, .8fr) minmax(280px, 1.2fr); gap: 24px; }
+  .final-cover { width: min(100%, 240px); }
+}

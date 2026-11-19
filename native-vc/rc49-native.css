@@ -1,0 +1,44 @@
+/* RC4.9: original VC details, with the existing examination-paper controls. */
+.loading-game-icons {
+  display: flex; align-items: center; gap: 14px;
+  margin: 12px 0 16px; padding: 9px 12px;
+  border-block: 1px solid #c9afad;
+  background: #fff8e8;
+  pointer-events: none;
+}
+.loading-game-icons img { width: 24px; height: 24px; image-rendering: pixelated; object-fit: contain; }
+.loading-game-icons span { flex: 1; height: 1px; background: repeating-linear-gradient(90deg, #b697a6 0 3px, transparent 3px 7px); }
+.native-radar {
+  position: absolute;
+  left: max(var(--native-edge), var(--native-safe-left));
+  bottom: calc(var(--control-bottom) + 132px + 10px);
+  width: 104px;
+  z-index: 2; pointer-events: none;
+  -webkit-user-select: none; user-select: none; -webkit-touch-callout: none;
+  filter: drop-shadow(0 2px 2px #17123c80);
+}
+.native-radar canvas { display: block; width: 104px; height: 104px; }
+.native-radar figcaption {
+  margin-top: 2px; padding: 4px 3px;
+  color: #fff5df; background: #17123cd9; border: 1px solid #f8dfc680;
+  border-radius: 2px; text-align: center;
+  font: 700 10px/1.2 Arial, sans-serif; white-space: nowrap;
+}
+.native-radar { margin: 0; }
+body:not([data-native-state="playing"]):not([data-native-state="finishing"]) .native-radar { display: none; }
+@media (max-height: 620px) {
+  .loading-game-icons { margin-block: 8px 10px; padding-block: 6px; }
+  .loading-game-icons img { width: 20px; height: 20px; }
+  .native-radar { width: 90px; }
+  .native-radar canvas { width: 90px; height: 90px; }
+  .native-radar figcaption { font-size: 9px; }
+}
+@media (max-height: 580px) {
+  .native-radar { bottom: calc(var(--control-bottom) + 100px + 9px); }
+}
+@media (orientation: landscape) and (max-height: 520px) {
+  .native-radar { width: 78px; bottom: calc(var(--control-bottom) + 100px + 7px); }
+  .native-radar canvas { width: 78px; height: 78px; }
+  .native-radar figcaption { font-size: 8px; padding-block: 3px; }
+  .loading-game-icons { display: none; }
+}

@@ -1,0 +1,44 @@
+/* 0.5.1 — exam-room bridge. Scoped to one scene; the RC4.9 UI stays intact. */
+.shell.exam-cinema-shell {width:100%;max-width:none;min-height:100svh;margin:0;padding:0;background:#161722;}
+.shell.exam-cinema-shell > .topbar,.shell.exam-cinema-shell > .footer {display:none!important;}
+.exam-cinema {position:relative;isolation:isolate;width:100%;max-width:680px;height:100svh;min-height:550px;margin:auto;overflow:hidden;background:#1a1825;color:#fff6e5;font-family:Arial,Helvetica,sans-serif;}
+.cinema-viewport,.cinema-room,.cinema-tint,.cinema-grain,.cinema-wipe{position:absolute;inset:0;width:100%;height:100%;}
+.cinema-viewport{overflow:hidden;background:linear-gradient(180deg,#5c5460,#151720);}
+.cinema-room{display:block;width:100%;height:100%;object-fit:contain;object-position:50% 50%;transform:scale(1.05) translateY(-8%);transform-origin:50% 60%;filter:saturate(.85) contrast(1.06);transition:transform 4.3s cubic-bezier(.13,.55,.32,1),filter 2.3s ease;}
+.exam-cinema[data-shot="2"] .cinema-room{object-fit:cover;transform:scale(1.47) translate(1%,11%);filter:saturate(.94) contrast(1.05);}
+.exam-cinema[data-shot="3"] .cinema-room,.exam-cinema[data-shot="4"] .cinema-room{object-fit:cover;transform:scale(2.35) translate(-.5%,-17%);filter:blur(2px) saturate(1.03);}
+.cinema-tint{background:linear-gradient(0deg,rgba(7,8,18,.94),rgba(8,10,22,.45) 29%,transparent 64%,rgba(4,9,18,.47)),radial-gradient(circle at 85% 27%,rgba(255,177,120,.11),transparent 60%);}
+.cinema-grain{pointer-events:none;z-index:4;opacity:.25;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.1) 0px,rgba(0,0,0,.1) 1px,transparent 1px,transparent 4px);}
+.cinema-wipe{z-index:7;background:#fff0d8;opacity:0;pointer-events:none;transition:opacity .7s ease;}
+.exam-cinema[data-shot="4"] .cinema-wipe{opacity:1;}
+.cinema-ui{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;padding:max(20px,env(safe-area-inset-top)) 21px max(22px,env(safe-area-inset-bottom));}
+.cinema-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.cinema-location{display:flex;align-items:center;gap:8px;max-width:200px;color:#e8dec8;font-size:10px;line-height:1.45;font-weight:900;letter-spacing:.115em;text-shadow:1px 2px 3px #17131c;}
+.cinema-live-dot{flex:0 0 7px;width:7px;height:7px;background:#cf6c64;box-shadow:0 0 0 4px rgba(208,108,100,.23);border-radius:50%;}
+.cinema-skip{pointer-events:auto;appearance:none;min-height:42px;min-width:102px;padding:9px 12px;border:1px solid rgba(255,244,226,.6);border-radius:2px;background:rgba(16,16,29,.66);color:#fff5de;font:700 12px/1.3 Arial,sans-serif;cursor:pointer;white-space:nowrap;}
+.cinema-skip:focus-visible{outline:3px solid #ffbd7d;outline-offset:3px;}
+.cinema-dialogue{margin:auto 0 48px;position:relative;min-height:206px;display:flex;align-items:end;}
+.cinema-beat{position:absolute;inset:auto 0 0;opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease;}
+.exam-cinema[data-shot="1"] .cinema-beat-1,.exam-cinema[data-shot="2"] .cinema-beat-2,.exam-cinema[data-shot="3"] .cinema-beat-3{opacity:1;transform:translateY(0);}
+.cinema-cue{font-size:10px;font-weight:900;letter-spacing:.19em;color:#ffd29a;text-transform:uppercase;text-shadow:1px 2px 3px #181721;}
+.cinema-beat h1{max-width:550px;margin:11px 0 14px;font:900 clamp(26px,6.5vw,43px)/.99 Arial Black,Arial,sans-serif;letter-spacing:-.04em;text-wrap:balance;color:#fff8df;text-shadow:0 3px 18px #080712;}
+.cinema-beat p{max-width:370px;margin:0;font:600 13px/1.45 Arial,sans-serif;color:#f6dfbe;text-shadow:0 2px 8px #0e0c17;}
+.cinema-bottom{display:flex;align-items:center;gap:11px;padding-top:14px;border-top:1px solid rgba(251,223,188,.36);font:900 9px/1 Arial,sans-serif;letter-spacing:.11em;color:#f9e4c3;}
+.cinema-bottom>span:first-child{white-space:nowrap;}.cinema-bottom>span:last-child{min-width:37px;text-align:right;}
+.cinema-progress{height:3px;background:#816d73;flex:1;overflow:hidden;}
+.cinema-progress i{display:block;width:var(--cinema-progress,0%);height:100%;background:#f9be83;transition:width 90ms linear;}
+.cinema-ticket{position:absolute;left:50%;top:45%;width:min(84%,390px);min-height:350px;box-sizing:border-box;padding:22px 22px 26px;background:#f4e4cd;color:#25223d;border:5px solid #fcefd6;box-shadow:0 20px 65px rgba(4,6,14,.7);transform:translate(-50%,25%) scale(.46) rotate(-8deg);opacity:0;transition:transform 2.6s cubic-bezier(.16,.54,.19,1),opacity .45s ease;}
+.exam-cinema[data-shot="3"] .cinema-ticket,.exam-cinema[data-shot="4"] .cinema-ticket{opacity:1;transform:translate(-50%,-43%) scale(1) rotate(0);}
+.cinema-ticket-hdr{display:flex;justify-content:space-between;border-block:2px solid #333448;padding:9px 0;font:900 10px/1 Arial,sans-serif;letter-spacing:.09em;}
+.cinema-ticket-seal{position:absolute;right:16px;top:70px;padding:5px 7px;border:2px solid #bc4364;color:#bc4364;font:900 13px/1 Arial,sans-serif;transform:rotate(12deg);}
+.cinema-ticket p{margin:27px 0 8px;font:700 12px/1.3 Arial,sans-serif;}
+.cinema-ticket strong{display:block;font:900 32px/.99 Arial Black,Arial,sans-serif;letter-spacing:-.045em;}
+.cinema-ticket strong span{display:block;}.cinema-ticket strong span:first-child{font-size:19px;letter-spacing:-.055em;margin-bottom:4px;}.cinema-ticket strong span:last-child{font-size:37px;}
+.cinema-ticket-line{height:2px;background:#31417e;margin:21px 0 19px;}
+.cinema-ticket-part{font:900 10px/1.3 Arial,sans-serif;letter-spacing:.15em;color:#bc4364;}
+.cinema-ticket h2{font:900 23px/1.03 Arial Black,Arial,sans-serif;letter-spacing:-.04em;margin:9px 0 24px;}
+.cinema-ticket-foot{display:block;font:600 10px/1.4 Arial,sans-serif;color:#5e5870;}
+.exam-cinema[data-shot="3"] .cinema-tint{background:linear-gradient(0deg,rgba(7,8,18,.99),rgba(5,7,15,.27) 40%,rgba(4,5,14,.36));}
+@media(min-width:700px){.exam-cinema{margin-block:22px;height:min(900px,calc(100svh - 44px));min-height:540px;border:5px solid #272536;box-shadow:0 12px 48px #100d18aa;}.cinema-beat h1{font-size:42px;}}
+@media(max-height:640px){.exam-cinema{min-height:0;}.cinema-dialogue{min-height:150px;margin-bottom:22px;}.cinema-beat h1{font-size:26px;}.cinema-ticket{top:46%;min-height:300px;padding:13px 18px;}}
+@media(prefers-reduced-motion:reduce){.cinema-room,.cinema-ticket,.cinema-wipe,.cinema-beat{transition:none!important;}.cinema-grain{display:none;}}

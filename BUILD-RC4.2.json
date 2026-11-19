@@ -1,0 +1,115 @@
+{
+  "release": "gta-ege-rc4.2-prefinal-20261117",
+  "date": "2026-11-17",
+  "timezone": "Asia/Bangkok",
+  "basedOn": "gta-ege-rc4.1-20261117-universal.zip",
+  "entrypoint": "index.html",
+  "package": "flat static deploy and optional local launchers",
+  "contentEdition": 15,
+  "storageVersion": 4,
+  "questions": 12,
+  "maxScore": 100,
+  "passScore": 60,
+  "sectionScores": {
+    "A": 24,
+    "B": 40,
+    "C": 36
+  },
+  "priorityS": {
+    "preloadStartsAfterCoverPaint": true,
+    "backgroundNativeWarmup": true,
+    "attemptCreatedOnlyOnStart": true,
+    "sameRuntimeThroughABtoC": true,
+    "artificialBriefingDelayMs": 0,
+    "continueLoadingIfNotReady": true,
+    "universalZeroLatencyClaim": false,
+    "resourceConstraintsRespected": true
+  },
+  "native": {
+    "engine": "vice-city-wasm",
+    "runtimeBinaryChanged": false,
+    "missionSCMChanged": true,
+    "size": 45040,
+    "sha256": "bf71cfd97673bc0eb9ae2b604e59462c73f84af89ab641a7dcec41745e0d87da",
+    "C1": "parked Maverick",
+    "C3": "closer RPG pickup and sequential live target marker",
+    "scoreABIChanged": false
+  },
+  "sectionRating": {
+    "range": [
+      1,
+      5
+    ],
+    "thresholds": "0–20%=1; >20–40%=2; >40–60%=3; >60–80%=4; >80–100%=5",
+    "sharedWithPNG": true,
+    "CVisibleOnlyAtFinal": true
+  },
+  "standaloneRoute": "rpg/",
+  "storyImageSize": [
+    1080,
+    1920
+  ],
+  "validation": {
+    "automatedTestsPassed": 263,
+    "automatedTestsFailed": 0,
+    "command": "node --test tests/*.test.cjs",
+    "runtimeFilesVerified": 1044,
+    "assembledAssetsVerified": 260,
+    "previewAResult": "24/24, 5/5 stars",
+    "browserLayoutWidths": [
+      320,
+      390,
+      430
+    ],
+    "layoutFixtureIsGameplayProof": false,
+    "nativeGPUVerified": false,
+    "nativeGPUBlocker": "Cloud browser: WebGL 2 unavailable (C-GPU)",
+    "nativeMobileTelegramVerified": false,
+    "macFinderTested": false,
+    "windowsLauncherTested": false,
+    "liveDeploymentUpdated": false
+  },
+  "changedFiles": [
+    "START-HERE.txt",
+    "app.js",
+    "exam-engine.js",
+    "index.html",
+    "native-preload.js",
+    "native-vc/index.html",
+    "native-vc/native.css",
+    "native-vc/native.js",
+    "native-vc/range-config.json",
+    "native-vc/range.scm",
+    "native-warmup.js",
+    "rpg.html",
+    "rpg/index.html",
+    "server.cjs",
+    "server.py",
+    "story-card.js"
+  ],
+  "newFiles": [
+    "BUILD-RC4.2.json",
+    "README-RC4.2.md",
+    "rc42-exam-style.css"
+  ],
+  "fileSHA256": {
+    "README-RC4.2.md": "5e9347b12ab84a209da91c89d733c817948426a08018d9b873d0a6984a3036a5",
+    "START-HERE.txt": "157ae71056d9474343e6dae8a6dcb4840a637d4989c799fc7616ab5d515d7d4b",
+    "app.js": "7076c49a262b9109b788319e9d34c0df17b2a9fa147e82161c4b05e5264dec4d",
+    "exam-engine.js": "850f2307533cdae146d8c1120dcca284a8b1459ba817e09941e05cee631c7168",
+    "index.html": "b2f48ea70aafcc5fbba71925ed4084ca8ee7b9d5632928cfc491d79e25eb881d",
+    "native-preload.js": "68c5c094818c9648c49bb6fa1705b0657bc18839bbbc775b1892727de5c1b964",
+    "native-vc/index.html": "fc8409c5ac5ca470c92ae59298308cadf9621bcd6d61232a127a9e1fd164d87e",
+    "native-vc/native.css": "b4bf0c3021b834c40733601e80fe625d1621947a01cb16fe6e32f47eafff24e1",
+    "native-vc/native.js": "dfa27d6eb668d63eaa0a56086559a3dee777cc51f48358cbb2812b86aaa9f11a",
+    "native-vc/range-config.json": "43560efcb911c8f3bc61f3310fc248dc3d861dec107329d638e48b0a998a3c95",
+    "native-vc/range.scm": "bf71cfd97673bc0eb9ae2b604e59462c73f84af89ab641a7dcec41745e0d87da",
+    "native-warmup.js": "4747ece1ae73a7dd8a41dd8970a2268d8024ea0140d975593efbd830b48a22f6",
+    "rc42-exam-style.css": "0beebc40e892485f32936d12a6665ec15ddd56d4becc0c83e5c57fb55e5ff15e",
+    "rpg.html": "80e478ed798f204c88ed506e20ce60396d5a6041dbd7a5276909260fe96afb55",
+    "rpg/index.html": "fa138c17ba1f702b9e2d0331b3da016655e450f9976c0d30e315093f6d334f04",
+    "server.cjs": "e16eebb34ec38e7c982f095229cc4f70c400e01514ef59094e6e1ab77ea2b0bb",
+    "server.py": "9a7ed5c143d797bd3139a544f2ac4e8f2549543ebb7da45020e74d869928efa9",
+    "story-card.js": "aa4c7900d194bca5b60fc6067b2c8c3bd5b1d26992941d0647b78f5843601abe"
+  }
+}

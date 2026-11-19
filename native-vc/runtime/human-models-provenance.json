@@ -1,0 +1,35 @@
+{
+  "purpose": "Restore original human driver and police from existing source. Existing textures are byte-identical to original. Fix shortened procedural robot directory allocation (male01:14\u219235 sectors) before native streaming.",
+  "sourceProject": "gta2026-hud-safe-20261111",
+  "source": "source-legacy/city/index.original.data",
+  "sourceManifest": "source-legacy/city/package-manifest.json",
+  "modifiedAssets": false,
+  "rights": "Existing project assets only; no new license or public distribution permission implied.",
+  "files": [
+    {
+      "path": "remote/models/gta3.img/male01.dff",
+      "originalPath": "/remote/models/gta3.img/male01.dff",
+      "size": 71680,
+      "sha256": "e354e60f0ceef6eb14960c4cdd612f51f1715b437cf2c41a73b05a2c10e02b4f",
+      "mimeType": "application/octet-stream",
+      "sourceAsset": "/vc-assets/local/models/gta3.img/male01.dff",
+      "sourceStart": 92986894,
+      "sourceEnd": 93058574
+    },
+    {
+      "path": "remote/models/gta3.img/cop.dff",
+      "originalPath": "/remote/models/gta3.img/cop.dff",
+      "size": 71680,
+      "sha256": "de369d76868bc0693c3e6e771e1717833502722ec5f8cafcd729d4612553a22e",
+      "mimeType": "application/octet-stream",
+      "sourceAsset": "/vc-assets/local/models/gta3.img/cop.dff",
+      "sourceStart": 66473486,
+      "sourceEnd": 66545166
+    }
+  ],
+  "runtimeFixes": {
+    "male01.dff": "gta3.dir streaming capacity 14 \u2192 35 sectors",
+    "male01": "default.ide texture dictionary generic \u2192 male01 (matches original)",
+    "cop.dff": "35 sectors preserved, cop TXD binding preserved"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "physicalFiles": 1051,
+  "physicalBytes": 71304340,
+  "assembledResources": 5,
+  "assembledBytes": 56471804,
+  "allSizesAndSHA256Match": true,
+  "missionBytes": 53205,
+  "missionSHA256": "fa84cbbc5a94d43f0a32c3e4dd02b349abecd5ee171721f157e95e95c68555ab",
+  "nativeGPUExecuted": false
+}

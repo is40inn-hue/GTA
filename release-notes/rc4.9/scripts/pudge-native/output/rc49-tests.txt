@@ -1,0 +1,21 @@
+✔ dedicated native Pudge install preserves player, police, humans, cars and original IMG records (9.479192ms)
+✔ reinstalling the same cameo is idempotent and cannot exhaust native directory entries (6.703107ms)
+✔ directory repair handles Buffer and offset Uint8Array without mutating the supplied bytes (0.667023ms)
+✔ occupied ped slot or duplicate model directory fails without mutating either definition (12.269426ms)
+✔ missing, truncated or wrong RenderWare asset cannot enter an apparently ready native scene (21.1472ms)
+✔ shipped DFF has finite geometry, complete HAnim skin and correctly sided shoulder weights (22.745124ms)
+✔ both real Pudge assets belong to verified background preload with leaves at most 512 KiB (9.391554ms)
+✔ current Pudge shoulder fit changes sockets and preserves native names, orientations and other local joints (8.409091ms)
+✔ RC4.6 keeps the approved Pudge texture and the preloaded asset budget (8.024167ms)
+✔ RC4.6 shipped animation channels retain corrected sockets and joined UV seams across idle, walk, run and fight samples (401.692734ms)
+✔ RC4.9 clavicle skin is rigid and meets its outer shoulder socket without scaling the collar toward the neck (423.70744ms)
+✔ RC4.9 native sports-bike mount, ride and steering samples preserve shoulder sockets and joined UV seams (357.303632ms)
+✔ RC4.9 ships the regenerated model with the same 24-bone format and unchanged texture footprint (4.05181ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1172.404597

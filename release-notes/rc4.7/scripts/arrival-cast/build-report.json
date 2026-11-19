@@ -1,0 +1,52 @@
+{
+  "modelID": 108,
+  "model": "egecj",
+  "description": "VC-native human extra inspired by CJ: white vest and blue jeans; not an original San Andreas model",
+  "sourceMesh": "remote/models/gta3.img/male01.dff",
+  "sourceSHA256": "e354e60f0ceef6eb14960c4cdd612f51f1715b437cf2c41a73b05a2c10e02b4f",
+  "vertices": 941,
+  "triangles": 970,
+  "nativeBones": 24,
+  "originalMeshAndSkinWeightsPreserved": true,
+  "texture": "128x128 project-authored colour atlas",
+  "dancer": {
+    "modelID": 109,
+    "model": "stripa",
+    "files": [
+      {
+        "path": "/vc-assets/local/models/gta3.img/stripa.dff",
+        "size": 86016,
+        "sha256": "807949526594ea366fd63201adcdceacde9669152bd033057ae88e8f65c0bdae"
+      },
+      {
+        "path": "/vc-assets/local/models/gta3.img/stripa.txd",
+        "size": 22528,
+        "sha256": "5afe8daac0987ff05e320d7638f32c615f484549aa1787c16ad8a5cdd7374479"
+      }
+    ],
+    "alreadyBundled": true,
+    "bytesModified": false
+  },
+  "slots": {
+    "108": "vacant native slot",
+    "109": "unused special01 assigned to existing stripa only"
+  },
+  "files": [
+    {
+      "path": "remote/models/gta3.img/egecj.dff",
+      "originalPath": "/remote/models/gta3.img/egecj.dff",
+      "size": 73728,
+      "sha256": "3f4a1b8f524e240140948f80e92b71a23e65a5c21c810d66fba29dfcf4f79c22",
+      "mimeType": "application/octet-stream"
+    },
+    {
+      "path": "remote/models/gta3.img/egecj.txd",
+      "originalPath": "/remote/models/gta3.img/egecj.txd",
+      "size": 18432,
+      "sha256": "8182488c4cdfabc4284c6887d566418fa6b17b0e3318eeabb408ad49cbef8c0e",
+      "mimeType": "application/octet-stream"
+    }
+  ],
+  "additionalDownloadBytes": 92160,
+  "nativeGPUExecuted": false
+}

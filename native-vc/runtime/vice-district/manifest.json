@@ -1,0 +1,3096 @@
+{
+  "version": 1,
+  "location": "Original Ocean Drive, Vice City",
+  "size": 9860745,
+  "files": [
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/alleyprop.txd",
+      "size": 26624,
+      "sha256": "986ab267d44e3c6ff8e7d5fddde2ce8aeed03a418c88b41397e20d9dc2914c05",
+      "chunks": [
+        {
+          "path": "986ab267d44e-alleyprop.txd",
+          "size": 26624,
+          "sha256": "986ab267d44e3c6ff8e7d5fddde2ce8aeed03a418c88b41397e20d9dc2914c05"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/beach_bush06s.dff",
+      "size": 4096,
+      "sha256": "6470e55aa657d4b48a69952b599507c12f5c16a1e47d60be567e11367f53452f",
+      "chunks": [
+        {
+          "path": "6470e55aa657-beach_bush06s.dff",
+          "size": 4096,
+          "sha256": "6470e55aa657d4b48a69952b599507c12f5c16a1e47d60be567e11367f53452f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/beach_bush08s.dff",
+      "size": 4096,
+      "sha256": "0af3c8a351521efea288907707b182cfc7c10fe638a14cf5eba42a5e03eba436",
+      "chunks": [
+        {
+          "path": "0af3c8a35152-beach_bush08s.dff",
+          "size": 4096,
+          "sha256": "0af3c8a351521efea288907707b182cfc7c10fe638a14cf5eba42a5e03eba436"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/beachblend12.dff",
+      "size": 2048,
+      "sha256": "8f26b34a3adc4f319a4fb96a646f8796d2d2e08e402ef30b088687a6924b5ea5",
+      "chunks": [
+        {
+          "path": "8f26b34a3adc-beachblend12.dff",
+          "size": 2048,
+          "sha256": "8f26b34a3adc4f319a4fb96a646f8796d2d2e08e402ef30b088687a6924b5ea5"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/beachblend13.dff",
+      "size": 2048,
+      "sha256": "7ccce9b0a428361420c9f232ae1b500333605145903536d93323dd063e5bf674",
+      "chunks": [
+        {
+          "path": "7ccce9b0a428-beachblend13.dff",
+          "size": 2048,
+          "sha256": "7ccce9b0a428361420c9f232ae1b500333605145903536d93323dd063e5bf674"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/beachblend14.dff",
+      "size": 2048,
+      "sha256": "87cfa4cf984169f5b0ec656e5f62da7f79e822be456109c0409cd4133c1cf7ff",
+      "chunks": [
+        {
+          "path": "87cfa4cf9841-beachblend14.dff",
+          "size": 2048,
+          "sha256": "87cfa4cf984169f5b0ec656e5f62da7f79e822be456109c0409cd4133c1cf7ff"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/beachblend15.dff",
+      "size": 2048,
+      "sha256": "50e40073966f7c1ae7b732d4fef4390c77251e8fb6fd8d3320b1b47e2235a735",
+      "chunks": [
+        {
+          "path": "50e40073966f-beachblend15.dff",
+          "size": 2048,
+          "sha256": "50e40073966f7c1ae7b732d4fef4390c77251e8fb6fd8d3320b1b47e2235a735"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/beachblend16.dff",
+      "size": 2048,
+      "sha256": "069030f98580e732c779210c016b95c7e73541cc044246a6889912bb975dfafd",
+      "chunks": [
+        {
+          "path": "069030f98580-beachblend16.dff",
+          "size": 2048,
+          "sha256": "069030f98580e732c779210c016b95c7e73541cc044246a6889912bb975dfafd"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/beachlo1.dff",
+      "size": 4096,
+      "sha256": "a77a7c85c85f3cb2dc83b8c60e8d729fab927c267712418a11b883bc8aa44ef6",
+      "chunks": [
+        {
+          "path": "a77a7c85c85f-beachlo1.dff",
+          "size": 4096,
+          "sha256": "a77a7c85c85f3cb2dc83b8c60e8d729fab927c267712418a11b883bc8aa44ef6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/benches.txd",
+      "size": 24576,
+      "sha256": "12a24611957bc97b11e7cf342b21507c4fcd10808206b5ccc8871b4bd30d2b8c",
+      "chunks": [
+        {
+          "path": "12a24611957b-benches.txd",
+          "size": 24576,
+          "sha256": "12a24611957bc97b11e7cf342b21507c4fcd10808206b5ccc8871b4bd30d2b8c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/benchm.txd",
+      "size": 14336,
+      "sha256": "1e4bc37317e2bcc2123271cc19c05250c58ca282d5f8a90c561aacd0973c2dd6",
+      "chunks": [
+        {
+          "path": "1e4bc37317e2-benchm.txd",
+          "size": 14336,
+          "sha256": "1e4bc37317e2bcc2123271cc19c05250c58ca282d5f8a90c561aacd0973c2dd6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/bouy.dff",
+      "size": 12288,
+      "sha256": "cd80f78166fe0bb078de5043b49f76979ced6aaae219a1c8717cbb3c19a60ff1",
+      "chunks": [
+        {
+          "path": "cd80f78166fe-bouy.dff",
+          "size": 12288,
+          "sha256": "cd80f78166fe0bb078de5043b49f76979ced6aaae219a1c8717cbb3c19a60ff1"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/buoy.txd",
+      "size": 20480,
+      "sha256": "6cec8c6f1014ab0f87cf7b7356ed3e4bd737a06b8a55539b057fb2c9827c320e",
+      "chunks": [
+        {
+          "path": "6cec8c6f1014-buoy.txd",
+          "size": 20480,
+          "sha256": "6cec8c6f1014ab0f87cf7b7356ed3e4bd737a06b8a55539b057fb2c9827c320e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/canopy.txd",
+      "size": 10240,
+      "sha256": "d5f10f9dd1403532a18cb2f1656eb790d66220b0dfa93a4f0b6fd114c276a2fa",
+      "chunks": [
+        {
+          "path": "d5f10f9dd140-canopy.txd",
+          "size": 10240,
+          "sha256": "d5f10f9dd1403532a18cb2f1656eb790d66220b0dfa93a4f0b6fd114c276a2fa"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/deco_buildkb09.dff",
+      "size": 36864,
+      "sha256": "c31cdc18add7ab091251257de497efed9eca1ab2e8567d4a68b191b1bcdc121c",
+      "chunks": [
+        {
+          "path": "c31cdc18add7-deco_buildkb09.dff",
+          "size": 36864,
+          "sha256": "c31cdc18add7ab091251257de497efed9eca1ab2e8567d4a68b191b1bcdc121c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/deco_polgrnda12.dff",
+      "size": 137216,
+      "sha256": "439e2aa90ec02befb51898f6b774baea0d7e52865510ccaf1653edfdeb85648b",
+      "chunks": [
+        {
+          "path": "439e2aa90ec0-deco_polgrnda12.dff",
+          "size": 137216,
+          "sha256": "439e2aa90ec02befb51898f6b774baea0d7e52865510ccaf1653edfdeb85648b"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/deco_polgrnda13.dff",
+      "size": 12288,
+      "sha256": "33c13282b6350fb9cef0eb49e32a45b3ab70774efe398c89c2944b807dce0ba6",
+      "chunks": [
+        {
+          "path": "33c13282b635-deco_polgrnda13.dff",
+          "size": 12288,
+          "sha256": "33c13282b6350fb9cef0eb49e32a45b3ab70774efe398c89c2944b807dce0ba6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/deco_polgrnda14.dff",
+      "size": 75776,
+      "sha256": "64d1d2bd1a9d290fab4f4cb6dd249bd83ff6538dea992d66b1beafaf3e252af2",
+      "chunks": [
+        {
+          "path": "64d1d2bd1a9d-deco_polgrnda14.dff",
+          "size": 75776,
+          "sha256": "64d1d2bd1a9d290fab4f4cb6dd249bd83ff6538dea992d66b1beafaf3e252af2"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/deco_polgrnda16.dff",
+      "size": 43008,
+      "sha256": "b2c75bc1bfe9023b09740f50370138536947bdae1b070d82cee8337d309d8e59",
+      "chunks": [
+        {
+          "path": "b2c75bc1bfe9-deco_polgrnda16.dff",
+          "size": 43008,
+          "sha256": "b2c75bc1bfe9023b09740f50370138536947bdae1b070d82cee8337d309d8e59"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/deco_polgrnda17.dff",
+      "size": 38912,
+      "sha256": "3052b608cd49aa6868c642fc19fdcadadf8559c550b3446f8310983c4cccee4b",
+      "chunks": [
+        {
+          "path": "3052b608cd49-deco_polgrnda17.dff",
+          "size": 38912,
+          "sha256": "3052b608cd49aa6868c642fc19fdcadadf8559c550b3446f8310983c4cccee4b"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/dynsigns.txd",
+      "size": 26624,
+      "sha256": "764b76b3eed5b7e1fea78f8d6996a70e187f5254f4f8bc9981e44fb3d3275036",
+      "chunks": [
+        {
+          "path": "764b76b3eed5-dynsigns.txd",
+          "size": 26624,
+          "sha256": "764b76b3eed5b7e1fea78f8d6996a70e187f5254f4f8bc9981e44fb3d3275036"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/kb_canopy_test.dff",
+      "size": 6144,
+      "sha256": "12fa63a230d460b010181b6083437bd54059ea672a6bfdb15e040a147d977940",
+      "chunks": [
+        {
+          "path": "12fa63a230d4-kb_canopy_test.dff",
+          "size": 6144,
+          "sha256": "12fa63a230d460b010181b6083437bd54059ea672a6bfdb15e040a147d977940"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/kb_chr_tbl_test.dff",
+      "size": 22528,
+      "sha256": "763cec7b6f98c2f10656e4e98dac03f04aee1d2e579946c8c322d600aa3a4ff3",
+      "chunks": [
+        {
+          "path": "763cec7b6f98-kb_chr_tbl_test.dff",
+          "size": 22528,
+          "sha256": "763cec7b6f98c2f10656e4e98dac03f04aee1d2e579946c8c322d600aa3a4ff3"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/kb_planter+bush2.dff",
+      "size": 20480,
+      "sha256": "a5321e3e3d8b39f2fff8b76f417c506250c09f84e658331d7160b8dba45b6f52",
+      "chunks": [
+        {
+          "path": "a5321e3e3d8b-kb_planter+bush2.dff",
+          "size": 20480,
+          "sha256": "a5321e3e3d8b39f2fff8b76f417c506250c09f84e658331d7160b8dba45b6f52"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lamppost1.dff",
+      "size": 8192,
+      "sha256": "0611c63f5fac81d2d97fce4d0bb49b80c0d9c18b3db7a56a2b8f16fceceb1003",
+      "chunks": [
+        {
+          "path": "0611c63f5fac-lamppost1.dff",
+          "size": 8192,
+          "sha256": "0611c63f5fac81d2d97fce4d0bb49b80c0d9c18b3db7a56a2b8f16fceceb1003"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_beacon_dy.dff",
+      "size": 8192,
+      "sha256": "76de3465919fefbe3447e9f2ce42df85c650294e3501bbad38bbb27e9ac56c21",
+      "chunks": [
+        {
+          "path": "76de3465919f-lod_beacon_dy.dff",
+          "size": 8192,
+          "sha256": "76de3465919fefbe3447e9f2ce42df85c650294e3501bbad38bbb27e9ac56c21"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_beacon_nt.dff",
+      "size": 8192,
+      "sha256": "881a775589db039cf2bd1198e0a77cba9f8227971e6f7a67e63707948d5c8894",
+      "chunks": [
+        {
+          "path": "881a775589db-lod_beacon_nt.dff",
+          "size": 8192,
+          "sha256": "881a775589db039cf2bd1198e0a77cba9f8227971e6f7a67e63707948d5c8894"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_leslie_dy.dff",
+      "size": 4096,
+      "sha256": "3987857adbc3173a41ee30372248d427de3b8ca35ed278786be0bb213fdadbb5",
+      "chunks": [
+        {
+          "path": "3987857adbc3-lod_leslie_dy.dff",
+          "size": 4096,
+          "sha256": "3987857adbc3173a41ee30372248d427de3b8ca35ed278786be0bb213fdadbb5"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_leslie_nt.dff",
+      "size": 4096,
+      "sha256": "cd46ed909d6a3366c6fe91f4e7ac1c54b4394b1ed85468c932d9508e30b0b37d",
+      "chunks": [
+        {
+          "path": "cd46ed909d6a-lod_leslie_nt.dff",
+          "size": 4096,
+          "sha256": "cd46ed909d6a3366c6fe91f4e7ac1c54b4394b1ed85468c932d9508e30b0b37d"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_macalpin_dy.dff",
+      "size": 6144,
+      "sha256": "1639f8df89b24917a36976031acded4737c05346d49745e7c4178066ce0e562f",
+      "chunks": [
+        {
+          "path": "1639f8df89b2-lod_macalpin_dy.dff",
+          "size": 6144,
+          "sha256": "1639f8df89b24917a36976031acded4737c05346d49745e7c4178066ce0e562f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_macalpin_nt.dff",
+      "size": 6144,
+      "sha256": "d23656ed18aaf4afae9e4801a727ebd257d6b80fd50e31171f65d819ea7f8b11",
+      "chunks": [
+        {
+          "path": "d23656ed18aa-lod_macalpin_nt.dff",
+          "size": 6144,
+          "sha256": "d23656ed18aaf4afae9e4801a727ebd257d6b80fd50e31171f65d819ea7f8b11"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_majestic_dy.dff",
+      "size": 6144,
+      "sha256": "5d3a724e9b810b79cd3ec70cbeeffbbd2dc3fddd4f884a4d717bc12275a62012",
+      "chunks": [
+        {
+          "path": "5d3a724e9b81-lod_majestic_dy.dff",
+          "size": 6144,
+          "sha256": "5d3a724e9b810b79cd3ec70cbeeffbbd2dc3fddd4f884a4d717bc12275a62012"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_majestic_nt.dff",
+      "size": 6144,
+      "sha256": "8872124a0c3073fee44b5e9aeef02dab1d9efae32801f084ef19807cef7a6e97",
+      "chunks": [
+        {
+          "path": "8872124a0c30-lod_majestic_nt.dff",
+          "size": 6144,
+          "sha256": "8872124a0c3073fee44b5e9aeef02dab1d9efae32801f084ef19807cef7a6e97"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_starlite_dy.dff",
+      "size": 2048,
+      "sha256": "e157f1d386f8865be50ec7244a96ecaede45a51c197dcae4772c5ee395c84a2c",
+      "chunks": [
+        {
+          "path": "e157f1d386f8-lod_starlite_dy.dff",
+          "size": 2048,
+          "sha256": "e157f1d386f8865be50ec7244a96ecaede45a51c197dcae4772c5ee395c84a2c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_starlite_nt.dff",
+      "size": 2048,
+      "sha256": "fbb10b00b7165a210d955a1693a89aabec8d5eefd60b0f2ccbf2009513c353a5",
+      "chunks": [
+        {
+          "path": "fbb10b00b716-lod_starlite_nt.dff",
+          "size": 2048,
+          "sha256": "fbb10b00b7165a210d955a1693a89aabec8d5eefd60b0f2ccbf2009513c353a5"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_tides_dy.dff",
+      "size": 10240,
+      "sha256": "6338053a6d24abcd58a5732c197823ff1e5d82a70c42742857a4e4cfdda2fc42",
+      "chunks": [
+        {
+          "path": "6338053a6d24-lod_tides_dy.dff",
+          "size": 10240,
+          "sha256": "6338053a6d24abcd58a5732c197823ff1e5d82a70c42742857a4e4cfdda2fc42"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lod_tides_nt.dff",
+      "size": 10240,
+      "sha256": "9658114b6d2735680d83bff7ca9603f0a5cd2745a5e52a0991c788d67226cf2f",
+      "chunks": [
+        {
+          "path": "9658114b6d27-lod_tides_nt.dff",
+          "size": 10240,
+          "sha256": "9658114b6d2735680d83bff7ca9603f0a5cd2745a5e52a0991c788d67226cf2f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodacne.dff",
+      "size": 6144,
+      "sha256": "97edde345a4c5a64b3747925b877e31105f25e59f5af135a0389a748662acb64",
+      "chunks": [
+        {
+          "path": "97edde345a4c-lodacne.dff",
+          "size": 6144,
+          "sha256": "97edde345a4c5a64b3747925b877e31105f25e59f5af135a0389a748662acb64"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys1_01_dy.dff",
+      "size": 4096,
+      "sha256": "92a8809d299e189c35c43bdefbcf07537b067da9cf4ba0850f109ee1351e5ada",
+      "chunks": [
+        {
+          "path": "92a8809d299e-lodalleys1_01_dy.dff",
+          "size": 4096,
+          "sha256": "92a8809d299e189c35c43bdefbcf07537b067da9cf4ba0850f109ee1351e5ada"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys1_01_nt.dff",
+      "size": 4096,
+      "sha256": "ebb0309f5689945ed7598248e692e633b4b6c1984b3764e55982948c8d99f143",
+      "chunks": [
+        {
+          "path": "ebb0309f5689-lodalleys1_01_nt.dff",
+          "size": 4096,
+          "sha256": "ebb0309f5689945ed7598248e692e633b4b6c1984b3764e55982948c8d99f143"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys1b_01_dy.dff",
+      "size": 4096,
+      "sha256": "4b59b4109c56b8c77b32949cc0899bb723a0883431ea655b5508ec5554e61c90",
+      "chunks": [
+        {
+          "path": "4b59b4109c56-lodalleys1b_01_dy.dff",
+          "size": 4096,
+          "sha256": "4b59b4109c56b8c77b32949cc0899bb723a0883431ea655b5508ec5554e61c90"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys1b_01_nt.dff",
+      "size": 4096,
+      "sha256": "ff2d02a499229987b07288ed122041bb35f8910ad9ce6896c985817c46b57357",
+      "chunks": [
+        {
+          "path": "ff2d02a49922-lodalleys1b_01_nt.dff",
+          "size": 4096,
+          "sha256": "ff2d02a499229987b07288ed122041bb35f8910ad9ce6896c985817c46b57357"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys2_01_dy.dff",
+      "size": 4096,
+      "sha256": "347bbecc629911f0ed5538cd72cf96c9c87a0911b3b5a19ac3ec567cc54d93a5",
+      "chunks": [
+        {
+          "path": "347bbecc6299-lodalleys2_01_dy.dff",
+          "size": 4096,
+          "sha256": "347bbecc629911f0ed5538cd72cf96c9c87a0911b3b5a19ac3ec567cc54d93a5"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys2_01_nt.dff",
+      "size": 2048,
+      "sha256": "c335c5c5df5e0a234885e874f5ddd1de23f3e41dabbf1c679064c784187c2016",
+      "chunks": [
+        {
+          "path": "c335c5c5df5e-lodalleys2_01_nt.dff",
+          "size": 2048,
+          "sha256": "c335c5c5df5e0a234885e874f5ddd1de23f3e41dabbf1c679064c784187c2016"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys3_01_dy.dff",
+      "size": 2048,
+      "sha256": "bc2cbb8fcdd2ca5d6462c393c4498438ef9056fda61540f958bf48f14e88f3aa",
+      "chunks": [
+        {
+          "path": "bc2cbb8fcdd2-lodalleys3_01_dy.dff",
+          "size": 2048,
+          "sha256": "bc2cbb8fcdd2ca5d6462c393c4498438ef9056fda61540f958bf48f14e88f3aa"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys3_01_nt.dff",
+      "size": 2048,
+      "sha256": "d9cda58ff9b78b471f8921a30764b542f89be9b33a5cfc33a5de3c3377358544",
+      "chunks": [
+        {
+          "path": "d9cda58ff9b7-lodalleys3_01_nt.dff",
+          "size": 2048,
+          "sha256": "d9cda58ff9b78b471f8921a30764b542f89be9b33a5cfc33a5de3c3377358544"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys3b_01_dy.dff",
+      "size": 2048,
+      "sha256": "46eb66e0f39d6c74b04295cfd4d9a2d2714029976cc7a717113cd4cf4d4e0e03",
+      "chunks": [
+        {
+          "path": "46eb66e0f39d-lodalleys3b_01_dy.dff",
+          "size": 2048,
+          "sha256": "46eb66e0f39d6c74b04295cfd4d9a2d2714029976cc7a717113cd4cf4d4e0e03"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodalleys3b_01_nt.dff",
+      "size": 2048,
+      "sha256": "7440255c9c895b9789b130d31b47065bed6d4be92f5de0d2f42ed582669d5723",
+      "chunks": [
+        {
+          "path": "7440255c9c89-lodalleys3b_01_nt.dff",
+          "size": 2048,
+          "sha256": "7440255c9c895b9789b130d31b47065bed6d4be92f5de0d2f42ed582669d5723"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodanrda03_dy.dff",
+      "size": 4096,
+      "sha256": "9d75bba1f966edda6b1f0424997352c88358cab6cd42a3814bcc7de62039a371",
+      "chunks": [
+        {
+          "path": "9d75bba1f966-lodanrda03_dy.dff",
+          "size": 4096,
+          "sha256": "9d75bba1f966edda6b1f0424997352c88358cab6cd42a3814bcc7de62039a371"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodanrda03_nt.dff",
+      "size": 4096,
+      "sha256": "6e0f3496d1bb39f631644080d757c885ee6c80f433bce865716e096deff8f29c",
+      "chunks": [
+        {
+          "path": "6e0f3496d1bb-lodanrda03_nt.dff",
+          "size": 4096,
+          "sha256": "6e0f3496d1bb39f631644080d757c885ee6c80f433bce865716e096deff8f29c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodanrda04_dy.dff",
+      "size": 2048,
+      "sha256": "3b1894426c9f6f9d110d054c877b07be823e444188802bac9b4ad1d8462ce72a",
+      "chunks": [
+        {
+          "path": "3b1894426c9f-lodanrda04_dy.dff",
+          "size": 2048,
+          "sha256": "3b1894426c9f6f9d110d054c877b07be823e444188802bac9b4ad1d8462ce72a"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodanrda04_nt.dff",
+      "size": 2048,
+      "sha256": "1310b10dbab96b539e2a49c3a69a1a7711ee63fe891ea7c211a9b6282479946d",
+      "chunks": [
+        {
+          "path": "1310b10dbab9-lodanrda04_nt.dff",
+          "size": 2048,
+          "sha256": "1310b10dbab96b539e2a49c3a69a1a7711ee63fe891ea7c211a9b6282479946d"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodanrda05_dy.dff",
+      "size": 2048,
+      "sha256": "5d332523a5c02b62c78f1bb63da8c121c4bff169c9fbf8f6617603c98b2ada11",
+      "chunks": [
+        {
+          "path": "5d332523a5c0-lodanrda05_dy.dff",
+          "size": 2048,
+          "sha256": "5d332523a5c02b62c78f1bb63da8c121c4bff169c9fbf8f6617603c98b2ada11"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodanrda05_nt.dff",
+      "size": 2048,
+      "sha256": "1297176ad3fcf707243080cd18bf405cef4385b1f34167ce167ff727d6fef2d8",
+      "chunks": [
+        {
+          "path": "1297176ad3fc-lodanrda05_nt.dff",
+          "size": 2048,
+          "sha256": "1297176ad3fcf707243080cd18bf405cef4385b1f34167ce167ff727d6fef2d8"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodanrda06_dy.dff",
+      "size": 2048,
+      "sha256": "f720a6865e81cac7690072b1a2686779f42add091e663655b7a225382f50403c",
+      "chunks": [
+        {
+          "path": "f720a6865e81-lodanrda06_dy.dff",
+          "size": 2048,
+          "sha256": "f720a6865e81cac7690072b1a2686779f42add091e663655b7a225382f50403c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodanrda06_nt.dff",
+      "size": 2048,
+      "sha256": "dc4bd3497d6928d7e47c49093af72b1d66f0c0ce9d11ac74b711331fd4bd25aa",
+      "chunks": [
+        {
+          "path": "dc4bd3497d69-lodanrda06_nt.dff",
+          "size": 2048,
+          "sha256": "dc4bd3497d6928d7e47c49093af72b1d66f0c0ce9d11ac74b711331fd4bd25aa"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodbigshops1.dff",
+      "size": 12288,
+      "sha256": "c5441ec512d993f40880cacbdb595bd5e4d4e8b423c2897c002aece049057b16",
+      "chunks": [
+        {
+          "path": "c5441ec512d9-lodbigshops1.dff",
+          "size": 12288,
+          "sha256": "c5441ec512d993f40880cacbdb595bd5e4d4e8b423c2897c002aece049057b16"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodbigshops2.dff",
+      "size": 12288,
+      "sha256": "8ff2afd7df7d5163015ece7938e6f69e307538f9321873155ab1e9f0a5f83923",
+      "chunks": [
+        {
+          "path": "8ff2afd7df7d-lodbigshops2.dff",
+          "size": 12288,
+          "sha256": "8ff2afd7df7d5163015ece7938e6f69e307538f9321873155ab1e9f0a5f83923"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodbphq.dff",
+      "size": 8192,
+      "sha256": "8a4ccbf16789c99834036634f4459135f9a3df700d8d2c5c391a295fc9b6b1bb",
+      "chunks": [
+        {
+          "path": "8a4ccbf16789-lodbphq.dff",
+          "size": 8192,
+          "sha256": "8a4ccbf16789c99834036634f4459135f9a3df700d8d2c5c391a295fc9b6b1bb"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodcasagrande_dy.dff",
+      "size": 6144,
+      "sha256": "cc9866d65fb1fb090eaca4e9c4cbfb23a1f444fd0c6960b9dcb22539e76eb4ef",
+      "chunks": [
+        {
+          "path": "cc9866d65fb1-lodcasagrande_dy.dff",
+          "size": 6144,
+          "sha256": "cc9866d65fb1fb090eaca4e9c4cbfb23a1f444fd0c6960b9dcb22539e76eb4ef"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodcasagrande_nt.dff",
+      "size": 6144,
+      "sha256": "437397f61171ab04740a4bc9a085eba6e94a7bc626d402d2cbccd8240410bf78",
+      "chunks": [
+        {
+          "path": "437397f61171-lodcasagrande_nt.dff",
+          "size": 6144,
+          "sha256": "437397f61171ab04740a4bc9a085eba6e94a7bc626d402d2cbccd8240410bf78"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodchlo1.dff",
+      "size": 2048,
+      "sha256": "81d81f57f81bcf63a967566188aa0a8bee87fad61921fb9c5c29790526d075ef",
+      "chunks": [
+        {
+          "path": "81d81f57f81b-lodchlo1.dff",
+          "size": 2048,
+          "sha256": "81d81f57f81bcf63a967566188aa0a8bee87fad61921fb9c5c29790526d075ef"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodclevelander_dy.dff",
+      "size": 10240,
+      "sha256": "f17f6c79e6c920fd3bc3986a2a2439b339affa64008fb4086df12c98298e83c5",
+      "chunks": [
+        {
+          "path": "f17f6c79e6c9-lodclevelander_dy.dff",
+          "size": 10240,
+          "sha256": "f17f6c79e6c920fd3bc3986a2a2439b339affa64008fb4086df12c98298e83c5"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodclevelander_nt.dff",
+      "size": 8192,
+      "sha256": "290c2e449c028e1775b4fb75084ff2852896b9bbcf1c62fff55747f118756966",
+      "chunks": [
+        {
+          "path": "290c2e449c02-lodclevelander_nt.dff",
+          "size": 8192,
+          "sha256": "290c2e449c028e1775b4fb75084ff2852896b9bbcf1c62fff55747f118756966"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodcolony2_dy.dff",
+      "size": 4096,
+      "sha256": "201dca135a839ea0c55e976436895f9ec455db317448109ec114faff8ba331c5",
+      "chunks": [
+        {
+          "path": "201dca135a83-lodcolony2_dy.dff",
+          "size": 4096,
+          "sha256": "201dca135a839ea0c55e976436895f9ec455db317448109ec114faff8ba331c5"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodcolony2_nt.dff",
+      "size": 4096,
+      "sha256": "f95c874d9f34530fd4ad6c28cae8cbef48713d669c89005c12b2b848927e6124",
+      "chunks": [
+        {
+          "path": "f95c874d9f34-lodcolony2_nt.dff",
+          "size": 4096,
+          "sha256": "f95c874d9f34530fd4ad6c28cae8cbef48713d669c89005c12b2b848927e6124"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodcolony_dy.dff",
+      "size": 4096,
+      "sha256": "2a073060b4822225ef23ac6a53d62775dfb8249f734a2f09d501df6d23a68807",
+      "chunks": [
+        {
+          "path": "2a073060b482-lodcolony_dy.dff",
+          "size": 4096,
+          "sha256": "2a073060b4822225ef23ac6a53d62775dfb8249f734a2f09d501df6d23a68807"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodcolony_nt.dff",
+      "size": 6144,
+      "sha256": "6b3719e27333bca8465221237d0be76c8e21cb74d3f1989aa88109b7362ebbdd",
+      "chunks": [
+        {
+          "path": "6b3719e27333-lodcolony_nt.dff",
+          "size": 6144,
+          "sha256": "6b3719e27333bca8465221237d0be76c8e21cb74d3f1989aa88109b7362ebbdd"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodighsandgrs1.dff",
+      "size": 4096,
+      "sha256": "35a8b4994af78e970fb8b204d92e4df58810f9a38c850fdeda57a8d7b2d7f65d",
+      "chunks": [
+        {
+          "path": "35a8b4994af7-lodighsandgrs1.dff",
+          "size": 4096,
+          "sha256": "35a8b4994af78e970fb8b204d92e4df58810f9a38c850fdeda57a8d7b2d7f65d"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodlhland.dff",
+      "size": 10240,
+      "sha256": "bfa10d0857332df972ecaec47f3975d3254e32a91384cbb4899847bd349ab0db",
+      "chunks": [
+        {
+          "path": "bfa10d085733-lodlhland.dff",
+          "size": 10240,
+          "sha256": "bfa10d0857332df972ecaec47f3975d3254e32a91384cbb4899847bd349ab0db"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodlightext.dff",
+      "size": 10240,
+      "sha256": "adecae58ed2ec9ad67817df462398227b57d4eb51a29029cb1bea5749c21daef",
+      "chunks": [
+        {
+          "path": "adecae58ed2e-lodlightext.dff",
+          "size": 10240,
+          "sha256": "adecae58ed2ec9ad67817df462398227b57d4eb51a29029cb1bea5749c21daef"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodmajestic2c_dy.dff",
+      "size": 6144,
+      "sha256": "b1e4e92f9e12f31f81a2928258c1455ec1ca5fa3348271f86723c55c629a57cd",
+      "chunks": [
+        {
+          "path": "b1e4e92f9e12-lodmajestic2c_dy.dff",
+          "size": 6144,
+          "sha256": "b1e4e92f9e12f31f81a2928258c1455ec1ca5fa3348271f86723c55c629a57cd"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodmajestic2c_nt.dff",
+      "size": 8192,
+      "sha256": "4378b2dc49387032edb348dc6b8e1ee2be8a4492dc9eb67e3fa8b6710ad491a1",
+      "chunks": [
+        {
+          "path": "4378b2dc4938-lodmajestic2c_nt.dff",
+          "size": 8192,
+          "sha256": "4378b2dc49387032edb348dc6b8e1ee2be8a4492dc9eb67e3fa8b6710ad491a1"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodmiland_kb01_dy.dff",
+      "size": 6144,
+      "sha256": "56aa5fad4e7c6ce7c64ab591088dcfb83ec078140708f0f522adb834163239ce",
+      "chunks": [
+        {
+          "path": "56aa5fad4e7c-lodmiland_kb01_dy.dff",
+          "size": 6144,
+          "sha256": "56aa5fad4e7c6ce7c64ab591088dcfb83ec078140708f0f522adb834163239ce"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodmiland_kb01_nt.dff",
+      "size": 6144,
+      "sha256": "f69a41e373487515876c28eff8f24851c5b3d259b4d174a250c694ba23181f51",
+      "chunks": [
+        {
+          "path": "f69a41e37348-lodmiland_kb01_nt.dff",
+          "size": 6144,
+          "sha256": "f69a41e373487515876c28eff8f24851c5b3d259b4d174a250c694ba23181f51"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodmiland_kb02.dff",
+      "size": 4096,
+      "sha256": "86bcfc3b025b2b313357ba3e53be0b6310ace6045bda961d92ef47cd80da8f87",
+      "chunks": [
+        {
+          "path": "86bcfc3b025b-lodmiland_kb02.dff",
+          "size": 4096,
+          "sha256": "86bcfc3b025b2b313357ba3e53be0b6310ace6045bda961d92ef47cd80da8f87"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodmiland_kb03.dff",
+      "size": 4096,
+      "sha256": "d33fdb926441fd5ce9cd5c8174b65008b0321b1c5a35c5b3a88b5c9f8da8f38e",
+      "chunks": [
+        {
+          "path": "d33fdb926441-lodmiland_kb03.dff",
+          "size": 4096,
+          "sha256": "d33fdb926441fd5ce9cd5c8174b65008b0321b1c5a35c5b3a88b5c9f8da8f38e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodmiland_kb04.dff",
+      "size": 4096,
+      "sha256": "2ba6e60164c14d0a43f01ab86dd518c182974f74e7295ed761af8cdb70df6613",
+      "chunks": [
+        {
+          "path": "2ba6e60164c1-lodmiland_kb04.dff",
+          "size": 4096,
+          "sha256": "2ba6e60164c14d0a43f01ab86dd518c182974f74e7295ed761af8cdb70df6613"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodmiland_ws04.dff",
+      "size": 4096,
+      "sha256": "89732f9cf07415313a324343a4d71a3d30d4d830550a6ac4c6a44e463bbd8244",
+      "chunks": [
+        {
+          "path": "89732f9cf074-lodmiland_ws04.dff",
+          "size": 4096,
+          "sha256": "89732f9cf07415313a324343a4d71a3d30d4d830550a6ac4c6a44e463bbd8244"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodmiland_ws04b.dff",
+      "size": 4096,
+      "sha256": "3da3ef1ed162249c64aa320e9b3fc1de7bf04c2553452e7925882df35c7f2193",
+      "chunks": [
+        {
+          "path": "3da3ef1ed162-lodmiland_ws04b.dff",
+          "size": 4096,
+          "sha256": "3da3ef1ed162249c64aa320e9b3fc1de7bf04c2553452e7925882df35c7f2193"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodnewscafe_dy.dff",
+      "size": 6144,
+      "sha256": "a0b1c4ebe99a5a4fc370d18c669b5fd51ef4f4ce267e214634dd8de97202f6e9",
+      "chunks": [
+        {
+          "path": "a0b1c4ebe99a-lodnewscafe_dy.dff",
+          "size": 6144,
+          "sha256": "a0b1c4ebe99a5a4fc370d18c669b5fd51ef4f4ce267e214634dd8de97202f6e9"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodnewscafe_nt.dff",
+      "size": 6144,
+      "sha256": "3f1f1d25eb6492e2dc47891b9494571260e4a82c6ed6805ec39ddff3238020c6",
+      "chunks": [
+        {
+          "path": "3f1f1d25eb64-lodnewscafe_nt.dff",
+          "size": 6144,
+          "sha256": "3f1f1d25eb6492e2dc47891b9494571260e4a82c6ed6805ec39ddff3238020c6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodnorthstar.dff",
+      "size": 26624,
+      "sha256": "5596c3551ca8354005eedc3772a3e57a6fe9b847f7d0a8090bbc853f4e07ba1b",
+      "chunks": [
+        {
+          "path": "5596c3551ca8-lodnorthstar.dff",
+          "size": 26624,
+          "sha256": "5596c3551ca8354005eedc3772a3e57a6fe9b847f7d0a8090bbc853f4e07ba1b"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodo_buildkb09.dff",
+      "size": 2048,
+      "sha256": "a937c75c63350f3f544885ebf2582f2520148364616238c9a05b72743c34d55e",
+      "chunks": [
+        {
+          "path": "a937c75c6335-lodo_buildkb09.dff",
+          "size": 2048,
+          "sha256": "a937c75c63350f3f544885ebf2582f2520148364616238c9a05b72743c34d55e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodo_polgrnda12.dff",
+      "size": 14336,
+      "sha256": "d0bd5bf85fc9ce2ad0d573653c98a814622050d701800513df382abd97180578",
+      "chunks": [
+        {
+          "path": "d0bd5bf85fc9-lodo_polgrnda12.dff",
+          "size": 14336,
+          "sha256": "d0bd5bf85fc9ce2ad0d573653c98a814622050d701800513df382abd97180578"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodo_polgrnda13.dff",
+      "size": 6144,
+      "sha256": "c7553820ccd9cc68f74efcab9be3d99e9a403cc2e07a8a9b07f9b8c1d8a23070",
+      "chunks": [
+        {
+          "path": "c7553820ccd9-lodo_polgrnda13.dff",
+          "size": 6144,
+          "sha256": "c7553820ccd9cc68f74efcab9be3d99e9a403cc2e07a8a9b07f9b8c1d8a23070"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodo_polgrnda14.dff",
+      "size": 8192,
+      "sha256": "9e22ae0f3de036470be85beea7bf01b1c3fb29ec810a63dafe11b8773a14e442",
+      "chunks": [
+        {
+          "path": "9e22ae0f3de0-lodo_polgrnda14.dff",
+          "size": 8192,
+          "sha256": "9e22ae0f3de036470be85beea7bf01b1c3fb29ec810a63dafe11b8773a14e442"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodo_polgrnda16.dff",
+      "size": 8192,
+      "sha256": "1b9374e23ccdda4675dad27610d4e30860106c12856494928c880575159989e6",
+      "chunks": [
+        {
+          "path": "1b9374e23ccd-lodo_polgrnda16.dff",
+          "size": 8192,
+          "sha256": "1b9374e23ccdda4675dad27610d4e30860106c12856494928c880575159989e6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodo_polgrnda17.dff",
+      "size": 8192,
+      "sha256": "d97ab6b8c46127b15773dddb6da1adcfcd5c7c1e4536025f1a9030487e72df0c",
+      "chunks": [
+        {
+          "path": "d97ab6b8c461-lodo_polgrnda17.dff",
+          "size": 8192,
+          "sha256": "d97ab6b8c46127b15773dddb6da1adcfcd5c7c1e4536025f1a9030487e72df0c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodoceanrdn1_dy.dff",
+      "size": 2048,
+      "sha256": "306dcb526d5aabc8a1cabd22e6a0819ec64ea3474a34f58005b0b4d47f2a23cf",
+      "chunks": [
+        {
+          "path": "306dcb526d5a-lodoceanrdn1_dy.dff",
+          "size": 2048,
+          "sha256": "306dcb526d5aabc8a1cabd22e6a0819ec64ea3474a34f58005b0b4d47f2a23cf"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodoceanrdn1_nt.dff",
+      "size": 2048,
+      "sha256": "690dec77d9ce0ee6c733aab41f605f6381572765c753dedf0d92ae18f3dc98dd",
+      "chunks": [
+        {
+          "path": "690dec77d9ce-lodoceanrdn1_nt.dff",
+          "size": 2048,
+          "sha256": "690dec77d9ce0ee6c733aab41f605f6381572765c753dedf0d92ae18f3dc98dd"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lododrive.txd",
+      "size": 110592,
+      "sha256": "a653ea4265f3db7fa4a6da6f02224ef4995c56756f1e798a55780b0ed2e6e2a8",
+      "chunks": [
+        {
+          "path": "a653ea4265f3-lododrive.txd",
+          "size": 110592,
+          "sha256": "a653ea4265f3db7fa4a6da6f02224ef4995c56756f1e798a55780b0ed2e6e2a8"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodowsand1.dff",
+      "size": 2048,
+      "sha256": "c2cdb89c7905a05dab4786b059c7ebcc993e4ad3151c041a751e0f5411abfac9",
+      "chunks": [
+        {
+          "path": "c2cdb89c7905-lodowsand1.dff",
+          "size": 2048,
+          "sha256": "c2cdb89c7905a05dab4786b059c7ebcc993e4ad3151c041a751e0f5411abfac9"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodowsand2.dff",
+      "size": 2048,
+      "sha256": "a21ba0450e39bf508e25af268e6f3abfd137ca62f503ffd9b0aac5c9a5ff865f",
+      "chunks": [
+        {
+          "path": "a21ba0450e39-lodowsand2.dff",
+          "size": 2048,
+          "sha256": "a21ba0450e39bf508e25af268e6f3abfd137ca62f503ffd9b0aac5c9a5ff865f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodpelican2_dy.dff",
+      "size": 4096,
+      "sha256": "458ce719521ea443cddf18fd321da35603673f89cbde146f12ab9996d3c94a25",
+      "chunks": [
+        {
+          "path": "458ce719521e-lodpelican2_dy.dff",
+          "size": 4096,
+          "sha256": "458ce719521ea443cddf18fd321da35603673f89cbde146f12ab9996d3c94a25"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodpelican2_nt.dff",
+      "size": 4096,
+      "sha256": "dbb88f2f6f8b6d68b3c4aa820bfda10c3e731271fed0c61093641f3e8700c414",
+      "chunks": [
+        {
+          "path": "dbb88f2f6f8b-lodpelican2_nt.dff",
+          "size": 4096,
+          "sha256": "dbb88f2f6f8b6d68b3c4aa820bfda10c3e731271fed0c61093641f3e8700c414"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodpelican_dy.dff",
+      "size": 4096,
+      "sha256": "1e412ce16366e9869e4041ce603c034e8de951b2bafb8eb9a201afc1d27a550f",
+      "chunks": [
+        {
+          "path": "1e412ce16366-lodpelican_dy.dff",
+          "size": 4096,
+          "sha256": "1e412ce16366e9869e4041ce603c034e8de951b2bafb8eb9a201afc1d27a550f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodpelican_nt.dff",
+      "size": 4096,
+      "sha256": "b33f3f62d5fc686a72c9f8c0b821bfb7737cc0e2369a5651b67a2095ae516415",
+      "chunks": [
+        {
+          "path": "b33f3f62d5fc-lodpelican_nt.dff",
+          "size": 4096,
+          "sha256": "b33f3f62d5fc686a72c9f8c0b821bfb7737cc0e2369a5651b67a2095ae516415"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodtides3_dy.dff",
+      "size": 8192,
+      "sha256": "aa57755f03ba48633637188fbf056fc28f48444c6d56a7cc8a750ca9eb2d46cc",
+      "chunks": [
+        {
+          "path": "aa57755f03ba-lodtides3_dy.dff",
+          "size": 8192,
+          "sha256": "aa57755f03ba48633637188fbf056fc28f48444c6d56a7cc8a750ca9eb2d46cc"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodtides3_nt.dff",
+      "size": 8192,
+      "sha256": "174182268d67e85008e20709d81fc8395b1885c148713c74ce1414da5795ee87",
+      "chunks": [
+        {
+          "path": "174182268d67-lodtides3_nt.dff",
+          "size": 8192,
+          "sha256": "174182268d67e85008e20709d81fc8395b1885c148713c74ce1414da5795ee87"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodwalkway2.dff",
+      "size": 4096,
+      "sha256": "84f6aa7ed0e0d3d48390ed8328336e50ff3889dc5b85597ef3d58477bfe3bb90",
+      "chunks": [
+        {
+          "path": "84f6aa7ed0e0-lodwalkway2.dff",
+          "size": 4096,
+          "sha256": "84f6aa7ed0e0d3d48390ed8328336e50ff3889dc5b85597ef3d58477bfe3bb90"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/lodxrefhot.txd",
+      "size": 32768,
+      "sha256": "6fd31ea4d9442dbfe646f313396bdcf5a00f52b737a84c010f93baa730253968",
+      "chunks": [
+        {
+          "path": "6fd31ea4d944-lodxrefhot.txd",
+          "size": 32768,
+          "sha256": "6fd31ea4d9442dbfe646f313396bdcf5a00f52b737a84c010f93baa730253968"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/miamiland_kb01_dy.dff",
+      "size": 28672,
+      "sha256": "72a646b5b18ccf17f6a1c32ec3e0b4765bd4958fc0819eebb6c57f5d564355fc",
+      "chunks": [
+        {
+          "path": "72a646b5b18c-miamiland_kb01_dy.dff",
+          "size": 28672,
+          "sha256": "72a646b5b18ccf17f6a1c32ec3e0b4765bd4958fc0819eebb6c57f5d564355fc"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/miamiland_kb01_nt.dff",
+      "size": 26624,
+      "sha256": "1154281817a7620d55d6c8cd675e36e0073174b549d50ce481e72cd76c57dd7d",
+      "chunks": [
+        {
+          "path": "1154281817a7-miamiland_kb01_nt.dff",
+          "size": 26624,
+          "sha256": "1154281817a7620d55d6c8cd675e36e0073174b549d50ce481e72cd76c57dd7d"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/miamiland_kb02.dff",
+      "size": 20480,
+      "sha256": "76be840b36289bd139d835451070e793c90594272a719de9056cc1c6fa2b11d3",
+      "chunks": [
+        {
+          "path": "76be840b3628-miamiland_kb02.dff",
+          "size": 20480,
+          "sha256": "76be840b36289bd139d835451070e793c90594272a719de9056cc1c6fa2b11d3"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/miamiland_kb03.dff",
+      "size": 4096,
+      "sha256": "3ed3d158b14875513c7a1a611c68eb70b8c794591094446001c054a572133a4c",
+      "chunks": [
+        {
+          "path": "3ed3d158b148-miamiland_kb03.dff",
+          "size": 4096,
+          "sha256": "3ed3d158b14875513c7a1a611c68eb70b8c794591094446001c054a572133a4c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/miamiland_kb04.dff",
+      "size": 16384,
+      "sha256": "4d9057d2cac038caa8ea2c28c5f144d0837a160e9330aae21c46fb31f0adc22a",
+      "chunks": [
+        {
+          "path": "4d9057d2cac0-miamiland_kb04.dff",
+          "size": 16384,
+          "sha256": "4d9057d2cac038caa8ea2c28c5f144d0837a160e9330aae21c46fb31f0adc22a"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/miamiland_ws04.dff",
+      "size": 18432,
+      "sha256": "3382dd3c31520067302c2b6b24c5879e99616c00c0e9af1a6c4eefb60aaa898c",
+      "chunks": [
+        {
+          "path": "3382dd3c3152-miamiland_ws04.dff",
+          "size": 18432,
+          "sha256": "3382dd3c31520067302c2b6b24c5879e99616c00c0e9af1a6c4eefb60aaa898c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/miamiland_ws04b.dff",
+      "size": 6144,
+      "sha256": "38fb158fbcaae1ae42cdf2624235c9c7bc6f38ee7d89735ca5a5f43a0f0cbe04",
+      "chunks": [
+        {
+          "path": "38fb158fbcaa-miamiland_ws04b.dff",
+          "size": 6144,
+          "sha256": "38fb158fbcaae1ae42cdf2624235c9c7bc6f38ee7d89735ca5a5f43a0f0cbe04"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/mitraffic.txd",
+      "size": 6144,
+      "sha256": "63d0d87ff7e3f56d52059f4f039fd029ccffcab5e8470ee2c980f89b3abaf16e",
+      "chunks": [
+        {
+          "path": "63d0d87ff7e3-mitraffic.txd",
+          "size": 6144,
+          "sha256": "63d0d87ff7e3f56d52059f4f039fd029ccffcab5e8470ee2c980f89b3abaf16e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/mtraffic1.dff",
+      "size": 34816,
+      "sha256": "e556a730c90514d314f72ae3a03d3706553981a0d3c9a6fca4f4e4804e4a9aef",
+      "chunks": [
+        {
+          "path": "e556a730c905-mtraffic1.dff",
+          "size": 34816,
+          "sha256": "e556a730c90514d314f72ae3a03d3706553981a0d3c9a6fca4f4e4804e4a9aef"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/new_bushtest.dff",
+      "size": 4096,
+      "sha256": "3d6bd40de56c2766b9251e0e0ff96883c9ce0bcf67f7bb55cfee0ee04dde3b3f",
+      "chunks": [
+        {
+          "path": "3d6bd40de56c-new_bushtest.dff",
+          "size": 4096,
+          "sha256": "3d6bd40de56c2766b9251e0e0ff96883c9ce0bcf67f7bb55cfee0ee04dde3b3f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/nt_aircon1_01.dff",
+      "size": 6144,
+      "sha256": "7b1a789d568db8f61454b53cf55a2abd6257195a0b2d835e5d2f5ef7b944db63",
+      "chunks": [
+        {
+          "path": "7b1a789d568d-nt_aircon1_01.dff",
+          "size": 6144,
+          "sha256": "7b1a789d568db8f61454b53cf55a2abd6257195a0b2d835e5d2f5ef7b944db63"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/nt_aircon1_02.dff",
+      "size": 6144,
+      "sha256": "aafe37192659275b111aec8c804437e2b4dd52dae470508925a6d944654cf940",
+      "chunks": [
+        {
+          "path": "aafe37192659-nt_aircon1_02.dff",
+          "size": 6144,
+          "sha256": "aafe37192659275b111aec8c804437e2b4dd52dae470508925a6d944654cf940"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/nt_aircon1dbl.dff",
+      "size": 10240,
+      "sha256": "ea7021570221ecf7b8abac95acdddca94ae665e2fda56683b3f2a4102e4f0a06",
+      "chunks": [
+        {
+          "path": "ea7021570221-nt_aircon1dbl.dff",
+          "size": 10240,
+          "sha256": "ea7021570221ecf7b8abac95acdddca94ae665e2fda56683b3f2a4102e4f0a06"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/nt_aircon3_01.dff",
+      "size": 2048,
+      "sha256": "f6e209e06ffc2da0f4a8a3945ae45542b3aeff822f469cd784cd9800d1769eca",
+      "chunks": [
+        {
+          "path": "f6e209e06ffc-nt_aircon3_01.dff",
+          "size": 2048,
+          "sha256": "f6e209e06ffc2da0f4a8a3945ae45542b3aeff822f469cd784cd9800d1769eca"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/nt_firehose_01.dff",
+      "size": 4096,
+      "sha256": "cc9e3b28d0e759aef534caae2c98ba30563ea5f8ea18bcd808b0a5c15e2872c8",
+      "chunks": [
+        {
+          "path": "cc9e3b28d0e7-nt_firehose_01.dff",
+          "size": 4096,
+          "sha256": "cc9e3b28d0e759aef534caae2c98ba30563ea5f8ea18bcd808b0a5c15e2872c8"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/nt_vent1_01.dff",
+      "size": 2048,
+      "sha256": "55dd96d2e79cfc12124103db041711ef2572a06b0e0f8ba73e1fee5e68fb2c84",
+      "chunks": [
+        {
+          "path": "55dd96d2e79c-nt_vent1_01.dff",
+          "size": 2048,
+          "sha256": "55dd96d2e79cfc12124103db041711ef2572a06b0e0f8ba73e1fee5e68fb2c84"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/nt_vent2_01.dff",
+      "size": 2048,
+      "sha256": "2739e9219a0eeda976bc4faa76dfdc18721f03d5cd7ddbfe3e2093b0ecd34957",
+      "chunks": [
+        {
+          "path": "2739e9219a0e-nt_vent2_01.dff",
+          "size": 2048,
+          "sha256": "2739e9219a0eeda976bc4faa76dfdc18721f03d5cd7ddbfe3e2093b0ecd34957"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/ocdneona_nt.dff",
+      "size": 4096,
+      "sha256": "880db86632da90a989d5d753ffa5afe24c42f8156b4795745db1de85dc69dcda",
+      "chunks": [
+        {
+          "path": "880db86632da-ocdneona_nt.dff",
+          "size": 4096,
+          "sha256": "880db86632da90a989d5d753ffa5afe24c42f8156b4795745db1de85dc69dcda"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/ocdneonb_nt.dff",
+      "size": 4096,
+      "sha256": "f7b462da9ecbedcf26a3282896dc9b923d084050de18e383279b1949dc2e6671",
+      "chunks": [
+        {
+          "path": "f7b462da9ecb-ocdneonb_nt.dff",
+          "size": 4096,
+          "sha256": "f7b462da9ecbedcf26a3282896dc9b923d084050de18e383279b1949dc2e6671"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oceanrda03_dy.dff",
+      "size": 18432,
+      "sha256": "51bd2453723bff1b9523e664232e44f5494d8d55e100f78d673676e0fe3cb5f3",
+      "chunks": [
+        {
+          "path": "51bd2453723b-oceanrda03_dy.dff",
+          "size": 18432,
+          "sha256": "51bd2453723bff1b9523e664232e44f5494d8d55e100f78d673676e0fe3cb5f3"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oceanrda03_nt.dff",
+      "size": 20480,
+      "sha256": "6f6f8cd98ab24bfdca4f1a06a06347022b65d58189d7d8aba2772928ab162232",
+      "chunks": [
+        {
+          "path": "6f6f8cd98ab2-oceanrda03_nt.dff",
+          "size": 20480,
+          "sha256": "6f6f8cd98ab24bfdca4f1a06a06347022b65d58189d7d8aba2772928ab162232"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oceanrda04_dy.dff",
+      "size": 8192,
+      "sha256": "94c337ac6b5177e2275423c35ab452662ffa6ab6e0cf3897fd367d441abdcb88",
+      "chunks": [
+        {
+          "path": "94c337ac6b51-oceanrda04_dy.dff",
+          "size": 8192,
+          "sha256": "94c337ac6b5177e2275423c35ab452662ffa6ab6e0cf3897fd367d441abdcb88"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oceanrda04_nt.dff",
+      "size": 10240,
+      "sha256": "8da835f9614c84ba2da3dd187b0d2bd223a01e0ca37d7af34cfd209c88e1ebf7",
+      "chunks": [
+        {
+          "path": "8da835f9614c-oceanrda04_nt.dff",
+          "size": 10240,
+          "sha256": "8da835f9614c84ba2da3dd187b0d2bd223a01e0ca37d7af34cfd209c88e1ebf7"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oceanrda05_dy.dff",
+      "size": 18432,
+      "sha256": "a196533f8a7c2edf831b4c8b653d1c2bae4ecbf85200f025c1e21d69672ee239",
+      "chunks": [
+        {
+          "path": "a196533f8a7c-oceanrda05_dy.dff",
+          "size": 18432,
+          "sha256": "a196533f8a7c2edf831b4c8b653d1c2bae4ecbf85200f025c1e21d69672ee239"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oceanrda05_nt.dff",
+      "size": 18432,
+      "sha256": "4a3f633b952352138d6e5c629e9f87de5c150fc89d56b9578ed698e3da040264",
+      "chunks": [
+        {
+          "path": "4a3f633b9523-oceanrda05_nt.dff",
+          "size": 18432,
+          "sha256": "4a3f633b952352138d6e5c629e9f87de5c150fc89d56b9578ed698e3da040264"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oceanrda06_dy.dff",
+      "size": 10240,
+      "sha256": "ca8c209d80728580f18c0fb7523bcea934d2c2d72f7ca802b3b0986993a6f8c9",
+      "chunks": [
+        {
+          "path": "ca8c209d8072-oceanrda06_dy.dff",
+          "size": 10240,
+          "sha256": "ca8c209d80728580f18c0fb7523bcea934d2c2d72f7ca802b3b0986993a6f8c9"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oceanrda06_nt.dff",
+      "size": 12288,
+      "sha256": "23fc22c18ca823c395b8428df1739f704a3992e6101b2cffab89fe92883a1256",
+      "chunks": [
+        {
+          "path": "23fc22c18ca8-oceanrda06_nt.dff",
+          "size": 12288,
+          "sha256": "23fc22c18ca823c395b8428df1739f704a3992e6101b2cffab89fe92883a1256"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oceanstrip2.txd",
+      "size": 92160,
+      "sha256": "c4f2949b8c737a6af565022aab68db0b3e00349a47e1cc4caf04a9531e704e5d",
+      "chunks": [
+        {
+          "path": "c4f2949b8c73-oceanstrip2.txd",
+          "size": 92160,
+          "sha256": "c4f2949b8c737a6af565022aab68db0b3e00349a47e1cc4caf04a9531e704e5d"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/ocmiamistrip.txd",
+      "size": 34816,
+      "sha256": "c33224cd2eab1e7aa3129b17987e74a9d9b1839b5d5e92a225caafe1b32aa4f3",
+      "chunks": [
+        {
+          "path": "c33224cd2eab-ocmiamistrip.txd",
+          "size": 34816,
+          "sha256": "c33224cd2eab1e7aa3129b17987e74a9d9b1839b5d5e92a225caafe1b32aa4f3"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/ocmiamistrip16.txd",
+      "size": 331776,
+      "sha256": "5ddc490fb93fc4c4fb0a6c1303f644b5de9cceb1da87c4baa9b9f7dc0326850e",
+      "chunks": [
+        {
+          "path": "5ddc490fb93f-ocmiamistrip16.txd",
+          "size": 331776,
+          "sha256": "5ddc490fb93fc4c4fb0a6c1303f644b5de9cceb1da87c4baa9b9f7dc0326850e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/ocmiamistrip9.txd",
+      "size": 727040,
+      "sha256": "5d9d8673fab526a73f4c07356f45a15b665b789deff9a9225d20ae69bd415bb0",
+      "chunks": [
+        {
+          "path": "5d9d8673fab5-ocmiamistrip9.txd-0.bin",
+          "size": 524288,
+          "sha256": "e48300f0f349615a9de53f63cbc0646d9e485b982da1f91e5842622593e830ed"
+        },
+        {
+          "path": "5d9d8673fab5-ocmiamistrip9.txd-524288.bin",
+          "size": 202752,
+          "sha256": "8f49b45c632fbe4009412ed19ad2cf7e8c9f4504670d225e5fd8fd88e9723624"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/ocmiamistrip9x.txd",
+      "size": 387072,
+      "sha256": "a8cf02b5c7d90b994842b1034220ffbbae3ba6df5342a43acd9f420d44b7074e",
+      "chunks": [
+        {
+          "path": "a8cf02b5c7d9-ocmiamistrip9x.txd",
+          "size": 387072,
+          "sha256": "a8cf02b5c7d90b994842b1034220ffbbae3ba6df5342a43acd9f420d44b7074e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_acne.dff",
+      "size": 24576,
+      "sha256": "6bd57855b6443e30152104cf4fbc36f2fdf1eb4ceeabd6c9bb6dcae39154bf47",
+      "chunks": [
+        {
+          "path": "6bd57855b644-od_acne.dff",
+          "size": 24576,
+          "sha256": "6bd57855b6443e30152104cf4fbc36f2fdf1eb4ceeabd6c9bb6dcae39154bf47"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys1_01_dy.dff",
+      "size": 16384,
+      "sha256": "96bd2c78e7b450db7dc9183acf550cbd5bacf6c5c591032a61a7c65bb441952d",
+      "chunks": [
+        {
+          "path": "96bd2c78e7b4-od_alleys1_01_dy.dff",
+          "size": 16384,
+          "sha256": "96bd2c78e7b450db7dc9183acf550cbd5bacf6c5c591032a61a7c65bb441952d"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys1_01_nt.dff",
+      "size": 16384,
+      "sha256": "8a065e06cbb3930af9e14f4144b608bbb80ee3cd89245333e1fcff1970e8a6b5",
+      "chunks": [
+        {
+          "path": "8a065e06cbb3-od_alleys1_01_nt.dff",
+          "size": 16384,
+          "sha256": "8a065e06cbb3930af9e14f4144b608bbb80ee3cd89245333e1fcff1970e8a6b5"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys1b_01_dy.dff",
+      "size": 22528,
+      "sha256": "10ec30f67e75357c7ad92ed5b48b6f2072d29c1bb45b63990ab4cb9c59b0921f",
+      "chunks": [
+        {
+          "path": "10ec30f67e75-od_alleys1b_01_dy.dff",
+          "size": 22528,
+          "sha256": "10ec30f67e75357c7ad92ed5b48b6f2072d29c1bb45b63990ab4cb9c59b0921f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys1b_01_nt.dff",
+      "size": 22528,
+      "sha256": "5d9e2a62fd8746b2f78456b98c0c9216327b01fbdef653316cb9dec42134df7b",
+      "chunks": [
+        {
+          "path": "5d9e2a62fd87-od_alleys1b_01_nt.dff",
+          "size": 22528,
+          "sha256": "5d9e2a62fd8746b2f78456b98c0c9216327b01fbdef653316cb9dec42134df7b"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys2_01_dy.dff",
+      "size": 14336,
+      "sha256": "03d72e77c0bfc72f534dfea4aecb9bea47c8e42c21ec160f59784dc04e855702",
+      "chunks": [
+        {
+          "path": "03d72e77c0bf-od_alleys2_01_dy.dff",
+          "size": 14336,
+          "sha256": "03d72e77c0bfc72f534dfea4aecb9bea47c8e42c21ec160f59784dc04e855702"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys2_01_nt.dff",
+      "size": 14336,
+      "sha256": "f7cf8eb36a920ecd7deb1ca7cc15b67b26120c48219e64ff615ddb94ac77c1fe",
+      "chunks": [
+        {
+          "path": "f7cf8eb36a92-od_alleys2_01_nt.dff",
+          "size": 14336,
+          "sha256": "f7cf8eb36a920ecd7deb1ca7cc15b67b26120c48219e64ff615ddb94ac77c1fe"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys3_01_dy.dff",
+      "size": 8192,
+      "sha256": "632c107cc6a971beb5a8a13d1aa3f693bce87c4e2d5ac147b37c628d2c3ddc7d",
+      "chunks": [
+        {
+          "path": "632c107cc6a9-od_alleys3_01_dy.dff",
+          "size": 8192,
+          "sha256": "632c107cc6a971beb5a8a13d1aa3f693bce87c4e2d5ac147b37c628d2c3ddc7d"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys3_01_nt.dff",
+      "size": 8192,
+      "sha256": "e0880cb7d957442ad406b5d2f52584ae5c5e59fb134b60792faa9248b5074983",
+      "chunks": [
+        {
+          "path": "e0880cb7d957-od_alleys3_01_nt.dff",
+          "size": 8192,
+          "sha256": "e0880cb7d957442ad406b5d2f52584ae5c5e59fb134b60792faa9248b5074983"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys3b_01_dy.dff",
+      "size": 10240,
+      "sha256": "ef27bf0f7ebb4571a90726a12cce7b8590372b3a53bc216c7034469efb9eaf72",
+      "chunks": [
+        {
+          "path": "ef27bf0f7ebb-od_alleys3b_01_dy.dff",
+          "size": 10240,
+          "sha256": "ef27bf0f7ebb4571a90726a12cce7b8590372b3a53bc216c7034469efb9eaf72"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_alleys3b_01_nt.dff",
+      "size": 10240,
+      "sha256": "19dacf8d11fd4a68930567ccfa5d8524aeee0332f0fd2ea50c89a6d7df662d28",
+      "chunks": [
+        {
+          "path": "19dacf8d11fd-od_alleys3b_01_nt.dff",
+          "size": 10240,
+          "sha256": "19dacf8d11fd4a68930567ccfa5d8524aeee0332f0fd2ea50c89a6d7df662d28"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_beachstuff.txd",
+      "size": 49152,
+      "sha256": "f698b3ad80bcab2ad6bd3ca8b82b5fbb5b7746848f6f0aa57b938a01c80d6651",
+      "chunks": [
+        {
+          "path": "f698b3ad80bc-od_beachstuff.txd",
+          "size": 49152,
+          "sha256": "f698b3ad80bcab2ad6bd3ca8b82b5fbb5b7746848f6f0aa57b938a01c80d6651"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_bigshops1.dff",
+      "size": 36864,
+      "sha256": "214b2fe48a539ec3cb49ea179105cc7df4a46ed84c98a66766a223923d569f0b",
+      "chunks": [
+        {
+          "path": "214b2fe48a53-od_bigshops1.dff",
+          "size": 36864,
+          "sha256": "214b2fe48a539ec3cb49ea179105cc7df4a46ed84c98a66766a223923d569f0b"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_bigshops2.dff",
+      "size": 26624,
+      "sha256": "cf7f46d1bd1d52ebcf537532d72defb22b04ad01ad255f3d99b60f72af54e58e",
+      "chunks": [
+        {
+          "path": "cf7f46d1bd1d-od_bigshops2.dff",
+          "size": 26624,
+          "sha256": "cf7f46d1bd1d52ebcf537532d72defb22b04ad01ad255f3d99b60f72af54e58e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_bigshops2.txd",
+      "size": 487424,
+      "sha256": "5250545d98b33c254068dfb148af8d56a349620e8aa1bdfd53d11cce1870a6c6",
+      "chunks": [
+        {
+          "path": "5250545d98b3-od_bigshops2.txd",
+          "size": 487424,
+          "sha256": "5250545d98b33c254068dfb148af8d56a349620e8aa1bdfd53d11cce1870a6c6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_bphq.dff",
+      "size": 24576,
+      "sha256": "b633b2e4148e90b0320eb5c928670d335432782f69383115dc0bc772c1681b7f",
+      "chunks": [
+        {
+          "path": "b633b2e4148e-od_bphq.dff",
+          "size": 24576,
+          "sha256": "b633b2e4148e90b0320eb5c928670d335432782f69383115dc0bc772c1681b7f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_bphq.txd",
+      "size": 53248,
+      "sha256": "add1035066119765a9382e40030056355eeb9a60c3ec1940a979390ede8b07b4",
+      "chunks": [
+        {
+          "path": "add103506611-od_bphq.txd",
+          "size": 53248,
+          "sha256": "add1035066119765a9382e40030056355eeb9a60c3ec1940a979390ede8b07b4"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_casagrande_dy.dff",
+      "size": 40960,
+      "sha256": "eee72dd987e30bdd002ece3e54c1e2a7f6a6ad585730c3d27f9a51b9ede818b6",
+      "chunks": [
+        {
+          "path": "eee72dd987e3-od_casagrande_dy.dff",
+          "size": 40960,
+          "sha256": "eee72dd987e30bdd002ece3e54c1e2a7f6a6ad585730c3d27f9a51b9ede818b6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_casagrande_nt.dff",
+      "size": 43008,
+      "sha256": "2a46858445e58307a9065bb80f9ad5fe3dae8ec3fcfd6bd3dabc55820a731fa1",
+      "chunks": [
+        {
+          "path": "2a46858445e5-od_casagrande_nt.dff",
+          "size": 43008,
+          "sha256": "2a46858445e58307a9065bb80f9ad5fe3dae8ec3fcfd6bd3dabc55820a731fa1"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_clevelander_dy.dff",
+      "size": 69632,
+      "sha256": "d5a14f5daa174988667452b92d69b67f3b96daad6ffaca1667c9860dabe586a6",
+      "chunks": [
+        {
+          "path": "d5a14f5daa17-od_clevelander_dy.dff",
+          "size": 69632,
+          "sha256": "d5a14f5daa174988667452b92d69b67f3b96daad6ffaca1667c9860dabe586a6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_clevelander_nt.dff",
+      "size": 98304,
+      "sha256": "08a7937f3fae33e718999eed0fc0f2751a98517768d1941e79f42ef176440b36",
+      "chunks": [
+        {
+          "path": "08a7937f3fae-od_clevelander_nt.dff",
+          "size": 98304,
+          "sha256": "08a7937f3fae33e718999eed0fc0f2751a98517768d1941e79f42ef176440b36"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_clevelfence.dff",
+      "size": 10240,
+      "sha256": "e70ddc76777ca9966ff11bf2562a51fad792e59a28c7c60ec6a56936df425dbf",
+      "chunks": [
+        {
+          "path": "e70ddc76777c-od_clevelfence.dff",
+          "size": 10240,
+          "sha256": "e70ddc76777ca9966ff11bf2562a51fad792e59a28c7c60ec6a56936df425dbf"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_colony2_dy.dff",
+      "size": 26624,
+      "sha256": "15cd95568ff3f50401cc305cf71e89698ded840996186398c753d665c5778989",
+      "chunks": [
+        {
+          "path": "15cd95568ff3-od_colony2_dy.dff",
+          "size": 26624,
+          "sha256": "15cd95568ff3f50401cc305cf71e89698ded840996186398c753d665c5778989"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_colony2_nt.dff",
+      "size": 24576,
+      "sha256": "1708e1c0de855600999f56c87bfe044ed3809607bc83eba5dbc63ede448c4602",
+      "chunks": [
+        {
+          "path": "1708e1c0de85-od_colony2_nt.dff",
+          "size": 24576,
+          "sha256": "1708e1c0de855600999f56c87bfe044ed3809607bc83eba5dbc63ede448c4602"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_colony_dy.dff",
+      "size": 28672,
+      "sha256": "899755de3fc6e3cb4b35052d87101e337cae2124c756cc05c63d6d6d02f82120",
+      "chunks": [
+        {
+          "path": "899755de3fc6-od_colony_dy.dff",
+          "size": 28672,
+          "sha256": "899755de3fc6e3cb4b35052d87101e337cae2124c756cc05c63d6d6d02f82120"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_colony_nt.dff",
+      "size": 32768,
+      "sha256": "84c27441a3005a1e0ffe8794d1bb2fd7117c751aa90469b8b13c1f29dc48269f",
+      "chunks": [
+        {
+          "path": "84c27441a300-od_colony_nt.dff",
+          "size": 32768,
+          "sha256": "84c27441a3005a1e0ffe8794d1bb2fd7117c751aa90469b8b13c1f29dc48269f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_cornercrap1.dff",
+      "size": 10240,
+      "sha256": "f69321d55458413b652ab0aeec57dd732c902462276c2daf415834dc7dd3ae01",
+      "chunks": [
+        {
+          "path": "f69321d55458-od_cornercrap1.dff",
+          "size": 10240,
+          "sha256": "f69321d55458413b652ab0aeec57dd732c902462276c2daf415834dc7dd3ae01"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_cornercrap2.dff",
+      "size": 4096,
+      "sha256": "c64f6ced248de1293b6aecb606c8f06735d5b0c9e307ee6d74b8739f4d2a5033",
+      "chunks": [
+        {
+          "path": "c64f6ced248d-od_cornercrap2.dff",
+          "size": 4096,
+          "sha256": "c64f6ced248de1293b6aecb606c8f06735d5b0c9e307ee6d74b8739f4d2a5033"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_cornercrap3.dff",
+      "size": 4096,
+      "sha256": "e9a0329bd44f84630e670ed671baae46319afc5860fc42936116102dc0ac4662",
+      "chunks": [
+        {
+          "path": "e9a0329bd44f-od_cornercrap3.dff",
+          "size": 4096,
+          "sha256": "e9a0329bd44f84630e670ed671baae46319afc5860fc42936116102dc0ac4662"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_dirtshad1.dff",
+      "size": 16384,
+      "sha256": "7d1891aaf806a92ccb4903b2a972d5c2395769d0806e72768ba2fc70ec49902f",
+      "chunks": [
+        {
+          "path": "7d1891aaf806-od_dirtshad1.dff",
+          "size": 16384,
+          "sha256": "7d1891aaf806a92ccb4903b2a972d5c2395769d0806e72768ba2fc70ec49902f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_dirtshad3.dff",
+      "size": 10240,
+      "sha256": "1035dd0b6fda8b342ef2e295d41e70ef25d0b09ab2b80f7337964d0a69535955",
+      "chunks": [
+        {
+          "path": "1035dd0b6fda-od_dirtshad3.dff",
+          "size": 10240,
+          "sha256": "1035dd0b6fda8b342ef2e295d41e70ef25d0b09ab2b80f7337964d0a69535955"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_dirtshad4.dff",
+      "size": 12288,
+      "sha256": "5806e53b15c31671fa86372b9d2c356ec15b2751cde7463af0c7b7f77839b9c1",
+      "chunks": [
+        {
+          "path": "5806e53b15c3-od_dirtshad4.dff",
+          "size": 12288,
+          "sha256": "5806e53b15c31671fa86372b9d2c356ec15b2751cde7463af0c7b7f77839b9c1"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_dirty1.dff",
+      "size": 16384,
+      "sha256": "ecc13bb8ab48d114553429d50eda2172e4a2ff36a65c5de176acedbe05b31247",
+      "chunks": [
+        {
+          "path": "ecc13bb8ab48-od_dirty1.dff",
+          "size": 16384,
+          "sha256": "ecc13bb8ab48d114553429d50eda2172e4a2ff36a65c5de176acedbe05b31247"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_dirty2.dff",
+      "size": 6144,
+      "sha256": "3f64488003f18c9b5803bd69d7fb325af598f5a6c79a3c8374c03588f836420a",
+      "chunks": [
+        {
+          "path": "3f64488003f1-od_dirty2.dff",
+          "size": 6144,
+          "sha256": "3f64488003f18c9b5803bd69d7fb325af598f5a6c79a3c8374c03588f836420a"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_dirty4.dff",
+      "size": 10240,
+      "sha256": "9188985f3c3689d9f7e639fe3640d91bb21a9909475bf811c246e9991f997bda",
+      "chunks": [
+        {
+          "path": "9188985f3c36-od_dirty4.dff",
+          "size": 10240,
+          "sha256": "9188985f3c3689d9f7e639fe3640d91bb21a9909475bf811c246e9991f997bda"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_fence.txd",
+      "size": 12288,
+      "sha256": "fe78c957d9d0c1b9f99a0387286a7f4dd3bf8766206345b842d8162f5a4d4c50",
+      "chunks": [
+        {
+          "path": "fe78c957d9d0-od_fence.txd",
+          "size": 12288,
+          "sha256": "fe78c957d9d0c1b9f99a0387286a7f4dd3bf8766206345b842d8162f5a4d4c50"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_fpbarsign.dff",
+      "size": 2048,
+      "sha256": "fe661daed141cb74d6f7eb033e2707c8b1b207a12a2a3a938d343a5705139fc6",
+      "chunks": [
+        {
+          "path": "fe661daed141-od_fpbarsign.dff",
+          "size": 2048,
+          "sha256": "fe661daed141cb74d6f7eb033e2707c8b1b207a12a2a3a938d343a5705139fc6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_groyne01.dff",
+      "size": 45056,
+      "sha256": "8c61ef730f9dd22b884dabf04c13ecfd68f2e70e77cee9291c94b07ae715e8ab",
+      "chunks": [
+        {
+          "path": "8c61ef730f9d-od_groyne01.dff",
+          "size": 45056,
+          "sha256": "8c61ef730f9dd22b884dabf04c13ecfd68f2e70e77cee9291c94b07ae715e8ab"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_hotels1.txd",
+      "size": 417792,
+      "sha256": "877b827ae7e257923a76bed29caab6c19664a1c0f3b329d4d1954a055b726776",
+      "chunks": [
+        {
+          "path": "877b827ae7e2-od_hotels1.txd",
+          "size": 417792,
+          "sha256": "877b827ae7e257923a76bed29caab6c19664a1c0f3b329d4d1954a055b726776"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_lhland.dff",
+      "size": 34816,
+      "sha256": "b8694092a5be9f2442219555d381a75bfbf18a50ffdb66f7dc34644f4135e385",
+      "chunks": [
+        {
+          "path": "b8694092a5be-od_lhland.dff",
+          "size": 34816,
+          "sha256": "b8694092a5be9f2442219555d381a75bfbf18a50ffdb66f7dc34644f4135e385"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_lightbeam.dff",
+      "size": 2048,
+      "sha256": "7e4430b56665e1e9229f87a1de8412da41220375e0505c0021e0f3448116974e",
+      "chunks": [
+        {
+          "path": "7e4430b56665-od_lightbeam.dff",
+          "size": 2048,
+          "sha256": "7e4430b56665e1e9229f87a1de8412da41220375e0505c0021e0f3448116974e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_lightext.dff",
+      "size": 67584,
+      "sha256": "61d125e8701f0ba479539167ecf44ca457c169db6beb1ec9683753f5609400f6",
+      "chunks": [
+        {
+          "path": "61d125e8701f-od_lightext.dff",
+          "size": 67584,
+          "sha256": "61d125e8701f0ba479539167ecf44ca457c169db6beb1ec9683753f5609400f6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_lighthouse.txd",
+      "size": 270336,
+      "sha256": "6ca0868de065dc817bbae884db2f29746a6c69a6b923d0ead4811ca6caa05043",
+      "chunks": [
+        {
+          "path": "6ca0868de065-od_lighthouse.txd",
+          "size": 270336,
+          "sha256": "6ca0868de065dc817bbae884db2f29746a6c69a6b923d0ead4811ca6caa05043"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_lighthousein.txd",
+      "size": 143360,
+      "sha256": "97f3687b1142e7058f70d110fb61f3bb3975acd82b359d43d7c76321848abc42",
+      "chunks": [
+        {
+          "path": "97f3687b1142-od_lighthousein.txd",
+          "size": 143360,
+          "sha256": "97f3687b1142e7058f70d110fb61f3bb3975acd82b359d43d7c76321848abc42"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_lightint.dff",
+      "size": 342016,
+      "sha256": "f241afb6717d42b79834226d8164b6a719e75629b4446aca1a7999b46974ff26",
+      "chunks": [
+        {
+          "path": "f241afb6717d-od_lightint.dff",
+          "size": 342016,
+          "sha256": "f241afb6717d42b79834226d8164b6a719e75629b4446aca1a7999b46974ff26"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_majestic2c_dy.dff",
+      "size": 47104,
+      "sha256": "42af6e8f2dc6b463b7e3203d0cf2135a788c592372df9bb839dc31e7a9a21ef7",
+      "chunks": [
+        {
+          "path": "42af6e8f2dc6-od_majestic2c_dy.dff",
+          "size": 47104,
+          "sha256": "42af6e8f2dc6b463b7e3203d0cf2135a788c592372df9bb839dc31e7a9a21ef7"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_majestic2c_nt.dff",
+      "size": 49152,
+      "sha256": "a62455ecbedb4c8933aaa6b6c69b06a61ed3d093147592abf2b80240d2f92716",
+      "chunks": [
+        {
+          "path": "a62455ecbedb-od_majestic2c_nt.dff",
+          "size": 49152,
+          "sha256": "a62455ecbedb4c8933aaa6b6c69b06a61ed3d093147592abf2b80240d2f92716"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_neonn.dff",
+      "size": 4096,
+      "sha256": "a1d34d800f7989ac49d2811455e54d966268bc356729fcc56a66f13dee46d780",
+      "chunks": [
+        {
+          "path": "a1d34d800f79-od_neonn.dff",
+          "size": 4096,
+          "sha256": "a1d34d800f7989ac49d2811455e54d966268bc356729fcc56a66f13dee46d780"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_neons1.txd",
+      "size": 71680,
+      "sha256": "f41b7357f8187286eff513fe153d26d9e936f93b59d11d0cd3720c08fbeb47e5",
+      "chunks": [
+        {
+          "path": "f41b7357f818-od_neons1.txd",
+          "size": 71680,
+          "sha256": "f41b7357f8187286eff513fe153d26d9e936f93b59d11d0cd3720c08fbeb47e5"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_neons2b_nt.dff",
+      "size": 8192,
+      "sha256": "117898a5fc3d744217d8ff837aae3e708f7390f616c5743554eb5b6364e358e0",
+      "chunks": [
+        {
+          "path": "117898a5fc3d-od_neons2b_nt.dff",
+          "size": 8192,
+          "sha256": "117898a5fc3d744217d8ff837aae3e708f7390f616c5743554eb5b6364e358e0"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_neons3b_nt.dff",
+      "size": 2048,
+      "sha256": "b2a719998cbf8bc37df97fcb0547458c7c74fdd67754bb70f9644f977181f859",
+      "chunks": [
+        {
+          "path": "b2a719998cbf-od_neons3b_nt.dff",
+          "size": 2048,
+          "sha256": "b2a719998cbf8bc37df97fcb0547458c7c74fdd67754bb70f9644f977181f859"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_neonx1.dff",
+      "size": 4096,
+      "sha256": "c52fe36ddbd57836c539ddd6689546d34307fc5bd5c46efb2c0aea94d0bb6480",
+      "chunks": [
+        {
+          "path": "c52fe36ddbd5-od_neonx1.dff",
+          "size": 4096,
+          "sha256": "c52fe36ddbd57836c539ddd6689546d34307fc5bd5c46efb2c0aea94d0bb6480"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_newscafe_dy.dff",
+      "size": 57344,
+      "sha256": "d03f89a1ed5829216b789366960660fe7b9e143a442ee20f9702aa12230357c1",
+      "chunks": [
+        {
+          "path": "d03f89a1ed58-od_newscafe_dy.dff",
+          "size": 57344,
+          "sha256": "d03f89a1ed5829216b789366960660fe7b9e143a442ee20f9702aa12230357c1"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_newscafe_nt.dff",
+      "size": 59392,
+      "sha256": "8a07348a3dce00555c3deb5b971afd6a987898bf132bc190231a9e6b3fa8a1f3",
+      "chunks": [
+        {
+          "path": "8a07348a3dce-od_newscafe_nt.dff",
+          "size": 59392,
+          "sha256": "8a07348a3dce00555c3deb5b971afd6a987898bf132bc190231a9e6b3fa8a1f3"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_northstar.dff",
+      "size": 229376,
+      "sha256": "5b0dbf37198f9d622bb9f538ff50b7101032327ed085f1a1444ec5ba635d6ffa",
+      "chunks": [
+        {
+          "path": "5b0dbf37198f-od_northstar.dff",
+          "size": 229376,
+          "sha256": "5b0dbf37198f9d622bb9f538ff50b7101032327ed085f1a1444ec5ba635d6ffa"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_oceanrdn1_dy.dff",
+      "size": 12288,
+      "sha256": "b458942f739929ce50ab3afb85d71aa2c34c274655f572f859e2a0bafb4ae2ae",
+      "chunks": [
+        {
+          "path": "b458942f7399-od_oceanrdn1_dy.dff",
+          "size": 12288,
+          "sha256": "b458942f739929ce50ab3afb85d71aa2c34c274655f572f859e2a0bafb4ae2ae"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_oceanrdn1_nt.dff",
+      "size": 12288,
+      "sha256": "ac18ec696307a5a09cc89c10b2ab11f18b90a9e1e213cec94d5cce9508485da2",
+      "chunks": [
+        {
+          "path": "ac18ec696307-od_oceanrdn1_nt.dff",
+          "size": 12288,
+          "sha256": "ac18ec696307a5a09cc89c10b2ab11f18b90a9e1e213cec94d5cce9508485da2"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_pat_hutb.dff",
+      "size": 34816,
+      "sha256": "565b26dea54d1e66816235733a90a4ceb4a58d4e4cfafbf1cf9bcf9369bec41a",
+      "chunks": [
+        {
+          "path": "565b26dea54d-od_pat_hutb.dff",
+          "size": 34816,
+          "sha256": "565b26dea54d1e66816235733a90a4ceb4a58d4e4cfafbf1cf9bcf9369bec41a"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_pelican2_dy.dff",
+      "size": 30720,
+      "sha256": "1e2d1cf4a78d1b04ce5e51f5c7b776fa2f15e47d95de2607237654951bd5ce2e",
+      "chunks": [
+        {
+          "path": "1e2d1cf4a78d-od_pelican2_dy.dff",
+          "size": 30720,
+          "sha256": "1e2d1cf4a78d1b04ce5e51f5c7b776fa2f15e47d95de2607237654951bd5ce2e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_pelican2_nt.dff",
+      "size": 34816,
+      "sha256": "66e54cd9c9dcb1fbd4f3f674ac3cb06ecd2d43d7629c4099cf746554909fa986",
+      "chunks": [
+        {
+          "path": "66e54cd9c9dc-od_pelican2_nt.dff",
+          "size": 34816,
+          "sha256": "66e54cd9c9dcb1fbd4f3f674ac3cb06ecd2d43d7629c4099cf746554909fa986"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_pelican_dy.dff",
+      "size": 24576,
+      "sha256": "0b715972680467c0571bb960ac7862c6da74adad382a6aac4f462d5e38dde661",
+      "chunks": [
+        {
+          "path": "0b7159726804-od_pelican_dy.dff",
+          "size": 24576,
+          "sha256": "0b715972680467c0571bb960ac7862c6da74adad382a6aac4f462d5e38dde661"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_pelican_nt.dff",
+      "size": 28672,
+      "sha256": "9096bcf7904d3a1f13058f5d18ae5834577a2c9ae75b56823d96497547d0d7a2",
+      "chunks": [
+        {
+          "path": "9096bcf7904d-od_pelican_nt.dff",
+          "size": 28672,
+          "sha256": "9096bcf7904d3a1f13058f5d18ae5834577a2c9ae75b56823d96497547d0d7a2"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_tides3_dy.dff",
+      "size": 36864,
+      "sha256": "f56281983dc21fb75320b282f9ec1749da82ca32738b68bdca26a3658d870455",
+      "chunks": [
+        {
+          "path": "f56281983dc2-od_tides3_dy.dff",
+          "size": 36864,
+          "sha256": "f56281983dc21fb75320b282f9ec1749da82ca32738b68bdca26a3658d870455"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_tides3_nt.dff",
+      "size": 45056,
+      "sha256": "6d1f1621d39f63de9f81e12c0fc20a4708ac15e5278ac9b5b624f5c9e31d5b97",
+      "chunks": [
+        {
+          "path": "6d1f1621d39f-od_tides3_nt.dff",
+          "size": 45056,
+          "sha256": "6d1f1621d39f63de9f81e12c0fc20a4708ac15e5278ac9b5b624f5c9e31d5b97"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_tracks08.dff",
+      "size": 4096,
+      "sha256": "9b7f4a44aa8e7afd5e67c7b41d8a74c0d2235c41eaee9344677eb61691e6e6a9",
+      "chunks": [
+        {
+          "path": "9b7f4a44aa8e-od_tracks08.dff",
+          "size": 4096,
+          "sha256": "9b7f4a44aa8e7afd5e67c7b41d8a74c0d2235c41eaee9344677eb61691e6e6a9"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_tracks10.dff",
+      "size": 4096,
+      "sha256": "4efc6bb80ec4f413bc8e7f6766ec31d37c6bf049796e7b87fc7569b6d0ec74ea",
+      "chunks": [
+        {
+          "path": "4efc6bb80ec4-od_tracks10.dff",
+          "size": 4096,
+          "sha256": "4efc6bb80ec4f413bc8e7f6766ec31d37c6bf049796e7b87fc7569b6d0ec74ea"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_tracks12.dff",
+      "size": 6144,
+      "sha256": "f3a0f2d71caefdadcdafd61a7fc3ecfdbf139076d973fb9fdc14241bf1dc10f6",
+      "chunks": [
+        {
+          "path": "f3a0f2d71cae-od_tracks12.dff",
+          "size": 6144,
+          "sha256": "f3a0f2d71caefdadcdafd61a7fc3ecfdbf139076d973fb9fdc14241bf1dc10f6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_tracks14.dff",
+      "size": 6144,
+      "sha256": "f490ab44b9f3532b84b8c19cdf2dc4b15e168f65781d57673f69414f38cce41f",
+      "chunks": [
+        {
+          "path": "f490ab44b9f3-od_tracks14.dff",
+          "size": 6144,
+          "sha256": "f490ab44b9f3532b84b8c19cdf2dc4b15e168f65781d57673f69414f38cce41f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_walkway2.dff",
+      "size": 92160,
+      "sha256": "8c46d7183750b875cc28efce5e7d7ff28623891703712ef5f7fc843d5733e22a",
+      "chunks": [
+        {
+          "path": "8c46d7183750-od_walkway2.dff",
+          "size": 92160,
+          "sha256": "8c46d7183750b875cc28efce5e7d7ff28623891703712ef5f7fc843d5733e22a"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/od_walkway3.dff",
+      "size": 55296,
+      "sha256": "86dfbdaf20c82904a637325b59ac8f7099a478e32dba936925aab534f7f393ca",
+      "chunks": [
+        {
+          "path": "86dfbdaf20c8-od_walkway3.dff",
+          "size": 55296,
+          "sha256": "86dfbdaf20c82904a637325b59ac8f7099a478e32dba936925aab534f7f393ca"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oddoorways02.dff",
+      "size": 4096,
+      "sha256": "0c2c82323ea9ac4e85b8a7eeecb7f2376b40fdd2d56b3f3f946400d018c0751d",
+      "chunks": [
+        {
+          "path": "0c2c82323ea9-oddoorways02.dff",
+          "size": 4096,
+          "sha256": "0c2c82323ea9ac4e85b8a7eeecb7f2376b40fdd2d56b3f3f946400d018c0751d"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/oddoorways1.dff",
+      "size": 6144,
+      "sha256": "ce90bb460df0a7fd4c8c26bbad5c3eb733d5024ef76fcfa08f47ba718d186fdb",
+      "chunks": [
+        {
+          "path": "ce90bb460df0-oddoorways1.dff",
+          "size": 6144,
+          "sha256": "ce90bb460df0a7fd4c8c26bbad5c3eb733d5024ef76fcfa08f47ba718d186fdb"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/odhighsandgrs1.dff",
+      "size": 20480,
+      "sha256": "b6c37cc19e3828b79dbb9e543df9c0240b3cf9ce00f9df27f91edd97a175cb1e",
+      "chunks": [
+        {
+          "path": "b6c37cc19e38-odhighsandgrs1.dff",
+          "size": 20480,
+          "sha256": "b6c37cc19e3828b79dbb9e543df9c0240b3cf9ce00f9df27f91edd97a175cb1e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/odlowsand1.dff",
+      "size": 2048,
+      "sha256": "34e744ed30a42a4a461f301f3ca7812de4b59de98937b50380c37f2bb3822a2e",
+      "chunks": [
+        {
+          "path": "34e744ed30a4-odlowsand1.dff",
+          "size": 2048,
+          "sha256": "34e744ed30a42a4a461f301f3ca7812de4b59de98937b50380c37f2bb3822a2e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/odlowsand2.dff",
+      "size": 2048,
+      "sha256": "229dc4508e4554519557e0ba270cd35d517515731ee5330a0509609e542f1b48",
+      "chunks": [
+        {
+          "path": "229dc4508e45-odlowsand2.dff",
+          "size": 2048,
+          "sha256": "229dc4508e4554519557e0ba270cd35d517515731ee5330a0509609e542f1b48"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/odrv_bushes.dff",
+      "size": 6144,
+      "sha256": "e0df96283c6415459276991e4a629bc132fed7afcf25fabe0f530929507f6450",
+      "chunks": [
+        {
+          "path": "e0df96283c64-odrv_bushes.dff",
+          "size": 6144,
+          "sha256": "e0df96283c6415459276991e4a629bc132fed7afcf25fabe0f530929507f6450"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/odrv_bushes01.dff",
+      "size": 2048,
+      "sha256": "7cdae5a074689aa422de85ad3bb93a44fb238b0025079b8763dbfdc3a520135c",
+      "chunks": [
+        {
+          "path": "7cdae5a07468-odrv_bushes01.dff",
+          "size": 2048,
+          "sha256": "7cdae5a074689aa422de85ad3bb93a44fb238b0025079b8763dbfdc3a520135c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/parkbench1.dff",
+      "size": 24576,
+      "sha256": "58da2e3e1fadd66b6b8a9827852206f8dc47168f2f7d8a121fac3cde93e507f9",
+      "chunks": [
+        {
+          "path": "58da2e3e1fad-parkbench1.dff",
+          "size": 24576,
+          "sha256": "58da2e3e1fadd66b6b8a9827852206f8dc47168f2f7d8a121fac3cde93e507f9"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/plants01.dff",
+      "size": 14336,
+      "sha256": "e36368b1c221fcc8410565ed33c4df5a89bacb5381a6d7b445cd4da869cbb334",
+      "chunks": [
+        {
+          "path": "e36368b1c221-plants01.dff",
+          "size": 14336,
+          "sha256": "e36368b1c221fcc8410565ed33c4df5a89bacb5381a6d7b445cd4da869cbb334"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/plants04.dff",
+      "size": 14336,
+      "sha256": "3b28ee2c3269e478166397fae191d4a319c3a4fb7bba36f3e5a7848adeb9b2b0",
+      "chunks": [
+        {
+          "path": "3b28ee2c3269-plants04.dff",
+          "size": 14336,
+          "sha256": "3b28ee2c3269e478166397fae191d4a319c3a4fb7bba36f3e5a7848adeb9b2b0"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/plants05.dff",
+      "size": 8192,
+      "sha256": "90ec8c21af73f0f6cd3f73e7e27ef8bbee955143265cf407eb7e1af33e0d114f",
+      "chunks": [
+        {
+          "path": "90ec8c21af73-plants05.dff",
+          "size": 8192,
+          "sha256": "90ec8c21af73f0f6cd3f73e7e27ef8bbee955143265cf407eb7e1af33e0d114f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/plants05b.dff",
+      "size": 8192,
+      "sha256": "cb3fb01b5633995dea24152729a14742531b61d958004206da0204da56c89806",
+      "chunks": [
+        {
+          "path": "cb3fb01b5633-plants05b.dff",
+          "size": 8192,
+          "sha256": "cb3fb01b5633995dea24152729a14742531b61d958004206da0204da56c89806"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/ramp.dff",
+      "size": 6144,
+      "sha256": "b92ee130ec74227aee64ad4bb064ae9adc9606dee4a2c7f138ee2e93ccc7dd7e",
+      "chunks": [
+        {
+          "path": "b92ee130ec74-ramp.dff",
+          "size": 6144,
+          "sha256": "b92ee130ec74227aee64ad4bb064ae9adc9606dee4a2c7f138ee2e93ccc7dd7e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/ramp2.txd",
+      "size": 14336,
+      "sha256": "c8b41bb4c01c285c7b54fa4fc17b472cd154c12270e9af098f9ecb70a7405bdc",
+      "chunks": [
+        {
+          "path": "c8b41bb4c01c-ramp2.txd",
+          "size": 14336,
+          "sha256": "c8b41bb4c01c285c7b54fa4fc17b472cd154c12270e9af098f9ecb70a7405bdc"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/rockpatch03.dff",
+      "size": 12288,
+      "sha256": "e197f385ccdfb3a79739a265681b895bf16fe769c973754346b933bcd68dbcda",
+      "chunks": [
+        {
+          "path": "e197f385ccdf-rockpatch03.dff",
+          "size": 12288,
+          "sha256": "e197f385ccdfb3a79739a265681b895bf16fe769c973754346b933bcd68dbcda"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/rockpatch1.dff",
+      "size": 10240,
+      "sha256": "280a519e9191b26f6001b279bf44e14210c40c6e8dcfbf22fc2e5b72d74d6a07",
+      "chunks": [
+        {
+          "path": "280a519e9191-rockpatch1.dff",
+          "size": 10240,
+          "sha256": "280a519e9191b26f6001b279bf44e14210c40c6e8dcfbf22fc2e5b72d74d6a07"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/rocky.txd",
+      "size": 12288,
+      "sha256": "13f57e49dd3923c2206e232796bc143504e35f99fdea436f80a7f7346f9cb843",
+      "chunks": [
+        {
+          "path": "13f57e49dd39-rocky.txd",
+          "size": 12288,
+          "sha256": "13f57e49dd3923c2206e232796bc143504e35f99fdea436f80a7f7346f9cb843"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/shared_beach.txd",
+      "size": 374784,
+      "sha256": "56531441a693a57cf69c52bfa58d7febe418c570b06804d9e341881915d60c6c",
+      "chunks": [
+        {
+          "path": "56531441a693-shared_beach.txd",
+          "size": 374784,
+          "sha256": "56531441a693a57cf69c52bfa58d7febe418c570b06804d9e341881915d60c6c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/sharedalleyod.txd",
+      "size": 337920,
+      "sha256": "3daf40c5c25daec69e3ae764d308040013de2c5a204916e2c0a2b9573949c430",
+      "chunks": [
+        {
+          "path": "3daf40c5c25d-sharedalleyod.txd",
+          "size": 337920,
+          "sha256": "3daf40c5c25daec69e3ae764d308040013de2c5a204916e2c0a2b9573949c430"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/stonebench1.dff",
+      "size": 16384,
+      "sha256": "f91ad765573665f23aec1fd6533529e6a9e172b00e46f3e2ce4a5243ce760a9e",
+      "chunks": [
+        {
+          "path": "f91ad7655736-stonebench1.dff",
+          "size": 16384,
+          "sha256": "f91ad765573665f23aec1fd6533529e6a9e172b00e46f3e2ce4a5243ce760a9e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/streetlamp1.dff",
+      "size": 6144,
+      "sha256": "dfa03874347b26545a8dc776f9bdd3feccf81ea82159ebc42cb87914206d7df2",
+      "chunks": [
+        {
+          "path": "dfa03874347b-streetlamp1.dff",
+          "size": 6144,
+          "sha256": "dfa03874347b26545a8dc776f9bdd3feccf81ea82159ebc42cb87914206d7df2"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/telegraph.txd",
+      "size": 55296,
+      "sha256": "52e85fcff2f503efd92215a620ffeb9782e84513c4e8ce61723adc239df3e526",
+      "chunks": [
+        {
+          "path": "52e85fcff2f5-telegraph.txd",
+          "size": 55296,
+          "sha256": "52e85fcff2f503efd92215a620ffeb9782e84513c4e8ce61723adc239df3e526"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/telgrphpole02.dff",
+      "size": 6144,
+      "sha256": "b8b9ebb207e6601716c3578bc049afc80e9166317ab9a30fa7978e416f76eadb",
+      "chunks": [
+        {
+          "path": "b8b9ebb207e6-telgrphpole02.dff",
+          "size": 6144,
+          "sha256": "b8b9ebb207e6601716c3578bc049afc80e9166317ab9a30fa7978e416f76eadb"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/veg_palm02.dff",
+      "size": 4096,
+      "sha256": "446ae55edcefe7ad12ffdaf1653898e55253a91915365fbcb0060b3fa6da8f85",
+      "chunks": [
+        {
+          "path": "446ae55edcef-veg_palm02.dff",
+          "size": 4096,
+          "sha256": "446ae55edcefe7ad12ffdaf1653898e55253a91915365fbcb0060b3fa6da8f85"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/veg_palm04.dff",
+      "size": 4096,
+      "sha256": "017c792738f9a75a7ad3ecfe43df50f3da7469735f1332a5ab0030f7a059e3fe",
+      "chunks": [
+        {
+          "path": "017c792738f9-veg_palm04.dff",
+          "size": 4096,
+          "sha256": "017c792738f9a75a7ad3ecfe43df50f3da7469735f1332a5ab0030f7a059e3fe"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/veg_palmkb2.dff",
+      "size": 4096,
+      "sha256": "a68e71f47fbe9bcc17092e3d852d4cb2325fe6c5336b5684ad7f1d1213b55df8",
+      "chunks": [
+        {
+          "path": "a68e71f47fbe-veg_palmkb2.dff",
+          "size": 4096,
+          "sha256": "a68e71f47fbe9bcc17092e3d852d4cb2325fe6c5336b5684ad7f1d1213b55df8"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/veg_palmkb3.dff",
+      "size": 4096,
+      "sha256": "732e28e35571541f291bce96cabb68e7895bce2168617e28911ba73239329ebf",
+      "chunks": [
+        {
+          "path": "732e28e35571-veg_palmkb3.dff",
+          "size": 4096,
+          "sha256": "732e28e35571541f291bce96cabb68e7895bce2168617e28911ba73239329ebf"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/veg_palmkb5.dff",
+      "size": 4096,
+      "sha256": "75279c8536585f334fdc8a1ff267ab4a96e933f33e13200e50814efdc25670f4",
+      "chunks": [
+        {
+          "path": "75279c853658-veg_palmkb5.dff",
+          "size": 4096,
+          "sha256": "75279c8536585f334fdc8a1ff267ab4a96e933f33e13200e50814efdc25670f4"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/veg_palmkbb11.dff",
+      "size": 4096,
+      "sha256": "ecd2e8d9b2ef4e55f3cd3dbb564c56f4e037dd700ebde72243f82222b62fbc8c",
+      "chunks": [
+        {
+          "path": "ecd2e8d9b2ef-veg_palmkbb11.dff",
+          "size": 4096,
+          "sha256": "ecd2e8d9b2ef4e55f3cd3dbb564c56f4e037dd700ebde72243f82222b62fbc8c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/veg_palwee02.dff",
+      "size": 4096,
+      "sha256": "6efbcc206136e6de611d7cc9d83a393707c444ed8569e24aae2da2c9e08d97b4",
+      "chunks": [
+        {
+          "path": "6efbcc206136-veg_palwee02.dff",
+          "size": 4096,
+          "sha256": "6efbcc206136e6de611d7cc9d83a393707c444ed8569e24aae2da2c9e08d97b4"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_beacon_dy.dff",
+      "size": 45056,
+      "sha256": "07794559ad55149df56d66439286830da0ddca417d9db07062bd13bf828645a4",
+      "chunks": [
+        {
+          "path": "07794559ad55-xod_beacon_dy.dff",
+          "size": 45056,
+          "sha256": "07794559ad55149df56d66439286830da0ddca417d9db07062bd13bf828645a4"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_beacon_nt.dff",
+      "size": 43008,
+      "sha256": "1433dc298d16fea823b82e8bae645f1887c558e243175b117184334e4cd11d24",
+      "chunks": [
+        {
+          "path": "1433dc298d16-xod_beacon_nt.dff",
+          "size": 43008,
+          "sha256": "1433dc298d16fea823b82e8bae645f1887c558e243175b117184334e4cd11d24"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_leslie_dy.dff",
+      "size": 45056,
+      "sha256": "99b4662b95e3e1dab2cc1f7b04989f52ac1bd00bcc7a29226ea79fc559a039ac",
+      "chunks": [
+        {
+          "path": "99b4662b95e3-xod_leslie_dy.dff",
+          "size": 45056,
+          "sha256": "99b4662b95e3e1dab2cc1f7b04989f52ac1bd00bcc7a29226ea79fc559a039ac"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_leslie_nt.dff",
+      "size": 32768,
+      "sha256": "65348bdeb6fdda7aa9c44949485f97d325e5df89bb8ab45e5df6d9a2bd384b3c",
+      "chunks": [
+        {
+          "path": "65348bdeb6fd-xod_leslie_nt.dff",
+          "size": 32768,
+          "sha256": "65348bdeb6fdda7aa9c44949485f97d325e5df89bb8ab45e5df6d9a2bd384b3c"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_macalpin_dy.dff",
+      "size": 59392,
+      "sha256": "cb0237717908e04cc10e3f72b78d36b71e31f75c078babafe70c807e43c2028f",
+      "chunks": [
+        {
+          "path": "cb0237717908-xod_macalpin_dy.dff",
+          "size": 59392,
+          "sha256": "cb0237717908e04cc10e3f72b78d36b71e31f75c078babafe70c807e43c2028f"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_macalpin_nt.dff",
+      "size": 53248,
+      "sha256": "a8b2df1ce3d4664bc7b4c23ec1c0dcab2014ebfacc76db45a3be4c761fe8b261",
+      "chunks": [
+        {
+          "path": "a8b2df1ce3d4-xod_macalpin_nt.dff",
+          "size": 53248,
+          "sha256": "a8b2df1ce3d4664bc7b4c23ec1c0dcab2014ebfacc76db45a3be4c761fe8b261"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_majestic_dy.dff",
+      "size": 55296,
+      "sha256": "009b7ec51db97e16c834cf5777dfc2d86b98b9af7e59cec82dc5c51ee5e9ce52",
+      "chunks": [
+        {
+          "path": "009b7ec51db9-xod_majestic_dy.dff",
+          "size": 55296,
+          "sha256": "009b7ec51db97e16c834cf5777dfc2d86b98b9af7e59cec82dc5c51ee5e9ce52"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_majestic_nt.dff",
+      "size": 47104,
+      "sha256": "9ab9346615cc1d6db56b607387d23bd4b7f3429727852b7314f3bef871370bf4",
+      "chunks": [
+        {
+          "path": "9ab9346615cc-xod_majestic_nt.dff",
+          "size": 47104,
+          "sha256": "9ab9346615cc1d6db56b607387d23bd4b7f3429727852b7314f3bef871370bf4"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_starlite_dy.dff",
+      "size": 43008,
+      "sha256": "5637f6c5bff53f438b02e6948c3a52a294e23bcfa78ef2c3b2b0c890b3f2c8d5",
+      "chunks": [
+        {
+          "path": "5637f6c5bff5-xod_starlite_dy.dff",
+          "size": 43008,
+          "sha256": "5637f6c5bff53f438b02e6948c3a52a294e23bcfa78ef2c3b2b0c890b3f2c8d5"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_starlite_nt.dff",
+      "size": 34816,
+      "sha256": "2f23deb3bc9ebd0cce3f21fc05fee8c7313710c1c9069f5e538f6c553d3f0f59",
+      "chunks": [
+        {
+          "path": "2f23deb3bc9e-xod_starlite_nt.dff",
+          "size": 34816,
+          "sha256": "2f23deb3bc9ebd0cce3f21fc05fee8c7313710c1c9069f5e538f6c553d3f0f59"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_tides_dy.dff",
+      "size": 49152,
+      "sha256": "7dc43bd9c1a1864ca5cbe9cb293ab324d4a29c48c7e446e68c8e3b6202b130b0",
+      "chunks": [
+        {
+          "path": "7dc43bd9c1a1-xod_tides_dy.dff",
+          "size": 49152,
+          "sha256": "7dc43bd9c1a1864ca5cbe9cb293ab324d4a29c48c7e446e68c8e3b6202b130b0"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xod_tides_nt.dff",
+      "size": 47104,
+      "sha256": "2b8c7edfd5197d5e9843c4442430bfe7670b760bb3c7f3a9ee23944b176c2f51",
+      "chunks": [
+        {
+          "path": "2b8c7edfd519-xod_tides_nt.dff",
+          "size": 47104,
+          "sha256": "2b8c7edfd5197d5e9843c4442430bfe7670b760bb3c7f3a9ee23944b176c2f51"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/models/gta3.img/xrefhotels.txd",
+      "size": 243712,
+      "sha256": "62b074ea91998789b22c63b8dae05aabc98a0567ebe8b2a8e2e562c58ae077a0",
+      "chunks": [
+        {
+          "path": "62b074ea9199-xrefhotels.txd",
+          "size": 243712,
+          "sha256": "62b074ea91998789b22c63b8dae05aabc98a0567ebe8b2a8e2e562c58ae077a0"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/data/maps/generic.ide",
+      "size": 21729,
+      "sha256": "d874675f02e6a28a0d6bb001da1fbd0d22ccb580bdc7892c56817f9c58060106",
+      "chunks": [
+        {
+          "path": "d874675f02e6-generic.ide",
+          "size": 21729,
+          "sha256": "d874675f02e6a28a0d6bb001da1fbd0d22ccb580bdc7892c56817f9c58060106"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/data/maps/oceandrv/oceandrv.ide",
+      "size": 13210,
+      "sha256": "dbbb7ba8c801ce3c132f350338cf0a8412dfe1b0b80b67290e1fe380399e8939",
+      "chunks": [
+        {
+          "path": "dbbb7ba8c801-oceandrv.ide",
+          "size": 13210,
+          "sha256": "dbbb7ba8c801ce3c132f350338cf0a8412dfe1b0b80b67290e1fe380399e8939"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/data/maps/oceandrv/oceandrv.ipl",
+      "size": 50189,
+      "sha256": "ac0a7128dfd8b1b59d8b4d8ee2b15a9e257cf9e96a556fc7d9e5bb3d938109c6",
+      "chunks": [
+        {
+          "path": "ac0a7128dfd8-oceandrv.ipl",
+          "size": 50189,
+          "sha256": "ac0a7128dfd8b1b59d8b4d8ee2b15a9e257cf9e96a556fc7d9e5bb3d938109c6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/data/maps/oceandrv/oceandrv.col",
+      "size": 177108,
+      "sha256": "3c9b3f141c762deaf57d47cc6445d5dcc201cda55b426606080888af44a5056e",
+      "chunks": [
+        {
+          "path": "3c9b3f141c76-oceandrv.col",
+          "size": 177108,
+          "sha256": "3c9b3f141c762deaf57d47cc6445d5dcc201cda55b426606080888af44a5056e"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/data/maps/paths.ipl",
+      "size": 1146106,
+      "sha256": "f7ac1c8d19fa4cd589f0c61f5e98fb673bad60a82b73482177f72de7947fa497",
+      "chunks": [
+        {
+          "path": "f7ac1c8d19fa-paths.ipl-0.bin",
+          "size": 524288,
+          "sha256": "1de72604ec104d4ba2717873e774b58cb4249320dcbb99ec98c62cc37f82fa60"
+        },
+        {
+          "path": "f7ac1c8d19fa-paths.ipl-524288.bin",
+          "size": 524288,
+          "sha256": "39be4d1a2c3459218447f28d8116cf52482fef00547382d75b77dc29b01f3498"
+        },
+        {
+          "path": "f7ac1c8d19fa-paths.ipl-1048576.bin",
+          "size": 97530,
+          "sha256": "c0ea40c89f4298471c587e9d48c4845c72b2a67c1937643e8fe4c9d0b48005a6"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/data/map.zon",
+      "size": 2154,
+      "sha256": "9a515d8a68a4fe00063b32c31eb764437e36dd3d514a1a844df5064005062caa",
+      "chunks": [
+        {
+          "path": "9a515d8a68a4-map.zon",
+          "size": 2154,
+          "sha256": "9a515d8a68a4fe00063b32c31eb764437e36dd3d514a1a844df5064005062caa"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/data/navig.zon",
+      "size": 759,
+      "sha256": "07d5584d2937865be284a5db3e2555d4410be8f027419a62bb512af10b11d4ee",
+      "chunks": [
+        {
+          "path": "07d5584d2937-navig.zon",
+          "size": 759,
+          "sha256": "07d5584d2937865be284a5db3e2555d4410be8f027419a62bb512af10b11d4ee"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/data/info.zon",
+      "size": 10483,
+      "sha256": "07a67a765d597a571d4d233edae4fc993178fa64230b10427dd813b6fa3b742d",
+      "chunks": [
+        {
+          "path": "07a67a765d59-info.zon",
+          "size": 10483,
+          "sha256": "07a67a765d597a571d4d233edae4fc993178fa64230b10427dd813b6fa3b742d"
+        }
+      ]
+    },
+    {
+      "fsPath": "/vc-assets/local/data/occlu.ipl",
+      "size": 21727,
+      "sha256": "57dc6229297becd6f051dcc9ed6ab17624b853e91b16ee1d7e8cd7103af60c82",
+      "chunks": [
+        {
+          "path": "57dc6229297b-occlu.ipl",
+          "size": 21727,
+          "sha256": "57dc6229297becd6f051dcc9ed6ab17624b853e91b16ee1d7e8cd7103af60c82"
+        }
+      ]
+    }
+  ],
+  "instanceCount": 468,
+  "note": "generic.txd is already supplied by base runtime. Original map positions and full paths preserved."
+}

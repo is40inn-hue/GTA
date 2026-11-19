@@ -1,0 +1,1106 @@
+{
+  "version": 3,
+  "magic": [
+    1380271941,
+    842023766
+  ],
+  "slots": {
+    "magic0": 0,
+    "magic1": 1,
+    "version": 2,
+    "phase": 3,
+    "player": 4,
+    "ped": 5,
+    "scene": 6,
+    "ammo": 7,
+    "ammoInitial": 8,
+    "weapon": 9,
+    "heartbeat": 10,
+    "playerHealth": 11,
+    "targetCount": 12,
+    "outcome": 13,
+    "completed": 14,
+    "currentWeapon": 15,
+    "command": 16,
+    "requestedScene": 17,
+    "commandSeq": 18,
+    "ackSeq": 19,
+    "nativeTimer": 20,
+    "emptyDeadline": 21,
+    "creditedCount": 22,
+    "target0_handle": 23,
+    "target0_health": 24,
+    "target0_credited": 25,
+    "target0_destroyed": 26,
+    "target0_baseline": 27,
+    "target1_handle": 28,
+    "target1_health": 29,
+    "target1_credited": 30,
+    "target1_destroyed": 31,
+    "target1_baseline": 32,
+    "target2_handle": 33,
+    "target2_health": 34,
+    "target2_credited": 35,
+    "target2_destroyed": 36,
+    "target2_baseline": 37,
+    "playerX": 38,
+    "playerY": 39,
+    "playerZ": 40,
+    "playerFrozen": 41,
+    "heliX": 42,
+    "heliY": 43,
+    "heliZ": 44,
+    "heliRoute": 45,
+    "rpgHit": 46,
+    "sceneDeadline": 47,
+    "driver": 48,
+    "hijacked": 49,
+    "driveCompleted": 50,
+    "inCar": 51,
+    "wanted": 52,
+    "cop": 53,
+    "copCar": 54,
+    "shotHit": 55,
+    "policeAlert": 56,
+    "policeAlertUntil": 57,
+    "record1_completed": 64,
+    "record1_scene": 65,
+    "record1_outcome": 66,
+    "record1_ammoInitial": 67,
+    "record1_ammo": 68,
+    "record1_weapon": 69,
+    "record1_targetCount": 70,
+    "record1_target0_health": 71,
+    "record1_target0_credited": 72,
+    "record1_target0_destroyed": 73,
+    "record1_target1_health": 74,
+    "record1_target1_credited": 75,
+    "record1_target1_destroyed": 76,
+    "record1_target2_health": 77,
+    "record1_target2_credited": 78,
+    "record1_target2_destroyed": 79,
+    "record1_hijacked": 80,
+    "record1_driveCompleted": 81,
+    "record2_completed": 96,
+    "record2_scene": 97,
+    "record2_outcome": 98,
+    "record2_ammoInitial": 99,
+    "record2_ammo": 100,
+    "record2_weapon": 101,
+    "record2_targetCount": 102,
+    "record2_target0_health": 103,
+    "record2_target0_credited": 104,
+    "record2_target0_destroyed": 105,
+    "record2_target1_health": 106,
+    "record2_target1_credited": 107,
+    "record2_target1_destroyed": 108,
+    "record2_target2_health": 109,
+    "record2_target2_credited": 110,
+    "record2_target2_destroyed": 111,
+    "record2_hijacked": 112,
+    "record2_driveCompleted": 113,
+    "record3_completed": 128,
+    "record3_scene": 129,
+    "record3_outcome": 130,
+    "record3_ammoInitial": 131,
+    "record3_ammo": 132,
+    "record3_weapon": 133,
+    "record3_targetCount": 134,
+    "record3_target0_health": 135,
+    "record3_target0_credited": 136,
+    "record3_target0_destroyed": 137,
+    "record3_target1_health": 138,
+    "record3_target1_credited": 139,
+    "record3_target1_destroyed": 140,
+    "record3_target2_health": 141,
+    "record3_target2_credited": 142,
+    "record3_target2_destroyed": 143,
+    "record3_hijacked": 144,
+    "record3_driveCompleted": 145,
+    "pickup": 146,
+    "pickupBlip": 147,
+    "pickupCollected": 148,
+    "routeBlip": 149,
+    "chaseStage": 150,
+    "target0_rpgHit": 151,
+    "target1_rpgHit": 152,
+    "target2_rpgHit": 153,
+    "missionHeat": 154,
+    "chaseHeli": 155,
+    "chaseHeliUpdate": 156,
+    "chaseActivated": 157,
+    "ambient0": 158,
+    "ambient1": 159,
+    "ambient2": 160,
+    "ambientState": 161,
+    "ambientAttackUntil": 162,
+    "ambientRemoveAt": 163,
+    "streetTaxi": 164,
+    "routeStage": 165,
+    "courier": 166,
+    "courierStopUntil": 167,
+    "courierRetryAt": 168,
+    "courierBoarding": 169,
+    "carDriver": 170,
+    "courierAttempts": 171,
+    "courierInCar": 172
+  },
+  "size": 47534,
+  "sha256": "6e6533c08b02a9bb3d46194283c2c5d0e66418ad61eb1cf10af22ebf56286cdf",
+  "phases": {
+    "error": -1,
+    "loading": 0,
+    "briefing": 1,
+    "playing": 2,
+    "complete": 3,
+    "idle": 4
+  },
+  "commands": {
+    "prepare": 1,
+    "start": 2
+  },
+  "scenes": [
+    {
+      "scene": 1,
+      "title": "Первый шум",
+      "weapon": 23,
+      "weaponName": "Uzi",
+      "model": 282,
+      "ammo": 40,
+      "burst": 3,
+      "targetModel": 217,
+      "targetModels": [
+        217
+      ],
+      "positions": [
+        [
+          288.8,
+          -1083,
+          11.2
+        ]
+      ],
+      "pickup": [
+        290,
+        -1069,
+        11.5
+      ],
+      "targetHeading": 90,
+      "targetHealth": 320,
+      "groundedTarget": true,
+      "targetName": "Вертолёт на стоянке",
+      "spawn": [
+        290,
+        -1065,
+        11.5
+      ],
+      "pointsPerTarget": 12,
+      "action": "destroy",
+      "instruction": "Возьми Узи. Взорви вертолёт на стоянке.",
+      "criterion": "Попадание и настоящий взрыв вертолёта — 12 баллов.",
+      "targetCount": 1
+    },
+    {
+      "scene": 2,
+      "title": "Уходи от погони",
+      "weapon": 0,
+      "weaponName": "За руль",
+      "model": 0,
+      "ammo": 0,
+      "burst": 0,
+      "targetModel": 130,
+      "targetModels": [
+        130
+      ],
+      "positions": [
+        [
+          287,
+          -1100,
+          11.2
+        ]
+      ],
+      "spawn": [
+        289,
+        -1099,
+        11.5
+      ],
+      "pointsPerTarget": 5,
+      "action": "hijack",
+      "instruction": "Забери машину. Подбери курьера и довези к метке.",
+      "criterion": "Угон — 5. Курьер и полный маршрут — ещё 5.",
+      "timeLimitSeconds": 150,
+      "route": [
+        [
+          272,
+          -1190,
+          11.5
+        ],
+        [
+          263,
+          -1285,
+          11.5
+        ],
+        [
+          233,
+          -1375,
+          11.5
+        ],
+        [
+          263,
+          -1285,
+          11.5
+        ],
+        [
+          263,
+          -1270,
+          11.5
+        ]
+      ],
+      "targetCount": 1
+    },
+    {
+      "scene": 3,
+      "title": "Последний аргумент",
+      "weapon": 30,
+      "weaponName": "РПГ",
+      "model": 287,
+      "ammo": 6,
+      "burst": 1,
+      "targetModel": 156,
+      "targetModels": [
+        156,
+        156,
+        217
+      ],
+      "positions": [
+        [
+          263,
+          -1308,
+          11.2
+        ],
+        [
+          258,
+          -1327,
+          11.2
+        ],
+        [
+          256,
+          -1340,
+          25
+        ]
+      ],
+      "spawn": [
+        263,
+        -1270,
+        11.5
+      ],
+      "pickup": [
+        263,
+        -1272,
+        11.5
+      ],
+      "pointsPerTarget": 0,
+      "targetPoints": [
+        4,
+        4,
+        6
+      ],
+      "guidanceOrder": [
+        0,
+        1,
+        2
+      ],
+      "guidanceSemantics": "one visible marker; other targets remain valid",
+      "action": "finale",
+      "instruction": "РПГ в двух шагах. Стреляй по цели с красной меткой. Вертолёт — последним.",
+      "criterion": "Машины — по 4. Вертолёт — 6. Шесть ракет.",
+      "targetCount": 3
+    }
+  ],
+  "location": "Ocean Drive",
+  "contentEdition": 10,
+  "pursuitEnabled": true,
+  "globalWantedEnabled": false,
+  "heatSemantics": "scripted mission pressure, not global native wanted level",
+  "ambient": {
+    "scene": 1,
+    "model": 7,
+    "count": 3,
+    "attackActor": 2,
+    "attackMilliseconds": 2200,
+    "fleeMilliseconds": 3500,
+    "scored": false,
+    "reactionActors": [
+      0,
+      1
+    ],
+    "reactionTrigger": "first-native-weapon-hit-and-health-loss",
+    "reactionOnce": true,
+    "taxiModel": 150,
+    "taxiPosition": [
+      298,
+      -1069,
+      11.2
+    ],
+    "taxiHailingActor": 0,
+    "attackTrigger": "pickup-collected-and-native-player-near-actor"
+  },
+  "courier": {
+    "scene": 2,
+    "model": 7,
+    "stop": [
+      233,
+      -1375,
+      11.5
+    ],
+    "position": [
+      242,
+      -1375,
+      11.5
+    ],
+    "recoveryPosition": [
+      225,
+      -1375,
+      11.5
+    ],
+    "stopMilliseconds": 900,
+    "retryMilliseconds": 6500,
+    "recreateAfterAttempts": 2,
+    "nativePassengerRequired": true,
+    "routeStages": [
+      "outbound",
+      "past-ramp",
+      "pickup-courier",
+      "return-past-ramp",
+      "drop-off"
+    ],
+    "scoredSeparately": false
+  },
+  "result": {
+    "engine": "vice-city-wasm",
+    "version": 3,
+    "immutable": true,
+    "nativeOnly": true
+  },
+  "globalByteOffset": 30000,
+  "fields": {
+    "magic0": {
+      "offset": 0,
+      "type": "int32"
+    },
+    "magic1": {
+      "offset": 4,
+      "type": "int32"
+    },
+    "version": {
+      "offset": 8,
+      "type": "int32"
+    },
+    "phase": {
+      "offset": 12,
+      "type": "int32"
+    },
+    "player": {
+      "offset": 16,
+      "type": "int32"
+    },
+    "ped": {
+      "offset": 20,
+      "type": "int32"
+    },
+    "scene": {
+      "offset": 24,
+      "type": "int32"
+    },
+    "ammo": {
+      "offset": 28,
+      "type": "int32"
+    },
+    "ammoInitial": {
+      "offset": 32,
+      "type": "int32"
+    },
+    "weapon": {
+      "offset": 36,
+      "type": "int32"
+    },
+    "heartbeat": {
+      "offset": 40,
+      "type": "int32"
+    },
+    "playerHealth": {
+      "offset": 44,
+      "type": "int32"
+    },
+    "targetCount": {
+      "offset": 48,
+      "type": "int32"
+    },
+    "outcome": {
+      "offset": 52,
+      "type": "int32"
+    },
+    "completed": {
+      "offset": 56,
+      "type": "int32"
+    },
+    "currentWeapon": {
+      "offset": 60,
+      "type": "int32"
+    },
+    "command": {
+      "offset": 64,
+      "type": "int32"
+    },
+    "requestedScene": {
+      "offset": 68,
+      "type": "int32"
+    },
+    "commandSeq": {
+      "offset": 72,
+      "type": "int32"
+    },
+    "ackSeq": {
+      "offset": 76,
+      "type": "int32"
+    },
+    "nativeTimer": {
+      "offset": 80,
+      "type": "int32"
+    },
+    "emptyDeadline": {
+      "offset": 84,
+      "type": "int32"
+    },
+    "creditedCount": {
+      "offset": 88,
+      "type": "int32"
+    },
+    "target0_handle": {
+      "offset": 92,
+      "type": "int32"
+    },
+    "target0_health": {
+      "offset": 96,
+      "type": "int32"
+    },
+    "target0_credited": {
+      "offset": 100,
+      "type": "int32"
+    },
+    "target0_destroyed": {
+      "offset": 104,
+      "type": "int32"
+    },
+    "target0_baseline": {
+      "offset": 108,
+      "type": "int32"
+    },
+    "target1_handle": {
+      "offset": 112,
+      "type": "int32"
+    },
+    "target1_health": {
+      "offset": 116,
+      "type": "int32"
+    },
+    "target1_credited": {
+      "offset": 120,
+      "type": "int32"
+    },
+    "target1_destroyed": {
+      "offset": 124,
+      "type": "int32"
+    },
+    "target1_baseline": {
+      "offset": 128,
+      "type": "int32"
+    },
+    "target2_handle": {
+      "offset": 132,
+      "type": "int32"
+    },
+    "target2_health": {
+      "offset": 136,
+      "type": "int32"
+    },
+    "target2_credited": {
+      "offset": 140,
+      "type": "int32"
+    },
+    "target2_destroyed": {
+      "offset": 144,
+      "type": "int32"
+    },
+    "target2_baseline": {
+      "offset": 148,
+      "type": "int32"
+    },
+    "playerX": {
+      "offset": 152,
+      "type": "float32"
+    },
+    "playerY": {
+      "offset": 156,
+      "type": "float32"
+    },
+    "playerZ": {
+      "offset": 160,
+      "type": "float32"
+    },
+    "playerFrozen": {
+      "offset": 164,
+      "type": "int32"
+    },
+    "heliX": {
+      "offset": 168,
+      "type": "float32"
+    },
+    "heliY": {
+      "offset": 172,
+      "type": "float32"
+    },
+    "heliZ": {
+      "offset": 176,
+      "type": "float32"
+    },
+    "heliRoute": {
+      "offset": 180,
+      "type": "int32"
+    },
+    "rpgHit": {
+      "offset": 184,
+      "type": "int32"
+    },
+    "sceneDeadline": {
+      "offset": 188,
+      "type": "int32"
+    },
+    "driver": {
+      "offset": 192,
+      "type": "int32"
+    },
+    "hijacked": {
+      "offset": 196,
+      "type": "int32"
+    },
+    "driveCompleted": {
+      "offset": 200,
+      "type": "int32"
+    },
+    "inCar": {
+      "offset": 204,
+      "type": "int32"
+    },
+    "wanted": {
+      "offset": 208,
+      "type": "int32"
+    },
+    "cop": {
+      "offset": 212,
+      "type": "int32"
+    },
+    "copCar": {
+      "offset": 216,
+      "type": "int32"
+    },
+    "shotHit": {
+      "offset": 220,
+      "type": "int32"
+    },
+    "policeAlert": {
+      "offset": 224,
+      "type": "int32"
+    },
+    "policeAlertUntil": {
+      "offset": 228,
+      "type": "int32"
+    },
+    "record1_completed": {
+      "offset": 256,
+      "type": "int32"
+    },
+    "record1_scene": {
+      "offset": 260,
+      "type": "int32"
+    },
+    "record1_outcome": {
+      "offset": 264,
+      "type": "int32"
+    },
+    "record1_ammoInitial": {
+      "offset": 268,
+      "type": "int32"
+    },
+    "record1_ammo": {
+      "offset": 272,
+      "type": "int32"
+    },
+    "record1_weapon": {
+      "offset": 276,
+      "type": "int32"
+    },
+    "record1_targetCount": {
+      "offset": 280,
+      "type": "int32"
+    },
+    "record1_target0_health": {
+      "offset": 284,
+      "type": "int32"
+    },
+    "record1_target0_credited": {
+      "offset": 288,
+      "type": "int32"
+    },
+    "record1_target0_destroyed": {
+      "offset": 292,
+      "type": "int32"
+    },
+    "record1_target1_health": {
+      "offset": 296,
+      "type": "int32"
+    },
+    "record1_target1_credited": {
+      "offset": 300,
+      "type": "int32"
+    },
+    "record1_target1_destroyed": {
+      "offset": 304,
+      "type": "int32"
+    },
+    "record1_target2_health": {
+      "offset": 308,
+      "type": "int32"
+    },
+    "record1_target2_credited": {
+      "offset": 312,
+      "type": "int32"
+    },
+    "record1_target2_destroyed": {
+      "offset": 316,
+      "type": "int32"
+    },
+    "record1_hijacked": {
+      "offset": 320,
+      "type": "int32"
+    },
+    "record1_driveCompleted": {
+      "offset": 324,
+      "type": "int32"
+    },
+    "record2_completed": {
+      "offset": 384,
+      "type": "int32"
+    },
+    "record2_scene": {
+      "offset": 388,
+      "type": "int32"
+    },
+    "record2_outcome": {
+      "offset": 392,
+      "type": "int32"
+    },
+    "record2_ammoInitial": {
+      "offset": 396,
+      "type": "int32"
+    },
+    "record2_ammo": {
+      "offset": 400,
+      "type": "int32"
+    },
+    "record2_weapon": {
+      "offset": 404,
+      "type": "int32"
+    },
+    "record2_targetCount": {
+      "offset": 408,
+      "type": "int32"
+    },
+    "record2_target0_health": {
+      "offset": 412,
+      "type": "int32"
+    },
+    "record2_target0_credited": {
+      "offset": 416,
+      "type": "int32"
+    },
+    "record2_target0_destroyed": {
+      "offset": 420,
+      "type": "int32"
+    },
+    "record2_target1_health": {
+      "offset": 424,
+      "type": "int32"
+    },
+    "record2_target1_credited": {
+      "offset": 428,
+      "type": "int32"
+    },
+    "record2_target1_destroyed": {
+      "offset": 432,
+      "type": "int32"
+    },
+    "record2_target2_health": {
+      "offset": 436,
+      "type": "int32"
+    },
+    "record2_target2_credited": {
+      "offset": 440,
+      "type": "int32"
+    },
+    "record2_target2_destroyed": {
+      "offset": 444,
+      "type": "int32"
+    },
+    "record2_hijacked": {
+      "offset": 448,
+      "type": "int32"
+    },
+    "record2_driveCompleted": {
+      "offset": 452,
+      "type": "int32"
+    },
+    "record3_completed": {
+      "offset": 512,
+      "type": "int32"
+    },
+    "record3_scene": {
+      "offset": 516,
+      "type": "int32"
+    },
+    "record3_outcome": {
+      "offset": 520,
+      "type": "int32"
+    },
+    "record3_ammoInitial": {
+      "offset": 524,
+      "type": "int32"
+    },
+    "record3_ammo": {
+      "offset": 528,
+      "type": "int32"
+    },
+    "record3_weapon": {
+      "offset": 532,
+      "type": "int32"
+    },
+    "record3_targetCount": {
+      "offset": 536,
+      "type": "int32"
+    },
+    "record3_target0_health": {
+      "offset": 540,
+      "type": "int32"
+    },
+    "record3_target0_credited": {
+      "offset": 544,
+      "type": "int32"
+    },
+    "record3_target0_destroyed": {
+      "offset": 548,
+      "type": "int32"
+    },
+    "record3_target1_health": {
+      "offset": 552,
+      "type": "int32"
+    },
+    "record3_target1_credited": {
+      "offset": 556,
+      "type": "int32"
+    },
+    "record3_target1_destroyed": {
+      "offset": 560,
+      "type": "int32"
+    },
+    "record3_target2_health": {
+      "offset": 564,
+      "type": "int32"
+    },
+    "record3_target2_credited": {
+      "offset": 568,
+      "type": "int32"
+    },
+    "record3_target2_destroyed": {
+      "offset": 572,
+      "type": "int32"
+    },
+    "record3_hijacked": {
+      "offset": 576,
+      "type": "int32"
+    },
+    "record3_driveCompleted": {
+      "offset": 580,
+      "type": "int32"
+    },
+    "pickup": {
+      "offset": 584,
+      "type": "int32"
+    },
+    "pickupBlip": {
+      "offset": 588,
+      "type": "int32"
+    },
+    "pickupCollected": {
+      "offset": 592,
+      "type": "int32"
+    },
+    "routeBlip": {
+      "offset": 596,
+      "type": "int32"
+    },
+    "chaseStage": {
+      "offset": 600,
+      "type": "int32"
+    },
+    "target0_rpgHit": {
+      "offset": 604,
+      "type": "int32"
+    },
+    "target1_rpgHit": {
+      "offset": 608,
+      "type": "int32"
+    },
+    "target2_rpgHit": {
+      "offset": 612,
+      "type": "int32"
+    },
+    "missionHeat": {
+      "offset": 616,
+      "type": "int32"
+    },
+    "chaseHeli": {
+      "offset": 620,
+      "type": "int32"
+    },
+    "chaseHeliUpdate": {
+      "offset": 624,
+      "type": "int32"
+    },
+    "chaseActivated": {
+      "offset": 628,
+      "type": "int32"
+    },
+    "ambient0": {
+      "offset": 632,
+      "type": "int32"
+    },
+    "ambient1": {
+      "offset": 636,
+      "type": "int32"
+    },
+    "ambient2": {
+      "offset": 640,
+      "type": "int32"
+    },
+    "ambientState": {
+      "offset": 644,
+      "type": "int32"
+    },
+    "ambientAttackUntil": {
+      "offset": 648,
+      "type": "int32"
+    },
+    "ambientRemoveAt": {
+      "offset": 652,
+      "type": "int32"
+    },
+    "streetTaxi": {
+      "offset": 656,
+      "type": "int32"
+    },
+    "routeStage": {
+      "offset": 660,
+      "type": "int32"
+    },
+    "courier": {
+      "offset": 664,
+      "type": "int32"
+    },
+    "courierStopUntil": {
+      "offset": 668,
+      "type": "int32"
+    },
+    "courierRetryAt": {
+      "offset": 672,
+      "type": "int32"
+    },
+    "courierBoarding": {
+      "offset": 676,
+      "type": "int32"
+    },
+    "carDriver": {
+      "offset": 680,
+      "type": "int32"
+    },
+    "courierAttempts": {
+      "offset": 684,
+      "type": "int32"
+    },
+    "courierInCar": {
+      "offset": 688,
+      "type": "int32"
+    }
+  },
+  "validation": {
+    "runtimeExecuted": false,
+    "instructions": 1473,
+    "codeStart": 34392,
+    "labels": {
+      "native_loop": 35051,
+      "dispatch": 35132,
+      "dispatch_allowed": 35171,
+      "not_prepare1": 35226,
+      "not_prepare2": 35257,
+      "not_prepare3": 35288,
+      "dispatch_start": 35295,
+      "start_no_walker0": 35451,
+      "start_no_walker1": 35485,
+      "start_not_ambient": 35485,
+      "start_not_chase": 35577,
+      "no_command": 35673,
+      "gameplay": 35697,
+      "ambient_missing": 35800,
+      "ambient_alive": 35827,
+      "ambient_attack_check": 35960,
+      "ambient_flee_check": 36049,
+      "ambient_removed": 36143,
+      "ambient_done": 36163,
+      "shooting": 36194,
+      "pickup_blip_removed": 36284,
+      "pickup_wait": 36301,
+      "pickup_wait_done": 36347,
+      "weapon_ready": 36354,
+      "heli_alive": 36423,
+      "heli_return": 36527,
+      "after_heli_route": 36586,
+      "alive0": 36657,
+      "bullet0": 36766,
+      "c1_react_alive0": 36927,
+      "c1_react_skip0": 36935,
+      "c1_react_alive1": 37004,
+      "c1_react_skip1": 37012,
+      "c1_reaction_done": 37012,
+      "count0": 37022,
+      "credit_done0": 37054,
+      "after_target0": 37088,
+      "alive1": 37149,
+      "bullet1": 37258,
+      "count1": 37312,
+      "credit_done1": 37344,
+      "after_target1": 37378,
+      "alive2": 37439,
+      "bullet2": 37548,
+      "count2": 37602,
+      "credit_done2": 37634,
+      "after_target2": 37668,
+      "c1_target_marker": 37668,
+      "finale_marker": 37770,
+      "finale_marker_next0": 37879,
+      "finale_marker_next1": 37964,
+      "finale_marker_next2": 38049,
+      "finale_marker_done": 38049,
+      "not_all_credited": 38088,
+      "empty_wait": 38154,
+      "car_gameplay": 38193,
+      "marker_route_next0": 38280,
+      "marker_route_next1": 38333,
+      "marker_route_next2": 38386,
+      "marker_route_next3": 38439,
+      "marker_route_next4": 38492,
+      "marker_car": 38499,
+      "marker_done": 38529,
+      "no_heli_follow": 38638,
+      "check_driver_alive": 38669,
+      "driver_alive": 38705,
+      "car_alive": 38741,
+      "hijacked": 38832,
+      "chase_already_active": 38906,
+      "drive_past_ramp": 39135,
+      "drive_courier": 39230,
+      "courier_alive": 39323,
+      "courier_not_boarded": 39456,
+      "courier_wait_stop": 39559,
+      "courier_check_retry": 39612,
+      "courier_board": 39665,
+      "courier_not_stopped": 39723,
+      "courier_cancel_board": 39818,
+      "courier_recover": 39889,
+      "courier_recover_removed": 39937,
+      "drive_return": 40104,
+      "courier_return_alive": 40173,
+      "courier_lost": 40290,
+      "drive_to_finish": 40327,
+      "car_player_out": 40432,
+      "check_timeout": 40562,
+      "finish_scene": 40601,
+      "finish_no_ambient0": 40649,
+      "finish_no_ambient1": 40707,
+      "finish_no_ambient2": 40765,
+      "finish_no_courier": 40833,
+      "finish_no_taxi": 40872,
+      "no_finish_cop": 40916,
+      "finish_no_heli": 40945,
+      "not_save1": 41174,
+      "not_save2": 41351,
+      "not_save3": 41528,
+      "finish_commit": 41528,
+      "prepare1": 41555,
+      "new_scene1": 41742,
+      "not_old_car1": 41801,
+      "clean_1_driver": 41842,
+      "clean_1_cop": 41881,
+      "clean_1_copCar": 41920,
+      "clean_1_pickup": 41959,
+      "clean_1_pickupBlip": 41998,
+      "clean_1_routeBlip": 42037,
+      "clean_1_chaseHeli": 42076,
+      "clean_1_streetTaxi": 42115,
+      "clean_1_ambient0": 42173,
+      "clean_1_ambient1": 42231,
+      "clean_1_ambient2": 42289,
+      "clean_1_courier": 42347,
+      "old_target1_0": 42676,
+      "old_target1_1": 42765,
+      "old_target1_2": 42854,
+      "prepare2": 43570,
+      "new_scene2": 43757,
+      "not_old_car2": 43816,
+      "clean_2_driver": 43857,
+      "clean_2_cop": 43896,
+      "clean_2_copCar": 43935,
+      "clean_2_pickup": 43974,
+      "clean_2_pickupBlip": 44013,
+      "clean_2_routeBlip": 44052,
+      "clean_2_chaseHeli": 44091,
+      "clean_2_streetTaxi": 44130,
+      "clean_2_ambient0": 44188,
+      "clean_2_ambient1": 44246,
+      "clean_2_ambient2": 44304,
+      "clean_2_courier": 44362,
+      "old_target2_0": 44691,
+      "old_target2_1": 44780,
+      "old_target2_2": 44869,
+      "prepare3": 45523,
+      "new_scene3": 45710,
+      "not_old_car3": 45769,
+      "clean_3_driver": 45810,
+      "clean_3_cop": 45849,
+      "clean_3_copCar": 45888,
+      "clean_3_pickup": 45927,
+      "clean_3_pickupBlip": 45966,
+      "clean_3_routeBlip": 46005,
+      "clean_3_chaseHeli": 46044,
+      "clean_3_streetTaxi": 46083,
+      "clean_3_ambient0": 46141,
+      "clean_3_ambient1": 46199,
+      "clean_3_ambient2": 46257,
+      "clean_3_courier": 46315,
+      "old_target3_0": 46644,
+      "old_target3_1": 46733,
+      "old_target3_2": 46822,
+      "model_failure": 47500,
+      "failure_loop": 47510
+    }
+  },
+  "mailbox": "JS writes requestedScene, command, commandSeq only. SCM acknowledges ackSeq. commandSeq must be written last.",
+  "records": "Per-scene terminal records are immutable; preparing a completed scene restores its native record, without spawning new targets."
+}

@@ -1,0 +1,762 @@
+{
+  "release": "gta-ege-rc4.6-20261117",
+  "date": "2026-11-17",
+  "timezone": "Asia/Bangkok",
+  "basedOn": "gta-ege-rc4.5-20261117-dist.zip",
+  "entrypoint": "index.html",
+  "contentEdition": 16,
+  "storageVersion": 4,
+  "questions": 12,
+  "maxScore": 100,
+  "passScore": 60,
+  "sectionScores": {
+    "A": 24,
+    "B": 40,
+    "C": 36
+  },
+  "results": {
+    "disclosure": "after final commission only",
+    "sameVisibleAndExportedPNG": true,
+    "size": [
+      1080,
+      1920
+    ]
+  },
+  "priorityS": {
+    "preloadStartsAfterCoverPaint": true,
+    "sameMutedRuntimeThroughABtoC": true,
+    "warmCityStartsNoGameTimer": true,
+    "artificialBriefingDelayMs": 0,
+    "resourceConstraintsRespected": true,
+    "universalZeroLatencyClaim": false
+  },
+  "native": {
+    "engine": "vice-city-wasm",
+    "runtimeBinaryChanged": false,
+    "missionSize": 51796,
+    "missionSHA256": "16ec9a2813cd7b349ce9d17f0a428e5c85822b49157413954260135817f3adae",
+    "arrival": {
+      "scene": 1,
+      "model": 217,
+      "crewModels": [
+        7,
+        7,
+        8
+      ],
+      "pudgeActor": 2,
+      "airPosition": [
+        288.8,
+        -1088,
+        17.2
+      ],
+      "landingPosition": [
+        288.8,
+        -1083,
+        10.85
+      ],
+      "foreground": [
+        [
+          287.8,
+          -1075.5
+        ],
+        [
+          291.5,
+          -1076.0
+        ],
+        [
+          289.7,
+          -1074.5
+        ]
+      ],
+      "landingTimeoutMilliseconds": 8000,
+      "exitTimeoutMilliseconds": 6000,
+      "walkMilliseconds": 4800,
+      "runMilliseconds": 4800,
+      "runRefreshMilliseconds": 700,
+      "runTarget": "current-player-position",
+      "runNearRadiusMetres": 4,
+      "brawlMilliseconds": 3200,
+      "fleeMilliseconds": 4500,
+      "startTrigger": "native-start-command-only",
+      "nativeExitRequired": true,
+      "pickupRelease": "brawl-start-or-bounded-fallback",
+      "scored": false,
+      "stages": [
+        "prepared",
+        "landing",
+        "exiting",
+        "foreground",
+        "brawl",
+        "flee",
+        "finished",
+        "fallback"
+      ]
+    },
+    "drive": {
+      "routeStages": [
+        "outbound",
+        "past-ramp",
+        "seafront",
+        "southern-bend",
+        "rpg"
+      ],
+      "passengerRequired": false,
+      "stopRequired": false,
+      "oneDirection": true,
+      "scoredSeparately": false
+    },
+    "street": {
+      "scene": 2,
+      "traffic": [
+        {
+          "model": 130,
+          "position": [
+            270,
+            -1160,
+            11.2
+          ],
+          "destination": [
+            290,
+            -1060,
+            11.2
+          ],
+          "speed": 6.5,
+          "colour": [
+            37,
+            37
+          ],
+          "routeStage": 0
+        },
+        {
+          "model": 150,
+          "position": [
+            256,
+            -1240,
+            11.2
+          ],
+          "destination": [
+            277,
+            -1130,
+            11.2
+          ],
+          "speed": 7.5,
+          "colour": [
+            6,
+            6
+          ],
+          "routeStage": 1
+        }
+      ],
+      "walkers": [
+        {
+          "model": 7,
+          "position": [
+            294,
+            -1125,
+            11.2
+          ],
+          "destination": [
+            290,
+            -1140
+          ]
+        },
+        {
+          "model": 107,
+          "position": [
+            290,
+            -1136,
+            11.2
+          ],
+          "destination": [
+            295,
+            -1119
+          ]
+        },
+        {
+          "model": 1,
+          "position": [
+            282,
+            -1190,
+            11.2
+          ],
+          "destination": [
+            279,
+            -1207
+          ]
+        }
+      ],
+      "trafficRelease": "native-driver-confirmed-and-route-stage",
+      "trafficMaxCount": 2,
+      "trafficDrivingStyle": 0,
+      "trafficRetireAfterMilliseconds": 45000,
+      "trafficRetireOnlyOffScreen": true,
+      "cameoModel": 107,
+      "cameoActor": 1,
+      "cameoSeenField": "cameoSeen",
+      "cameoExposureMilliseconds": 600,
+      "cameoRadiusMetres": 18,
+      "cameoRequiresNativeVisibility": true,
+      "cameoRequiresDriving": true,
+      "allAmbientScored": false,
+      "allSceneActorsCleanedOnFinish": true
+    },
+    "C2TimeLimitSeconds": 150,
+    "C2Route": [
+      [
+        272,
+        -1190,
+        11.5
+      ],
+      [
+        263,
+        -1285,
+        11.5
+      ],
+      [
+        244,
+        -1340,
+        11.5
+      ],
+      [
+        218,
+        -1430,
+        11.5
+      ],
+      [
+        193,
+        -1500,
+        11.5
+      ]
+    ],
+    "C3Spawn": [
+      193,
+      -1500,
+      11.5
+    ],
+    "scoreRecordABIChanged": false,
+    "originalSlotsPreserved": [
+      0,
+      176
+    ],
+    "appendedCameoSlots": {
+      "cameoSeen": 190,
+      "cameoVisibleSince": 191,
+      "record2_cameoSeen": 192
+    },
+    "pudgeModelId": 8,
+    "blockPedModelId": 107,
+    "blockPedAdditionalBytes": 32768,
+    "pudgeShoulderFit": {
+      "outsetPerSide": 0.125,
+      "drop": 0.06,
+      "nativeFramesAndInverseBindsUpdatedTogether": true
+    },
+    "pudgeCPUPoseCount": 20,
+    "modelProvenance": [
+      "native-vc/runtime/pudge-model-provenance.json",
+      "native-vc/runtime/block-ped-provenance.json"
+    ]
+  },
+  "observation": {
+    "id": "seafront-outsider-v1",
+    "afterScene": 2,
+    "unscored": true,
+    "requiresNativeCameoSeen": true,
+    "nativeGamePaused": true,
+    "oneTapAnswerOrSkip": true,
+    "disclosure": "final exam review or standalone C3 completion"
+  },
+  "visual": {
+    "cover": "assets/brand-cover-rc45.png",
+    "coverSHA256": "d8d7f1c240b3c9e3cdaa2735d99a164ff4dde5e10cab62d9978d3556e4209b0f",
+    "originalCoverPreserved": true,
+    "coverDimensions": [
+      1086,
+      1448
+    ],
+    "sameLogoInResult": true,
+    "newStyleSheets": [
+      "native-vc/rc46-scene.css"
+    ],
+    "notifications": "6px below mission plaque, one notice at a time",
+    "checkedPhoneWidths": [
+      320,
+      390,
+      430
+    ]
+  },
+  "standaloneRoute": "rpg/",
+  "validation": {
+    "automatedTestsPassed": 331,
+    "automatedTestsFailed": 0,
+    "physicalRuntimeFilesVerified": 1049,
+    "assembledResourcesVerified": 5,
+    "browser": {
+      "release": "RC4.6",
+      "widths": [
+        320,
+        390,
+        430
+      ],
+      "height": 690,
+      "rootLoaded": true,
+      "scope": "Production HTML/CSS in isolated layout fixture; no native gameplay execution.",
+      "nativeGPUExecuted": false,
+      "checks": [
+        {
+          "screen": "hud",
+          "width": 320,
+          "nodes": [
+            {
+              "bottom": 690,
+              "clientWidth": 320,
+              "display": "block",
+              "height": 690,
+              "id": "",
+              "left": 0,
+              "right": 320,
+              "scrollWidth": 320,
+              "top": 0,
+              "width": 320
+            },
+            {
+              "bottom": 140.1875,
+              "clientWidth": 148,
+              "display": "block",
+              "height": 128.1875,
+              "id": "mission-identity",
+              "left": 12,
+              "right": 162.984375,
+              "scrollWidth": 148,
+              "top": 12,
+              "width": 150.984375
+            },
+            {
+              "bottom": 0,
+              "clientWidth": 0,
+              "display": "none",
+              "height": 0,
+              "id": "range-instruction",
+              "left": 0,
+              "right": 0,
+              "scrollWidth": 0,
+              "top": 0,
+              "width": 0
+            },
+            {
+              "bottom": 172.1875,
+              "clientWidth": 148,
+              "display": "block",
+              "height": 26,
+              "id": "native-toast",
+              "left": 12,
+              "right": 162.984375,
+              "scrollWidth": 148,
+              "top": 146.1875,
+              "width": 150.984375
+            },
+            {
+              "bottom": 581.40625,
+              "clientWidth": 296,
+              "display": "flex",
+              "height": 128,
+              "id": "car-controls",
+              "left": 12,
+              "right": 308,
+              "scrollWidth": 296,
+              "top": 453.40625,
+              "width": 296
+            }
+          ]
+        },
+        {
+          "screen": "hud",
+          "width": 390,
+          "nodes": [
+            {
+              "bottom": 690,
+              "clientWidth": 390,
+              "display": "block",
+              "height": 690,
+              "id": "",
+              "left": 0,
+              "right": 390,
+              "scrollWidth": 390,
+              "top": 0,
+              "width": 390
+            },
+            {
+              "bottom": 112.640625,
+              "clientWidth": 218,
+              "display": "block",
+              "height": 100.640625,
+              "id": "mission-identity",
+              "left": 12,
+              "right": 232.984375,
+              "scrollWidth": 218,
+              "top": 12,
+              "width": 220.984375
+            },
+            {
+              "bottom": 0,
+              "clientWidth": 0,
+              "display": "none",
+              "height": 0,
+              "id": "range-instruction",
+              "left": 0,
+              "right": 0,
+              "scrollWidth": 0,
+              "top": 0,
+              "width": 0
+            },
+            {
+              "bottom": 148.03125,
+              "clientWidth": 218,
+              "display": "block",
+              "height": 29.390625,
+              "id": "native-toast",
+              "left": 12,
+              "right": 232.984375,
+              "scrollWidth": 218,
+              "top": 118.640625,
+              "width": 220.984375
+            },
+            {
+              "bottom": 581.40625,
+              "clientWidth": 366,
+              "display": "flex",
+              "height": 132.59375,
+              "id": "car-controls",
+              "left": 12,
+              "right": 378,
+              "scrollWidth": 366,
+              "top": 448.8125,
+              "width": 366
+            }
+          ]
+        },
+        {
+          "screen": "hud",
+          "width": 430,
+          "nodes": [
+            {
+              "bottom": 690,
+              "clientWidth": 430,
+              "display": "block",
+              "height": 690,
+              "id": "",
+              "left": 0,
+              "right": 430,
+              "scrollWidth": 430,
+              "top": 0,
+              "width": 430
+            },
+            {
+              "bottom": 112.640625,
+              "clientWidth": 258,
+              "display": "block",
+              "height": 100.640625,
+              "id": "mission-identity",
+              "left": 12,
+              "right": 272.984375,
+              "scrollWidth": 258,
+              "top": 12,
+              "width": 260.984375
+            },
+            {
+              "bottom": 0,
+              "clientWidth": 0,
+              "display": "none",
+              "height": 0,
+              "id": "range-instruction",
+              "left": 0,
+              "right": 0,
+              "scrollWidth": 0,
+              "top": 0,
+              "width": 0
+            },
+            {
+              "bottom": 148.03125,
+              "clientWidth": 258,
+              "display": "block",
+              "height": 29.390625,
+              "id": "native-toast",
+              "left": 12,
+              "right": 272.984375,
+              "scrollWidth": 258,
+              "top": 118.640625,
+              "width": 260.984375
+            },
+            {
+              "bottom": 581.40625,
+              "clientWidth": 406,
+              "display": "flex",
+              "height": 144,
+              "id": "car-controls",
+              "left": 12,
+              "right": 418,
+              "scrollWidth": 406,
+              "top": 437.40625,
+              "width": 406
+            }
+          ]
+        },
+        {
+          "screen": "question",
+          "width": 320,
+          "nodes": [
+            {
+              "bottom": 690,
+              "clientWidth": 320,
+              "display": "block",
+              "height": 690,
+              "id": "",
+              "left": 0,
+              "right": 320,
+              "scrollWidth": 320,
+              "top": 0,
+              "width": 320
+            },
+            {
+              "bottom": 350.515625,
+              "clientWidth": 254,
+              "display": "grid",
+              "height": 59,
+              "id": "street-answer-local",
+              "left": 32,
+              "right": 288,
+              "scrollWidth": 254,
+              "top": 291.515625,
+              "width": 256
+            },
+            {
+              "bottom": 418.515625,
+              "clientWidth": 254,
+              "display": "grid",
+              "height": 59,
+              "id": "street-answer-steve",
+              "left": 32,
+              "right": 288,
+              "scrollWidth": 254,
+              "top": 359.515625,
+              "width": 256
+            },
+            {
+              "bottom": 486.515625,
+              "clientWidth": 254,
+              "display": "grid",
+              "height": 59,
+              "id": "street-answer-officer",
+              "left": 32,
+              "right": 288,
+              "scrollWidth": 254,
+              "top": 427.515625,
+              "width": 256
+            },
+            {
+              "bottom": 544.515625,
+              "clientWidth": 134,
+              "display": "block",
+              "height": 48,
+              "id": "street-answer-missed",
+              "left": 153.796875,
+              "right": 288,
+              "scrollWidth": 134,
+              "top": 496.515625,
+              "width": 134.203125
+            }
+          ]
+        },
+        {
+          "screen": "question",
+          "width": 390,
+          "nodes": [
+            {
+              "bottom": 690,
+              "clientWidth": 390,
+              "display": "block",
+              "height": 690,
+              "id": "",
+              "left": 0,
+              "right": 390,
+              "scrollWidth": 390,
+              "top": 0,
+              "width": 390
+            },
+            {
+              "bottom": 354.0625,
+              "clientWidth": 316,
+              "display": "grid",
+              "height": 59,
+              "id": "street-answer-local",
+              "left": 36,
+              "right": 354,
+              "scrollWidth": 316,
+              "top": 295.0625,
+              "width": 318
+            },
+            {
+              "bottom": 422.0625,
+              "clientWidth": 316,
+              "display": "grid",
+              "height": 59,
+              "id": "street-answer-steve",
+              "left": 36,
+              "right": 354,
+              "scrollWidth": 316,
+              "top": 363.0625,
+              "width": 318
+            },
+            {
+              "bottom": 490.0625,
+              "clientWidth": 316,
+              "display": "grid",
+              "height": 59,
+              "id": "street-answer-officer",
+              "left": 36,
+              "right": 354,
+              "scrollWidth": 316,
+              "top": 431.0625,
+              "width": 318
+            },
+            {
+              "bottom": 548.0625,
+              "clientWidth": 134,
+              "display": "block",
+              "height": 48,
+              "id": "street-answer-missed",
+              "left": 219.796875,
+              "right": 354,
+              "scrollWidth": 134,
+              "top": 500.0625,
+              "width": 134.203125
+            }
+          ]
+        },
+        {
+          "screen": "question",
+          "width": 430,
+          "nodes": [
+            {
+              "bottom": 690,
+              "clientWidth": 430,
+              "display": "block",
+              "height": 690,
+              "id": "",
+              "left": 0,
+              "right": 430,
+              "scrollWidth": 430,
+              "top": 0,
+              "width": 430
+            },
+            {
+              "bottom": 357.3125,
+              "clientWidth": 328,
+              "display": "grid",
+              "height": 59,
+              "id": "street-answer-local",
+              "left": 50,
+              "right": 380,
+              "scrollWidth": 328,
+              "top": 298.3125,
+              "width": 330
+            },
+            {
+              "bottom": 425.3125,
+              "clientWidth": 328,
+              "display": "grid",
+              "height": 59,
+              "id": "street-answer-steve",
+              "left": 50,
+              "right": 380,
+              "scrollWidth": 328,
+              "top": 366.3125,
+              "width": 330
+            },
+            {
+              "bottom": 493.3125,
+              "clientWidth": 328,
+              "display": "grid",
+              "height": 59,
+              "id": "street-answer-officer",
+              "left": 50,
+              "right": 380,
+              "scrollWidth": 328,
+              "top": 434.3125,
+              "width": 330
+            },
+            {
+              "bottom": 551.3125,
+              "clientWidth": 134,
+              "display": "block",
+              "height": 48,
+              "id": "street-answer-missed",
+              "left": 245.796875,
+              "right": 380,
+              "scrollWidth": 134,
+              "top": 503.3125,
+              "width": 134.203125
+            }
+          ]
+        }
+      ]
+    },
+    "nativeGPUVerified": false,
+    "nativeMobileTelegramVerified": false,
+    "macFinderTested": false,
+    "windowsLauncherTested": false,
+    "liveDeploymentUpdated": false
+  },
+  "changedFiles": [
+    "START-HERE.txt",
+    "app.js",
+    "exam-engine.js",
+    "index.html",
+    "native-vc/index.html",
+    "native-vc/native.js",
+    "native-vc/range-config.json",
+    "native-vc/range.scm",
+    "native-vc/runtime/manifest.json",
+    "native-vc/runtime/pudge-model-provenance.json",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.dff",
+    "rc45-exam.css",
+    "rpg/index.html",
+    "rpg.html",
+    "server.cjs",
+    "server.py",
+    "vice-port.js"
+  ],
+  "newFiles": [
+    "README-RC4.6.md",
+    "native-vc/block-ped-model.js",
+    "native-vc/rc46-scene.css",
+    "native-vc/runtime/block-ped-provenance.json",
+    "native-vc/runtime/remote/models/gta3.img/egesteve.dff",
+    "native-vc/runtime/remote/models/gta3.img/egesteve.txd"
+  ],
+  "fileSHA256": {
+    "START-HERE.txt": "cd65c68b72066529b5c13b1cdd5c381b68f7718ff1a05d9dba50bc230b16804e",
+    "app.js": "51a39bc8428664cb5da9aa200a4ec4f9827f5ddc6ff1efcd2ecd279d8ab690b4",
+    "exam-engine.js": "f995406f67a2e6c81189252a34d9d043ee3e6543655ae738449bdc6a81cde181",
+    "index.html": "4bbd16c92e1f0916978155eff646ffeda1da07df16837a72b256b84f7f38a81e",
+    "native-vc/index.html": "be0837b4da357ff476bdc267d916156e61afc61cc76bd48950394d466a793d5d",
+    "native-vc/native.js": "125526bd9891c6c83a3c0c764fb7657f5316025fda63f8d16ad78148287abfdd",
+    "native-vc/range-config.json": "41a424fdfc766253d22b629f030dcf2decee91e1ca4776d2d6f27409cfd17dfd",
+    "native-vc/range.scm": "16ec9a2813cd7b349ce9d17f0a428e5c85822b49157413954260135817f3adae",
+    "native-vc/runtime/manifest.json": "c946b5bb62384059201ea4a65a4b59d89b041ba8f9149cb855c833b6678ffa3d",
+    "native-vc/runtime/pudge-model-provenance.json": "675f0c4f46a953b0a6a946a76a1664c882ee035226ce118e036cd93d842ea2e9",
+    "native-vc/runtime/remote/models/gta3.img/egepudge.dff": "db7bb65b8177d4576d5320a9ea40043feb6d52cd4669fc6d44b279be22e45723",
+    "rc45-exam.css": "80d7257528a0cb09b8cc5e5ebe37c3a09a987becd5f19e2877083201b105ab32",
+    "rpg/index.html": "40a832fb224ab9cda0bb7bc96b946d56cd97a9c13d0761eef02a6411739aebd3",
+    "rpg.html": "2ad66d07055de049e1ca11a47e62e55d68fd246857c307eff95296c68fc24c8b",
+    "server.cjs": "1c40fe29f79b999ff5bad83b134a9145dd044e0f4b0da561bf1edd332df7c711",
+    "server.py": "4c0bc3b71080f937347fee2ea4460489e2fb86e699b5ed7cb5e105d98840e400",
+    "vice-port.js": "b6525e084f14549c5e357c1eba7bb0df89b89f2d548a3377d5686b8a0c151d34",
+    "README-RC4.6.md": "0283045c28e6d87e602dcc5c0920848035770a78a5bf551f4da10ccf0dc79c9f",
+    "native-vc/block-ped-model.js": "f79511cf56649c56ae259392389bc98676c48afd44c8211ca0692e9cf2b8d58f",
+    "native-vc/rc46-scene.css": "53663305eca0218ec2d845eee8dfdf4e1e8311395326650d66c857062e889c5f",
+    "native-vc/runtime/block-ped-provenance.json": "b68fc6c2523d21da118322abb0e3ff4bb633b77b88ad542aa18ac6f34b19f0d5",
+    "native-vc/runtime/remote/models/gta3.img/egesteve.dff": "c4b0ffca7093ac85f3c55c21d0f15d6706156631fed64a6288fe26473442a0d5",
+    "native-vc/runtime/remote/models/gta3.img/egesteve.txd": "9bd7e92fef1ef3045d49854c7c940c6276ec14c8139e1351dcebddc3f0189e11"
+  }
+}

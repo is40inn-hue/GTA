@@ -1,0 +1,102 @@
+/* RC4.5 — cover colours on native exam paper and controls.
+   Deliberately no positioning, sizing, safe-area, visibility or input overrides. */
+:root {
+  --cream: #fff0d8;
+  --ink: #17123c;
+  --red: #b40f49;
+  --blue: #1736b6;
+  --gold: #ffd18a;
+  --edge: #c4ae99;
+  --native-raspberry: #df145b;
+  --native-sunset: linear-gradient(90deg, #1736b6, #8432bf 42%, #df145b 74%, #ffd18a);
+}
+#native-intro,
+#native-loading {
+  background: radial-gradient(ellipse at 100% 100%, #d7156238, transparent 63%),
+    linear-gradient(150deg, #122779, #24399b 55%, #39266d);
+}
+.native-paper { color: var(--ink); background: var(--cream); border-top-color: var(--native-raspberry); box-shadow: 0 7px 0 #17123cb3; }
+.native-paper::after { background: var(--native-sunset); }
+.loading-paper { border-color: #b798a3; border-top-color: var(--blue); box-shadow: 5px 7px 0 #17123c, 0 20px 60px #0003; }
+.loading-form-head { background: linear-gradient(110deg, #fff0df, #f5d9d3); border-bottom-color: #bc96a1; }
+.loading-form-head .eyebrow,
+.eyebrow { color: #6a5361; }
+.loading-form-cells i { color: var(--ink); background-color: #fff9ec; border-color: #bb9baa; }
+.exam-cells i { color: var(--ink); background: #ffe1af; border-color: #bf9b88; }
+.native-note { border-color: var(--edge); }
+.native-note span,
+.download-note,
+.native-paper .load-footnote,
+.native-paper #load-status { color: #665363; }
+.native-start { color: #fffaf0; background: var(--blue); box-shadow: 2px 3px 0 var(--ink); }
+.native-start:active { background: #14268a; box-shadow: 1px 1px 0 var(--ink); }
+.native-secondary { color: var(--blue); border-color: #b6a0ad; background: #fff8ec; }
+.native-secondary:active { background: #eee6ff; }
+.native-text-button,
+.native-home,
+#error-browser-help a { color: #14268a; }
+.loading-stages li { color: #766174; border-color: #c5adba; background: #f5e4de; }
+.loading-stages i { color: #796575; }
+:is(body, #native-loading)[data-load-step="browser"] .loading-stages [data-stage="files"],
+:is(body, #native-loading)[data-load-step="cache"] .loading-stages [data-stage="files"],
+:is(body, #native-loading)[data-load-step="files"] .loading-stages [data-stage="files"],
+:is(body, #native-loading)[data-load-step="engine"] .loading-stages [data-stage="engine"],
+:is(body, #native-loading)[data-load-step="scene"] .loading-stages [data-stage="scene"] {
+  color: #fffaf0;
+  background: var(--blue);
+  border-color: var(--blue);
+  box-shadow: inset 0 -3px var(--native-raspberry);
+}
+.loading-meter progress::-webkit-progress-bar { background: #decbd0; }
+.loading-meter progress::-webkit-progress-value { background: var(--native-sunset); }
+.loading-meter progress::-moz-progress-bar { background: var(--native-sunset); }
+.briefing-stats span { color: #51415f; background: #f7e0c7; border-color: #c2a188; }
+.complete-paper { border-top-color: var(--blue); }
+.complete-paper #complete-detail,
+#error-diagnostic-details { color: #665363; }
+.protocol-stamp { color: var(--red); border-color: var(--red); }
+
+/* The live city gets thin print details; its playing area stays the same. */
+.mission-identity {
+  color: var(--ink);
+  background: #fff0d8f2;
+  border-left-color: var(--native-raspberry);
+  border-top-color: var(--gold);
+  box-shadow: 2px 3px 0 #17123c35;
+}
+.mission-eyebrow { color: #665363; }
+.native-label { color: #fffaf0; text-shadow: -1px -1px 0 #17123c, 1px -1px 0 #17123c, -1px 1px 0 #17123c, 1px 1px 0 #17123c, 2px 2px 0 #df145b; }
+.mission-route span { color: #766378; border-color: #c4aab6; background: #fff8ec; }
+.mission-route [data-beat].active { color: #fffaf0; background: var(--blue); border-color: var(--blue); }
+.native-icon-button { color: #fff0d8; border-color: #fff0d8b3; background-color: #17123ced; }
+.native-icon-button:active { background-color: #343394; }
+#native-ammo { color: #ffe0a9; background: #17123cf0; border-color: #bfa685; }
+#mission-time { color: var(--ink); background: #fff0d8f2; border-left-color: var(--blue); }
+#mission-time[data-urgent="true"],
+#mission-time.is-urgent { color: var(--red); border-left-color: var(--native-raspberry); }
+#mission-heat { color: var(--gold); text-shadow: 0 1px 2px #17123c; }
+#mission-heat .idle { color: #fff0d850; }
+.range-instruction { color: #fffaf0; background: #17123ce6; }
+.range-controls button,
+.drive-actions button { color: #fffaf0; border-color: #fff0d8; background: #1835a5ed; box-shadow: inset 0 -3px #df145b73; }
+.range-controls #native-fire,
+.drive-actions button:last-child { background: #b40f49ed; }
+.range-controls #native-fire:active,
+.drive-actions button:last-child:active { background: #df145b; }
+.range-controls button[aria-pressed="true"] { color: #fffaf0; border-color: #ffd18a; background: #3a3aa8; box-shadow: inset 0 -3px #ffd18a; }
+.range-controls small { color: #efe7f0; }
+#drive-stick { background: #17123c99; border-color: #fff0d8a8; }
+#drive-knob { background: #fff0d8d6; border-color: #fffaf0; }
+#native-toast { color: var(--ink); background: var(--cream); border-left-color: var(--blue); }
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible { outline-color: var(--gold); box-shadow: 0 0 0 2px var(--ink); }
+
+@media (prefers-contrast: more) {
+  .mission-identity,
+  #mission-time { background: #fff0d8; }
+  .range-controls button,
+  .drive-actions button { background: #1736b6; }
+  .range-controls #native-fire,
+  .drive-actions button:last-child { background: #b40f49; }
+}

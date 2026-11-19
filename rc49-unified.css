@@ -1,0 +1,50 @@
+/* RC4.9 — familiar game marks inside the existing printed exam.
+   Decorative sprites are extracted from the bundled game; they never report
+   progress or become additional controls. Base dimensions stay in RC4.8. */
+.checkpoint-receipt { position: relative; }
+.receipt-game-icon {
+  position: absolute;
+  right: -18px;
+  bottom: -6px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+  filter: drop-shadow(1px 2px 0 #17123c55);
+}
+.result-loading-seal.result-save-seal {
+  background: var(--print-blush);
+  border-color: var(--print-ink);
+  box-shadow: 3px 3px 0 var(--print-raspberry);
+}
+.result-save-seal img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+.practice-preload-icon {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+.practice-preload {
+  color: var(--print-ink);
+  border-color: var(--print-rule);
+  background: var(--print-paper);
+}
+.practice-preload progress { accent-color: var(--print-blue); }
+.practice-preload progress::-webkit-progress-bar { background: #e3dce6; }
+.practice-preload progress::-webkit-progress-value { background: var(--print-blue); }
+.practice-preload[data-state="complete"] {
+  color: var(--print-blue-dark);
+  border-color: var(--print-rule);
+}
+@media (prefers-reduced-motion: reduce) {
+  .result-loading-seal.result-save-seal { animation: none; }
+}

@@ -1,0 +1,250 @@
+/* Edition 05: a GTA collage cover carried into a Russian exam workbook. */
+:root {
+  --brand-ink: #1b1424;
+  --brand-gold: #ddb34f;
+}
+
+.home-page .edition-strip {
+  margin-block: 14px;
+  background: #f4f0e7;
+  border-color: #c3b8a8;
+  border-left-color: #a53536;
+  color: #62584b;
+}
+.home-page .edition-strip > span:first-child {
+  padding: 0;
+  background: transparent;
+  color: var(--blue);
+  font-size: 10px;
+  letter-spacing: .035em;
+}
+.brand-book {
+  overflow: hidden;
+  border: 3px solid var(--brand-ink);
+  background: #f4f0e7;
+  color: var(--brand-ink);
+  box-shadow: 5px 6px 0 var(--brand-ink);
+}
+.brand-book-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 19px;
+  border-bottom: 3px solid var(--brand-ink);
+  background: #f4f0e7;
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+.brand-book-topline > span:last-child { white-space: nowrap; }
+.brand-front {
+  padding: 19px 24px 24px;
+  background: #263fa3;
+  color: #fffdf5;
+  text-align: center;
+}
+.brand-book .brand-title {
+  width: min(100%, 320px);
+  margin: 0 auto;
+  color: inherit;
+  font: inherit;
+  letter-spacing: normal;
+  text-shadow: none;
+  text-transform: none;
+}
+.brand-title img { display: block; width: 100%; height: auto; }
+.brand-subject {
+  margin: 7px 0 0;
+  color: #fff4d0;
+  font-size: 10px;
+  line-height: 1.5;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.brand-start { display: grid; gap: 11px; margin-top: 18px; }
+.brand-start p {
+  margin: 0;
+  color: #fffdf5;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.brand-start .primary {
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 13px 17px;
+  border: 2px solid var(--brand-ink);
+  background: #efcb64;
+  color: var(--brand-ink);
+  box-shadow: 3px 3px 0 var(--brand-ink);
+}
+.brand-start .primary:hover:not(:disabled) { background: #f6dd91; }
+.brand-start .primary:focus-visible { outline: 3px solid #fffdf5; outline-offset: 4px; }
+.brand-poster {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 22px;
+  padding: 23px;
+  border-top: 3px solid var(--brand-ink);
+  background: #f4f0e7;
+}
+.brand-poster-button {
+  display: block;
+  width: min(100%, 174px);
+  min-width: 0;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--blue);
+  text-align: left;
+}
+.brand-poster-button > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 941 / 1672;
+  border: 2px solid var(--brand-ink);
+  background: #fffdf5;
+  object-fit: contain;
+  box-shadow: 3px 3px 0 var(--brand-ink);
+}
+.brand-poster-button > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  min-height: 44px;
+  padding-top: 6px;
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.brand-poster-button:focus-visible { outline: 3px solid var(--blue); outline-offset: 7px; }
+.brand-poster-button:hover > span { color: #152b78; }
+.brand-invitation { min-width: 0; }
+.brand-subject-label {
+  display: inline-block;
+  max-width: 100%;
+  padding: 6px 8px;
+  border: 2px solid var(--brand-ink);
+  background: #ac3034;
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+.brand-invitation h2 {
+  margin: 13px 0 10px;
+  color: var(--brand-ink);
+  font: 800 23px/1.2 var(--body-font);
+  letter-spacing: -.025em;
+}
+.brand-invitation p { margin: 0; color: #655543; font-size: 12px; line-height: 1.65; }
+.brand-gold-seal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  margin: 18px 0 0;
+  border: 5px double #87621f;
+  border-radius: 50%;
+  background: #edc76b;
+  box-shadow: inset 0 0 0 4px #f9e4a7, 2px 2px 0 #b78a2f;
+  color: #4b3510;
+  text-align: center;
+  transform: rotate(-2deg);
+}
+.brand-gold-seal span { font: 800 8px/1.2 var(--body-font); letter-spacing: .025em; }
+.brand-gold-seal strong { margin: 2px 0; font: 900 33px/1 var(--display-font); letter-spacing: -.06em; }
+
+/* The book's labels and panel frames continue through the exam. */
+.stage-kicker {
+  display: table;
+  max-width: 100%;
+  margin-bottom: 19px;
+  padding: 7px 10px;
+  border: 2px solid var(--brand-ink);
+  background: #ac3034;
+  color: white;
+  font: 800 10px/1.45 var(--body-font);
+  letter-spacing: .045em;
+}
+.stage-letter {
+  border: 3px solid var(--brand-ink);
+  background: linear-gradient(165deg, #6545a4 5%, #e773a7 57%, #f4bb73 100%);
+  color: #fffdf5;
+  text-shadow: 2px 2px 0 var(--brand-ink), -1px -1px 0 var(--brand-ink);
+  box-shadow: 4px 4px 0 var(--brand-ink);
+}
+.screenshot-wrap {
+  border: 3px solid var(--brand-ink);
+  background: var(--brand-ink);
+  box-shadow: 3px 3px 0 #b9a28d;
+}
+.case-evidence button { border: 2px solid var(--brand-ink); }
+.case-evidence button.active { border-color: var(--brand-ink); box-shadow: 2px 2px 0 var(--brand-ink); }
+.scorecard { border: 3px solid var(--brand-ink); box-shadow: 5px 6px 0 var(--brand-ink); }
+.score-stamp.pass { border-color: #94681a; background: #fae7ad; color: #5b3b09; }
+.home-page .exam-pass { border-color: #a36f5c; box-shadow: 3px 4px 0 #d7bcae; }
+.home-page .exam-pass .primary { font-weight: 700; letter-spacing: .01em; }
+
+@media (max-width: 760px) {
+  .home-page .edition-strip { gap: 5px 9px; margin-block: 12px; padding: 8px 10px; font-size: 11px; }
+  .brand-book-topline { padding: 9px 15px; font-size: 8px; }
+  .brand-front { padding: 12px 18px 20px; }
+  .brand-book .brand-title { width: min(100%, 238px); }
+  .brand-subject { margin-top: 3px; font-size: 9px; }
+  .brand-start { margin-top: 13px; gap: 9px; }
+  .brand-start p { font-size: 11px; }
+  .brand-start .primary { min-height: 50px; padding: 12px 14px; }
+  .brand-poster { grid-template-columns: minmax(0, .82fr) minmax(0, 1fr); gap: 17px; padding: 19px; }
+  .brand-poster-button { max-width: 140px; }
+  .brand-invitation h2 { font-size: 20px; }
+  .brand-invitation p { font-size: 11px; }
+  .brand-gold-seal { width: 78px; height: 78px; margin-top: 13px; }
+  .brand-gold-seal strong { font-size: 29px; }
+}
+@media (max-width: 360px) {
+  .brand-book-topline { gap: 6px; padding-inline: 12px; font-size: 7px; }
+  .brand-front { padding-inline: 14px; }
+  .brand-book .brand-title { width: 210px; max-width: 100%; }
+  .brand-subject { font-size: 8px; }
+  .brand-start p { font-size: 10px; }
+  .brand-start .primary { padding-inline: 12px; }
+  .brand-poster { gap: 13px; padding: 15px; }
+  .brand-subject-label { padding: 5px; font-size: 8px; }
+  .brand-invitation h2 { font-size: 18px; }
+  .brand-invitation p { font-size: 10px; }
+  .brand-poster-button > span { font-size: 9px; }
+  .brand-gold-seal { width: 72px; height: 72px; }
+  .brand-gold-seal span { font-size: 7px; }
+  .brand-gold-seal strong { font-size: 27px; }
+}
+@media print {
+  .scorecard { border: 1px solid var(--form-line); box-shadow: none; }
+}
+/* Full artwork stays separate from the fast start on the home screen. */
+.brand-cover-full { display: block; width: min(360px,100%); height: auto; margin: 16px auto; border: 3px solid #21152e; }
+.brand-downloads { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 20px; }
+.brand-downloads .secondary { display: flex; align-items: center; justify-content: center; min-width: 0; padding: 13px 10px; font-size: 12px; text-align: center; text-decoration: none; }
+@media (max-width: 420px) { .brand-downloads { grid-template-columns: 1fr; } }
+.screenshot-wrap.is-archive { background: #080e0b; }
+.screenshot-wrap.is-archive img { display: block; aspect-ratio: auto; height: auto; max-height: 360px; object-fit: contain; }
+.image-caption { margin: -5px 0 18px; padding: 10px 12px; border-left: 2px solid #9d715b; color: #6c5143; background: #fff8eb; font-size: 11px; line-height: 1.5; }
+.launch-error { flex-wrap: wrap; }
+.launch-error .secondary { max-width: 100%; white-space: normal; }
+@media (max-width: 620px) { .screenshot-wrap.is-archive img { max-height: 300px; } }

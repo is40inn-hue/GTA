@@ -1,0 +1,341 @@
+/* RC4.8 — one printed workbook, from registration to the story card.
+   Safe-area ownership, the approved cover and question timing stay unchanged. */
+:root {
+  --print-paper: #fffaf0;
+  --print-sheet: #fff0d8;
+  --print-blush: #f8e0da;
+  --print-ink: #17123c;
+  --print-blue: #1736b6;
+  --print-blue-dark: #14268a;
+  --print-raspberry: #b40f49;
+  --print-gold: #ffd18a;
+  --print-rule: #bba4a4;
+  --print-radius: 3px;
+  --print-shadow: 3px 3px 0 var(--print-ink);
+}
+
+/* A little Russian answer-sheet texture, confined to the chrome. */
+.shell:not(.rpg-exam-shell) > .topbar {
+  border-color: var(--print-rule);
+  border-top-color: var(--print-blue);
+  background: linear-gradient(110deg, #fff1df, var(--print-blush));
+  box-shadow: 0 2px 0 #17123c20;
+}
+.shell:not(.rpg-exam-shell) > .topbar::after {
+  border-block-color: #b68d99;
+  background: repeating-linear-gradient(90deg, #b68d99 0 1px, #fffaf0 1px 8px, transparent 8px 11px);
+  opacity: .7;
+}
+.shell.final-home-shell > .topbar {
+  background: var(--print-paper);
+  border-top-color: var(--print-blue);
+  border-bottom-color: var(--print-blue);
+  box-shadow: 0 3px 0 var(--print-raspberry);
+}
+.topbar .brand-mark {
+  border-color: var(--print-ink);
+  border-bottom-color: var(--print-raspberry);
+  box-shadow: 2px 2px 0 var(--print-ink);
+}
+.topbar :is(.icon-button, .music-button, .fullscreen-button) {
+  border: 2px solid var(--print-ink);
+  border-radius: var(--print-radius);
+  background-color: var(--print-paper);
+  color: var(--print-blue-dark);
+  box-shadow: 2px 2px 0 #17123c26;
+}
+.topbar .music-button[aria-pressed="true"] {
+  border-color: var(--print-ink);
+  background-color: var(--print-blue);
+  color: var(--print-paper);
+  box-shadow: inset 0 -3px var(--print-raspberry), 2px 2px 0 #17123c26;
+}
+
+/* Saved work is an exam receipt, not a green success alert. */
+.resume-banner,
+.daily-banner {
+  color: var(--print-ink);
+  background: linear-gradient(105deg, var(--print-paper), #f9e8df);
+  border-color: var(--print-rule);
+  border-left-color: var(--print-blue);
+  border-radius: var(--print-radius);
+  box-shadow: 2px 3px 0 #17123c18;
+}
+.resume-banner strong,
+.daily-banner strong { color: var(--print-blue-dark); }
+.resume-banner small { color: #665363; }
+.resume-banner .secondary,
+.daily-banner .secondary {
+  min-height: 50px;
+  border: 2px solid var(--print-rule);
+  border-radius: var(--print-radius);
+  color: var(--print-blue-dark);
+  background: var(--print-paper);
+  box-shadow: 2px 2px 0 #17123c1f;
+}
+.daily-banner .tag {
+  color: var(--print-blue-dark);
+  background: var(--print-sheet);
+  border-color: var(--print-rule);
+}
+.daily-banner.launch-error { border-left-color: var(--print-raspberry); }
+
+/* The same chunky printed key throughout. Sizes never change on selection. */
+.primary,
+.stage-clean .primary,
+.checkpoint-clean .primary,
+.exam-shell .question-actions .primary,
+.final-home .final-pass > .primary,
+.result-share-actions .primary {
+  min-height: 56px;
+  padding: 13px 18px;
+  border: 2px solid var(--print-ink);
+  border-radius: var(--print-radius);
+  color: var(--print-paper);
+  background: var(--print-blue);
+  box-shadow: var(--print-shadow);
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: .015em;
+  transition: background-color .12s ease, box-shadow .12s ease, transform .12s ease;
+}
+.primary:hover:not(:disabled),
+.final-home .final-pass > .primary:hover:not(:disabled) { background: var(--print-blue-dark); }
+.secondary,
+.mini-button,
+.result-share-actions .secondary {
+  min-height: 50px;
+  border: 2px solid var(--print-rule);
+  border-radius: var(--print-radius);
+  color: var(--print-blue-dark);
+  background: var(--print-paper);
+  box-shadow: 2px 2px 0 #17123c1f;
+  font-weight: 700;
+}
+.primary:active:not(:disabled),
+.stage-clean .primary:active:not(:disabled),
+.checkpoint-clean .primary:active:not(:disabled),
+.exam-shell .question-actions .primary:active:not(:disabled),
+.final-home .final-pass > .primary:active:not(:disabled),
+.result-share-actions .primary:active:not(:disabled),
+.secondary:active:not(:disabled),
+.mini-button:active:not(:disabled) {
+  transform: translate(1px, 2px);
+  box-shadow: 1px 1px 0 var(--print-ink);
+}
+.primary:disabled,
+.final-home .final-pass > .primary:disabled,
+.exam-shell .question-actions .primary:disabled,
+.result-share-actions .primary:disabled {
+  background: #e7dfdc;
+  color: #6b6279;
+  border-color: #c3b2b4;
+  box-shadow: none;
+  opacity: 1;
+}
+.secondary:disabled,
+.mini-button:disabled { box-shadow: none; opacity: .5; }
+:is(.primary, .secondary, .mini-button, .choice, .tap-order-card, .icon-button, .music-button, .fullscreen-button) {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+:is(.primary, .secondary, .mini-button, .choice, .tap-order-card, .icon-button, .music-button, .fullscreen-button):focus-visible,
+.exam-shell .question-card .choice:focus-visible,
+.final-home :is(a, button, input, summary):focus-visible {
+  outline: 3px solid var(--print-raspberry);
+  outline-offset: 4px;
+}
+
+/* Bordered answer cells feel like filling in a form, without extra instructions. */
+.exam-shell .question-card {
+  border: 1px solid var(--print-rule);
+  border-top: 3px solid var(--print-blue);
+  border-radius: var(--print-radius);
+  background: var(--print-paper);
+  box-shadow: 3px 4px 0 #17123c25;
+}
+.exam-shell .question-card::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  right: 10px;
+  height: 6px;
+  opacity: .48;
+  background: repeating-linear-gradient(90deg, #bc929b 0 1px, transparent 1px 8px);
+  border-block: 1px solid #bc929b;
+  pointer-events: none;
+}
+.exam-shell .question-card .choice,
+.exam-shell .question-card .choice.selected {
+  min-height: 60px;
+  gap: 11px;
+  padding: 11px 12px;
+  border-width: 1px;
+  border-radius: var(--print-radius);
+}
+.question-card .choice:not(.correct):not(.incorrect),
+.question-card .tap-order-card {
+  border-color: var(--print-rule);
+  background-color: #fff7e9;
+}
+.question-card .choice-letter,
+.question-card .tap-order-number {
+  width: 32px;
+  height: 34px;
+  border: 1px solid #b8909d;
+  border-radius: 0;
+  background: var(--print-paper);
+  color: #6b4b61;
+  font: 700 16px/1 "Courier New", monospace;
+}
+.question-card .choice-indicator {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #b8909d;
+  border-radius: 0;
+  background: var(--print-paper);
+}
+.question-card .choice-text { font-size: 14px; line-height: 1.4; }
+.question-card .choice.selected:not(.correct):not(.incorrect),
+.question-card .tap-order-card.is-selected {
+  color: var(--print-ink);
+  background: #eeebfb;
+  border-color: var(--print-blue);
+  box-shadow: inset 3px 0 var(--print-blue);
+}
+.question-card .choice.selected .choice-letter,
+.question-card .tap-order-card.is-selected .tap-order-number {
+  background: var(--print-blue);
+  border-color: var(--print-blue);
+  color: var(--print-paper);
+}
+.exam-shell .pill,
+.stage-route > span,
+.checkpoint-route > * { border-radius: 0; font-family: "Courier New", monospace; }
+.exam-shell .pill {
+  border-color: #b8909d;
+  color: #7d3050;
+  background: #f9e3dc;
+}
+.exam-shell .question-count { font-size: 15px; font-variant-numeric: tabular-nums; }
+.exam-shell .progress-track { height: 5px; border-radius: 0; }
+.exam-shell .question-actions {
+  padding-top: 15px;
+  border-top: 1px solid var(--print-rule);
+  background: var(--print-paper);
+}
+.exam-shell .question-actions .primary { min-width: 0; }
+.exam-shell .feedback.accepted {
+  background: #f4ecf4;
+  border-color: #bd9cad;
+  border-left: 3px solid var(--print-blue);
+  border-radius: var(--print-radius);
+}
+.exam-shell .tap-order-card { border-radius: var(--print-radius); }
+.tap-order-toolbar .tap-order-undo { min-height: 48px; }
+.audio-console { border-radius: var(--print-radius); border-width: 2px; }
+.audio-toggle {
+  border: 2px solid var(--print-ink);
+  border-radius: 2px;
+  box-shadow: 2px 2px 0 #17123c66;
+}
+.audio-restart { border-radius: 2px; }
+
+/* The registration sheet, section slips and verdict share the same frame. */
+.final-home .final-pass,
+.stage-clean .stage-intro-card,
+.checkpoint-card.checkpoint-clean,
+.commission-card,
+.practice-dossier {
+  border-radius: var(--print-radius);
+  box-shadow: var(--print-shadow);
+}
+.stage-clean .stage-kicker,
+.checkpoint-kicker,
+.practice-stamp,
+.protocol-stamp { border-radius: 0; }
+.checkpoint-clean h1 { font-family: Georgia, "Times New Roman", serif; font-style: italic; }
+.stage-route > span,
+.checkpoint-route > * { border-color: #bba4af; }
+.stage-route > .done,
+.checkpoint-route > .done,
+.question-navigation button.done:not(.current),
+.case-evidence button.done:not(.active) {
+  color: var(--print-blue-dark);
+  background: #eeebfb;
+  border-color: #b6a7c6;
+}
+.commission-steps li.done,
+.native-route .done { color: var(--print-blue-dark); }
+.stage-route > .current,
+.checkpoint-route > .current {
+  background: var(--print-blue);
+  border-color: var(--print-ink);
+  color: var(--print-paper);
+  box-shadow: inset 0 -3px var(--print-raspberry);
+}
+.final-home .final-pass .text-input {
+  border-radius: 1px;
+  background: #fffdf7;
+  box-shadow: inset 0 1px 0 #d8b9c1;
+}
+
+/* A canonical image is the result; its surrounding buttons use the same language. */
+.result-picture {
+  border: 2px solid var(--print-ink);
+  border-radius: 0;
+  box-shadow: var(--print-shadow);
+}
+.result-share-actions { gap: 10px; }
+.result-share-actions .primary {
+  color: var(--print-ink);
+  background: var(--print-gold);
+}
+.result-share-actions .primary:hover:not(:disabled) { background: #ffe2ad; }
+.result-review {
+  border: 1px solid var(--print-rule);
+  border-radius: var(--print-radius);
+  background: #fff7e9;
+}
+.result-review > summary { min-height: 50px; padding: 13px 14px; font-weight: 700; }
+.result-review .review-item { border-inline: 0; border-radius: 0; }
+.result-again { min-height: 48px; }
+.modal-top { background: var(--print-blush); }
+#toast { border-radius: var(--print-radius); background: var(--print-paper); }
+
+@media (max-width: 360px) {
+  .exam-shell .question-card .choice,
+  .exam-shell .question-card .choice.selected { min-height: 58px; gap: 8px; padding-inline: 9px; }
+  .question-card .choice-letter { width: 29px; height: 32px; }
+  .question-card .choice-text { font-size: 13px; }
+  .primary,
+  .exam-shell .question-actions .primary,
+  .final-home .final-pass > .primary,
+  .result-share-actions .primary { padding-inline: 12px; font-size: 14px; }
+  .result-share-actions { gap: 8px; }
+  .result-share-actions .secondary { padding-inline: 11px; }
+}
+@media (hover: hover) {
+  .question-card .choice:hover:not(:disabled):not(.selected),
+  .question-card .tap-order-card:hover:not(:disabled):not(.is-selected) {
+    background-color: #f7edf4;
+    border-color: #846884;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .primary,
+  .secondary,
+  .mini-button,
+  .question-card .choice,
+  .question-card .tap-order-card { transition: none; }
+}
+@media print {
+  .result-picture { border: 0; box-shadow: none; }
+  .exam-shell .question-card,
+  .final-home .final-pass { box-shadow: none; }
+}
+

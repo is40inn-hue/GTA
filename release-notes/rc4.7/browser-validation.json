@@ -1,0 +1,45 @@
+{
+  "scope": "Cloud Chrome, actual app in same-origin iframe; CSS viewport wrapper, not an iPhone or Telegram emulator.",
+  "applicationFlow": "Resumed a saved edition15 test attempt. A4 and B5 completed; one deliberately wrong B answer. Current production content edition16 is covered by automated tests.",
+  "phoneWrapperWidths": [
+    320,
+    390,
+    430
+  ],
+  "horizontalOverflowObserved": false,
+  "questionSelection": "Changed an existing selected A option; visible checked state and focus updated. All A images loaded.",
+  "orderInteraction": "Selected, undid, resumed after page refresh and completed five-game chronology; five selected cards and enabled finish button observed.",
+  "audioUI": "Both musical questions mounted and advanced. No assertion of audible output through the remote session.",
+  "disclosure": "A and B transitions were neutral. Correct answers, scores and section stars appeared only at final review.",
+  "nativeLaunch": {
+    "attempted": true,
+    "nativeGPUExecuted": false,
+    "code": "C-GPU",
+    "reason": "WebGL 2 unavailable; GL_VENDOR Disabled; GL_RENDERER Disabled"
+  },
+  "technicalSkip": "Three unavailable C scenes skipped through visible controls; retained A/B score; final56/100 and expected section stars5/4/1.",
+  "finalPNG": {
+    "visible": true,
+    "naturalWidth": 1080,
+    "naturalHeight": 1920,
+    "downloadButtonClicked": true,
+    "downloadEventConfirmed": false,
+    "note": "Cloud download event timed out. Does not prove file saving on iOS; visible PNG rendering and VM export tests pass."
+  },
+  "nativeCSSFixture": {
+    "arrivalQuestion": "Four options, two selections, explicit skip; native scripts omitted for visual-only check.",
+    "driving": "Steering, gas, brake and hold-to-exit layout. At390px, buttons measured44/68/60px high.",
+    "loader": "Paper form, discreet palm, three phases; fixture percent explicitly labelled as mock, not measured progress."
+  },
+  "nativeGPUExecuted": false,
+  "nativeMobileTelegramVerified": false,
+  "publicDeploymentChanged": false,
+  "screenshots": [
+    "/workspace/shared/gta-rc47-part-a.jpg",
+    "/workspace/shared/gta-rc47-part-b.jpg",
+    "/workspace/shared/gta-rc47-c-question.jpg",
+    "/workspace/shared/gta-rc47-driving-layout.jpg",
+    "/workspace/shared/gta-rc47-load-layout.jpg"
+  ],
+  "screenshotsExcludedFromPackage": true
+}

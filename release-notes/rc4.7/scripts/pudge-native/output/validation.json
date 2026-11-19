@@ -1,0 +1,23 @@
+{
+  "modelID": 8,
+  "nativeBones": 24,
+  "vertices": 3895,
+  "triangles": 5266,
+  "inverseBindMaxError": 4.60850309025318e-08,
+  "reconstructedBindVertexMaxError": 6.699606255551954e-08,
+  "shoulderAnchorMaxErrors": {
+    "21": 2.7755575615628914e-17,
+    "22": 1.1102230246251565e-16,
+    "23": 1.1102230246251565e-16,
+    "24": 1.1102230246251565e-16,
+    "31": 1.3877787807814457e-17,
+    "32": 1.1102230246251565e-16,
+    "33": 1.3877787807814457e-17,
+    "34": 0.0
+  },
+  "weightsNormalized": true,
+  "indicesInRange": true,
+  "leftRightNotSwapped": true,
+  "nativeGPUExecuted": false,
+  "scope": "CPU structure and bind-pose acceptance only; no claim about actual Vice City animation, seating, clipping or performance."
+}

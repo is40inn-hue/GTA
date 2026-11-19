@@ -1,0 +1,497 @@
+{
+  "release": "gta-ege-rc4.5-20261117",
+  "date": "2026-11-17",
+  "timezone": "Asia/Bangkok",
+  "basedOn": "gta-ege-rc4.4-prefinal-20261117-dist.zip",
+  "entrypoint": "index.html",
+  "contentEdition": 16,
+  "storageVersion": 4,
+  "questions": 12,
+  "maxScore": 100,
+  "passScore": 60,
+  "sectionScores": {
+    "A": 24,
+    "B": 40,
+    "C": 36
+  },
+  "results": {
+    "disclosure": "after the final commission only",
+    "sameVisibleAndExportedPNG": true,
+    "size": [
+      1080,
+      1920
+    ]
+  },
+  "priorityS": {
+    "preloadStartsAfterCoverPaint": true,
+    "sameMutedRuntimeThroughABtoC": true,
+    "warmCityStartsNoGameTimer": true,
+    "artificialBriefingDelayMs": 0,
+    "resourceConstraintsRespected": true,
+    "universalZeroLatencyClaim": false
+  },
+  "native": {
+    "engine": "vice-city-wasm",
+    "runtimeBinaryChanged": false,
+    "missionSize": 48065,
+    "missionSHA256": "0399988ed5f9420ce88770cea8c02e0ed3c8a78632bad17fe81a02c6755daa39",
+    "streetTaxiAndPedestrians": true,
+    "arrival": {
+      "scene": 1,
+      "model": 217,
+      "crewModels": [
+        7,
+        7,
+        8
+      ],
+      "pudgeActor": 2,
+      "airPosition": [
+        288.8,
+        -1088,
+        17.2
+      ],
+      "landingPosition": [
+        288.8,
+        -1083,
+        10.85
+      ],
+      "foreground": [
+        [
+          287.8,
+          -1075.5
+        ],
+        [
+          291.5,
+          -1076.0
+        ],
+        [
+          289.7,
+          -1074.5
+        ]
+      ],
+      "landingTimeoutMilliseconds": 8000,
+      "exitTimeoutMilliseconds": 6000,
+      "walkMilliseconds": 1800,
+      "brawlMilliseconds": 3200,
+      "fleeMilliseconds": 4500,
+      "startTrigger": "native-start-command-only",
+      "nativeExitRequired": true,
+      "pickupRelease": "brawl-start-or-bounded-fallback",
+      "scored": false,
+      "stages": [
+        "prepared",
+        "landing",
+        "exiting",
+        "foreground",
+        "brawl",
+        "flee",
+        "finished",
+        "fallback"
+      ]
+    },
+    "drive": {
+      "routeStages": [
+        "outbound",
+        "past-ramp",
+        "seafront",
+        "southern-bend",
+        "rpg"
+      ],
+      "passengerRequired": false,
+      "stopRequired": false,
+      "oneDirection": true,
+      "scoredSeparately": false
+    },
+    "C2TimeLimitSeconds": 150,
+    "C2RequiresNativePassenger": false,
+    "C2Route": [
+      [
+        272,
+        -1190,
+        11.5
+      ],
+      [
+        263,
+        -1285,
+        11.5
+      ],
+      [
+        244,
+        -1340,
+        11.5
+      ],
+      [
+        218,
+        -1430,
+        11.5
+      ],
+      [
+        193,
+        -1500,
+        11.5
+      ]
+    ],
+    "C3Spawn": [
+      193,
+      -1500,
+      11.5
+    ],
+    "scoreRecordABIChanged": false,
+    "originalSlotsPreserved": [
+      0,
+      172
+    ],
+    "pudgeModelId": 8,
+    "nativeModelProvenance": "native-vc/runtime/pudge-model-provenance.json",
+    "extraModelBytes": 839680
+  },
+  "visual": {
+    "cover": "assets/brand-cover-rc45.png",
+    "coverSHA256": "d8d7f1c240b3c9e3cdaa2735d99a164ff4dde5e10cab62d9978d3556e4209b0f",
+    "originalCoverPreserved": true,
+    "coverDimensions": [
+      1086,
+      1448
+    ],
+    "sameLogoInResult": true,
+    "mobileCTAVisibleAtCheckedWidths": [
+      320,
+      390,
+      430
+    ],
+    "newStyleSheets": [
+      "rc45-cover.css",
+      "rc45-exam.css",
+      "native-vc/rc45-native.css"
+    ]
+  },
+  "standaloneRoute": "rpg/",
+  "validation": {
+    "automatedTestsPassed": 308,
+    "automatedTestsFailed": 0,
+    "physicalRuntimeFilesVerified": 1047,
+    "assembledResourcesVerified": 5,
+    "browser": {
+      "release": "rc4.5-20261117",
+      "viewportChecks": [
+        {
+          "width": 390,
+          "nodes": [
+            {
+              "bottom": 891.828125,
+              "class": "",
+              "clientWidth": 375,
+              "left": 0,
+              "right": 375,
+              "scrollWidth": 375,
+              "tag": "BODY",
+              "top": 0,
+              "width": 375
+            },
+            {
+              "bottom": 166,
+              "class": "topbar",
+              "clientWidth": 345,
+              "left": 14,
+              "right": 361,
+              "scrollWidth": 345,
+              "tag": "HEADER",
+              "top": 107,
+              "width": 347
+            },
+            {
+              "bottom": 571.328125,
+              "class": "final-cover",
+              "clientWidth": 293,
+              "left": 40.125,
+              "right": 334.875,
+              "scrollWidth": 293,
+              "tag": "FIGURE",
+              "top": 179,
+              "width": 294.75
+            },
+            {
+              "bottom": 790.828125,
+              "class": "exam-pass final-pass",
+              "clientWidth": 345,
+              "left": 14,
+              "right": 361,
+              "scrollWidth": 345,
+              "tag": "ASIDE",
+              "top": 587.328125,
+              "width": 347
+            },
+            {
+              "bottom": 711.328125,
+              "class": "primary",
+              "clientWidth": 309,
+              "left": 31,
+              "right": 344,
+              "scrollWidth": 309,
+              "tag": "BUTTON",
+              "top": 659.328125,
+              "width": 313
+            },
+            {
+              "bottom": 780.828125,
+              "class": "final-home-links",
+              "clientWidth": 313,
+              "left": 31,
+              "right": 344,
+              "scrollWidth": 313,
+              "tag": "DIV",
+              "top": 736.828125,
+              "width": 313
+            },
+            {
+              "bottom": 891.828125,
+              "class": "footer",
+              "clientWidth": 347,
+              "left": 14,
+              "right": 361,
+              "scrollWidth": 347,
+              "tag": "FOOTER",
+              "top": 805.828125,
+              "width": 347
+            }
+          ]
+        },
+        {
+          "width": 320,
+          "nodes": [
+            {
+              "bottom": 868.15625,
+              "class": "",
+              "clientWidth": 305,
+              "left": 0,
+              "right": 305,
+              "scrollWidth": 305,
+              "top": 0,
+              "width": 305
+            },
+            {
+              "bottom": 166,
+              "class": "topbar",
+              "clientWidth": 275,
+              "left": 14,
+              "right": 291,
+              "scrollWidth": 275,
+              "top": 107,
+              "width": 277
+            },
+            {
+              "bottom": 547.65625,
+              "class": "final-cover",
+              "clientWidth": 275,
+              "left": 14,
+              "right": 291,
+              "scrollWidth": 275,
+              "top": 179,
+              "width": 277
+            },
+            {
+              "bottom": 767.15625,
+              "class": "exam-pass final-pass",
+              "clientWidth": 275,
+              "left": 14,
+              "right": 291,
+              "scrollWidth": 275,
+              "top": 563.65625,
+              "width": 277
+            },
+            {
+              "bottom": 687.65625,
+              "class": "primary",
+              "clientWidth": 247,
+              "left": 27,
+              "right": 278,
+              "scrollWidth": 247,
+              "top": 635.65625,
+              "width": 251
+            }
+          ]
+        },
+        {
+          "width": 430,
+          "nodes": [
+            {
+              "bottom": 891.828125,
+              "class": "",
+              "clientWidth": 415,
+              "left": 0,
+              "right": 415,
+              "scrollWidth": 415,
+              "top": 0,
+              "width": 415
+            },
+            {
+              "bottom": 166,
+              "class": "topbar",
+              "clientWidth": 385,
+              "left": 14,
+              "right": 401,
+              "scrollWidth": 385,
+              "top": 107,
+              "width": 387
+            },
+            {
+              "bottom": 571.328125,
+              "class": "final-cover",
+              "clientWidth": 293,
+              "left": 60.125,
+              "right": 354.875,
+              "scrollWidth": 293,
+              "top": 179,
+              "width": 294.75
+            },
+            {
+              "bottom": 790.828125,
+              "class": "exam-pass final-pass",
+              "clientWidth": 385,
+              "left": 14,
+              "right": 401,
+              "scrollWidth": 385,
+              "top": 587.328125,
+              "width": 387
+            },
+            {
+              "bottom": 711.328125,
+              "class": "primary",
+              "clientWidth": 349,
+              "left": 31,
+              "right": 384,
+              "scrollWidth": 349,
+              "top": 659.328125,
+              "width": 353
+            }
+          ]
+        },
+        {
+          "width": 390,
+          "mode": "guest",
+          "nodes": [
+            {
+              "bottom": 919.71875,
+              "class": "",
+              "clientWidth": 375,
+              "left": 0,
+              "right": 375,
+              "scrollWidth": 375,
+              "top": 0,
+              "width": 375
+            },
+            {
+              "bottom": 166,
+              "class": "topbar",
+              "clientWidth": 345,
+              "left": 14,
+              "right": 361,
+              "scrollWidth": 345,
+              "top": 107,
+              "width": 347
+            },
+            {
+              "bottom": 571.328125,
+              "class": "final-cover",
+              "clientWidth": 293,
+              "left": 40.125,
+              "right": 334.875,
+              "scrollWidth": 293,
+              "top": 179,
+              "width": 294.75
+            },
+            {
+              "bottom": 818.71875,
+              "class": "exam-pass final-pass",
+              "clientWidth": 345,
+              "left": 14,
+              "right": 361,
+              "scrollWidth": 345,
+              "top": 587.328125,
+              "width": 347
+            },
+            {
+              "bottom": 739.21875,
+              "class": "primary",
+              "clientWidth": 309,
+              "left": 31,
+              "right": 344,
+              "scrollWidth": 309,
+              "top": 687.21875,
+              "width": 313
+            }
+          ]
+        }
+      ],
+      "observed": {
+        "mobileStartVisible": true,
+        "posterFullyVisible": true,
+        "noHorizontalOverflow": true,
+        "headerBelowSimulatedTelegramChrome": true,
+        "guestNameEntry": true,
+        "aFourQuestionsAndCheckpoint": true,
+        "noCorrectnessBeforeFinal": true,
+        "bMusicQuestionVisible": true,
+        "standalonePracticeIntroVisible": true,
+        "storyImage": {
+          "width": 1080,
+          "height": 1920,
+          "complete": true
+        }
+      },
+      "limitations": [
+        "Telegram layout simulated in browser; not a physical iPhone run.",
+        "Story preview uses the user-supplied gameplay screenshot and an illustrative score of 80.",
+        "Native C GPU gameplay was not executed in this browser."
+      ],
+      "viewportHeight": 844,
+      "simulatedTelegramInsets": {
+        "safeAreaTop": 59,
+        "contentSafeAreaTop": 48,
+        "bottom": 34
+      }
+    },
+    "nativeGPUVerified": false,
+    "nativeMobileTelegramVerified": false,
+    "macFinderTested": false,
+    "windowsLauncherTested": false,
+    "liveDeploymentUpdated": false,
+    "sameNativeMissionAsRC44": true
+  },
+  "changedFiles": [
+    "START-HERE.txt",
+    "app.js",
+    "index.html",
+    "native-vc/index.html",
+    "rpg/index.html",
+    "rpg.html",
+    "server.cjs",
+    "server.py",
+    "story-card.js"
+  ],
+  "newFiles": [
+    "README-RC4.5.md",
+    "assets/brand-cover-rc45.png",
+    "final-brand.js",
+    "native-vc/rc45-native.css",
+    "rc45-cover.css",
+    "rc45-exam.css"
+  ],
+  "fileSHA256": {
+    "START-HERE.txt": "4b5c9a4ff554e2e6d04a33725af017fdde4926de8b02dce3d5cc13d34777ab59",
+    "app.js": "676f0015633d9d0d1b8b767cd9c98048dbdcc9df7fe51411e124ef9a05f34d83",
+    "index.html": "01cf86c337e6c1bdfcd4ab7b32f3d853d0a31a942d9cc7fcef4e374600d9a143",
+    "native-vc/index.html": "5cd14e146ac7ba5922806968560a604ada5736617ea3ed2c2f74fa38badfa5e3",
+    "rpg/index.html": "ce712dbaefee13b8f83b2b19c279bad1879f59cd956ec56785a2871420ff5de0",
+    "rpg.html": "f872176562ed258b934c1b9de6955abde60a3d1d987b0a0e6fff4aef4139bb9b",
+    "server.cjs": "abe7e69ca0f61f38eb293c6b1692123b846c1769c6cce309e12d876bc40029c6",
+    "server.py": "9def7dc080fdbf6b884f026e00979dbdb5c2791caae3a0c0f6b0a888d6c54d33",
+    "story-card.js": "c17bf249aa4bd847d50a57887f81e069eb298a52c0e1b0b729ea3a97fd4ad163",
+    "README-RC4.5.md": "d721ff93a85a2bd53f88ffd1fd8f6b05f0605f051376683b8f9a01497a2394b3",
+    "assets/brand-cover-rc45.png": "d8d7f1c240b3c9e3cdaa2735d99a164ff4dde5e10cab62d9978d3556e4209b0f",
+    "final-brand.js": "630b00ceb072e8ae2fb79ed6c08a106ace7b048ebfe06332e906bf16d2060811",
+    "native-vc/rc45-native.css": "68483633573326e6d2b89c2c198daeaa20d77b6904fc4255a7ced861b7e6747d",
+    "rc45-cover.css": "b4dbdb314501c90e8fc3a57c71cf341e227b91ae5f119948acb5de0c1e43a610",
+    "rc45-exam.css": "730650c67f187e78f6b365d4740e0d097d6d2deb45188dc7bd698c67112d6fe6"
+  }
+}
