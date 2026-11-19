@@ -92,14 +92,14 @@ function main() {
   let root;
   try {
     root = selectRoot(__dirname);
-    const required = ['app.js', 'exam-engine.js', 'native-vc/index.html', 'native-vc/runtime/index.wasm'];
+    const required = ['native-assets.js', 'native-vc/native.js', 'native-vc/range.scm', 'native-vc/runtime/index.wasm'];
     const missing = required.filter(file => {
       try { const info = fs.statSync(path.join(root, file)); return !info.isFile() || !info.size; }
       catch (_) { return true; }
     });
     if (missing.length) throw new Error('Архив распакован не полностью. Не найдены: ' + missing.join(', ') + '. Распакуй весь ZIP заново.');
   } catch (error) {
-    console.error('\nНе удалось запустить ЕГЭ по GTA.\n' + error.message);
+    console.error('\nНе удалось запустить Подготовка к GTA VI.\n' + error.message);
     process.exitCode = 1; return;
   }
   const server = http.createServer((req, res) => {
@@ -110,7 +110,7 @@ function main() {
     const result = locateFile(root, req.url || '/');
     if (result.status !== 200) {
       res.writeHead(result.status, result.location ? { Location: result.location } : { 'Content-Type': 'text/plain; charset=utf-8' });
-      res.end(req.method === 'HEAD' ? undefined : 'RC4: ' + result.status); return;
+      res.end(req.method === 'HEAD' ? undefined : 'HTTP ' + result.status); return;
     }
     const range = parseRange(req.headers.range, result.size);
     if (range === false) { res.writeHead(416, { 'Content-Range': 'bytes */' + result.size }); res.end(); return; }
@@ -130,7 +130,7 @@ function main() {
   });
   server.on('listening', () => {
     const url = 'http://127.0.0.1:' + server.address().port + '/';
-    console.log('\nЕГЭ по GTA · RC4.9 запущен на этом компьютере.\n\n' + url + '\n\nОставь это окно открытым. Если браузер не открылся сам — скопируй адрес выше.\nДля остановки нажми Ctrl+C.\n');
+    console.log('\nПодготовка к GTA VI запущен на этом компьютере.\n\n' + url + '\n\nОставь это окно открытым. Если браузер не открылся сам — скопируй адрес выше.\nДля остановки нажми Ctrl+C.\n');
     openBrowser(url);
   });
   process.on('SIGINT', () => server.close(() => process.exit(0)));

@@ -90,7 +90,7 @@ class RC4Handler(BaseHTTPRequestHandler):
         super().end_headers()
 
     def finish_status(self, status, extra=None):
-        body = ('RC4: ' + str(status)).encode('utf-8')
+        body = ('HTTP ' + str(status)).encode('utf-8')
         self.send_response(status)
         self.send_header('Content-Type', 'text/plain; charset=utf-8')
         self.send_header('Content-Length', str(len(body)))
@@ -161,12 +161,12 @@ def select_root(base_directory):
 def main():
     try:
         root = select_root(Path(__file__).resolve().parent)
-        required = ['app.js', 'exam-engine.js', 'native-vc/index.html', 'native-vc/runtime/index.wasm']
+        required = ['native-assets.js', 'native-vc/native.js', 'native-vc/range.scm', 'native-vc/runtime/index.wasm']
         missing = [name for name in required if not (root / name).is_file() or not (root / name).stat().st_size]
         if missing:
             raise ValueError('Архив распакован не полностью. Не найдены: ' + ', '.join(missing) + '. Распакуй весь ZIP заново.')
     except (ValueError, OSError) as error:
-        print('\nНе удалось запустить ЕГЭ по GTA.\n' + str(error))
+        print('\nНе удалось запустить Подготовка к GTA VI.\n' + str(error))
         return 1
     handler = type('LocalRC4Handler', (RC4Handler,), {'root': root.resolve()})
     try:
@@ -180,7 +180,7 @@ def main():
         print('Не удалось открыть локальный порт: ' + str(error) + '\nЗакрой лишние окна запуска и повтори. Адрес будет показан только после успешного старта.')
         return 1
     url = 'http://127.0.0.1:{}/'.format(server.server_port)
-    print('\nЕГЭ по GTA · RC4.9 запущен на этом компьютере.\n\n' + url + '\n\nОставь это окно открытым. Если браузер не открылся сам — скопируй адрес выше.\nДля остановки нажми Ctrl+C.\n', flush=True)
+    print('\nПодготовка к GTA VI запущен на этом компьютере.\n\n' + url + '\n\nОставь это окно открытым. Если браузер не открылся сам — скопируй адрес выше.\nДля остановки нажми Ctrl+C.\n', flush=True)
     browser = threading.Timer(0.3, webbrowser.open, args=(url,))
     browser.daemon = True
     browser.start()

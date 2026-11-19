@@ -14,7 +14,7 @@ fi
 
 _rc4_find_node() {
   for _rc4_bin in \
-    /opt/homebrew/bin/node /usr/local/bin/node /opt/local/bin/node \
+    "$HOME/.local/node/bin/node" /opt/homebrew/bin/node /usr/local/bin/node /opt/local/bin/node \
     "$(type -P node 2>/dev/null)" \
     "${NVM_DIR:-$HOME/.nvm}"/versions/node/*/bin/node \
     "$HOME"/.volta/tools/image/node/*/bin/node \

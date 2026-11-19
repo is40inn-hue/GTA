@@ -1,30 +1,24 @@
 'use strict';
 (function () {
   const $ = id => document.getElementById(id), canvas = $('canvas');
-  const params = new URLSearchParams(location.search), session = params.get('session') || '';
-  const legacy8 = params.get('legacyEdition') === '8';
-  const legacy9 = params.get('legacyEdition') === '9' || params.get('edition') === '9';
-  const sequence10 = !legacy8 && !legacy9 && params.get('legacy') !== '1';
-  const examMode = params.get('exam') === '1';
-  let warmup = examMode && params.get('warmup') === '1';
-  const storyExam = sequence10 && examMode;
-  const flow = window.GTAPracticeFlow, continuous = params.get('flow') === '1' && !!flow;
+  const session = '', legacy8 = false, legacy9 = false, sequence10 = true;
+  const warmup = false, continuous = true;
+  const flow = window.GTAPracticeFlow;
   const briefingClock = flow?.createCountdown(), transitionClock = flow?.createCountdown();
-  document.body.dataset.exam = String(examMode);
+
   document.body.dataset.embedded = String(parent !== window);
-  document.body.dataset.walkControls = String(!legacy8 && params.get('legacy') !== '1');
+  document.body.dataset.walkControls = String(!legacy8 && true);
   document.body.dataset.continuous = String(continuous);
   const validScene = value => Number.isInteger(value) && value >= 1 && value <= 3;
-  let desiredScene = validScene(Number(params.get('scene'))) ? Number(params.get('scene')) : 1;
-  const screens = ['native-intro', 'native-loading', 'native-briefing', 'native-error', 'native-complete', 'native-pause-screen', 'native-street-question'];
-  if(sequence10){ const route=document.querySelector('.mission-route'); route.setAttribute('aria-label','Пять действий практики'); route.innerHTML=[1,2,3,4,5].map(n=>'<span data-beat="'+n+'">'+n+'</span>').join(''); }
-  const state = { engine: 'vice-city-wasm', version: legacy8 || params.get('legacy') === '1' ? 2 : 3, scene: desiredScene, stage: 'idle', warmup: warmup, ammo: 0, ammoInitial: 0, targetCount: 0, weapon: null, frames: 0 };
-  let disposed = false, externalPause = false, pageSuspended = false, muted = true, aiming = false, abi = -1, contract = null;
+  let desiredScene = 1;
+  const screens = ['native-loading', 'native-briefing', 'native-error', 'native-complete', 'native-pause-screen'];
+  const state = { engine: 'vice-city-wasm', version: legacy8 || false ? 2 : 3, scene: desiredScene, stage: 'idle', warmup: warmup, ammo: 0, ammoInitial: 0, targetCount: 0, weapon: null, frames: 0 };
+  let disposed = false, externalPause = false, pageSuspended = false, muted = false, aiming = false, abi = -1, contract = null;
   let started = false, nativePaused = false, firePressed = false, shotPending = false, burstStartAmmo = 0, burstSize = 1, lastShot = 0;
   let manifest, fileAbort = null, watchdog = null, statusTimer = null, toastTimer = null, keyboardTimer = null, prepareTimer = null, scriptBlobURL = null;
   let visibleWait = 0, lastTick = performance.now(), lastEnter = 0, lastScan = 0, lastReport = '', finishAt = 0;
   let pendingPrepare = true, awaitingSequence = 0, pendingResult = null;
-  let streetQuestionResult = null, arrivalChoices = new Set();
+
   let releasePreparedSession = null;
   let seamlessHandoff = false;
   let briefingHeld = false, manualPause = false, pausedStage = null;
@@ -34,7 +28,7 @@
   const results = new Map(), reported = new Set(), nativeKeys = new WeakSet(), nativeMouseEvents = new WeakSet();
   const preparationWaiters = new Set();
   const warmSettle = { frames: 0, nativeStart: 0, activeMs: 0, lastFrame: 0 };
-  const baseURL = new URL('runtime/', location.href);
+  const baseURL = new URL('runtime/', document.baseURI);
   const clone = value => JSON.parse(JSON.stringify(value));
   const highlightCapture = window.GTAHighlightCapture?.create({ canvas: canvas,
     onHighlight: value => notify('highlight', { version: 1, highlight: value }) });
@@ -44,7 +38,7 @@
   const driveInput = window.GTADriveInput.create({ onKey: (code, down) => nativeKey(code, down) });
   let driveMode = false;
   const keyMap = {KeyW:['w',87],KeyA:['a',65],KeyS:['s',83],KeyD:['d',68],KeyF:['f',70],Space:[' ',32]};
-  function canWalk() { return !legacy8 && params.get('legacy') !== '1'; }
+  function canWalk() { return !legacy8 && true; }
   function carScene() { return sceneConfig(desiredScene)?.action === 'hijack'; }
   function nativeKey(code,down) {
     if (!keyMap[code] || (down && carKeys.has(code))) return;
@@ -66,7 +60,14 @@
   function sceneConfig(number) { return contract?.scenes.find(scene => scene.scene === number); }
   function snapshot() { return clone(state); }
   function notify(type, extra) { if (parent !== window) parent.postMessage(Object.assign({ type: 'vice:' + type, session: session }, extra || {}), location.origin); }
-  function setStage(stage) { state.stage = stage; document.body.dataset.nativeState = stage; if (!['playing', 'finishing'].includes(stage)) radar?.hide(); notify('state', { state: snapshot() }); }
+  let activeMs = 0, activeSince = null;
+  function syncClock() {
+    const now = performance.now();
+    if (activeSince !== null) activeMs += Math.max(0, now - activeSince);
+    activeSince = state.stage === 'playing' && pageActive() && !manualPause ? now : null;
+  }
+  function rideTime() { syncClock(); return activeMs; }
+  function setStage(stage) { state.stage = stage; syncClock(); document.body.dataset.nativeState = stage; if (!['playing', 'finishing'].includes(stage)) radar?.hide(); notify('state', { state: snapshot() }); }
   function show(id) { screens.forEach(name => { $(name).hidden = name !== id; }); }
   function toast(message) { $('native-toast').textContent = message; $('native-toast').className = 'visible'; clearTimeout(toastTimer); toastTimer = setTimeout(() => { $('native-toast').className = ''; }, 2600); }
   const examNotices = new Set();
@@ -82,11 +83,11 @@
     for (let index = 0; index < config.targetCount; index++) {
       if (heap[abi + slot['target' + index + '_credited']] === 1) credited++;
     }
-    if (storyExam && phase === contract.phases.playing && state.stage === 'playing' && !inactive() && $('native-toast').className !== 'visible') {
+    if (phase === contract.phases.playing && state.stage === 'playing' && !inactive() && $('native-toast').className !== 'visible') {
       if (desiredScene === 1) {
         if (state.arrivalStage === 2) examNotice('crew-exit', 'Рация: к тебе гости. Смотри перед вертолётом.');
         else if (state.arrivalStage === 4) examNotice('street-brawl', 'Местный: «Ты кого привёз?!»');
-        else if (state.escapeEntered && !state.pickupCollected) examNotice('pudge-bike', 'Пудж нашёл байк. Ему уже не до экзамена.');
+        else if (state.escapeEntered && !state.pickupCollected) examNotice('pudge-bike', 'Пудж забрал байк. Походу, он уже поехал.');
         else if (state.pickupCollected) examNotice('pickup', 'Узи в руках. Освободи выезд.');
       }
       if (desiredScene === 2) {
@@ -96,9 +97,8 @@
         else if (state.policeAlert) examNotice('commission-en-route', 'Рация: патруль за тобой.');
       }
     }
-    if (carScene() && !storyExam) { if (slot.policeAlert !== undefined && heap[abi + slot.policeAlert] === 1) examNotice('hijacked', 'Патруль заметил угон. Выезжай со двора.'); else if(heap[abi+slot.hijacked]===1)examNotice('hijacked','За рулём. Теперь выезжай со двора.'); return; }
     if (carScene()) return;
-    if (!examMode && credited > 0) examNotice('hit-' + credited, 'Цель поражена · ' + credited + '/' + config.targetCount);
+    if (credited > 0) examNotice('hit-' + credited, 'Цель поражена · ' + credited + '/' + config.targetCount);
     if (phase === contract.phases.playing && state.ammo === 1 && credited < config.targetCount && $('native-toast').className !== 'visible') {
       const lastTargetInAir = !sequence10 || desiredScene === 3 && [0, 1].every(index => heap[abi + slot['target' + index + '_credited']] === 1 || heap[abi + slot['target' + index + '_destroyed']] === 1) && heap[abi + slot.target2_destroyed] !== 1;
       examNotice('last-ammo', config.weapon === 30 ? (lastTargetInAir ? 'Последняя ракета. Дождись прохода.' : 'Последняя ракета. Цель у метки.') : 'Последний патрон. Выбирай цель.');
@@ -128,9 +128,9 @@
     return String(value?.message || value || '').replace(/https?:\/\/\S+/g, '[URL]').replace(/blob:\S+/g, '[модуль]').slice(0, 240) + status + file;
   }
   function diagnosticText() {
-    return ['Запуск практики · v' + launch.build, 'Код: ' + (launch.code || 'нет'), 'Этап: ' + launchLabels[launch.step],
+    return ['Запуск игры · v' + launch.build, 'Код: ' + (launch.code || 'нет'), 'Этап: ' + launchLabels[launch.step],
       '3D: ' + launch.graphics, 'Файлы: ' + Math.round(launch.received / 1048576) + ' / ' + Math.ceil(launch.total / 1048576) + ' МБ',
-      'Движок: ' + (launch.runtime ? 'инициализирован' : 'не инициализирован'), 'Сцена: С' + desiredScene,
+      'Движок: ' + (launch.runtime ? 'инициализирован' : 'не инициализирован'), 'Сцена: ' + desiredScene,
       'Главный цикл: ' + (launch.frame ? 'запущен' : launch.main ? 'main запущен' : 'не запущен'),
       'Протокол сцены: ' + (abi >= 0 ? 'подключён' : 'не подключён'), launch.detail ? 'Причина: ' + launch.detail : ''].filter(Boolean).join('\n');
   }
@@ -197,6 +197,7 @@
   }
   function release() { aimMotion.clear(); stopFire(); setAim(false); releaseCar(); for(const reset of dragResets)reset(); }
   function synchronizePause() {
+    syncClock();
     wakePreparation();
     if (inactive()) highlightCapture?.pause();
     if (warmup) warmSettle.lastFrame = 0;
@@ -219,7 +220,7 @@
     $('error-code').textContent = launch.code + ' · запуск v' + launch.build;
     $('error-diagnostic').textContent = diagnosticText();
     $('error-browser-help').hidden = !['C-GPU', 'C-GPU-CONTEXT'].includes(launch.code);
-    $('error-open').href = new URL('../rpg/', location.href).href;
+    $('error-open').href = location.href;
     show('native-error'); notify('error', { message: message, code: launch.code, scene: desiredScene });
     clearInterval(watchdog); clearInterval(statusTimer); clearTimeout(keyboardTimer);
   }
@@ -342,33 +343,25 @@
     if (abi < 0 || !contract || !window.HEAP32 || disposed) return false;
     const heap = window.HEAP32, slot = contract.slots;
     const sequence = Math.max(heap[abi + slot.commandSeq], heap[abi + slot.ackSeq]) + 1;
-    if (!Number.isSafeInteger(sequence) || sequence < 1 || sequence >= 2147483647) { fail('Сеанс завершён. Открой практику заново.'); return false; }
+    if (!Number.isSafeInteger(sequence) || sequence < 1 || sequence >= 2147483647) { fail('Сеанс завершён. Начни новый выезд.'); return false; }
     // These three mailbox slots are the only native-memory writes performed by JS.
     heap[abi + slot.requestedScene] = scene;
     heap[abi + slot.command] = command;
     heap[abi + slot.commandSeq] = sequence;
     awaitingSequence = sequence; visibleWait = 0; return true;
   }
+  const missionNames = ['Старые знакомые', 'По набережной', 'Последний залп'];
+  const radio = ['На площадке встреча. Тебя уже ждут.', 'После такого шума лучше сменить район. Машина рядом.', 'Тебя засекли. Патруль в воздухе.'];
   function updateSceneCopy() {
+    document.title = 'Подготовка к GTA VI';
     document.body.dataset.scene = String(desiredScene);
-    $('intro-scene').textContent = 'Практическое задание / С' + desiredScene;
-    const config = sceneConfig(desiredScene); if (!config) return;
-    const flying = desiredScene === 3 && params.get('legacy') !== '1';
-    const patrol = desiredScene === 2 && config.targetModel === 156;
-    const heading = sequence10 ? config.title : canWalk() ? ['Угон', 'Взрыв', 'Воздушная цель'][desiredScene-1] : desiredScene === 1 ? 'Пристрелка' : desiredScene === 2 ? patrol ? 'Перекрытие' : 'Контроль очереди' : flying ? 'Воздушная цель' : 'Тяжёлый билет';
-    const objective = sequence10 ? config.instruction : canWalk() ? ['Забери машину и выезжай со двора', 'Взорви красную машину', 'Сбей вертолёт из РПГ'][desiredScene-1] : desiredScene === 1 ? 'Повреди две разные машины' : desiredScene === 2 ? patrol ? 'Повреди три патрульные машины' : 'Повреди три разные машины' : flying ? 'Сбей вертолёт из РПГ' : 'Уничтожь две машины';
-    $('briefing-title').textContent = config.title; $('briefing-instruction').textContent = config.instruction;
-    $('briefing-criterion').textContent = config.criterion;
-    $('briefing-ammo').textContent = config.action === 'hijack' ? (config.timeLimitSeconds || 90) + ' секунд' : config.ammo + (desiredScene === 3 ? (config.ammo === 3 ? ' ракеты' : ' ракет') : ' патронов');
-    $('briefing-targets').textContent = config.targetCount + (config.targetCount === 1 ? ' цель' : ' цели');
-    $('native-scene-label').textContent = 'С' + desiredScene + ' / ' + (sequence10 ? config.title : canWalk() ? ['Забери машину','Взорви машину','Сбей вертолёт'][desiredScene-1] : config.weaponName);
-    $('mission-heading').textContent = 'С' + desiredScene + ' / 3 · ' + heading;
-    $('mission-objective').textContent = objective;
-    const timed = flying || sequence10 && carScene(), seconds = config.timeLimitSeconds || 90;
-    $('mission-time').hidden = !timed;
-    if (timed) { $('mission-time').textContent = 'Осталось ' + String(Math.floor(seconds / 60)).padStart(2, '0') + ':' + String(seconds % 60).padStart(2, '0'); $('mission-time').setAttribute('aria-label', 'Осталось ' + seconds + ' секунд'); }
-    $('fire-label').textContent = config.weapon === 23 ? 'Очередь' : 'Выстрел';
-    $('fire-detail').textContent = config.weapon === 23 ? 'Тап — короткая очередь' : 'Тап — один выстрел';
+    $('mission-heading').textContent = missionNames[desiredScene - 1];
+    $('native-scene-label').textContent = 'Миссия ' + desiredScene + ' / 3';
+    $('mission-objective').textContent = radio[desiredScene - 1];
+    $('mission-time').hidden = desiredScene !== 3;
+    const auto = desiredScene === 1;
+    $('fire-label').textContent = auto ? 'Очередь' : 'Выстрел';
+    $('fire-detail').textContent = auto ? 'Узи' : 'РПГ';
   }
   function setScene(number) {
     number = Number(number); if (!validScene(number) || disposed) return false;
@@ -381,15 +374,15 @@
     delete state.timeRemaining;
     $('native-pause').hidden = true; $('range-hud').hidden = $('range-controls').hidden = $('range-instruction').hidden = true;
     state.ammo = state.ammoInitial = state.targetCount = 0; state.weapon = null;
-    pendingResult = null; streetQuestionResult = null; arrivalChoices.clear(); state.cameoSeen = false; state.arrivalPudgeSeen = state.arrivalSteveSeen = false; finishAt = 0; lastReport = ''; awaitingSequence = 0; pendingPrepare = true; updateSceneCopy();
+    pendingResult = null; state.cameoSeen = false; state.arrivalPudgeSeen = state.arrivalSteveSeen = false; finishAt = 0; lastReport = ''; awaitingSequence = 0; pendingPrepare = true; updateSceneCopy();
     if (started) {
       setStage('preparing');
       if (seamlessHandoff) { show(null); $('range-hud').hidden = $('range-instruction').hidden = false; $('range-instruction').textContent = sceneConfig(number).instruction; }
       else show('native-loading');
-      launchStep('scene', 'Подготавливаем задание С' + number + '…', 100);
+      launchStep('scene', 'Готовим район · ' + number + '…', 100);
       if (abi >= 0) pendingPrepare = !sendCommand(contract.commands.prepare, number);
       synchronizePause();
-    } else { setStage('idle'); show('native-intro'); }
+    } else { setStage('idle'); show('native-loading'); }
     notify('scene', { scene: number }); return true;
   }
   function startScene() {
@@ -400,40 +393,14 @@
     setStage('starting'); $('native-begin').disabled = true; synchronizePause(); return true;
   }
   function beginBriefing() {
-    if (warmup) return;
-    briefingHeld = false; $('briefing-pause').hidden = !continuous;
-    $('briefing-pause').textContent = 'Пауза';
-    $('briefing-countdown').hidden = !continuous;
-    if (!continuous) return;
-    if (storyExam) {
-      // The city has already been prepared and visually settled behind A/B.
-      // Reveal that same canvas without adding a second three-second briefing.
-      show(null); $('range-hud').hidden = $('range-instruction').hidden = false;
-      if (startScene()) return;
-    }
-    const number = desiredScene;
-    briefingClock.start({ durationMs: storyExam || seamlessHandoff ? 0 : 3000,
-      isCurrent: () => !disposed && state.stage === 'briefing' && desiredScene === number,
-      isActive: () => pageActive() && !briefingHeld,
-      onTick: value => { $('briefing-countdown').textContent = value.paused ? 'Старт приостановлен' : 'Старт через ' + value.seconds; },
-      onComplete: startScene
-    });
-  }
-  function activate() {
-    if (disposed || state.stage === 'error') return false;
-    if (!warmup) return true;
-    warmup = false; state.warmup = false;
-    if (state.stage === 'warmed') {
-      setStage('briefing'); show('native-briefing'); synchronizePause(); beginBriefing();
-      notify('ready', { scene: desiredScene });
-    } else { synchronizePause(); notify('state', { state: snapshot() }); }
-    return true;
+    show('native-briefing');
+    if (startScene()) show(null);
   }
   function pauseScene() {
     if (manualPause || !['playing', 'finishing'].includes(state.stage)) return;
     pausedStage = state.stage; manualPause = true; release(); setStage('paused');
     $('car-controls').hidden = $('range-controls').hidden = $('range-instruction').hidden = $('native-pause').hidden = true;
-    $('native-pause-title').textContent = 'Практика на паузе'; show('native-pause-screen'); synchronizePause();
+    $('native-pause-title').textContent = 'Пауза'; show('native-pause-screen'); synchronizePause();
   }
   function resumeScene() {
     if (!manualPause || !pageActive()) return;
@@ -448,7 +415,7 @@
       if(![0,1].includes(hijacked)||![0,1].includes(driveCompleted)||driveCompleted>hijacked||![1,3,4].includes(outcome)||outcome===1&&!driveCompleted||outcome!==1&&driveCompleted)return null;
       return {engine:'vice-city-wasm',version:3,scene:config.scene,completed:true,outcome:({1:'cleared',3:'timeout',4:'lost'})[outcome],ammoInitial:0,ammoRemaining:0,targets:[],milestones:{hijacked:hijacked===1,driveCompleted:driveCompleted===1}};
     }
-    const flyingTarget = config.scene === 3 && params.get('legacy') !== '1';
+    const flyingTarget = config.scene === 3 && true;
     if (value('completed') !== 1 || value('scene') !== config.scene || value('targetCount') !== config.targetCount || value('weapon') !== config.weapon || value('ammoInitial') !== config.ammo) return null;
     const ammo = value('ammo'); if (ammo < 0 || ammo > config.ammo) return null;
     const targets = [];
@@ -466,104 +433,23 @@
     if (!sequence10 && outcome === 4 && !targets.every(target => target.destroyed)) return null;
     return { engine: 'vice-city-wasm', version: contract.version, scene: config.scene, completed: true, outcome: ({ 1: 'cleared', 2: 'ammo', 3: 'timeout', 4: 'lost' })[outcome], ammoInitial: config.ammo, ammoRemaining: ammo, targets: targets };
   }
-  function askStreetQuestion(result) {
-    if (!sequence10 || warmup || result.scene !== 1 || !state.arrivalPudgeSeen || !state.arrivalSteveSeen ||
-        result.observation || results.has(1) || !window.GTAExam?.streetObservation || !$('native-street-question')) return false;
-    streetQuestionResult = clone(result);
-    arrivalChoices.clear(); updateArrivalChoices();
-    briefingClock?.cancel(); transitionClock?.cancel(); release();
-    setStage('observation'); synchronizePause();
-    clearTimeout(toastTimer); $('native-toast').className = '';
-    $('native-pause').hidden = $('range-controls').hidden = $('car-controls').hidden = $('range-instruction').hidden = true;
-    show('native-street-question');
-    $('street-question-title').focus?.({ preventScroll: true });
-    return true;
-  }
-  function updateArrivalChoices() {
-    for (const choice of Object.keys(window.GTAExam?.streetObservation?.arrivalChoices || {})) {
-      const button = $('arrival-answer-' + choice);
-      if (button) button.setAttribute('aria-pressed', String(arrivalChoices.has(choice)));
-    }
-    const confirm = $('arrival-confirm');
-    if (confirm) { confirm.disabled = arrivalChoices.size !== 2; confirm.textContent = 'Ответить · ' + arrivalChoices.size + ' / 2'; }
-  }
-  function selectArrivalChoice(choice) {
-    if (disposed || warmup || !pageActive() || state.stage !== 'observation' || !streetQuestionResult) return;
-    if (!Object.prototype.hasOwnProperty.call(window.GTAExam.streetObservation.arrivalChoices, choice)) return;
-    if (arrivalChoices.has(choice)) arrivalChoices.delete(choice);
-    else if (arrivalChoices.size < 2) arrivalChoices.add(choice);
-    updateArrivalChoices();
-  }
-  function answerStreetQuestion(skip) {
-    if (disposed || warmup || !pageActive() || state.stage !== 'observation' || !streetQuestionResult || !skip && arrivalChoices.size !== 2) return;
-    const observation = window.GTAExam.streetObservation.read({ id: window.GTAExam.streetObservation.arrivalId, choices: skip ? [] : Array.from(arrivalChoices) });
-    if (!observation) return;
-    // Commit once, then hand the original native result to the usual owner.
-    // No correctness feedback or additional points appear during the route.
-    const result = streetQuestionResult; streetQuestionResult = null;
-    result.observation = observation;
-    complete(result);
-  }
   function complete(result) {
-    if (disposed || state.stage === 'complete' || result.scene !== desiredScene) return;
-    if (state.stage === 'observation' && streetQuestionResult) return;
-    if (askStreetQuestion(result)) return;
-    const existing = results.get(result.scene);
-    // SCM restores only native facts when revisiting a completed scene. Keep
-    // its already confirmed UI answer, but still compare every native field.
-    // An explicitly different observation is not replaced or accepted here.
-    if (existing?.observation && result.observation === undefined) {
-      result = Object.assign({}, result, { observation: clone(existing.observation) });
+    if (disposed || results.has(result.scene) || result.scene !== desiredScene) return;
+    results.set(result.scene, clone(result));
+    state.result = clone(result);
+    setStage('complete');
+    release();
+    synchronizePause();
+    clearTimeout(toastTimer);
+    $('native-toast').className = '';
+    $('native-pause').hidden = $('car-controls').hidden = $('range-controls').hidden = true;
+    if (result.outcome === 'cleared' && desiredScene < 3) {
+      setScene(desiredScene + 1);
+      return;
     }
-    if (existing && JSON.stringify(existing) !== JSON.stringify(result)) { fail('Не удалось проверить результат задания. Открой практику заново.'); return; }
-    results.set(result.scene, clone(result)); state.result = clone(result);
-    briefingClock?.cancel(); setStage('complete'); release(); synchronizePause(); clearTimeout(toastTimer); $('native-toast').className = '';
-    $('native-pause').hidden = true;
-    $('complete-title').textContent = desiredScene === 3 ? 'Практика завершена.' : 'Этап С' + desiredScene + ' завершён.';
-    $('complete-detail').textContent = examMode ? 'Оценку объявит комиссия.' : 'Результат сохранён.';
-    const observationReview = $('complete-observation');
-    if (observationReview) {
-      const remembered = !examMode && desiredScene === 3 ? window.GTAExam?.streetObservation?.review(results.get(1)?.observation || results.get(2)?.observation) : null;
-      observationReview.hidden = !remembered;
-      observationReview.textContent = remembered ? remembered.explanation + ' Твой ответ: ' + remembered.chosen + '.' : '';
-    }
-    const rating = $('complete-rating');
-    if (rating) {
-      rating.hidden = examMode || !sequence10 || desiredScene !== 3;
-      if (!rating.hidden) {
-        let points = 0, maximum = 0;
-        for (const config of contract.scenes) {
-          maximum += config.action === 'hijack' ? config.pointsPerTarget * 2 : config.targetPoints ? config.targetPoints.reduce((sum, value) => sum + value, 0) : config.pointsPerTarget * config.targetCount;
-          const earned = results.get(config.scene); if (!earned) continue;
-          if (config.action === 'hijack') points += config.pointsPerTarget * (Number(earned.milestones?.hijacked === true) + Number(earned.milestones?.driveCompleted === true));
-          else earned.targets.forEach((target, index) => { if (target.credited) points += config.targetPoints?.[index] ?? config.pointsPerTarget; });
-        }
-        const stars = window.GTAExam.sectionRating(points, maximum);
-        rating.setAttribute('aria-label', 'Часть C: ' + points + ' из ' + maximum + ' баллов, ' + stars + ' из 5 звёзд');
-        rating.innerHTML = '<span aria-hidden="true">' + '★'.repeat(stars) + '<i>' + '☆'.repeat(5 - stars) + '</i></span><small>' + points + ' / ' + maximum + ' · часть C</small>';
-      }
-    }
-    $('complete-next-label').textContent = sequence10 ? (desiredScene===1?(storyExam?'Рация: за руль. РПГ дальше по набережной.':'Копы рядом. Пора за руль.'):desiredScene===2?(storyExam?'Рация: РПГ у метки. Последний рывок.':'Последний аргумент — РПГ.'):examMode?'Передаём работу комиссии.':'Заезд завершён.') : desiredScene === 1 ? params.get('legacy') === '1' ? 'Дальше — контроль очереди.' : canWalk() ? 'Следом — взрыв.' : 'Следом — перекрытие.' : desiredScene === 2 ? params.get('legacy') === '1' ? 'Финал: тяжёлый билет.' : 'Финал: воздушная цель.' : examMode ? 'Передаём работу комиссии.' : 'Заезд завершён.';
-    $('complete-countdown').hidden = !continuous || (!examMode && desiredScene === 3);
-    $('complete-countdown').textContent = desiredScene === 3 ? 'Подводим итог…' : 'Следующий этап начнётся автоматически.';
-    if (!examMode && (result.outcome === 'timeout' || result.outcome === 'lost')) {
-      const reason = sequence10 ? (result.outcome==='timeout'?'Время вышло. Выполненные действия сохранены.':'Заезд прерван. Выполненные действия сохранены.') : result.scene === 1 ? 'Поездка завершена. Выполненные действия сохранены.' : result.outcome === 'timeout' ? 'Время вышло. Попадание не засчитано.' : 'Вертолёт разбился без попадания РПГ. Не засчитано.';
-      $('complete-detail').textContent = reason + ' Можно пройти практику ещё раз.';
-    }
-    $('native-next').hidden = examMode || desiredScene === 3; $('native-again').hidden = examMode || desiredScene !== 3;
-    $('native-next').textContent = continuous ? 'Продолжить сейчас →' : 'К заданию С' + Math.min(3, desiredScene + 1) + ' →';
-    $('car-controls').hidden = $('range-controls').hidden = $('range-instruction').hidden = true; show(continuous && desiredScene < 3 ? null : 'native-complete');
-    if (continuous && desiredScene < 3) { $('range-hud').hidden = $('range-instruction').hidden = false; $('range-instruction').textContent = $('complete-next-label').textContent; }
-    if (!reported.has(result.scene)) { reported.add(result.scene); notify('complete', { result: clone(result) }); }
-    if (continuous && !examMode && desiredScene < 3) {
-      const number = desiredScene;
-      transitionClock.start({ durationMs: 0,
-        isCurrent: () => !disposed && state.stage === 'complete' && desiredScene === number,
-        isActive: pageActive,
-        onTick: value => { $('complete-countdown').textContent = value.paused ? 'Переход приостановлен' : 'Следующая сцена через ' + value.seconds; },
-        onComplete: () => setScene(number + 1)
-      });
-    }
+    $('range-hud').hidden = true;
+    show('native-complete');
+    window.RideReport.show([...results.values()], rideTime(), highlightCapture?.getHighlight());
   }
   function sequenceObjective(heap, slot, config) {
     if (desiredScene === 1) {
@@ -573,6 +459,7 @@
       if (!state.pickupReady && state.arrivalStage === 4) return 'Гости не поделили дорогу. Смотри за ними.';
       if (!state.pickupReady && state.escapeEntered) return 'Пудж уезжает. Смотри на байк.';
       if (!state.pickupReady && state.escapeState > 0) return 'Пудж заметил мотоцикл. Смотри за ним.';
+      if (!state.pickupReady) return 'Встречай гостей на площадке.';
       return state.pickupCollected ? (config.targetModel === 217 ? 'Взорви вертолёт у красной метки.' : 'Взорви машину у красной метки.') : 'Подбери Узи у красной метки.';
     }
     if (desiredScene === 2) {
@@ -591,7 +478,7 @@
     if (groundTargets === 2) return 'Взорви машину у красной метки.';
     if (groundTargets === 1) return 'Осталась одна машина. Взорви её.';
     if (remaining(2)) return 'Теперь вверх. Сбей вертолёт.';
-    return 'Практика завершена.';
+    return 'Район снова тихий.';
   }
   function readNative(renderedFrame) {
     if (!contract || !window.HEAP32 || disposed || manualPause || state.stage === 'observation') return;
@@ -604,13 +491,13 @@
       }
     }
     if (abi < 0) return;
-    if (heap[abi] !== contract.magic[0] || heap[abi + 1] !== contract.magic[1] || heap[abi + 2] !== contract.version) { fail('Игровой сеанс прерван. Открой практику заново.'); return; }
+    if (heap[abi] !== contract.magic[0] || heap[abi + 1] !== contract.magic[1] || heap[abi + 2] !== contract.version) { fail('Игровой сеанс прерван. Начни новый выезд.'); return; }
     const phase = heap[abi + slot.phase];
     if (phase === contract.phases.error) { fail('Не удалось загрузить сцену. Попробуй ещё раз.', { code: 'C-MODELS' }); return; }
     if (warmup && [contract.phases.playing, contract.phases.complete].includes(phase)) {
       fail('Не удалось подготовить сцену. Попробуй открыть её ещё раз.', { code: 'C-WARMUP' }); return;
     }
-    if (launch.step !== 'scene') launchStep('scene', 'Собираем задание С' + desiredScene + '…', 99);
+    if (launch.step !== 'scene') launchStep('scene', 'Открываем район · ' + desiredScene + '…', 99);
     if (pendingPrepare && heap[abi + slot.heartbeat] > 0) pendingPrepare = !sendCommand(contract.commands.prepare, desiredScene);
     if (pendingPrepare || heap[abi + slot.ackSeq] < awaitingSequence || heap[abi + slot.scene] !== desiredScene) return;
     const config = sceneConfig(desiredScene), ammo = heap[abi + slot.ammo];
@@ -640,15 +527,9 @@
     $('drive-enter').hidden=!carScene(); $('drive-brake').hidden=!driveMode; if($('drive-gas'))$('drive-gas').hidden=!driveMode;
     joystick.setAttribute('aria-label',driveMode?'Руль: тяни влево или вправо':'Джойстик движения');
     if(!carScene()) $('range-instruction').textContent=sequence10 && desiredScene===1 && !state.pickupReady?'Смотри вперёд. Можно двигаться джойстиком.':sequence10 && state.pickupCollected===false?'Джойстик слева — шагни к метке.':canWalk()?(aiming?'Тяни прицел. Нажми «'+$('fire-label').textContent+'».':'Движение слева. Прицел и '+(config.weapon===23?'очередь':'выстрел')+' справа.'):'Прицел → наведи на цель → выстрел';
-    if(carScene()) { $('native-scene-label').textContent='С'+desiredScene+(state.hijacked?' / Уходи от погони':' / Забери машину');$('range-controls').hidden=true;$('drive-enter').textContent=state.inCar?'Удержи: выйти':'Сесть';$('range-instruction').textContent=state.inCar?'Руль слева. Справа — газ и тормоз / назад.':'Подойди к водительской двери. Нажми «Сесть».'; }
-    if(sequence10){
-      const beat=desiredScene===1?(state.pickupCollected?2:1):desiredScene===2?(state.hijacked?4:3):5;
-      const titles=[!state.pickupReady?'Нежданные гости':'Подбери оружие','Первый взрыв','Забери машину','Уходи от погони','Последний аргумент'];
-      $('native-scene-label').textContent='ПРАКТИКА';$('mission-heading').textContent=beat+' / 5 · '+titles[beat-1];
-      $('mission-objective').textContent=sequenceObjective(heap,slot,config);
-      document.querySelectorAll('[data-beat]').forEach(el=>el.classList.toggle('active',Number(el.dataset.beat)===beat));
-    }
-    if ((desiredScene === 3 || sequence10 && carScene()) && params.get('legacy') !== '1' && [contract.phases.playing, contract.phases.complete].includes(phase)) {
+    if(carScene()) { $('range-controls').hidden=true;$('drive-enter').textContent=state.inCar?'Удержи: выйти':'Сесть';$('range-instruction').textContent=state.inCar?'Руль слева. Справа — газ и тормоз / назад.':'Подойди к водительской двери. Нажми «Сесть».'; }
+    $('mission-objective').textContent = sequenceObjective(heap,slot,config);
+    if (desiredScene === 3 && [contract.phases.playing, contract.phases.complete].includes(phase)) {
       const remaining = Math.max(0, Math.min(config.timeLimitSeconds || 90, Math.ceil((heap[abi + slot.sceneDeadline] - heap[abi + slot.nativeTimer]) / 1000)));
       state.timeRemaining = remaining;
       $('mission-time').textContent = 'Осталось ' + String(Math.floor(remaining / 60)).padStart(2, '0') + ':' + String(remaining % 60).padStart(2, '0');
@@ -676,13 +557,13 @@
       else { beginBriefing(); notify('ready', { scene: desiredScene }); }
     }
     if (phase === contract.phases.playing && (state.weapon === config.weapon || sequence10) && state.frames > 0 && ['starting', 'briefing', 'preparing', 'engine'].includes(state.stage)) {
-      setStage('playing'); show(null); if (!storyExam || desiredScene === 1) examNotice('start', storyExam?'Смотри вперёд. Вертолёт идёт на посадку.':sequence10?config.instruction:canWalk()?['Забери машину. Затем выезжай со двора.','Взорви красную машину. Можно подойти ближе.','Сбей вертолёт. Он пролетит снова.'][desiredScene-1]:'Комиссия наблюдает. Удачи.'); $('range-hud').hidden = $('range-instruction').hidden = false;$('range-controls').hidden=carScene();$('car-controls').hidden=!(carScene()||canWalk()); $('native-pause').hidden = false; syncAudio();
+      setStage('playing'); show(null); examNotice('start', radio[desiredScene - 1]); $('range-hud').hidden = $('range-instruction').hidden = false;$('range-controls').hidden=carScene();$('car-controls').hidden=!(carScene()||canWalk()); $('native-pause').hidden = false; syncAudio();
     }
     if (state.stage === 'playing' || state.stage === 'finishing') noticeNativeProgress(heap, slot, config, phase);
     $('native-fire').disabled = state.stage !== 'playing' || sequence10 && state.pickupCollected === false || ammo === 0 || shotPending;
     if (phase === contract.phases.complete) {
       const result = readResult(heap, slot, config);
-      if (!result) { fail('Не удалось проверить результат. Открой практику заново.'); return; }
+      if (!result) { fail('Не удалось проверить результат. Начни новый выезд.'); return; }
       if (!pendingResult) { pendingResult = result; finishAt = now + (results.has(desiredScene) ? 0 : desiredScene === 3 ? 1800 : 650); release(); setStage('finishing'); }
       if (renderedFrame === true) captureNativeHighlight(heap, slot, config);
       if (now >= finishAt) complete(pendingResult);
@@ -716,8 +597,7 @@
   async function begin() {
     if (started || disposed) return; started = true; startInteraction();
     setStage('loading'); show('native-loading');
-    if (!examMode) { $('loading-route').hidden = true; $('load-footnote').textContent = 'Задание начнётся, когда город будет готов.'; $('load-title').innerHTML = 'Следующая остановка —<br>Vice City.'; }
-    launchStep('browser', 'Сейчас продолжим.', 0);
+    launchStep('browser', 'Проверяем графику.', 0);
     fileAbort = new AbortController(); startWatchdog();
     try {
       await preparationTurn();
@@ -728,21 +608,20 @@
       const gl = probe.getContext('webgl2', { alpha: false, depth: true, stencil: true, antialias: false });
       launch.graphics = gl ? 'WebGL 2' : 'WebGL 2 unavailable';
       if (!gl) {
-        fail('Не удалось запустить 3D-сцену. Попробуй открыть практику в Safari или Chrome.', { code: 'C-GPU' }); return;
+        fail('Не удалось запустить 3D-сцену. Попробуй открыть игру в Safari или Chrome.', { code: 'C-GPU' }); return;
       }
       gl.getExtension('WEBGL_lose_context')?.loseContext();
       launchStep('cache', 'Проверяем, что уже готово.', 0);
-      let assets = window.GTANativeAssets;
-      try { await parent.GTANativePreload?.pause(); assets = parent.GTANativeAssets || assets; } catch (_) {}
+      const assets = window.GTANativeAssets;
       await preparationTurn();
       if (!assets) throw new Error('Native asset loader unavailable');
       launchStep('files', 'Продолжаем подготовку города.');
       const onActivity = () => { if (!disposed && state.stage === 'loading') idleWait = 0; };
       manifest = await assets.loadManifest({ signal: fileAbort.signal, onActivity: onActivity });
       await preparationTurn();
-      const configResponse = await fetch(params.get('legacy') === '1' ? 'range-legacy-config.json' : legacy8 ? 'range-v8-config.json' : legacy9 ? 'range-v9-config.json' : 'range-config.json', { signal: fileAbort.signal, cache: 'no-cache', priority: warmup ? 'low' : 'high' }); if (!configResponse.ok) throw new Error('Scene config unavailable'); contract = await configResponse.json();
+      const configResponse = await fetch('range-config.json', { signal: fileAbort.signal, cache: 'no-cache', priority: warmup ? 'low' : 'high' }); if (!configResponse.ok) throw new Error('Scene config unavailable'); contract = await configResponse.json();
       if (![2,3].includes(contract.version) || contract.scenes.length !== 3 || !contract.scenes.every(scene => validScene(scene.scene))) throw new Error('Unsupported scene contract');
-      const sceneFile = params.get('legacy') === '1' ? 'range-legacy.scm' : legacy8 ? 'range-v8.scm' : legacy9 ? 'range-v9.scm' : 'range.scm';
+      const sceneFile = 'range.scm';
       const [sceneResponse, iniResponse] = await Promise.all([fetch(sceneFile + '?v=' + contract.sha256, { signal: fileAbort.signal, priority: warmup ? 'low' : 'high' }), fetch('revc.ini', { signal: fileAbort.signal, priority: warmup ? 'low' : 'high' })]);
       if (!sceneResponse.ok || !iniResponse.ok) throw new Error('Scene data unavailable');
       const scene = new Uint8Array(await sceneResponse.arrayBuffer()), ini = new TextEncoder().encode(await iniResponse.text());
@@ -825,7 +704,7 @@
     } catch (error) {
       if (!disposed && error.name !== 'AbortError') {
         console.error('[Vice City startup]', error);
-        if (launch.step === 'browser') { fail('Не удалось запустить 3D-сцену. Попробуй открыть практику в Safari или Chrome.', { code: 'C-GPU', detail: error }); return; }
+        if (launch.step === 'browser') { fail('Не удалось запустить 3D-сцену. Попробуй открыть игру в Safari или Chrome.', { code: 'C-GPU', detail: error }); return; }
         const timeout = error.code === 'NETWORK_TIMEOUT' || error.name === 'TimeoutError';
         const integrity = /integrity|sha-?256|mismatch/i.test(String(error.message));
         fail(timeout ? 'Загрузка прервалась. Проверь соединение и попробуй ещё раз.' : integrity ? 'Часть игры загрузилась с ошибкой. Попробуй ещё раз.' : 'Не удалось загрузить игру. Проверь соединение и попробуй ещё раз.',
@@ -833,17 +712,15 @@
       }
     }
   }
-  $('native-start').onclick = begin; $('native-begin').onclick = startScene;
-  for (const choice of ['cj', 'pudge', 'steve', 'dancer']) {
-    const button = $('arrival-answer-' + choice);
-    if (button) button.onclick = () => selectArrivalChoice(choice);
-  }
-  if ($('arrival-confirm')) $('arrival-confirm').onclick = () => answerStreetQuestion(false);
-  if ($('street-answer-missed')) $('street-answer-missed').onclick = () => answerStreetQuestion(true);
-  $('briefing-pause').onclick = () => { briefingHeld = !briefingHeld; $('briefing-pause').textContent = briefingHeld ? 'Продолжить' : 'Пауза'; briefingClock?.sync(); };
-  $('native-pause').onclick = pauseScene; $('native-resume').onclick = resumeScene;
-  $('native-next').onclick = () => { startInteraction(); if (!examMode && desiredScene < 3) setScene(desiredScene + 1); };
-  $('native-retry').onclick = $('native-again').onclick = () => { notify('restart'); location.reload(); };
+  $('native-begin').onclick = startScene;
+  $('native-pause').onclick = pauseScene;
+  $('native-resume').onclick = resumeScene;
+  $('native-again').onclick = $('native-retry').onclick = () => location.reload();
+  $('sound-toggle').onclick = () => {
+    muted = !muted;
+    $('sound-toggle').textContent = muted ? 'Включить звук' : 'Выключить звук';
+    synchronizePause();
+  };
   $('error-copy').onclick = async () => {
     const details = $('error-diagnostic-details'); details.open = true;
     try { await navigator.clipboard.writeText(diagnosticText()); $('error-copy').textContent = 'Сведения скопированы'; }
@@ -854,22 +731,14 @@
     fail('Запуск игры прервался. Повтори запуск; если ошибка повторится, скопируй сведения ниже.', { code: 'C-ENGINE-ERROR', detail: event.error || event.reason || event.message });
   }
   window.addEventListener('error', startupException); window.addEventListener('unhandledrejection', startupException);
-  window.addEventListener('message', event => {
-    if (event.origin !== location.origin || event.source !== parent || event.data?.session !== session || disposed) return;
-    if (event.data.type === 'vice:preferences') { muted = !!event.data.muted; externalPause = !!event.data.paused; synchronizePause(); }
-    if (event.data.type === 'vice:scene') setScene(event.data.scene);
-    if (event.data.type === 'vice:activate') activate();
-    if (event.data.type === 'vice:start') startScene();
-    if (event.data.type === 'vice:destroy') destroy();
-  });
-  document.addEventListener('visibilitychange', synchronizePause); window.addEventListener('blur', release);
+  document.addEventListener('visibilitychange', synchronizePause); window.addEventListener('blur', () => { release(); pauseScene(); });
   // Rotation/viewport changes invalidate joystick centres and held touch ownership.
   // Require a fresh gesture rather than continuing to steer with stale coordinates.
   window.addEventListener('orientationchange', release); window.addEventListener('resize', release);
-  canvas.addEventListener('webglcontextcreationerror', event => { fail('Браузер не смог создать 3D-сцену Vice City. Попробуй открыть практику в отдельном браузере.', { code: 'C-GPU-CONTEXT', detail: event.statusMessage }); });
-  canvas.addEventListener('webglcontextlost', event => { event.preventDefault(); fail('Браузер потерял доступ к 3D-графике. Для продолжения нужен новый запуск практики.', { code: 'C-GPU-CONTEXT' }); });
+  canvas.addEventListener('webglcontextcreationerror', event => { fail('Браузер не смог создать 3D-сцену Vice City. Попробуй открыть игру в отдельном браузере.', { code: 'C-GPU-CONTEXT', detail: event.statusMessage }); });
+  canvas.addEventListener('webglcontextlost', event => { event.preventDefault(); fail('Браузер потерял доступ к 3D-графике. Для продолжения нужен новый запуск игры.', { code: 'C-GPU-CONTEXT' }); });
   function destroy() {
-    if (disposed) return; briefingClock?.cancel(); transitionClock?.cancel(); streetQuestionResult = null; release(); disposed = true; fileAbort?.abort(); clearInterval(watchdog); clearInterval(statusTimer); clearTimeout(toastTimer); clearTimeout(keyboardTimer); clearTimeout(prepareTimer); synchronizePause();
+    if (disposed) return; briefingClock?.cancel(); transitionClock?.cancel(); release(); disposed = true; fileAbort?.abort(); clearInterval(watchdog); clearInterval(statusTimer); clearTimeout(toastTimer); clearTimeout(keyboardTimer); clearTimeout(prepareTimer); synchronizePause();
     highlightCapture?.destroy();
     radar?.dispose();
     if (scriptBlobURL) { URL.revokeObjectURL(scriptBlobURL); scriptBlobURL = null; }
@@ -877,9 +746,12 @@
   }
   window.addEventListener('pagehide', event => { if (event.persisted) { pageSuspended = true; synchronizePause(); } else destroy(); });
   window.addEventListener('pageshow', event => { if (event.persisted) { pageSuspended = false; synchronizePause(); } });
-  window.ViceRange = { snapshot: snapshot, destroy: destroy, setScene: setScene, startScene: startScene, activate: activate,
-    getHighlight: () => highlightCapture?.getHighlight() || null };
-  updateSceneCopy(); $('intro-note').textContent = examMode ? 'Оценку объявит комиссия. Результаты заданий сохраняются.' : continuous ? 'Три сцены подряд. Пауза — вверху.' : 'Три задания в Vice City.';
-  notify('mounted');
-  if (examMode) prepareTimer = setTimeout(() => { prepareTimer = null; return begin(); }, 0);
+  if (location.protocol === 'file:') {
+    updateSceneCopy();
+    show('native-loading');
+    window.chooseRideFolder(begin);
+  } else {
+    updateSceneCopy();
+    begin();
+  }
 })();

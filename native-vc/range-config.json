@@ -198,8 +198,8 @@
     "record1_escapeDeparted": 224,
     "escapeBikeZ": 225
   },
-  "size": 56463,
-  "sha256": "67c4c72db55bc3831eaf676c64e161ab5b63bdf649aec9e37b0ee5ca9320bfda",
+  "size": 56476,
+  "sha256": "a63ea38811f5bf22d0fc0a0901bde01dc7e02e88ff2555d1b7dfd42451571db5",
   "phases": {
     "error": -1,
     "loading": 0,
@@ -215,7 +215,7 @@
   "scenes": [
     {
       "scene": 1,
-      "title": "Первый шум",
+      "title": "Старые знакомые",
       "weapon": 23,
       "weaponName": "Uzi",
       "model": 282,
@@ -248,15 +248,13 @@
         -1065,
         11.5
       ],
-      "pointsPerTarget": 12,
       "action": "destroy",
       "instruction": "Вертолёт садится. Затем возьми Узи и освободи выезд.",
-      "criterion": "Попадание и настоящий взрыв вертолёта — 12 баллов.",
       "targetCount": 1
     },
     {
       "scene": 2,
-      "title": "Уходи от погони",
+      "title": "По набережной",
       "weapon": 0,
       "weaponName": "За руль",
       "model": 0,
@@ -278,11 +276,8 @@
         -1099,
         11.5
       ],
-      "pointsPerTarget": 5,
       "action": "hijack",
       "instruction": "Забери машину. По набережной — прямо к РПГ.",
-      "criterion": "Угон — 5. Полный проезд к РПГ — ещё 5.",
-      "timeLimitSeconds": 150,
       "route": [
         [
           272,
@@ -314,7 +309,7 @@
     },
     {
       "scene": 3,
-      "title": "Последний аргумент",
+      "title": "Последний залп",
       "weapon": 30,
       "weaponName": "РПГ",
       "model": 287,
@@ -353,12 +348,6 @@
         -1502,
         11.5
       ],
-      "pointsPerTarget": 0,
-      "targetPoints": [
-        4,
-        4,
-        6
-      ],
       "guidanceOrder": [
         0,
         1,
@@ -367,7 +356,6 @@
       "guidanceSemantics": "one visible marker; other targets remain valid",
       "action": "finale",
       "instruction": "РПГ в двух шагах. Стреляй по цели с красной меткой. Вертолёт — последним.",
-      "criterion": "Машины — по 4. Вертолёт — 6. Шесть ракет.",
       "targetCount": 3
     }
   ],

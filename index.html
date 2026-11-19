@@ -1,191 +1,54 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#fff0d8">
-    <meta name="color-scheme" content="light">
-    <meta name="description" content="Единый гангстерский экзамен по миру GTA. Вспомни любимые GTA, узнай музыку и получи свой аттестат. 12 заданий, 100 баллов. Проходной — 60.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/brand-cover-rc45.png?release=ege-054">
-    <meta property="og:image:width" content="1086">
-    <meta property="og:image:height" content="1448">
-    <meta property="og:title" content="ЕГЭ по GTA — Единый гангстерский экзамен">
-    <meta property="og:description" content="Ты вырос на GTA. Докажи. Лор, музыка, реальные игровые кадры и интерактивные задания — на 100 баллов.">
-    <title>ЕГЭ по GTA — Единый гангстерский экзамен</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23252638'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-weight='900' font-size='26' fill='%23fffaf0'%3EЕГЭ%3C/text%3E%3C/svg%3E">
-    <style id="ege-boot-style">
-      .boot-panel{box-sizing:border-box;max-width:36rem;margin:12vh auto;padding:2rem;background:#faf5e8;color:#262630;border:1px solid #c7bcaa;border-top:5px solid #344985;font:16px/1.55 Arial,sans-serif;box-shadow:5px 5px 0 #ddd5c7}
-      .boot-kicker{margin:0 0 1.2rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;color:#344985}.boot-panel h1{margin:0 0 .8rem;font-size:clamp(1.5rem,5vw,2rem);line-height:1.15}.boot-panel p{max-width:30rem}.boot-detail{font-size:.78rem;color:#6d645a;overflow-wrap:anywhere}.boot-retry{min-height:46px;margin-top:.7rem;padding:.7rem 1.4rem;border:0;background:#344985;color:#fff;font:700 15px Arial,sans-serif;cursor:pointer}.boot-retry:disabled{opacity:.65;cursor:wait}.boot-failed{border-top-color:#aa2855}.boot-retry:focus-visible{outline:3px solid #aa2855;outline-offset:3px}@media(max-width:620px){.boot-panel{margin:10vh 1rem;padding:1.4rem}}
-    </style>
-    <script id="ege-boot-guard">
-'use strict';
-
-// This source is embedded into index.html so the recovery screen does not
-// depend on another successful network request. The test checks both copies.
-(function (root, factory) {
-  if (typeof module === 'object' && module.exports) module.exports = { create: factory };
-  else root.GTAExamBoot = factory(root);
-})(typeof window !== 'undefined' ? window : globalThis, function (root) {
-  const doc = root.document;
-  const START_TIMEOUT = 20000, QUESTIONS_TIMEOUT = 12000;
-  let phase = 'loading', failure = null, retrying = false;
-  const fallback = '<main id="boot-panel" class="boot-panel" aria-live="polite" aria-busy="true"><p class="boot-kicker">ЕГЭ · ДОПУСК К GTA VI</p><h1 id="boot-title">Открываем экзамен</h1><p id="boot-message">Подготавливаем твой вариант.</p><p id="boot-detail" class="boot-detail" hidden></p><button id="boot-retry" class="boot-retry" type="button" onclick="window.GTAExamBoot ? window.GTAExamBoot.retry() : location.reload()">Повторить</button></main>';
-
-  function error(code, message, detail) {
-    const value = new Error(message);
-    value.bootCode = code; value.bootDetail = detail || '';
-    return value;
-  }
-  function renderFailure() {
-    if (!failure || !doc) return;
-    let panel = doc.getElementById('boot-panel');
-    const app = doc.getElementById('app');
-    if (!panel && app) { app.innerHTML = fallback; panel = doc.getElementById('boot-panel'); }
-    if (!panel) return;
-    panel.setAttribute('aria-busy', 'false');
-    panel.classList.add('boot-failed');
-    const title = doc.getElementById('boot-title'), message = doc.getElementById('boot-message'), detail = doc.getElementById('boot-detail');
-    if (title) title.textContent = failure.code === 'B-FILE' ? 'Открой через локальный запуск' : 'Экзамен пока не открылся';
-    if (message) message.textContent = failure.message;
-    if (detail) { detail.hidden = false; detail.textContent = failure.detail || 'Код: ' + failure.code; }
-  }
-  function fail(value) {
-    if (phase === 'ready') return false;
-    phase = 'failed'; root.clearTimeout(watchdog);
-    failure = { code: value && value.bootCode || 'B-START', message: value && value.bootCode ? value.message : 'Не удалось открыть экзамен. Попробуй ещё раз.', detail: value && value.bootDetail || '' };
-    renderFailure();
-    return false;
-  }
-  function ready() {
-    if (phase === 'failed') return false;
-    phase = 'ready'; root.clearTimeout(watchdog);
-    return true;
-  }
-  function retry() {
-    // Exactly one navigation per explicit click. Never reload automatically.
-    if (retrying) return;
-    retrying = true;
-    const button = doc && doc.getElementById('boot-retry');
-    if (button) { button.disabled = true; button.textContent = 'Открываем…'; }
-    root.location.reload();
-  }
-  function requireModules(modules) {
-    if (phase === 'failed') { renderFailure(); return false; }
-    for (const item of modules) {
-      const name = typeof item === 'string' ? item : item.name;
-      if (!root[name]) return fail(error('B-MODULE', 'Не загрузилась часть экзамена. Проверь соединение и нажми «Повторить».', 'Не загрузился: ' + (item.label || name)));
-    }
-    return true;
-  }
-  async function loadQuestions(url) {
-    let expired = false, timeout;
-    const controller = typeof root.AbortController === 'function' ? new root.AbortController() : null;
-    const deadline = new Promise((_, reject) => {
-      timeout = root.setTimeout(() => {
-        expired = true;
-        reject(error('B-QUESTIONS-TIMEOUT', 'Вопросы загружаются слишком долго. Проверь соединение и попробуй ещё раз.'));
-        if (controller) controller.abort();
-      }, QUESTIONS_TIMEOUT);
-    });
-    const request = (async () => {
-      let response;
-      try { response = await root.fetch(url, { cache: 'no-cache', ...(controller ? { signal: controller.signal } : {}) }); }
-      catch (cause) {
-        if (expired) throw error('B-QUESTIONS-TIMEOUT', 'Вопросы загружаются слишком долго. Проверь соединение и попробуй ещё раз.');
-        throw error('B-QUESTIONS-NETWORK', 'Не удалось загрузить вопросы. Проверь соединение и попробуй ещё раз.');
-      }
-      if (!response.ok) throw error('B-QUESTIONS-HTTP-' + response.status, response.status === 404 ? 'В сборке не найден файл с вопросами. Попробуй открыть экзамен ещё раз.' : 'Сервер не отдал вопросы. Попробуй ещё раз.', 'Код: B-QUESTIONS-HTTP-' + response.status);
-      let questions;
-      try { questions = await response.json(); }
-      catch (_) { throw error('B-QUESTIONS-JSON', 'Файл с вопросами не удалось прочитать. Попробуй открыть экзамен ещё раз.'); }
-      if (!Array.isArray(questions) || !questions.length) throw error('B-QUESTIONS-FORMAT', 'В сборке нет доступных вопросов. Попробуй открыть экзамен ещё раз.');
-      return questions;
-    })();
-    try { return await Promise.race([request, deadline]); }
-    finally { root.clearTimeout(timeout); }
-  }
-  const watchdog = root.setTimeout(() => {
-    if (phase === 'loading') fail(error('B-SCRIPTS-TIMEOUT', 'Не все файлы экзамена загрузились вовремя. Проверь соединение и нажми «Повторить».'));
-  }, START_TIMEOUT);
-  if (doc) doc.addEventListener('DOMContentLoaded', renderFailure, { once: true });
-  root.addEventListener('error', event => {
-    if (phase !== 'loading') return;
-    const target = event.target;
-    if (target && target.tagName === 'SCRIPT' && target.getAttribute('data-boot-required') !== null) {
-      const name = target.getAttribute('src') || 'скрипт запуска';
-      fail(error('B-SCRIPT', 'Не загрузилась часть экзамена. Проверь соединение и нажми «Повторить».', 'Не загрузился файл: ' + name.split('?')[0]));
-    } else if (event.filename) {
-      const filename = String(event.filename).split(/[?#]/)[0];
-      const required = doc ? Array.from(doc.querySelectorAll('script[data-boot-required]')) : [];
-      if (required.some(script => String(script.src).split(/[?#]/)[0] === filename) || /(?:^|\/)app\.js$/.test(filename)) {
-        fail(error('B-SCRIPT-EXEC', 'При открытии экзамена произошла ошибка. Нажми «Повторить».', 'Ошибка запуска: ' + filename.split('/').pop()));
-      }
-    }
-  }, true);
-  if (root.location && root.location.protocol === 'file:') {
-    fail(error('B-FILE', 'Распакуй весь архив и запусти START-MAC.command на Mac или START-WINDOWS.cmd на Windows.', 'Экзамен открывается по адресу из окна запуска. Двойной щелчок по index.html не запускает сервер.'));
-  }
-  return { requireModules, loadQuestions, fail, ready, retry, error, getState: () => ({ phase, failure, retrying }) };
-});
-    </script>
-    <link rel="stylesheet" href="styles.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="v3.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="v4.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="brand-ui.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="evidence-scope.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="workbook-ui.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="rpg-scene.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="rpg-app.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="practice-ui.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="vice-accent.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="clean-ui.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="rc42-exam-style.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="rc43-classic.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="rc45-exam.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="rc45-cover.css?release=ege-052-20261119">
-    <script async src="https://telegram.org/js/telegram-web-app.js?65"></script>
-    <script defer data-boot-required src="config.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="exam-content.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="v6-radio-content.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="v8-practice-content.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="rc2-content.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="rc3-content.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="exam-engine.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="netlify-legacy-content.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="classic-brand.js?release=ege-052-20261119"></script>
-    <script defer src="final-brand.js?release=ege-054-20261119"></script>
-    <script defer src="image-content-bounds.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="story-card.js?release=ege-054-20261119"></script>
-    <script defer data-boot-required src="audio-controller.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="evidence-scope.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="rpg-scene.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="native-assets.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="native-preload.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="vice-port.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="practice-flow.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="native-warmup.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="game-gestures.js?release=ege-052-20261119"></script>
-    <script defer data-boot-required src="telegram-layout.js?release=ege-052-20261119"></script>
-    <link rel="stylesheet" href="exam-cinema.css?release=ege-052-20261119">
-    <link rel="stylesheet" href="exam-micro.css?release=ege-056">
-    <script defer src="native-vc/hud-radar.js?release=ege-055"></script>
-    <script defer src="exam-b-patrol.js?release=ege-055"></script>
-    <script defer data-boot-required src="app.js?release=ege-056-20261119"></script>
-  <link rel="stylesheet" href="rc47-polish.css?release=ege-052-20261119">
-<link rel="stylesheet" href="rc48-unified.css?release=ege-052-20261119">
-<link rel="stylesheet" href="rc49-unified.css?release=ege-sunset-20261119">
+<head>
+  <base href="native-vc/">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#12171d">
+  <title>Подготовка к GTA VI</title><link rel="stylesheet" href="native.css?release=rc4.9-20261118">
+  <script defer src="../native-assets.js?release=rc4.9-20261118"></script><script defer src="../practice-flow.js?release=rc4.9-20261118"></script><script defer src="human-models.js?release=rc4.9-20261118"></script><script defer src="street-dressing.js?release=rc4.9-20261118"></script><script defer src="vice-district.js?release=rc4.9-20261118"></script><script defer src="aim-motion.js?release=rc4.9-20261118"></script><script defer src="../game-gestures.js?release=rc4.9-20261118"></script><script defer src="../telegram-layout.js?release=rc4.9-20261118"></script><script defer src="native-gestures.js?release=rc4.9-20261118"></script><script defer src="../image-content-bounds.js?release=rc4.9-20261118"></script><script defer src="highlight-capture.js?release=rc4.9-20261118"></script><script defer src="pudge-model.js?release=rc4.9-20261118"></script><script defer src="block-ped-model.js?release=rc4.9-20261118"></script><script defer src="arrival-cast-models.js?release=rc4.9-20261118"></script><script defer src="scene-vehicles.js?release=rc4.9-20261118"></script><script defer src="drive-input.js?release=rc4.9-20261118"></script><script defer src="hud-radar.js?release=rc4.9-20261118"></script><script defer src="local-files.js"></script><script defer src="ride-report.js"></script><script defer src="native.js?release=rc4.9-20261118"></script>
+<link rel="stylesheet" href="rc45-native.css?release=rc4.9-20261118">
+<link rel="stylesheet" href="rc46-scene.css?release=rc4.9-20261118">
+<link rel="stylesheet" href="rc47-native.css?release=rc4.9-20261118">
+<link rel="stylesheet" href="rc48-native.css?release=rc4.9-20261118">
+<link rel="stylesheet" href="rc49-native.css?release=rc4.9-20261118">
+<link rel="stylesheet" href="ride.css">
 </head>
-  <body>
-    <div id="app"><main id="boot-panel" class="boot-panel" aria-live="polite" aria-busy="true">
-      <p class="boot-kicker">ЕГЭ · ДОПУСК К GTA VI</p>
-      <h1 id="boot-title">Открываем экзамен</h1>
-      <p id="boot-message">Подготавливаем твой вариант.</p>
-      <p id="boot-detail" class="boot-detail" hidden></p>
-      <button id="boot-retry" class="boot-retry" type="button" onclick="window.GTAExamBoot ? window.GTAExamBoot.retry() : location.reload()">Повторить</button>
-    </main></div>
-    <div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
-    <dialog id="dialog" aria-label="Дополнительная информация"></dialog>
-    <noscript><style>#boot-panel{display:none}</style><p style="max-width:38rem;margin:4rem auto;padding:1.5rem;color:#25251f;font:18px/1.6 system-ui">Для экзамена нужен JavaScript. Включи его в браузере и обнови страницу.</p></noscript>
-  </body>
-</html>
+<body data-native-state="idle" data-state-menu="1" data-scene="1">
+  <canvas id="canvas" tabindex="-1" aria-label="Игровая сцена Vice City"></canvas>
+  <figure id="native-radar" class="native-radar" hidden role="img" aria-label="Миникарта"><canvas id="radar-canvas" aria-hidden="true"></canvas><figcaption id="radar-caption" aria-hidden="true">VICE CITY</figcaption></figure>
+  <div class="range-hud" id="range-hud" hidden>
+    <div class="mission-stack">
+    <div class="mission-identity">
+      <div class="mission-eyebrow"><span id="native-scene-label">Миссия 1 / 3</span></div>
+      <h2 id="mission-heading">Старые знакомые</h2>
+      <p id="mission-objective">Встречай гостей на площадке.</p>
+
+    </div>
+    <div class="mission-notes">
+      <div class="range-instruction" id="range-instruction" hidden>Прицел → наведи на цель → выстрел</div>
+      <div id="native-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+    </div>
+    </div>
+    <div class="mission-instruments"><button id="native-pause" class="native-icon-button" type="button" aria-label="Пауза"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button><span id="mission-heat" hidden aria-label="Тревога"></span><span id="native-ammo">Боезапас</span><span id="mission-time" hidden aria-label="Оставшееся время">01:30</span></div>
+  </div>
+  <div class="range-controls" id="range-controls" hidden aria-label="Управление оружием">
+    <button id="native-aim" type="button" aria-pressed="false"><span class="control-symbol" aria-hidden="true"><svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="8"/><path d="M14 2v7m0 10v7M2 14h7m10 0h7"/></svg></span><span>Прицел<small>Тяни для наведения</small></span></button>
+    <button id="native-fire" type="button"><span class="control-symbol" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="m16 2-10 14h7l-1 10 10-14h-7z"/></svg></span><span><span id="fire-label">Выстрел</span><small id="fire-detail">Оружие задания</small></span></button>
+  </div>
+  <div id="car-controls" hidden aria-label="Управление машиной"><div id="drive-stick" role="group" aria-label="Джойстик движения"><span id="drive-knob"></span><span class="drive-steer-label" aria-hidden="true">← Руль →</span></div><div class="drive-actions"><button id="drive-enter" type="button">Сесть</button><button id="drive-gas" type="button" hidden>Газ</button><button id="drive-brake" type="button">Тормоз / назад</button></div></div>
+  <section class="native-screen" id="native-loading" aria-labelledby="load-title">
+    <div class="city-splash"><div class="splash-content"><p class="eyebrow">Ocean Drive · Vice City</p>
+    <h1 id="load-title">Подготовка<br>к <em>GTA VI</em></h1><p class="splash-line">Вспомни, как это делается.</p>
+    <div id="local-choice" hidden><label class="folder-button">Открыть папку игры<input id="ride-folder" type="file" webkitdirectory multiple></label><p id="local-hint">Выбери распакованную папку игры на компьютере.</p></div>
+    <div class="splash-progress"><span id="load-step">Открываем город</span><span id="load-percent"></span></div>
+    <progress id="load-progress" max="100" aria-label="Загрузка города"></progress>
+    <p id="load-status" role="status">Проверяем графику.</p></div></div></section>
+  <section class="native-screen is-scene-overlay" id="native-briefing" hidden><div class="native-paper"><h2>Город ждёт.</h2><button id="native-begin" class="native-start">В город →</button></div></section>
+  <section class="native-screen is-scene-overlay native-pause-screen" id="native-pause-screen" hidden><div class="native-paper"><p class="eyebrow">Ocean Drive</p><h2 id="native-pause-title">Пауза</h2><button id="native-resume" class="native-start">Продолжить →</button><button class="native-secondary" id="sound-toggle">Выключить звук</button></div></section>
+  <section class="native-screen" id="native-error" hidden aria-labelledby="error-title"><div class="native-paper"><p class="eyebrow">Ocean Drive</p><h2 id="error-title">Не удалось открыть игру</h2><p id="error-detail" role="alert"></p><div class="native-note" id="error-browser-help" hidden><b>Открой ссылку в отдельном браузере</b><span>Открой эту ссылку в Safari или Chrome и попробуй ещё раз.</span><a id="error-open" target="_blank" rel="noopener noreferrer">Открыть игру отдельно ↗</a></div><button class="native-start" id="native-retry">Повторить запуск <span aria-hidden="true">↻</span></button><details id="error-diagnostic-details"><summary>Сведения о запуске</summary><p class="error-code" id="error-code"></p><button class="native-secondary" id="error-copy" type="button">Скопировать сведения</button><pre id="error-diagnostic"></pre><small>Только состояние запуска. Без имени, аватара и данных Telegram. Сведения никуда не отправляются.</small></details></div></section>
+  <section class="native-screen" id="native-complete" hidden aria-labelledby="report-title">
+    <article class="ride-report"><p class="eyebrow">Подготовка к GTA VI</p><h1 id="report-title">Сводка выезда</h1>
+    <img id="ride-frame" alt="Кадр твоего выезда в Vice City" hidden>
+    <p id="ride-line"></p><dl id="ride-stats"></dl><p id="ride-player" hidden></p>
+    <div class="report-actions"><button id="save-card">Сохранить</button><button id="share-card">Поделиться</button></div>
+    <p id="export-status" role="status"></p><button class="native-start" id="native-again">Ещё заезд ↻</button></article></section>
+</body></html>

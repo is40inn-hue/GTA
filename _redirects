@@ -1,4 +1,0 @@
-# Keep links to the previously nested deployment working after publishing this flat archive.
-/dist / 302
-/dist/ / 302
-/dist/* /:splat 302

@@ -40,7 +40,8 @@
       "rearForkLength": 0.6586349520030045,
       "collision": "existing bundled vehicles.col pcj600; visible handlebar ends are cosmetic",
       "requiredNativeNodes": "chassis_dummy/forks_front/forks_rear/wheel_front/wheel_rear/mudguard/handlebars",
-      "runtimeExecuted": false
+      "runtimeExecuted": false,
+      "palette": "Authored face palette in RenderWare materials"
     },
     {
       "model": 227,
@@ -71,7 +72,7 @@
       "path": "remote/models/gta3.img/pcj600.dff",
       "originalPath": "/remote/models/gta3.img/pcj600.dff",
       "size": 57344,
-      "sha256": "7d0d2282805bc022ca56d53a9d4e1564c274966cec7ca476a5685c9d789b2e86",
+      "sha256": "484a97a74ba4975d24ee1dbcd72744d317d535bfb3dfa5f05d5ba600ae4708b0",
       "mimeType": "application/octet-stream"
     },
     {
